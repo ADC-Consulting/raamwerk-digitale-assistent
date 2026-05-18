@@ -101,7 +101,7 @@ function DomainGlyph({ id }) {
 function Brandbar() {
   return (
     <header className="logobar">
-      <img src="logo.png" alt="Rijksoverheid" className="site-logo" />
+      <img src="docs/logo.png" alt="Rijksoverheid" className="site-logo" />
     </header>
   );
 }
