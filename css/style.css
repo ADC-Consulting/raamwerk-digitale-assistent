@@ -261,13 +261,103 @@ h3 { font-size: 20px; line-height: 1.3; }
 .section-title-row { display: flex; align-items: end; justify-content: space-between; margin-bottom: 28px; gap: 24px; }
 .section-title-row p { color: var(--ink-700); max-width: 520px; margin: 6px 0 0; }
 
-/* ---------- Diagram ---------- */
+/* ---------- Diagram (B1 — clean expanding) ---------- */
 .diagram-wrap {
   position: relative;
   aspect-ratio: 1 / 1;
   width: 100%;
 }
-.diagram-svg { width: 100%; height: 100%; display: block; }
+.diagram-svg { width: 100%; height: 100%; display: block; overflow: visible; }
+
+/* Rings: smooth fill transitions on hover; focus ring for keyboard users */
+.diagram-svg g[role="button"]:focus { outline: none; }
+.diagram-svg g[role="button"]:focus-visible > circle:first-of-type,
+.diagram-svg g[role="button"]:focus-visible > path:first-of-type {
+  stroke: #fbb705;
+  stroke-width: 3;
+}
+
+/* Chips */
+.diagram-svg .chip > circle { transition: fill .15s ease; }
+
+/* Hint pill (closed-state only) */
+.diagram-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  background: var(--paper);
+  border: 1px solid var(--ink-200);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-700);
+  box-shadow: 0 2px 6px rgba(11, 29, 46, .08);
+  pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
+  z-index: 2;
+}
+.diagram-hint.off { opacity: 0; transform: translate(-50%, 6px); }
+
+/* Floating summary tip — shown on chip / ring hover */
+.diagram-tip {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translate(-50%, 6px);
+  max-width: min(360px, 78%);
+  background: var(--paper);
+  border: 1px solid var(--ink-200);
+  border-left: 3px solid var(--ro-blue-700);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--ink-800);
+  box-shadow: 0 8px 24px rgba(11, 29, 46, .12);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease;
+  z-index: 3;
+}
+.diagram-tip.on { opacity: 1; transform: translate(-50%, 0); }
+.diagram-tip-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--ro-blue-700);
+  margin-bottom: 2px;
+}
+.diagram-tip-title { font-weight: 700; color: var(--ro-blue-900); margin-bottom: 3px; }
+.diagram-tip-body  { color: var(--ink-700); line-height: 1.4; }
+.diagram-tip-cta   { color: var(--ro-blue-700); font-size: 12px; margin-top: 6px; font-weight: 600; }
+
+/* Close pill when open */
+.diagram-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--paper);
+  border: 1px solid var(--ink-300);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-700);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(11, 29, 46, .08);
+  z-index: 4;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.diagram-close:hover {
+  background: var(--ro-blue-700);
+  color: #fff;
+  border-color: var(--ro-blue-700);
+}
 
 /* ---------- Search & filters ---------- */
 .searchbar {
