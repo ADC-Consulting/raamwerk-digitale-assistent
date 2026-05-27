@@ -4,10 +4,6 @@ nr: 7
 title: Ethiek & Mensenrechten
 short: Het bewust afwegen van waarden en grondrechten bij de inzet van een digitale assistent — wat wenselijk is én wat juridisch verplicht is.
 status: published
-practices:
-  - bias-monitoring
-  - menselijke-controle
-  - ethische-impact-iama
 samenhang_blokken:
   - naam: Compliance
     omschrijving: "Ethiek en compliance raken elkaar maar zijn niet hetzelfde. Compliance stelt het minimum vast dat wettelijk verplicht is; ethiek vraagt wat maatschappelijk wenselijk is, ook waar de wet nog geen antwoord geeft. IAMA en Algoritmekader zijn de koppelingsinstrumenten."

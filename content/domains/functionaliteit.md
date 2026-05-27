@@ -4,14 +4,6 @@ nr: 4
 title: Functionaliteit
 short: De concrete mogelijkheden van de assistent — van conversatievermogen en foutafhandeling tot integraties en taakuitvoering.
 status: published
-practices:
-  - contextueel-conversatievermogen
-  - proactieve-ondersteuning
-  - foutafhandeling
-  - personalisatie
-  - response-streaming
-  - systeemintegraties
-  - taakuitvoering
 samenhang_blokken:
   - naam: Infrastructuur & Data
     omschrijving: "Functionaliteit kan alleen duurzaam worden ingericht op een solide infrastructuur en robuuste databasis. RAG-pipeline, response streaming en MCP-integraties komen uit infrastructuur; functionaliteit maakt ze zichtbaar voor de gebruiker."

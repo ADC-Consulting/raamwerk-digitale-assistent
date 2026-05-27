@@ -133,9 +133,10 @@ function DomeinDetail({ id }) {
   if (!d) return <div className="container"><h1>Domein niet gevonden</h1></div>;
   const isFundament = ['governance','infrastructuur-data','cultuur-adoptie','kennis-capaciteit'].includes(d.id);
   const typeLabel = isFundament ? 'fundament' : 'domein';
-  const practices = d.practices && d.practices.length > 0
-    ? d.practices.map(id => RAAM.PRACTICES.find(p => p.id === id)).filter(Boolean)
-    : RAAM.PRACTICES.filter(p => p.domains.includes(d.id));
+  // Single source of truth: a practice belongs to a domain when its own
+  // `domains:` frontmatter includes the domain id. The overview-card count
+  // (renderCard) uses the same filter — they always agree.
+  const practices = RAAM.PRACTICES.filter(p => p.domains.includes(d.id));
   const comingSoon = d.status === 'coming-soon';
   return (
     <div className="container">

@@ -4,10 +4,6 @@ nr: 5
 title: Duurzaamheid
 short: De milieu-impact van een digitale assistent over de hele levenscyclus — energie, CO₂, water, hardware — en hoe je die actief stuurt.
 status: published
-practices:
-  - kleinste-model-per-taak
-  - zuinige-inferentie
-  - meet-energie-emissies
 samenhang_blokken:
   - naam: Infrastructuur & Data
     omschrijving: "AI-rekeninfrastructuur is energie-intensief. Modelroutering, kwantisatie en efficiënt model-serving zijn zowel kosten- als duurzaamheidsmaatregelen. Kies het 'smallest sufficient model' per taak en pas semantische caching toe in RAG-pipelines."

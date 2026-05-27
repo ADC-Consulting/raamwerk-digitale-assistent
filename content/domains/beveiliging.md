@@ -4,13 +4,6 @@ nr: 9
 title: Beveiliging
 short: Klassieke informatiebeveiliging plus AI-specifieke risico's (prompt injection, model poisoning, excessive agency) in gelaagde defense-in-depth-aanpak.
 status: published
-practices:
-  - dreigingsmodellering-llm
-  - prompt-injection-hardening
-  - iam-assistenten
-  - agentic-tool-beveiliging
-  - data-logbescherming
-  - security-monitoring-incident
 samenhang_blokken:
   - naam: Compliance
     omschrijving: "Beveiliging levert de technische maatregelen en bewijsstukken; Compliance vertaalt die naar juridische verplichtingen en documentatie (algoritmeregister, DPIA, meldplicht onder NIS2 en BIO2)."

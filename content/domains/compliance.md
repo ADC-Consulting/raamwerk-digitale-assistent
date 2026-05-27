@@ -4,11 +4,6 @@ nr: 8
 title: Compliance
 short: Naleving van regels, normen en wetgeving — AVG, AI Act, sectorale kaders — vertaald naar aantoonbaar gedrag van de assistent.
 status: published
-practices:
-  - risicobeoordeling-ai
-  - transparantie-uitlegbaarheid
-  - compliance-monitoring-audit
-  - buy-vs-build
 samenhang_blokken:
   - naam: Kennis en capaciteit
     omschrijving: "Zonder voldoende juridische, technische en ethische kennis bij teams kun je compliance-kaders (AVG, AI Act) niet consistent toepassen in ontwerp, ontwikkeling en gebruik van de assistent. AI-geletterdheid (verplicht onder de AI Act sinds februari 2025) is daarmee een compliance-vraagstuk."

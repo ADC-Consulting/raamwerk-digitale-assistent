@@ -4,16 +4,6 @@ nr: 1
 title: Kwaliteit van de output
 short: De mate waarin de output relevant, correct, herleidbaar en passend is bij input, context en gebruiker — gemeten én verbeterd in elke stap van de keten.
 status: published
-practices:
-  - evaluatieraamwerk-3-niveaus
-  - indicatoren-per-stakeholder
-  - offline-validatie
-  - evaluatie-per-assistent-type
-  - llm-judges
-  - multi-agent-kwaliteitsketen
-  - golden-dataset
-  - output-transparantie
-  - drift-aanpasbaarheid
 samenhang_blokken:
   - naam: Gebruikerservaring en toegankelijkheid
     omschrijving: "Confidence-indicatoren, disclaimers en mogelijkheden om naar een mens over te schakelen bepalen hoe de assistent ervaren wordt — kwaliteit is alleen merkbaar als de UI hem zichtbaar maakt."

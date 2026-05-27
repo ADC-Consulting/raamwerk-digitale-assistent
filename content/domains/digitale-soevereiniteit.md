@@ -4,10 +4,6 @@ nr: 6
 title: Digitale Soevereiniteit
 short: Het vermogen om zelf te blijven bepalen welke data, modellen en infrastructuur de assistent gebruikt — en op elk moment te kunnen wisselen.
 status: published
-practices:
-  - provider-agnostische-orkestratie
-  - exit-zeven-lagen
-  - hosting-nl-eu
 samenhang_blokken:
   - naam: Infrastructuur & Data
     omschrijving: "De hardste afhankelijkheid. De keuze van rekenomgeving — Vlam.AI, ODC's, GovChat-NL, GPT-NL, Haven of een commerciële cloud — bepaalt de soevereiniteitsruimte. Open standaarden (MCP, OpenAI Chat Completions) en open-source componenten zijn de bouwstenen."

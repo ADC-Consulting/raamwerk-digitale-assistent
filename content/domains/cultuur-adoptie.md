@@ -4,11 +4,6 @@ nr: 1
 title: Cultuur & Adoptie
 short: Het verankeren van de digitale assistent in de organisatiecultuur via leiderschap, persona-gericht adoptiewerk en een fail-forward cultuur.
 status: published
-practices:
-  - ai-transformatieprogramma
-  - persona-drijfveren-analyse
-  - adoptieplan-interventies
-  - fail-forward-cultuur
 samenhang_blokken:
   - naam: Antwoordkwaliteit
     omschrijving: "Adoptie en een fail-forward cultuur hangen samen met inzicht in hoe goed de assistent werkelijk is. Een goede evaluatiestrategie is randvoorwaardelijk: zonder feedback geen leereffect, zonder leereffect geen adoptie."
