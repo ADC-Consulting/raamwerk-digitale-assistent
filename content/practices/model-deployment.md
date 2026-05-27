@@ -5,7 +5,7 @@ summary: >
   Taalmodellen draaien in productie vergt concrete keuzes over inference-engines,
   modelversies en routering. Open standaarden en versionering zijn essentieel voor
   reproduceerbaarheid, auditeerbaarheid en exit-mogelijkheden.
-domains: [infrastructuur-data]
+domains: [infrastructuur-data, digitale-soevereiniteit]
 phases: [Pilot, Productie]
 levels: [Operationeel]
 sources:

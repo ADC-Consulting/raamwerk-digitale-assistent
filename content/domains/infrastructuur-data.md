@@ -3,14 +3,7 @@ id: infrastructuur-data
 nr: 4
 title: Infrastructuur & Data
 short: "De technische fundering: rekenkracht, opslag, en data-pipelines."
-practices:
-  - infrastructuur-keuze
-  - rag-pijplijn
-  - model-deployment
-  - datakwaliteit-governance
-  - model-deployment
-  - llmops-monitoring
-  - schaalbaarheid-productie
+status: published
 samenhang_blokken:
   - naam: Beveiliging
     omschrijving: "Elke infrastructuurkeuze heeft directe beveiligingsimplicaties. BIO2-compliance is verplicht. AI-specifieke risico's (prompt injection, data exfiltration) vereisen pentesting, SBOM's en zero-trust-architectuur. De Cyberbeveiligingswet (NIS2-implementatie) treedt in het voorjaar van 2026 in werking."

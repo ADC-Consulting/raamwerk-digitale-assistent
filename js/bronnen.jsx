@@ -1,11 +1,12 @@
-// ── Eigen kleurpalet voor categorieën (blauw + roze) ──
+// ── Eigen kleurpalet voor categorieën (blauw + roze + groen + amber) ──
 const D_TYPES = {
-  beleid:    { label: 'Beleidskader',   color: '#0B3A66', tint: '#D6E2F0' }, // diepblauw
-  richtlijn: { label: 'Richtlijn',      color: '#01689B', tint: '#DCEAF4' }, // middenblauw
-  raamwerk:  { label: 'Raamwerk',       color: '#5E8FB0', tint: '#E6EEF4' }, // grijsblauw
-  verplicht: { label: 'Verplicht kader',color: '#9C1F54', tint: '#F4DCE6' }, // diep roze
-  register:  { label: 'Register',       color: '#C84890', tint: '#F8DDEC' }, // helder roze
-  infra:     { label: 'Infrastructuur', color: '#E5A7C5', tint: '#FBECF2' }, // zacht roze
+  beleid:    { label: 'Beleidskader',     color: '#0B3A66', tint: '#D6E2F0' }, // diepblauw
+  verplicht: { label: 'Verplicht kader',  color: '#9C1F54', tint: '#F4DCE6' }, // diep roze
+  richtlijn: { label: 'Richtlijnen',      color: '#01689B', tint: '#DCEAF4' }, // middenblauw
+  raamwerk:  { label: 'Raamwerk',         color: '#5E8FB0', tint: '#E6EEF4' }, // grijsblauw
+  tools:     { label: 'Tools',            color: '#3A6B4F', tint: '#DDE7E0' }, // gedempt groen
+  voorbeeld: { label: 'Voorbeeldproject', color: '#7A5A32', tint: '#ECDFCD' }, // gedempt amber
+  infra:     { label: 'Overig',           color: '#6B7785', tint: '#EEF2F6' }, // grijs (fallback)
 };
 
 // Primaire UI-accent (gebruikt voor headings, actieve chip, hover-stripe):
@@ -129,7 +130,7 @@ function VariantD() {
     return () => document.removeEventListener('mousedown', onDoc);
   }, []);
 
-  const CATEGORY_ORDER = ['beleid', 'richtlijn', 'verplicht', 'raamwerk', 'register', 'infra'];
+  const CATEGORY_ORDER = ['beleid', 'verplicht', 'richtlijn', 'raamwerk', 'tools', 'voorbeeld', 'infra'];
 
   const uniqueCats = [...new Set(data.map(d => d.categorie).filter(Boolean))];
   const tabs = [

@@ -3,11 +3,8 @@ const { useState: useS, useMemo: useM } = React;
 
 const RAAM = window.RAAMWERK;
 
-function boldBeforeColon(text) {
-  const idx = text.indexOf(':');
-  if (idx === -1) return text;
-  return <><strong>{text.slice(0, idx)}</strong>{text.slice(idx)}</>;
-}
+// Practice body items render as plain paragraphs (no auto-bolding). Tips read as
+// natural prose; visual separation is handled by .practice-tips p in style.css.
 
 
 /* ============================== COLLAPSIBLE SECTION ============================== */
@@ -75,13 +72,17 @@ function DomeinenPage() {
   const overige = RAAM.DOMAINS.filter(d => !FUND_IDS.includes(d.id));
   const renderCard = (d, isFundament = false) => {
     const count = RAAM.PRACTICES.filter(p => p.domains.includes(d.id)).length;
+    const comingSoon = d.status === 'coming-soon';
     return (
-      <a key={d.id} className={'card card-link domain-card' + (isFundament ? ' domain-card--fundament' : '')}
+      <a key={d.id} className={'card card-link domain-card' + (isFundament ? ' domain-card--fundament' : '') + (comingSoon ? ' domain-card--coming-soon' : '')}
          onClick={(e) => { e.preventDefault(); navigate('/domeinen/' + d.id); }}
          href={'#/domeinen/' + d.id}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8 }}>
           <DomainGlyph id={d.id} />
-          <span className="nr">{isFundament ? 'FUNDAMENT' : 'DOMEIN'} {String(d.nr).padStart(2, '0')}</span>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 6 }}>
+            <span className="nr">{isFundament ? 'FUNDAMENT' : 'DOMEIN'} {String(d.nr).padStart(2, '0')}</span>
+            {comingSoon && <span className="badge-coming-soon">Binnenkort</span>}
+          </div>
         </div>
         <h3>{d.title}</h3>
         <p>{d.short}</p>
@@ -132,9 +133,11 @@ function DomeinDetail({ id }) {
   if (!d) return <div className="container"><h1>Domein niet gevonden</h1></div>;
   const isFundament = ['governance','infrastructuur-data','cultuur-adoptie','kennis-capaciteit'].includes(d.id);
   const typeLabel = isFundament ? 'fundament' : 'domein';
-  const practices = d.practices && d.practices.length > 0
-    ? d.practices.map(id => RAAM.PRACTICES.find(p => p.id === id)).filter(Boolean)
-    : RAAM.PRACTICES.filter(p => p.domains.includes(d.id));
+  // Single source of truth: a practice belongs to a domain when its own
+  // `domains:` frontmatter includes the domain id. The overview-card count
+  // (renderCard) uses the same filter — they always agree.
+  const practices = RAAM.PRACTICES.filter(p => p.domains.includes(d.id));
+  const comingSoon = d.status === 'coming-soon';
   return (
     <div className="container">
       <div className="crumbs">
@@ -142,6 +145,11 @@ function DomeinDetail({ id }) {
         <a href="#/domeinen">Domeinen</a><span className="sep">/</span>
         <span>{d.title}</span>
       </div>
+      {comingSoon && (
+        <div className="banner-coming-soon" role="status">
+          <strong>Binnenkort beschikbaar</strong> — dit {typeLabel} is nog in review. De inhoud op deze pagina is een eerste opzet en kan nog veranderen.
+        </div>
+      )}
       <div className="detail-header">
         <span className="eyebrow">{isFundament ? 'Fundament' : 'Domein'} {String(d.nr).padStart(2, '0')}</span>
         <h1>{d.title}</h1>
@@ -391,8 +399,10 @@ function PracticeDetail({ id }) {
 
       <div className="detail-grid">
         <div className="detail-body">
-          <h2>Praktische tips:</h2>
-          <ul>{p.body.map((b, i) => <li key={i}>{boldBeforeColon(b)}</li>)}</ul>
+          <h2>Praktische tips</h2>
+          <div className="practice-tips">
+            {p.body.map((b, i) => <p key={i}>{b}</p>)}
+          </div>
 
           {p.sources && p.sources.length > 0 && (
             <>
