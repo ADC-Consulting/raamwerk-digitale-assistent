@@ -98,7 +98,7 @@ function DomeinenPage() {
           <span className="eyebrow">Overzicht</span>
           <h1 style={{ marginTop: 6, fontSize: 38 }}>Domeinen van het raamwerk</h1>
           <p className="lede" style={{ marginTop: 10 }}>
-            Het raamwerk omvat vier fundamentele randvoorwaarden en negen domeinen die samen de digitale assistent vormen. Klik op een domein voor de volledige beschrijving, good practices en bronnen.
+            Het raamwerk omvat vier fundamenten en negen domeinen die samen de digitale assistent vormen. Klik op een domein voor de volledige beschrijving, good practices en bronnen.
           </p>
         </div>
       </div>
@@ -106,7 +106,7 @@ function DomeinenPage() {
       <div className="section-header" style={{ display: 'flex', alignItems: 'baseline', gap: 16, margin: '40px 0 4px' }}>
         <span className="eyebrow" style={{ fontSize: 13, letterSpacing: 1.6 }}>{RAAM.HOME.fundamenten_section.label}</span>
         <span style={{ flex: 1, height: 2, background: '#0b3d68' }}/>
-        <span style={{ fontSize: 13, color: 'var(--ink-500)' }}>{fundamenten.length} randvoorwaarden</span>
+        <span style={{ fontSize: 13, color: 'var(--ink-500)' }}>{fundamenten.length} fundamenten</span>
       </div>
       <p style={{ color: 'var(--ink-700)', maxWidth: 780, margin: '0 0 22px' }}>
         {RAAM.HOME.fundamenten_section.description}
@@ -116,7 +116,7 @@ function DomeinenPage() {
       <div id="digitale-assistent" className="section-header" style={{ display: 'flex', alignItems: 'baseline', gap: 16, margin: '48px 0 4px', scrollMarginTop: 24 }}>
         <span className="eyebrow" style={{ fontSize: 13, letterSpacing: 1.6 }}>{RAAM.HOME.assistent_section.label}</span>
         <span style={{ flex: 1, height: 2, background: '#01689b' }}/>
-        <span style={{ fontSize: 13, color: 'var(--ink-500)' }}>{overige.length} onderdelen</span>
+        <span style={{ fontSize: 13, color: 'var(--ink-500)' }}>{overige.length} domeinen</span>
       </div>
       <p style={{ color: 'var(--ink-700)', maxWidth: 780, margin: '0 0 22px' }}>
         {RAAM.HOME.assistent_section.description}
