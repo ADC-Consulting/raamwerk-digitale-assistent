@@ -42,6 +42,13 @@ function App() {
 
   return (
     <div className="app">
+      <div className="dev-banner" role="status" aria-live="polite">
+        <span className="dev-banner-dot" aria-hidden="true"></span>
+        <span>
+          <strong>In ontwikkeling</strong> — deze website is nog onder review.
+          Sommige domeinen en teksten zijn nog placeholder en kunnen wijzigen.
+        </span>
+      </div>
       <Brandbar/>
       <Navbar route={route} theme={t.theme} setTheme={setTheme}/>
       <main>{page}</main>
