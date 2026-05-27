@@ -3,12 +3,12 @@ id: infrastructuur-data
 nr: 4
 title: Infrastructuur & Data
 short: "De technische fundering: rekenkracht, opslag, en data-pipelines."
+status: published
 practices:
   - infrastructuur-keuze
   - rag-pijplijn
   - model-deployment
   - datakwaliteit-governance
-  - model-deployment
   - llmops-monitoring
   - schaalbaarheid-productie
 samenhang_blokken:

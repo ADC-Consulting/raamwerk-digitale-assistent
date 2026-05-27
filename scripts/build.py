@@ -6,69 +6,22 @@ Run: python3 scripts/build.py
 
 import json
 import os
-import re
-import glob
-import yaml
 
-CONTENT_DIR = os.path.join(os.path.dirname(__file__), '..', 'content')
-OUTPUT_FILE = os.path.join(os.path.dirname(__file__), '..', 'js', 'data.js')
+from _content import (
+    CAT_TO_TYPEKEY,
+    CONTENT_DIR,
+    REPO_ROOT,
+    load_bronnen,
+    load_domain_files,
+    load_filters,
+    load_glossery,
+    load_practice_files,
+    load_yaml,
+    md_to_html,
+    resolve_sources,
+)
 
-
-def parse_md(path):
-    with open(path, encoding='utf-8') as f:
-        text = f.read()
-
-    match = re.match(r'^---\n(.*?)\n---\n(.*)', text, re.DOTALL)
-    if not match:
-        raise ValueError(f'No frontmatter found in {path}')
-
-    frontmatter = yaml.safe_load(match.group(1))
-    body_text = match.group(2).strip()
-    body_items = [p.strip() for p in body_text.split('\n\n') if p.strip()]
-    frontmatter['body'] = body_items
-    return frontmatter
-
-
-def md_to_html(text):
-    html = []
-    for para in text.strip().split('\n\n'):
-        para = para.strip()
-        if not para:
-            continue
-        lines = para.split('\n')
-        if all(line.startswith('- ') for line in lines if line.strip()):
-            items = []
-            for line in lines:
-                if line.strip():
-                    item = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', line[2:])
-                    items.append(f'<li>{item}</li>')
-            html.append('<ul>' + ''.join(items) + '</ul>')
-        else:
-            para = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', para)
-            para = para.replace('\n', '<br/>')
-            html.append(f'<p>{para}</p>')
-    return ''.join(html)
-
-
-def parse_domain_md(path):
-    with open(path, encoding='utf-8') as f:
-        text = f.read()
-
-    match = re.match(r'^---\n(.*?)\n---\n(.*)', text, re.DOTALL)
-    if not match:
-        raise ValueError(f'No frontmatter found in {path}')
-
-    frontmatter = yaml.safe_load(match.group(1))
-    sections = match.group(2).split('\n---\n')
-    frontmatter['wat'] = md_to_html(sections[0]) if len(sections) > 0 else ''
-    frontmatter['waarom'] = md_to_html(sections[1]) if len(sections) > 1 else ''
-    frontmatter.setdefault('sources', [])
-    return frontmatter
-
-
-def load_yaml(path):
-    with open(path, encoding='utf-8') as f:
-        return yaml.safe_load(f)
+OUTPUT_FILE = os.path.join(REPO_ROOT, 'js', 'data.js')
 
 
 def js_value(v):
@@ -88,6 +41,7 @@ def render_domains(domains):
         lines.append(f'    practices: {js_value(d.get("practices", []))},')
         lines.append(f'    keuzemomenten: {js_value(d.get("keuzemomenten", ""))},')
         lines.append(f'    samenhang_blokken: {js_value(d.get("samenhang_blokken", []))},')
+        lines.append(f'    status: {js_value(d.get("status", "published"))},')
 
         lines.append('  },')
     lines.append('];')
@@ -106,16 +60,6 @@ def render_practices(practices):
         lines.append('  },')
     lines.append('];')
     return '\n'.join(lines)
-
-
-CAT_TO_TYPEKEY = {
-    'Beleidskader':    'beleid',
-    'Richtlijnen':     'richtlijn',
-    'Richtlijn':       'richtlijn',
-    'Verplicht kader': 'verplicht',
-    'Raamwerk':        'raamwerk',
-    'Register':        'register',
-}
 
 
 def render_bronnen(bronnen):
@@ -156,31 +100,21 @@ def render_glossary(glossary, bronnen_by_id):
     return '\n'.join(lines)
 
 
-def resolve_sources(sources, bronnen_by_id):
-    resolved = []
-    for s in sources:
-        if isinstance(s, str) and s in bronnen_by_id:
-            resolved.append(bronnen_by_id[s])
-        else:
-            resolved.append(s)
-    return resolved
-
-
 def main():
-    meta = load_yaml(os.path.join(CONTENT_DIR, 'filters.yaml'))
+    meta = load_filters()
     home = load_yaml(os.path.join(CONTENT_DIR, 'home.yaml'))
     over = load_yaml(os.path.join(CONTENT_DIR, 'context_raamwerk.yaml'))
-    bronnen = load_yaml(os.path.join(CONTENT_DIR, 'bronnen.yaml'))
+    bronnen = load_bronnen()
     bronnen_by_id = {b['id']: b for b in bronnen}
-    glossary = load_yaml(os.path.join(CONTENT_DIR, 'glossery.yaml')) or []
+    glossary = load_glossery()
 
-    domain_files = glob.glob(os.path.join(CONTENT_DIR, 'domains', '*.md'))
-    domains = sorted([parse_domain_md(f) for f in domain_files], key=lambda d: d['nr'])
+    domains = sorted(load_domain_files(), key=lambda d: d['nr'])
     for d in domains:
+        d['wat'] = md_to_html(d.pop('wat_raw', ''))
+        d['waarom'] = md_to_html(d.pop('waarom_raw', ''))
         d['sources'] = resolve_sources(d.get('sources', []), bronnen_by_id)
 
-    practice_files = sorted(glob.glob(os.path.join(CONTENT_DIR, 'practices', '*.md')))
-    practices = [parse_md(f) for f in practice_files]
+    practices = load_practice_files()
     for p in practices:
         p['sources'] = resolve_sources(p.get('sources', []), bronnen_by_id)
 

@@ -2,35 +2,55 @@
 id: functionaliteit
 nr: 4
 title: Functionaliteit
-short: Welke taken en integraties de assistent kan uitvoeren.
+short: De concrete mogelijkheden van de assistent — van conversatievermogen en foutafhandeling tot integraties en taakuitvoering.
+status: published
+practices:
+  - contextueel-conversatievermogen
+  - proactieve-ondersteuning
+  - foutafhandeling
+  - personalisatie
+  - response-streaming
+  - systeemintegraties
+  - taakuitvoering
+samenhang_blokken:
+  - naam: Infrastructuur & Data
+    omschrijving: "Functionaliteit kan alleen duurzaam worden ingericht op een solide infrastructuur en robuuste databasis. RAG-pipeline, response streaming en MCP-integraties komen uit infrastructuur; functionaliteit maakt ze zichtbaar voor de gebruiker."
+  - naam: Kennis en capaciteit
+    omschrijving: "Om taakuitvoering en integraties goed te benutten is voldoende AI-geletterdheid en domeinkennis nodig in de organisatie. Medewerkers moeten weten wat de assistent wel en niet kan."
+  - naam: Antwoordkwaliteit
+    omschrijving: "Sterke functionaliteit (integraties, taakuitvoering, personalisatie) zorgt dat antwoorden niet alleen mooi maar ook feitelijk juist zijn, omdat de assistent echte data en statussen uit bronsystemen ophaalt en terugmeldt."
+  - naam: Gebruikerservaring en toegankelijkheid
+    omschrijving: "Hoe functionaliteit wordt aangeboden (streaming, foutafhandeling, personalisatie) bepaalt de ervaren gebruiksvriendelijkheid en het vertrouwen in de assistent."
+  - naam: Technische Prestaties
+    omschrijving: "Integraties, orkestratie en personalisatie leggen de basis voor schaalbaarheid en snelheid. Slim hergebruikbare koppelingen verbeteren performance; rommelige functionaliteit veroorzaakt vertraging."
+  - naam: Beveiliging
+    omschrijving: "Zodra de assistent taken uitvoert raken functionele keuzes direct aan autorisaties, logging, dataminimalisatie en bewaartermijnen. Elke nieuwe functie vergroot het aanvalsoppervlak."
+  - naam: Compliance
+    omschrijving: "Personalisatie en taakuitvoering raken AVG en AI Act direct: een DPIA per nieuwe personalisatievorm en duidelijke grondslag per autonome actie zijn standaard, niet optioneel."
+sources:
+  - handreiking-generatieve-ai
 ---
 
-Infrastructuur & Data omvat alles wat onder de motorkap zit van een digitale AI-assistent: de rekenkracht waarop hij draait, de manier waarop hij informatie ophaalt, en de processen om hem stabiel en betrouwbaar te houden. Naast hardware en software gaat het om de manier waarop data wordt beheerd, verrijkt en beschikbaar gemaakt. Dit fundament vormt de technische bodem waar assistenten op draaien.
+Functionaliteit in een digitale assistent verwijst naar de concrete mogelijkheden die de assistent biedt om gebruikers te ondersteunen bij hun taken en doelen. Het omvat alle capaciteiten waarmee de assistent input kan verwerken en interpreteren, en deze kan vertalen naar relevante acties.
 
-Het fundament beslaat zes samenhangende deelonderwerpen:
+Het domein beslaat zeven samenhangende capaciteiten:
 
-**Waar draait het op? (AI-rekeninfrastructuur)** — De fysieke rekenkracht waarop AI-modellen draaien. Kies je voor een eigen overheidsdatacentrum, een Europese soevereine cloud, of een commerciële publieke cloud? En hoe koop je die rekenkracht in (bijv. via MaaS/1 STIP)?
+- **Conversatievermogen** — Het begrijpen van natuurlijke taal, het herkennen van intenties en het geven van heldere, contextbewuste antwoorden over meerdere beurten heen.
+- **Proactieve ondersteuning** — De assistent doet uit zichzelf suggesties, stelt passende vervolgstappen voor en anticipeert op vervolgvragen op basis van context.
+- **Foutafhandeling** — Het omgaan met onduidelijke of onvolledige vragen via verduidelijkingsvragen, fallback-paden en escalatie naar mensen.
+- **Personalisatie** — Het afstemmen van antwoorden en gedrag op gebruikersprofiel, rol en voorkeuren, binnen duidelijke privacy-kaders.
+- **Response streaming** — Het tonen van tussentijdse output zodat gebruikers minder wachttijd ervaren.
+- **Integraties met systemen en tools** — Het koppelen met bestaande zaaksystemen, registraties en ondersteunende tools voor actuele data en transacties.
+- **Taakuitvoering** — Het daadwerkelijk uitvoeren van acties (afspraak inplannen, melding registreren, formulier verwerken) in onderliggende systemen.
 
-**Hoe zet je het model live? (Model hosting en deployment)** — De manier waarop een taalmodel daadwerkelijk in productie draait: welke software serveert het model (vLLM, Ollama), hoe verpak je het in containers (Kubernetes), hoe houd je versies bij, en hoe stuur je vragen naar het juiste model.
-
-**Hoe komt de assistent aan zijn kennis? (Datapijplijnen voor RAG)** — Het proces om overheidsbronnen op te halen, in stukjes te knippen (chunking), doorzoekbaar te maken (embeddings, vectordatabases) en de juiste passages te vinden bij een vraag.
-
-**Welke bronnen vertrouw je? (Datakwaliteit en governance)** — Welke bronnen mag de assistent gebruiken, wie bewaakt de kwaliteit, en hoe houd je ze actueel als wet- en regelgeving verandert?
-
-**Werkt het zoals het moet? (Monitoring en observability)** — Doorlopend zicht op wat de assistent doet, of antwoorden kloppen, hoeveel het kost, en waar het misgaat. Met tooling als Langfuse, MLflow en evaluatieframeworks zoals RAGAS.
-
-**Blijft het werken bij druk? (Schaalbaarheid en beschikbaarheid)** — Denk aan automatisch op- en afschalen, slim hergebruik van eerdere antwoorden (caching), en het onderscheid tussen real-time vragen en zwaar nachtwerk.
+Samen bepalen deze elementen in hoeverre een digitale assistent in de praktijk als waardevol, betrouwbaar en effectief wordt ervaren.
 
 ---
 
-Infrastructuurkeuzes bepalen wat een digitale assistent veilig, betrouwbaar en soeverein kan leveren. Een assistent die draait op een publieke cloud-API van een Amerikaans techbedrijf heeft wezenlijk andere eigenschappen qua privacy, beschikbaarheid en kosten dan een assistent op het VLAM.AI-platform in een Overheidsdatacentrum. Echter, infrastructuur is geen technisch detail maar juist een beleidsmatige keuze met directe impact op burgers en de controleerbaarheid van overheidsdienstverlening.
+Functionaliteit is cruciaal omdat het hoofddoel van de assistent is om betrouwbare, begrijpelijke en bruikbare ondersteuning te bieden die gebruikers echt helpt hun taken te voltooien. Als je functionaliteit negeert, ontstaat het risico op onduidelijke of foutieve antwoorden, gefrustreerde gebruikers en verlies van vertrouwen in zowel de digitale dienst als de organisatie erachter.
 
-Het doel van goede infrastructuur is een stabiel, veilig en schaalbaar technisch fundament waarop digitale assistenten betrouwbaar kunnen draaien, met behoud van digitale soevereiniteit en controle over data.
+Goede functionaliteit levert grote voordelen op: gebruikers krijgen sneller en duidelijker hulp, medewerkers worden ontlast van routinematig werk, en processen worden consistenter en efficiënter. Op schaal kan één goed ontworpen assistent 24/7 interacties ondersteunen met een gelijk en voorspelbaar kwaliteitsniveau — directe impact op bereikbaarheid, doorlooptijden en klantbeleving.
 
-Zonder goede infrastructuur loopt ieder chatbot-project uiteindelijk vast. Denk aan vendor lock-in op één commerciële LLM-provider, oncontroleerbare kosten, onduidelijkheid over waar data en logs staan, en performance-problemen zodra het gebruik groeit. Met goede infrastructuur bouw je aan lagere kosten, meer wendbaarheid en de mogelijkheid om als overheid regie te houden over je eigen technologie. Dat betekent niet dat je alle oplossingen zelf hoeft te hosten, maar wel dat je je bewust moet zijn van de beslissingen die je maakt.
-
-**Belangrijk voor de burger:** Goede data en infrastructuur zorgt ervoor dat antwoorden betrouwbaar, snel en privacybewust tot stand komen. Als een RAG-pijplijn alleen officiële wetgeving als bron gebruikt, krijgt de burger een verifieerbaar antwoord met bronverwijzing. Verouderde bronnen leiden tot verkeerde informatie over rechten en plichten. En mensen beoordelen fouten van AI strenger dan menselijke fouten; een solide data-infrastructuur is daarom nodig om vertrouwen te behouden.
-
-**Belangrijk voor de organisatie:** De infrastructuurkeuze bepaalt kosten, schaalbaarheid en wendbaarheid.
-
-**Belangrijk voor de overheid als geheel:** Het principe 'centraal afspreken, federatief inrichten' stuurt aan op gedeelde voorzieningen. Herbruikbare bouwblokken (open-source API's, widgets) voorkomen dat iedere organisatie het wiel opnieuw uitvindt. De Visie Digitale Autonomie en Soevereiniteit (december 2025) vat het samen: 'open waar kan, beschermen waar moet'.
+- **Belangrijk voor de burger:** Snelle, begrijpelijke en toegankelijke hulp op maat — zonder telefonische wachtrij of beperkte openingstijden.
+- **Belangrijk voor de organisatie:** Minder druk op balie en telefoon, efficiëntere processen en betere datakwaliteit door consistente verwerking van standaardvragen.
+- **Belangrijk voor de overheid als geheel:** Transparante, betrouwbare digitale dienstverlening en versterkt maatschappelijk vertrouwen wanneer assistenten doen wat ze beloven.

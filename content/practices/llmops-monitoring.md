@@ -11,7 +11,7 @@ levels: [Tactisch]
 sources:
   - langfuse
   - ragas
-  - owasp-top10-llm
+  - owasp-llm-top10
   - mlflow
   - deepeval
   - langwatch
