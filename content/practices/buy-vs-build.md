@@ -8,7 +8,7 @@ summary: >
   expliciet en op basis van capaciteiten, niet ad hoc per offerte.
 domains: [compliance, kennis-capaciteit, digitale-soevereiniteit, governance]
 phases: [PoC, Pilot, Productie]
-levels: [Bestuurlijk, Tactisch]
+levels: []
 sources:
   - algoritmekader
   - visie-digitale-autonomie

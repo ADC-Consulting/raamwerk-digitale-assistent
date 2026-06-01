@@ -4,11 +4,11 @@ title: Proactieve ondersteuning — relevante vervolgstappen en suggesties
 summary: >
   Een proactieve assistent reageert niet alleen op vragen maar neemt zelf het
   initiatief om de gebruiker verder te helpen op basis van context en historie.
-  Hij signaleert ontbrekende gegevens, stelt logische vervolgstappen voor en
-  biedt extra informatie aan voordat de gebruiker erom vraagt.
+  Hij signaleert ontbrekende gegevens, stelt logische vervolgstappen voor en biedt
+  extra informatie aan voordat de gebruiker erom vraagt.
 domains: [functionaliteit, gebruikerservaring]
 phases: [Pilot, Productie]
-levels: [Operationeel, Tactisch]
+levels: [Developer/ Engineer]
 sources:
   - slack-proactive-ai
   - arxiv-proactive-agents

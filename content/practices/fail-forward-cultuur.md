@@ -2,13 +2,13 @@
 id: fail-forward-cultuur
 title: Bouw aan een fail-forward cultuur met psychologische veiligheid
 summary: >
-  Een fail-forward cultuur — waarin fouten vroegtijdig en gecontroleerd
-  zichtbaar worden — is randvoorwaardelijk voor innovatie met AI. De basis is
-  psychologische veiligheid, vertaald naar AI-leiderschap, design-thinking,
-  rapid prototyping en zichtbare rituelen rondom leren van mislukkingen.
-domains: [cultuur-adoptie, governance, ethiek-mensenrechten]
+  Een fail-forward cultuur — waarin fouten vroegtijdig en gecontroleerd zichtbaar
+  worden — is randvoorwaardelijk voor innovatie met AI. De basis is psychologische
+  veiligheid, vertaald naar AI-leiderschap, design-thinking, rapid prototyping en
+  zichtbare rituelen rondom leren van mislukkingen.
+domains: [cultuur-adoptie]
 phases: [PoC, Pilot, Productie]
-levels: [Bestuurlijk, Tactisch]
+levels: [Bestuur/ beleidsmaker, Projectmanager, Developer/ Engineer, Compliance officer]
 sources:
   - bosa-digital-playbook
   - onegov-hackathon

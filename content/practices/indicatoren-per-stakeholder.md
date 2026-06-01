@@ -2,13 +2,13 @@
 id: indicatoren-per-stakeholder
 title: Gebruik een mix van indicatoren voor diverse stakeholders
 summary: >
-  Engineers, domeinexperts en managers kijken naar verschillende signalen.
-  Het grootste verschil tussen klassieke ML en GenAI zit in de soft metrics
-  die outputkwaliteit meten — die zijn voor GenAI veel belangrijker dan voor
-  klassieke modellen. Maak per laag eigenaarschap expliciet.
-domains: [antwoordkwaliteit, governance, technische-prestaties]
-phases: [Pilot, Productie]
-levels: [Tactisch]
+  Engineers, domeinexperts en managers kijken naar verschillende signalen. Het
+  grootste verschil tussen klassieke ML en GenAI zit in de soft metrics die
+  outputkwaliteit meten — die zijn voor GenAI veel belangrijker dan voor klassieke
+  modellen. Maak per laag eigenaarschap expliciet.
+domains: [antwoordkwaliteit]
+phases: [Pilot, Productie, PoC]
+levels: [Bestuur/ beleidsmaker, Projectmanager, Developer/ Engineer, Compliance officer]
 sources: []
 ---
 

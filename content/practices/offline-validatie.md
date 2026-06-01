@@ -7,7 +7,7 @@ summary: >
   vangen en de basis voor latere online evaluatie in productie.
 domains: [antwoordkwaliteit]
 phases: [PoC, Pilot]
-levels: [Operationeel]
+levels: [Projectmanager, Developer/ Engineer]
 sources: []
 ---
 

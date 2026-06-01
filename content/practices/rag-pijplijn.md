@@ -2,12 +2,13 @@
 id: rag-pijplijn
 title: RAG-pijplijnarchitectuur - betrouwbaar ophalen en dan verifieerbaar antwoorden
 summary: >
-  Retrieval-Augmented Generation (RAG) is de meest gebruikte architectuur voor digitale
-  assistenten die antwoorden moeten baseren op actuele, betrouwbare bronnen. De kwaliteit
-  hangt niet af van het taalmodel alleen, maar vooral van hoe goed de retrieval werkt.
-domains: [infrastructuur-data, antwoordkwaliteit]
+  Retrieval-Augmented Generation (RAG) is de meest gebruikte architectuur voor
+  digitale assistenten die antwoorden moeten baseren op actuele, betrouwbare
+  bronnen. De kwaliteit hangt niet af van het taalmodel alleen, maar vooral van
+  hoe goed de retrieval werkt.
+domains: [infrastructuur-data, functionaliteit]
 phases: [PoC, Pilot, Productie]
-levels: [Operationeel]
+levels: [Developer/ Engineer]
 sources:
   - wetwijzer-bedrijven
   - dense-sparse-retrieval

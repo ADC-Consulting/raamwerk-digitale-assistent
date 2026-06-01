@@ -2,13 +2,13 @@
 id: llm-judges
 title: Gebruik LLM-judges voor schaalbare evaluatie
 summary: >
-  Een LLM-judge is een taalmodel dat andere AI-output beoordeelt. Mensen
-  kunnen niet duizend antwoorden per dag nakijken; LLM-judges wel. Houd het
+  Een LLM-judge is een taalmodel dat andere AI-output beoordeelt. Mensen kunnen
+  niet duizend antwoorden per dag nakijken; LLM-judges wel. Houd het
   scoringssysteem simpel (bij voorkeur binair), geef één judge één taak, en
   kalibreer continu op menselijke beoordelingen.
-domains: [antwoordkwaliteit, governance]
+domains: [antwoordkwaliteit]
 phases: [Pilot, Productie]
-levels: [Operationeel, Tactisch]
+levels: [Developer/ Engineer]
 sources:
   - ragas
   - deepeval

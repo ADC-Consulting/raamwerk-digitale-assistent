@@ -232,6 +232,10 @@ h3 { font-size: 20px; line-height: 1.3; }
 .tag.tag-phase-pilot    { background: #F6BDE1; color: #7a1040; border-color: #F092CD; }
 .tag.tag-phase-productie{ background: #F092CD; color: #5e0a2f; border-color: #c0609e; }
 .tag.tag-level          { background: var(--ink-100); color: var(--ink-700); border-color: var(--ink-200); }
+.tag.tag-level-bestuur-beleidsmaker,
+.tag.tag-level-projectmanager,
+.tag.tag-level-developer-engineer,
+.tag.tag-level-compliance-officer,
 .tag.tag-level-operationeel,
 .tag.tag-level-tactisch,
 .tag.tag-level-bestuurlijk  { background: #ddeeff; color: #0a3a6e; border-color: #a8c8f0; }

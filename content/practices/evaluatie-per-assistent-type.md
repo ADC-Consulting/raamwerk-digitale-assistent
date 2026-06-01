@@ -4,12 +4,12 @@ title: Kies evaluatiecriteria passend bij het type assistent
 summary: >
   De definitie van een assistent kent vier assen — initiatie (reactief →
   proactief), taakuitvoering (enkelvoudig → agentisch), informatie-toegang
-  (statisch → dynamisch), executie-autonomie (mens-gestuurd → autonoom). Hoe
-  meer naar rechts, hoe zwaarder de nadruk op compliance, consistentie, bias
-  en technische robuustheid.
-domains: [antwoordkwaliteit, functionaliteit, ethiek-mensenrechten, governance]
+  (statisch → dynamisch), executie-autonomie (mens-gestuurd → autonoom). Hoe meer
+  naar rechts, hoe zwaarder de nadruk op compliance, consistentie, bias en
+  technische robuustheid.
+domains: [antwoordkwaliteit]
 phases: [PoC, Pilot, Productie]
-levels: [Tactisch, Bestuurlijk]
+levels: [Projectmanager, Bestuur/ beleidsmaker, Developer/ Engineer, Compliance officer]
 sources:
   - langwatch
 ---

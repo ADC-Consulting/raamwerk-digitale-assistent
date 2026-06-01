@@ -8,7 +8,7 @@ summary: >
   praktijk ook standhoudt.
 domains: [ethiek-mensenrechten, governance, compliance]
 phases: [Pilot, Productie]
-levels: [Tactisch, Bestuurlijk]
+levels: []
 sources:
   - algoritmekader-menselijke-controle
   - algoritmekader-menselijke-tussenkomst

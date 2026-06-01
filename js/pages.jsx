@@ -364,7 +364,7 @@ function PracticesPage() {
                       return <span key={did} className="tag tag-domain tag-domain--icon" title={dd.title}><DomainGlyph id={did}/></span>;
                     })}
                     {p.phases.map(ph => <span key={ph} className={'tag tag-phase-' + ph.toLowerCase()}>{ph}</span>)}
-                    {p.levels.map(l => <span key={l} className={'tag tag-level-' + l.toLowerCase()}>{l}</span>)}
+                    {p.levels.map(l => <span key={l} className={'tag tag-level-' + l.toLowerCase().replace(/[\s/]+/g, '-').replace(/-+/g, '-')}>{l}</span>)}
                   </div>
                   <div className="row-meta">
                     <span className="read-more">Lees meer <Icon.Arrow/></span>
@@ -401,7 +401,13 @@ function PracticeDetail({ id }) {
         <div className="detail-body">
           <h2>Praktische tips</h2>
           <div className="practice-tips">
-            {p.body.map((b, i) => <p key={i}>{b}</p>)}
+            {p.body.map((b, i) => {
+              const colon = b.indexOf(': ');
+              if (colon > 0) {
+                return <p key={i}><strong>{b.slice(0, colon)}:</strong> {b.slice(colon + 2)}</p>;
+              }
+              return <p key={i}>{b}</p>;
+            })}
           </div>
 
           {p.sources && p.sources.length > 0 && (

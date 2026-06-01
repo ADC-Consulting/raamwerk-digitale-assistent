@@ -7,7 +7,7 @@ summary: >
   Completions + MCP voor tools). Abstractielaag eerst, modelkeuze daarna.
 domains: [digitale-soevereiniteit, infrastructuur-data]
 phases: [PoC, Pilot, Productie]
-levels: [Operationeel, Tactisch]
+levels: []
 sources:
   - litellm
   - mcp-protocol

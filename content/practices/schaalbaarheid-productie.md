@@ -5,9 +5,9 @@ summary: >
   De stap van pilot naar productie lukt alleen met een doordachte aanpak voor
   schaalbaarheid. Auto-scaling, caching en burst-capaciteit bepalen of de dienst
   kan meegroeien met het gebruik.
-domains: [infrastructuur-data, technische-prestaties]
+domains: [technische-prestaties]
 phases: [Productie]
-levels: [Tactisch]
+levels: [Developer/ Engineer]
 sources:
   - innovatiebudget-2025
   - haven

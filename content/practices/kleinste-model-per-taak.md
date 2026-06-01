@@ -3,12 +3,12 @@ id: kleinste-model-per-taak
 title: Kies het kleinste model dat de taak aankan
 summary: >
   Niet elke taak vereist een frontier-model. Het standaardgebruik van grote
-  algemene modellen voor eenvoudige taken is ecologisch en financieel
-  inefficiënt. Begin klein, meet, en schaal alleen op wanneer de kwaliteit
-  aantoonbaar tekortschiet.
+  algemene modellen voor eenvoudige taken is ecologisch en financieel inefficiënt.
+  Begin klein, meet, en schaal alleen op wanneer de kwaliteit aantoonbaar
+  tekortschiet.
 domains: [duurzaamheid, infrastructuur-data, technische-prestaties, antwoordkwaliteit]
 phases: [PoC, Pilot, Productie]
-levels: [Operationeel, Tactisch]
+levels: []
 sources:
   - ai-energy-score
   - ml-energy-leaderboard

@@ -8,7 +8,7 @@ summary: >
   overoptimalisatie kan nauwkeurigheid kosten.
 domains: [duurzaamheid, technische-prestaties, infrastructuur-data, gebruikerservaring]
 phases: [Pilot, Productie]
-levels: [Operationeel]
+levels: []
 sources:
   - arxiv-rag-energy
   - arxiv-babbling-suppression

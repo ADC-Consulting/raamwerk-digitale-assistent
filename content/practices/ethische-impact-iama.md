@@ -8,7 +8,7 @@ summary: >
   meest effectief.
 domains: [ethiek-mensenrechten, compliance, governance]
 phases: [PoC, Pilot, Productie]
-levels: [Tactisch, Bestuurlijk]
+levels: []
 sources:
   - iama
   - iama-toelichting

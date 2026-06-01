@@ -4,6 +4,7 @@ phases:
   - Productie
 
 levels:
-  - Operationeel
-  - Tactisch
-  - Bestuurlijk
+  - Bestuur/ beleidsmaker
+  - Projectmanager
+  - Developer/ Engineer
+  - Compliance officer

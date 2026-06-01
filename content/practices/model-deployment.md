@@ -7,7 +7,7 @@ summary: >
   reproduceerbaarheid, auditeerbaarheid en exit-mogelijkheden.
 domains: [infrastructuur-data, digitale-soevereiniteit]
 phases: [Pilot, Productie]
-levels: [Operationeel]
+levels: [Developer/ Engineer]
 sources:
   - vllm
   - ollama

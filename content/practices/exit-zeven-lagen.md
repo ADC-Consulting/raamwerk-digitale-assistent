@@ -8,7 +8,7 @@ summary: >
   SWIPO, EU Data Act en EU Cloud Code of Conduct.
 domains: [digitale-soevereiniteit, governance, compliance]
 phases: [Pilot, Productie]
-levels: [Tactisch, Bestuurlijk]
+levels: []
 sources:
   - eu-data-act
   - swipo

@@ -8,7 +8,7 @@ summary: >
   en beleid (human-in-the-loop voor gevoelige acties).
 domains: [beveiliging, antwoordkwaliteit]
 phases: [Pilot, Productie]
-levels: [Operationeel]
+levels: []
 sources:
   - owasp-prompt-injection
   - nvidia-nemo-guardrails

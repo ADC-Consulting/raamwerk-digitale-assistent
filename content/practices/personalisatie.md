@@ -6,9 +6,9 @@ summary: >
   gedrag, binnen duidelijke privacy-kaders. Werk met een centraal
   gebruikersprofiel, expliciete regels per personalisatie-element en een
   voorkeurenpagina waarop gebruikers controle houden.
-domains: [functionaliteit, gebruikerservaring, compliance]
+domains: [functionaliteit, gebruikerservaring]
 phases: [Pilot, Productie]
-levels: [Tactisch]
+levels: [Developer/ Engineer, Projectmanager]
 sources:
   - arxiv-profile-personalization
   - user-profile-conv-ai
