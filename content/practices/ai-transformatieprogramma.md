@@ -2,13 +2,13 @@
 id: ai-transformatieprogramma
 title: Verbind de digitale assistent met een breder AI-transformatieprogramma
 summary: >
-  Losse AI-experimenten zijn nuttig in de beginfase, maar om op te schalen moet
-  de digitale assistent onderdeel worden van een samenhangend transformatieplan
-  met een AI-strategie, gedeeld eigenaarschap en waarde-domeinen in plaats van
+  Losse AI-experimenten zijn nuttig in de beginfase, maar om op te schalen moet de
+  digitale assistent onderdeel worden van een samenhangend transformatieplan met
+  een AI-strategie, gedeeld eigenaarschap en waarde-domeinen in plaats van
   geïsoleerde use cases.
 domains: [cultuur-adoptie, governance]
-phases: [PoC, Pilot, Productie]
-levels: [Bestuurlijk, Tactisch]
+phases: [Pilot, Productie]
+levels: [Bestuur/ beleidsmaker, Projectmanager]
 sources:
   - prosci-adkar
   - platform-ai-overheid

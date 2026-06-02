@@ -7,7 +7,7 @@ summary: >
   rapporteer richting CSRD — zonder cijfers is duurzaamheidsbeleid theorie.
 domains: [duurzaamheid, governance, compliance]
 phases: [Pilot, Productie]
-levels: [Tactisch]
+levels: []
 sources:
   - sci-for-ai
   - codecarbon

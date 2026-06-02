@@ -3,12 +3,12 @@ id: contextueel-conversatievermogen
 title: Contextueel conversatievermogen — Dialogue State Tracking
 summary: >
   Een goede assistent bewaart de samenhang in een gesprek door de dialoogstatus
-  actief bij te houden over meerdere beurten heen. Onderwerp, identifiers,
-  rol en historie worden in een gespreksgeheugen vastgelegd zodat verwijzingen
-  als "die aanvraag van net" correct worden geïnterpreteerd.
-domains: [functionaliteit, gebruikerservaring, antwoordkwaliteit, technische-prestaties]
-phases: [Pilot, Productie]
-levels: [Operationeel, Tactisch]
+  actief bij te houden over meerdere beurten heen. Onderwerp, identifiers, rol en
+  historie worden in een gespreksgeheugen vastgelegd zodat verwijzingen als "die
+  aanvraag van net" correct worden geïnterpreteerd.
+domains: [functionaliteit, gebruikerservaring]
+phases: [Pilot, Productie, PoC]
+levels: [Developer/ Engineer]
 sources:
   - dst-multidomain
   - decagon-dst

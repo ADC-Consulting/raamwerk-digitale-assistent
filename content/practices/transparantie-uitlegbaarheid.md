@@ -8,7 +8,7 @@ summary: >
   ontwerp- en documentatie-eisen.
 domains: [compliance, gebruikerservaring, ethiek-mensenrechten]
 phases: [Pilot, Productie]
-levels: [Operationeel, Tactisch]
+levels: []
 sources:
   - ec-transparante-ai
   - transparantie-format

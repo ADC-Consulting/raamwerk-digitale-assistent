@@ -4,11 +4,11 @@ title: Response streaming — gefaseerde antwoorden voor vlotte UX
 summary: >
   Streaming toont tussentijdse output terwijl het volledige antwoord nog wordt
   opgebouwd. Bij lange of informatieve antwoorden verkort dat de gevoelde
-  wachttijd; bij kritieke of juridische tekst moet streaming juist worden
-  uitgezet zodat het complete antwoord ineens beschikbaar is.
-domains: [functionaliteit, gebruikerservaring, technische-prestaties]
+  wachttijd; bij kritieke of juridische tekst moet streaming juist worden uitgezet
+  zodat het complete antwoord ineens beschikbaar is.
+domains: [functionaliteit, gebruikerservaring]
 phases: [Pilot, Productie]
-levels: [Operationeel]
+levels: [Developer/ Engineer]
 sources:
   - tds-response-streaming
   - microsoft-semantic-kernel-streaming

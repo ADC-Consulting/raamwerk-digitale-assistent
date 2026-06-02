@@ -1,37 +1,35 @@
 ---
 id: systeemintegraties
-title: Integraties met bestaande systemen — koppelingen via API of integratielaag
+title: Taakuitvoering — van dialoog naar betrouwbare acties in systemen
 summary: >
-  De assistent opereert niet losstaand maar werkt samen met zaaksystemen,
-  registraties en ondersteunende tools. Doe dat via gestandaardiseerde API's en
-  een centrale integratielaag (iPaaS of ESB), met een groeipad van informatief
-  naar read-only naar read/write.
-domains: [functionaliteit, infrastructuur-data, technische-prestaties]
-phases: [Pilot, Productie]
-levels: [Operationeel, Tactisch]
+  Een assistent met echte waarde gaat verder dan antwoorden: hij voert taken uit
+  in onderliggende systemen via gestructureerde flows, BPMN-procesmodellen en
+  orchestratie-tooling. Workflow-helderheid is de voorwaarde voor controleerbare,
+  traceerbare taakuitvoering.
+domains: [functionaliteit]
+phases: [Pilot, Productie, PoC]
+levels: [Developer/ Engineer, Projectmanager]
 sources:
-  - azure-integration-services
-  - mulesoft
-  - boomi
-  - wso2
-  - apache-camel
-  - mcp-protocol
-  - mcp-gateway-docker
-  - zapier-mcp
+  - bpmn-org
+  - camunda
+  - prefect
+  - apache-airflow
+  - azure-logic-apps
+  - uipath
 ---
 
-Werk via een centrale integratielaag in plaats van directe koppelingen vanuit de assistent: een iPaaS-oplossing (Microsoft Azure Integration Services, Boomi, MuleSoft) of open-source ESB-technologie (WSO2, Apache Camel) beheert calls centraal, logt ze en biedt versie-, retry- en monitoring-functionaliteit die je anders zelf zou moeten bouwen.
+Modelleer een vaste flow per top-taak: breng per top-taak een heldere workflow in kaart en leg deze expliciet vast in configuratie of code. Ad-hoc taakuitvoering zonder gemodelleerde flow leidt tot onreproduceerbare uitkomsten en is niet auditeerbaar.
 
-Laat de business-logica in het bronsysteem: de assistent roept generieke acties aan ("zaak aanmaken", "status opvragen"); het bronsysteem doet de inhoudelijke verwerking. Inhoudelijke logica in de assistent zelf maakt onderhoud onmogelijk en compliance moeilijker.
+Werk taken uit in BPMN of vergelijkbare procesmodellen: Business Process Model and Notation maakt stappen, benodigde gegevens en beslismomenten zichtbaar voor zowel ontwikkelaars als business-analisten. Camunda Modeler is een gangbare keuze; visuele modellen verlagen de drempel voor stakeholders om mee te lezen.
 
-Voor organisaties met technisch verouderde systemen: combineer meerdere integratie-bouwstenen. Gebruik database-views of een datawarehouse voor read-only-toegang als bronsystemen geen goede API's hebben. Ondersteun bestandsuitwisseling (CSV/XML via SFTP) en message queues als tussenstap voor periodieke synchronisatie. Niet alles hoeft real-time API te zijn.
+Richt per taak een workflow/orkestratie in: een workflow bepaalt welke gegevens uit het gesprek worden opgehaald, welke API-calls worden gedaan en wanneer de taak "afgerond" is. Camunda, Prefect, Apache Airflow of Azure Logic Apps zijn beproefde orchestratie-platforms — kies er één en standaardiseer.
 
-Zorg voor een groeipad: begin met een informatieve assistent (geen systeemkoppeling), breid uit naar read-only-koppeling (status en gegevens inzien), en pas in een later stadium naar volledige read/write-integratie (zaak aanmaken, muteren). Lock-step opschalen is veiliger dan met read/write beginnen.
+Bouw op een stabiele integratielaag: een iPaaS of ESB (zie de praktijk *Integraties met bestaande systemen*) levert de bouwstenen voor betrouwbare taakuitvoering. Workflow-tooling roept de integratielaag aan; de assistent roept de workflow aan. Drie lagen, elk met een eigen verantwoordelijkheid.
 
-Hanteer een MCP-achtige aanpak aan de AI-kant: definieer standaard "tools" (zoals `create_case`, `get_status`) die de assistent kan aanroepen, en koppel die onder water flexibel aan API, ESB of file. Hierdoor kun je later naar moderne koppelingen migreren zonder de assistent zelf steeds aan te passen.
+Gebruik RPA als vangnet voor legacy-systemen: als er geen API's beschikbaar zijn, kunnen Robotic Process Automation-tools (zoals UiPath) handelingen in technisch verouderde platformen uitvoeren. Behandel RPA als tijdelijke brugtechnologie, niet als langetermijnstrategie — RPA is kwetsbaar voor UI-wijzigingen en levert geen schone audit-trail.
 
-Gebruik een MCP-gateway voor centrale governance over agents: tools zoals Docker MCP-gateway beheren welke agent bij welke systemen kan onder welke omstandigheden — en geven je een logpoint voor agent-acties. Zonder gateway is "wie heeft wat gedaan" niet te beantwoorden.
+Markeer onomkeerbare acties expliciet: betalingen, mutaties in registraties, verzending van besluiten — vereis altijd een aparte bevestigingsstap (human-in-the-loop) en log de bevestiging als onderdeel van de audit-trail. "Per ongeluk uitgevoerd" mag geen mogelijke uitkomst zijn.
 
-Documenteer elke integratie: per koppeling vastleggen wat de doel-API is, welke autorisatie-scope, welke retry-policy, en wie eigenaar is bij storingen. Een integratie zonder eigenaar wordt een blinde vlek bij incidenten.
+Definieer afrondingscriteria per taak: wanneer is de taak echt klaar? Bij een aanvraag: ontvangstbevestiging, opname in zaaksysteem, e-mail naar burger, status bijgewerkt. Een halfaffe taak die door de assistent als "klaar" wordt gemeld, is een datakwaliteits- én een vertrouwensincident.
 
-Test integraties end-to-end, niet alleen unit: een API-call die in isolatie werkt kan in een keten (assistent → integratielaag → ESB → bronsysteem) op rare manieren falen. Bouw integratie-tests die de hele keten doorlopen, inclusief foutpaden.
+Test taakuitvoering met realistische scenario's: niet alleen happy path maar ook onderbrekingen, time-outs, ongeldige input en gedeeltelijke uitval van bronsystemen. Een workflow die bij een time-out een halve actie achterlaat, beschadigt vertrouwen sneller dan een goed afgehandeld foutpad.

@@ -6,9 +6,9 @@ summary: >
   modelkeuze, input-controle, bronnen, retrieval, generatie en output-controle.
   Een multi-agent setup met scherp afgebakende verantwoordelijkheden grijpt
   gericht in op meerdere plekken tegelijk.
-domains: [antwoordkwaliteit, infrastructuur-data, functionaliteit, technische-prestaties]
+domains: [antwoordkwaliteit]
 phases: [Pilot, Productie]
-levels: [Operationeel, Tactisch]
+levels: [Developer/ Engineer]
 sources:
   - stackviv-multi-agent
   - helm-stanford

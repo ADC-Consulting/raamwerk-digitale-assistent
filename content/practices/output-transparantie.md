@@ -2,13 +2,13 @@
 id: output-transparantie
 title: Bied transparantie aan gebruiker én admin over de kwaliteit van de output
 summary: >
-  Transparantie heeft twee kanten: richting de gebruiker (zodat die antwoorden
-  kan beoordelen en weet wanneer doorklikken of escaleren) en richting de
-  admin (zodat het beheer-team drift, incidenten en patronen ziet). Disclaimers
-  alleen zijn zwakke risicobeheersing — combineer ze met andere maatregelen.
-domains: [antwoordkwaliteit, gebruikerservaring, governance]
+  Transparantie heeft twee kanten: richting de gebruiker (zodat die antwoorden kan
+  beoordelen en weet wanneer doorklikken of escaleren) en richting de admin (zodat
+  het beheer-team drift, incidenten en patronen ziet). Disclaimers alleen zijn
+  zwakke risicobeheersing — combineer ze met andere maatregelen.
+domains: [antwoordkwaliteit, gebruikerservaring]
 phases: [Pilot, Productie]
-levels: [Operationeel, Tactisch]
+levels: [Projectmanager, Developer/ Engineer]
 sources:
   - mlflow
   - langsmith

@@ -8,7 +8,7 @@ summary: >
   je eigen logs het volgende doelwit.
 domains: [beveiliging, compliance, ethiek-mensenrechten]
 phases: [Pilot, Productie]
-levels: [Operationeel, Tactisch]
+levels: []
 sources:
   - owasp-sensitive-info
   - nist-ai-600-1

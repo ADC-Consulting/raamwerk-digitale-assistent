@@ -8,7 +8,7 @@ summary: >
   de praktijk manifesteren en wordt bij elke materiële wijziging herhaald.
 domains: [compliance, governance, ethiek-mensenrechten, antwoordkwaliteit]
 phases: [PoC, Pilot, Productie]
-levels: [Tactisch, Bestuurlijk]
+levels: []
 sources:
   - nist-ai-rmf
   - iso-23894

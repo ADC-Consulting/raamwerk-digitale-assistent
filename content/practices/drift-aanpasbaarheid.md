@@ -2,13 +2,13 @@
 id: drift-aanpasbaarheid
 title: Aanpasbaarheid — adaptief leren bij dataverandering
 summary: >
-  Wetgeving en beleid wijzigen continu. De assistent moet die wijzigingen snel
-  en gecontroleerd kunnen verwerken via versie-gestuurde RAG, geautomatiseerde
-  drift-detectie en een menselijke review-workflow voor veranderingen voordat
-  ze live gaan.
-domains: [antwoordkwaliteit, infrastructuur-data, compliance]
+  Wetgeving en beleid wijzigen continu. De assistent moet die wijzigingen snel en
+  gecontroleerd kunnen verwerken via versie-gestuurde RAG, geautomatiseerde
+  drift-detectie en een menselijke review-workflow voor veranderingen voordat ze
+  live gaan.
+domains: [antwoordkwaliteit, infrastructuur-data]
 phases: [Productie]
-levels: [Operationeel, Tactisch]
+levels: [Projectmanager, Developer/ Engineer]
 sources:
   - evidently-ai
   - alibi-detect

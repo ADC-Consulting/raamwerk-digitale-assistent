@@ -8,7 +8,7 @@ summary: >
   gesignaleerd en opgepakt.
 domains: [compliance, beveiliging, governance]
 phases: [Pilot, Productie]
-levels: [Operationeel, Tactisch]
+levels: []
 sources:
   - splunk-siem-blog
   - splunk

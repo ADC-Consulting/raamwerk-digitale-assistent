@@ -3,12 +3,12 @@ id: foutafhandeling
 title: Foutafhandeling — gecontroleerd omgaan met fouten en tijdige escalatie
 summary: >
   Onduidelijke vragen, ontbrekende gegevens en technische fouten moeten
-  voorspelbaar en gebruikersvriendelijk worden afgehandeld zonder dat
-  gesprekken vastlopen. Standaardiseer reacties per fouttype, gebruik
-  confidence-scores en bouw een betekenisvolle escalatie naar mensen.
-domains: [functionaliteit, antwoordkwaliteit, gebruikerservaring, technische-prestaties]
+  voorspelbaar en gebruikersvriendelijk worden afgehandeld zonder dat gesprekken
+  vastlopen. Standaardiseer reacties per fouttype, gebruik confidence-scores en
+  bouw een betekenisvolle escalatie naar mensen.
+domains: [gebruikerservaring]
 phases: [Pilot, Productie]
-levels: [Operationeel]
+levels: [Developer/ Engineer]
 sources:
   - conversation-design-institute
   - microsoft-handle-errors

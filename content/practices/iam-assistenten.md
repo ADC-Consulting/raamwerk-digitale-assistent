@@ -8,7 +8,7 @@ summary: >
   privilege en need-to-know zijn de kernprincipes.
 domains: [beveiliging, compliance, governance]
 phases: [Pilot, Productie]
-levels: [Operationeel, Tactisch]
+levels: []
 sources:
   - bio2
   - nis2-ncsc

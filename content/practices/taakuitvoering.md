@@ -2,13 +2,13 @@
 id: taakuitvoering
 title: Taakuitvoering — van dialoog naar betrouwbare acties in systemen
 summary: >
-  Een assistent met echte waarde gaat verder dan antwoorden: hij voert taken
-  uit in onderliggende systemen via gestructureerde flows, BPMN-procesmodellen
-  en orchestratie-tooling. Workflow-helderheid is de voorwaarde voor
-  controleerbare, traceerbare taakuitvoering.
-domains: [functionaliteit, infrastructuur-data, beveiliging]
-phases: [Pilot, Productie]
-levels: [Operationeel, Tactisch]
+  Een assistent met echte waarde gaat verder dan antwoorden: hij voert taken uit
+  in onderliggende systemen via gestructureerde flows, BPMN-procesmodellen en
+  orchestratie-tooling. Workflow-helderheid is de voorwaarde voor controleerbare,
+  traceerbare taakuitvoering.
+domains: [functionaliteit]
+phases: [Pilot, Productie, PoC]
+levels: [Developer/ Engineer, Projectmanager]
 sources:
   - bpmn-org
   - camunda

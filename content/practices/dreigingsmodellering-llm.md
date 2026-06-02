@@ -8,7 +8,7 @@ summary: >
   identificeren en het ontwerp daarop af te stemmen.
 domains: [beveiliging, infrastructuur-data, governance]
 phases: [PoC, Pilot, Productie]
-levels: [Operationeel, Tactisch]
+levels: []
 sources:
   - owasp-llm-top10
   - owasp-agentic-top10

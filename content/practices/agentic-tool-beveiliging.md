@@ -8,7 +8,7 @@ summary: >
   policy-engines en menselijke tussenkomst zijn essentieel.
 domains: [beveiliging, infrastructuur-data, functionaliteit]
 phases: [Pilot, Productie]
-levels: [Operationeel, Tactisch]
+levels: []
 sources:
   - owasp-agentic-top10
   - owasp-excessive-agency

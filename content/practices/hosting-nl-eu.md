@@ -8,7 +8,7 @@ summary: >
   borg operationele soevereiniteit contractueel.
 domains: [digitale-soevereiniteit, infrastructuur-data, compliance, governance]
 phases: [Pilot, Productie]
-levels: [Bestuurlijk, Tactisch]
+levels: []
 sources:
   - bbn2-gemeenten
   - surf-snellius

@@ -8,7 +8,7 @@ summary: >
   test-set — weet het niet.
 domains: [ethiek-mensenrechten, antwoordkwaliteit, governance]
 phases: [Pilot, Productie]
-levels: [Operationeel, Tactisch]
+levels: []
 sources:
   - algoritmekader-bias
   - algoritmekader-biastoets

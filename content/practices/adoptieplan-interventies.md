@@ -4,11 +4,11 @@ title: Maak een adoptieplan met gerichte interventies
 summary: >
   Vertaal de persona-analyse naar een concreet adoptieplan: individuele
   adoptie-interventies gestructureerd via ADKAR, organisatie-niveau interventies
-  rond OR en sociale plannen, en een communicatieplan dat de visie omzet in
-  een verhaal vanuit de gebruiker.
-domains: [cultuur-adoptie, kennis-capaciteit]
+  rond OR en sociale plannen, en een communicatieplan dat de visie omzet in een
+  verhaal vanuit de gebruiker.
+domains: [cultuur-adoptie]
 phases: [Pilot, Productie]
-levels: [Operationeel, Tactisch]
+levels: [Projectmanager]
 sources:
   - prosci-adkar
   - vng-reisgids-ai

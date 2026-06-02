@@ -8,7 +8,7 @@ summary: >
   productie grip te houden.
 domains: [beveiliging, compliance, governance]
 phases: [Pilot, Productie]
-levels: [Operationeel, Tactisch]
+levels: []
 sources:
   - nist-ai-600-1
   - nis2-ncsc
