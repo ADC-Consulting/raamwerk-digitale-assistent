@@ -8,6 +8,7 @@ summary: >
 domains: [evaluatie-assistent]
 phases: [PoC, Pilot]
 levels: [Projectmanager, Developer/ Engineer]
+image: docs_for_GP/offline_validatie.png
 sources: []
 ---
 

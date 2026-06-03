@@ -2,17 +2,17 @@
 id: evaluatie-per-assistent-type
 title: Kies evaluatiecriteria passend bij het type assistent
 summary: >
-  De definitie van een assistent kent vier assen — initiatie (reactief →
-  proactief), taakuitvoering (enkelvoudig → agentisch), informatie-toegang
-  (statisch → dynamisch), executie-autonomie (mens-gestuurd → autonoom). Hoe meer
-  naar rechts, hoe zwaarder de nadruk op compliance, consistentie, bias en
-  technische robuustheid.
+  De definitie van een digitale assistent kent vier kenmerken-assen (initiatie, taakuitvoering, informatietoegang, executie-autonomie). Hoe meer naar rechts op deze assen (proactief, agentisch, dynamisch, autonoom), 
+  hoe zwaarder de nadruk op compliance, consistentie, bias en technische robuustheid. Meer autonomie en complexiteit brengen meer risico, en daarmee meer behoefte aan governance-gerichte indicatoren.
 domains: [evaluatie-assistent]
 phases: [PoC, Pilot, Productie]
 levels: [Projectmanager, Bestuur/ beleidsmaker, Developer/ Engineer, Compliance officer]
+image: docs_for_GP/evaluatiecriteria.png
 sources:
   - langwatch
 ---
+
+Belangrijke nuance bij agentische workflows: een enkelvoudige assistent (één vraag, één antwoord, waarbij de assistent elke vraag als nieuw behandelt) is fundamenteel anders te evalueren dan een agentische assistent (doorlopend gesprek waarbij de assistent de context onthoudt). Bij agentische assistenten moet je niet alleen de output evalueren, maar ook tussenstappen, tool-calls, geheugenstate en de coherentie over meerdere in-en output combinaties.
 
 Map elke nieuwe assistent op de vier kenmerkenassen voordat je metrics kiest: een statische FAQ-bot vraagt om andere indicatoren dan een dynamische actie-uitvoerende agent. Zonder die mapping kies je generieke metrics die niet sturend zijn.
 

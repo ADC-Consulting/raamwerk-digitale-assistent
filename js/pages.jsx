@@ -6,6 +6,8 @@ const RAAM = window.RAAMWERK;
 // Practice body items render as plain paragraphs (no auto-bolding). Tips read as
 // natural prose; visual separation is handled by .practice-tips p in style.css.
 
+const FASES = ["PoC", "Pilot", "Productie"];
+
 
 /* ============================== COLLAPSIBLE SECTION ============================== */
 function Section({ title, children, id, defaultOpen = false }) {
@@ -128,6 +130,47 @@ function DomeinenPage() {
   );
 }
 
+/* ============================== MATURITY STEPPER ============================== */
+function MaturityStepper({ phases }) {
+  const activeSet = new Set(phases);
+  const activeIndices = FASES.map((f, i) => activeSet.has(f) ? i : -1).filter(i => i >= 0);
+  const firstActive = activeIndices.length ? activeIndices[0] : -1;
+  const lastActive  = activeIndices.length ? activeIndices[activeIndices.length - 1] : -1;
+
+  return (
+    <div className="maturity-stepper">
+      <span className="maturity-label" aria-hidden="true">Volwassenheid</span>
+      <div className="maturity-track-wrap">
+        <div className="maturity-line maturity-line--base" aria-hidden="true"></div>
+        {firstActive !== -1 && (
+          <div
+            className="maturity-line maturity-line--fill"
+            style={{
+              left:  `${(firstActive * 2 + 1) * 100 / 6}%`,
+              right: `${((2 - lastActive) * 2 + 1) * 100 / 6}%`
+            }}
+            aria-hidden="true"
+          ></div>
+        )}
+        <ol className="maturity-phases" role="list">
+          {FASES.map(fase => {
+            const isActive = activeSet.has(fase);
+            return (
+              <li key={fase} className="maturity-phase"
+                  aria-label={fase + ': ' + (isActive ? 'bereikt' : 'nog niet bereikt')}>
+                <div className={'maturity-dot' + (isActive ? ' maturity-dot--active' : '')} aria-hidden="true"></div>
+                <span className={'maturity-phase-label' + (isActive ? ' maturity-phase-label--active' : '')} aria-hidden="true">
+                  {fase}
+                </span>
+              </li>
+            );
+          })}
+        </ol>
+      </div>
+    </div>
+  );
+}
+
 /* ============================== DOMEIN DETAIL ============================== */
 function DomeinDetail({ id }) {
   const d = RAAM.DOMAINS.find(x => x.id === id);
@@ -200,16 +243,16 @@ function DomeinDetail({ id }) {
             {practices.length === 0 ? (
               <p style={{ color: 'var(--ink-500)' }}>Nog geen good practices in dit domein. Heb je er een? <a href="#">Dien een suggestie in</a>.</p>
             ) : (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+              <div className="practice-maturity-list">
                 {practices.map(p => (
-                  <a key={p.id} className="card card-link practice-card"
+                  <a key={p.id} className="practice-maturity-card"
                      onClick={(e) => { e.preventDefault(); navigate('/practices/' + p.id); }}
                      href={'#/practices/' + p.id}>
-                    <h3 style={{ margin: 0 }}>{p.title}</h3>
-                    <p>{p.summary}</p>
-                    <div className="tag-row">
-                      {p.phases.map(ph => <span key={ph} className={'tag tag-phase-' + ph.toLowerCase()}>{ph}</span>)}
+                    <div>
+                      <h3>{p.title}</h3>
+                      <p>{p.summary}</p>
                     </div>
+                    <MaturityStepper phases={p.phases} />
                   </a>
                 ))}
               </div>
@@ -393,7 +436,9 @@ function PracticeDetail({ id }) {
         <div>
           <span className="eyebrow">Good Practice</span>
           <h1>{p.title}</h1>
-          <p className="lede" style={{ fontSize: 19 }}>{p.summary}</p>
+          {p.summary.split('\n').filter(s => s.trim()).map((para, i) => (
+            <p key={i} className="lede" style={{ fontSize: 19 }}>{para.trim()}</p>
+          ))}
         </div>
         <SuggestieBlok />
       </div>
