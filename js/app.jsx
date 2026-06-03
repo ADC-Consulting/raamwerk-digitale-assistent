@@ -45,8 +45,8 @@ function App() {
       <div className="dev-banner" role="status" aria-live="polite">
         <span className="dev-banner-dot" aria-hidden="true"></span>
         <span>
-          <strong>In ontwikkeling</strong> — deze website is nog onder review.
-          Sommige domeinen en teksten zijn nog placeholder en kunnen wijzigen.
+          <strong>In ontwikkeling</strong> - Sommige domeinen en teksten dienen nog als placeholder en kunnen op korte termijn wijzigen.
+          Heb je vragen of aanvullingen? Laat ze dan gerust achter in de suggestiebox.
         </span>
       </div>
       <Brandbar/>

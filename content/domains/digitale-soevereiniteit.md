@@ -1,8 +1,8 @@
 ---
 id: digitale-soevereiniteit
-nr: 6
+nr: 7
 title: Digitale Soevereiniteit
-short: Het vermogen om zelf te blijven bepalen welke data, modellen en infrastructuur de assistent gebruikt — en op elk moment te kunnen wisselen.
+short: Het vermogen om zelf te blijven bepalen welke data, modellen en infrastructuur de assistent gebruikt en op elk moment te kunnen wisselen.
 status: published
 samenhang_blokken:
   - naam: Infrastructuur & Data

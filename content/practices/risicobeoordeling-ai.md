@@ -3,12 +3,12 @@ id: risicobeoordeling-ai
 title: Risicobeoordeling — AI-risico's structureel in kaart brengen en beheersen
 summary: >
   Een digitale assistent brengt risico's met zich mee die niet altijd direct
-  zichtbaar zijn — bias, onjuiste informatie, privacyschendingen. Een
-  structurele risicobeoordeling maakt deze risico's inzichtelijk vóórdat ze in
-  de praktijk manifesteren en wordt bij elke materiële wijziging herhaald.
-domains: [compliance, governance, ethiek-mensenrechten, antwoordkwaliteit]
-phases: [PoC, Pilot, Productie]
-levels: []
+  zichtbaar zijn — bias, onjuiste informatie, privacyschendingen. Een structurele
+  risicobeoordeling maakt deze risico's inzichtelijk vóórdat ze in de praktijk
+  manifesteren en wordt bij elke materiële wijziging herhaald.
+domains: [ethiek-mensenrechten,compliance]
+phases: [Pilot, Productie]
+levels: [Compliance officer, Projectmanager]
 sources:
   - nist-ai-rmf
   - iso-23894

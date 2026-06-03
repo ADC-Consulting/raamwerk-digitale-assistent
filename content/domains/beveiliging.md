@@ -1,6 +1,6 @@
 ---
 id: beveiliging
-nr: 9
+nr: 10
 title: Beveiliging
 short: Klassieke informatiebeveiliging plus AI-specifieke risico's (prompt injection, model poisoning, excessive agency) in gelaagde defense-in-depth-aanpak.
 status: published

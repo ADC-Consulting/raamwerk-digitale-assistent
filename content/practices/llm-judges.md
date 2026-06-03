@@ -6,7 +6,7 @@ summary: >
   niet duizend antwoorden per dag nakijken; LLM-judges wel. Houd het
   scoringssysteem simpel (bij voorkeur binair), geef één judge één taak, en
   kalibreer continu op menselijke beoordelingen.
-domains: [antwoordkwaliteit]
+domains: [evaluatie-assistent]
 phases: [Pilot, Productie]
 levels: [Developer/ Engineer]
 sources:

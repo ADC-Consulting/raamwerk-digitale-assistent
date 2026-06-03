@@ -1,3 +1,4 @@
+/* global SuggestieBlok */
 // ── Eigen kleurpalet voor categorieën (blauw + roze + groen + amber) ──
 const D_TYPES = {
   beleid:    { label: 'Beleidskader',     color: '#0B3A66', tint: '#D6E2F0' }, // diepblauw
@@ -116,6 +117,7 @@ function VariantD() {
   const data = window.BRONNEN;
 
   const [active, setActive] = React.useState('alle');
+  const [q, setQ] = React.useState('');
   const [hover, setHover] = React.useState(null);
   const [sortBy, setSortBy] = React.useState('recent');
   const [sortDir, setSortDir] = React.useState('desc');
@@ -138,9 +140,14 @@ function VariantD() {
     ...uniqueCats.map(cat => ({ key: cat, label: cat, count: data.filter(d => d.categorie === cat).length })),
   ];
 
+  const ql = q.toLowerCase();
   const filtered = data.filter(d => {
-    if (active === 'alle') return true;
-    return d.categorie === active;
+    if (active !== 'alle' && d.categorie !== active) return false;
+    if (ql) {
+      return (d.title || '').toLowerCase().includes(ql) ||
+             (d.omschrijving || '').toLowerCase().includes(ql);
+    }
+    return true;
   });
 
   const sorted = [...filtered].sort((a, b) => {
@@ -168,16 +175,19 @@ function VariantD() {
 
   return (
     <div className="container" style={{ fontFamily: 'Arial, sans-serif', color: '#1F2A36', paddingBottom: 56 }}>
-      <div style={{ marginBottom: 18 }}>
-        <span className="eyebrow">Bronnen &amp; kaders</span>
-        <h1 style={{ marginTop: 6, fontSize: 38 }}>Bronnen</h1>
-        <p className="lede" style={{ marginTop: 10 }}>De documenten, registers en kaders waar dit dossier op leunt. Filter op type of doorzoek de lijst om de juiste bron te vinden.</p>
+      <div style={{ marginBottom: 18, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
+        <div>
+          <span className="eyebrow">Bronnen &amp; kaders</span>
+          <h1 style={{ marginTop: 6, fontSize: 38 }}>Bronnen</h1>
+          <p className="lede" style={{ marginTop: 10 }}>De documenten, registers en kaders waar dit dossier op leunt. Filter op type of doorzoek de lijst om de juiste bron te vinden.</p>
+        </div>
+        <SuggestieBlok />
       </div>
 
       <div style={vdStyle.toolbar}>
         <div style={vdStyle.search}>
           <VdSearchIcon />
-          <input style={vdStyle.searchInput} placeholder="Zoek in bronnen…" />
+          <input style={vdStyle.searchInput} placeholder="Zoek in bronnen…" value={q} onChange={e => setQ(e.target.value)} />
         </div>
         <div style={{display:'flex', gap:8, flexWrap:'wrap'}}>
           {tabs.map(t => (

@@ -1,10 +1,12 @@
-/* global React, navigate, FrameworkDiagram, DomainGlyph, Icon, BronnenLijst */
+/* global React, navigate, FrameworkDiagram, DomainGlyph, Icon, BronnenLijst, SuggestieBlok */
 const { useState: useS, useMemo: useM } = React;
 
 const RAAM = window.RAAMWERK;
 
 // Practice body items render as plain paragraphs (no auto-bolding). Tips read as
 // natural prose; visual separation is handled by .practice-tips p in style.css.
+
+const FASES = ["PoC", "Pilot", "Productie"];
 
 
 /* ============================== COLLAPSIBLE SECTION ============================== */
@@ -94,7 +96,7 @@ function DomeinenPage() {
   };
   return (
     <div className="container">
-      <div className="section-title-row" style={{ marginBottom: 18 }}>
+      <div className="section-title-row" style={{ marginBottom: 18, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
         <div>
           <span className="eyebrow">Overzicht</span>
           <h1 style={{ marginTop: 6, fontSize: 38 }}>Domeinen van het raamwerk</h1>
@@ -102,6 +104,7 @@ function DomeinenPage() {
             Het raamwerk omvat vier fundamenten en negen domeinen die samen de digitale assistent vormen. Klik op een domein voor de volledige beschrijving, good practices en bronnen.
           </p>
         </div>
+        <SuggestieBlok />
       </div>
 
       <div className="section-header" style={{ display: 'flex', alignItems: 'baseline', gap: 16, margin: '40px 0 4px' }}>
@@ -123,6 +126,47 @@ function DomeinenPage() {
         {RAAM.HOME.assistent_section.description}
       </p>
       <div className="domain-grid">{overige.map(d => renderCard(d, false))}</div>
+    </div>
+  );
+}
+
+/* ============================== MATURITY STEPPER ============================== */
+function MaturityStepper({ phases }) {
+  const activeSet = new Set(phases);
+  const activeIndices = FASES.map((f, i) => activeSet.has(f) ? i : -1).filter(i => i >= 0);
+  const firstActive = activeIndices.length ? activeIndices[0] : -1;
+  const lastActive  = activeIndices.length ? activeIndices[activeIndices.length - 1] : -1;
+
+  return (
+    <div className="maturity-stepper">
+      <span className="maturity-label" aria-hidden="true">Volwassenheid</span>
+      <div className="maturity-track-wrap">
+        <div className="maturity-line maturity-line--base" aria-hidden="true"></div>
+        {firstActive !== -1 && (
+          <div
+            className="maturity-line maturity-line--fill"
+            style={{
+              left:  `${(firstActive * 2 + 1) * 100 / 6}%`,
+              right: `${((2 - lastActive) * 2 + 1) * 100 / 6}%`
+            }}
+            aria-hidden="true"
+          ></div>
+        )}
+        <ol className="maturity-phases" role="list">
+          {FASES.map(fase => {
+            const isActive = activeSet.has(fase);
+            return (
+              <li key={fase} className="maturity-phase"
+                  aria-label={fase + ': ' + (isActive ? 'bereikt' : 'nog niet bereikt')}>
+                <div className={'maturity-dot' + (isActive ? ' maturity-dot--active' : '')} aria-hidden="true"></div>
+                <span className={'maturity-phase-label' + (isActive ? ' maturity-phase-label--active' : '')} aria-hidden="true">
+                  {fase}
+                </span>
+              </li>
+            );
+          })}
+        </ol>
+      </div>
     </div>
   );
 }
@@ -150,10 +194,13 @@ function DomeinDetail({ id }) {
           <strong>Binnenkort beschikbaar</strong> — dit {typeLabel} is nog in review. De inhoud op deze pagina is een eerste opzet en kan nog veranderen.
         </div>
       )}
-      <div className="detail-header">
-        <span className="eyebrow">{isFundament ? 'Fundament' : 'Domein'} {String(d.nr).padStart(2, '0')}</span>
-        <h1>{d.title}</h1>
-        <p className="lede" style={{ fontSize: 19 }}>{d.short}</p>
+      <div className="detail-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
+        <div>
+          <span className="eyebrow">{isFundament ? 'Fundament' : 'Domein'} {String(d.nr).padStart(2, '0')}</span>
+          <h1>{d.title}</h1>
+          <p className="lede" style={{ fontSize: 19 }}>{d.short}</p>
+        </div>
+        <SuggestieBlok />
       </div>
 
       <div className="detail-with-toc">
@@ -196,16 +243,16 @@ function DomeinDetail({ id }) {
             {practices.length === 0 ? (
               <p style={{ color: 'var(--ink-500)' }}>Nog geen good practices in dit domein. Heb je er een? <a href="#">Dien een suggestie in</a>.</p>
             ) : (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+              <div className="practice-maturity-list">
                 {practices.map(p => (
-                  <a key={p.id} className="card card-link practice-card"
+                  <a key={p.id} className="practice-maturity-card"
                      onClick={(e) => { e.preventDefault(); navigate('/practices/' + p.id); }}
                      href={'#/practices/' + p.id}>
-                    <h3 style={{ margin: 0 }}>{p.title}</h3>
-                    <p>{p.summary}</p>
-                    <div className="tag-row">
-                      {p.phases.map(ph => <span key={ph} className={'tag tag-phase-' + ph.toLowerCase()}>{ph}</span>)}
+                    <div>
+                      <h3>{p.title}</h3>
+                      <p>{p.summary}</p>
                     </div>
+                    <MaturityStepper phases={p.phases} />
                   </a>
                 ))}
               </div>
@@ -233,13 +280,6 @@ function DomeinDetail({ id }) {
                 </div>
               : <p style={{ color: 'var(--ink-500)' }}>Nog geen inhoud toegevoegd.</p>}
           </Section>
-        </div>
-      </div>
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: 40 }}>
-        <div className="side-card" style={{ width: 320, textAlign: 'center' }}>
-          <h4>Vragen of aanvullingen?</h4>
-          <p style={{ margin: '0 0 12px', color: 'var(--ink-700)', fontSize: 13 }}>Help het raamwerk verbeteren met jouw praktijkervaring.</p>
-          <button className="btn btn-sm btn-ghost" onClick={() => alert('Suggestie indienen')}><Icon.Suggest/> Suggestie indienen</button>
         </div>
       </div>
     </div>
@@ -277,7 +317,7 @@ function PracticesPage() {
 
   return (
     <div className="container">
-      <div className="section-title-row" style={{ marginBottom: 18 }}>
+      <div className="section-title-row" style={{ marginBottom: 18, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
         <div>
           <span className="eyebrow">Praktijk</span>
           <h1 style={{ marginTop: 6, fontSize: 38 }}>Overzicht Good Practices</h1>
@@ -285,6 +325,7 @@ function PracticesPage() {
             {RAAM.PRACTICES.length} concrete handvatten, methoden en technieken voor de (door)ontwikkeling van digitale assistenten.
           </p>
         </div>
+        <SuggestieBlok />
       </div>
 
       <div className="searchbar" style={{ marginBottom: 24 }}>
@@ -391,10 +432,15 @@ function PracticeDetail({ id }) {
         <a href="#/practices">Good Practices</a><span className="sep">/</span>
         <span>{p.title}</span>
       </div>
-      <div className="detail-header">
-        <span className="eyebrow">Good Practice</span>
-        <h1>{p.title}</h1>
-        <p className="lede" style={{ fontSize: 19 }}>{p.summary}</p>
+      <div className="detail-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
+        <div>
+          <span className="eyebrow">Good Practice</span>
+          <h1>{p.title}</h1>
+          {p.summary.split('\n').filter(s => s.trim()).map((para, i) => (
+            <p key={i} className="lede" style={{ fontSize: 19 }}>{para.trim()}</p>
+          ))}
+        </div>
+        <SuggestieBlok />
       </div>
 
       <div className="detail-grid">
@@ -409,6 +455,7 @@ function PracticeDetail({ id }) {
               return <p key={i}>{b}</p>;
             })}
           </div>
+          {p.image && <img src={'docs/' + p.image} alt="" style={{ width: '100%', margin: '1.5rem 0', borderRadius: 8 }} />}
 
           {p.sources && p.sources.length > 0 && (
             <>
@@ -452,10 +499,13 @@ function OverPage() {
   const sectionIds = o.sections.map((_, i) => 'over-sec-' + i);
   return (
     <div className="container">
-      <div className="detail-header">
-        <span className="eyebrow">{o.eyebrow}</span>
-        <h1>{o.title}</h1>
-        <p className="lede" style={{ fontSize: 19 }}>{o.lede}</p>
+      <div className="detail-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
+        <div>
+          <span className="eyebrow">{o.eyebrow}</span>
+          <h1>{o.title}</h1>
+          <p className="lede" style={{ fontSize: 19 }}>{o.lede}</p>
+        </div>
+        <SuggestieBlok />
       </div>
 
       <div className="detail-with-toc">

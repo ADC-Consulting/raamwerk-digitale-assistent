@@ -86,6 +86,7 @@ function DomainGlyph({ id }) {
     'kennis-capaciteit': <g fill="none" stroke={stroke} strokeWidth={sw}><path d="M4 5h7a3 3 0 0 1 3 3v12"/><path d="M20 5h-3a3 3 0 0 0-3 3v12"/><path d="M4 5v14h7"/><path d="M20 5v14h-3"/></g>,
     'governance': <g fill="none" stroke={stroke} strokeWidth={sw}><path d="M4 20h16M5 20V9M9 20V9M15 20V9M19 20V9M4 9l8-5 8 5"/></g>,
     'infrastructuur-data': <g fill="none" stroke={stroke} strokeWidth={sw}><ellipse cx="12" cy="6" rx="7" ry="2.5"/><path d="M5 6v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6"/><path d="M5 12v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6"/></g>,
+    'evaluatie-assistent': <g fill="none" stroke={stroke} strokeWidth={sw}><circle cx="10" cy="10" r="6"/><path d="m15 15 4 4"/><path d="M7 12l2-3 2 2 2-4"/></g>,
     'monitoring-evaluatie': <g fill="none" stroke={stroke} strokeWidth={sw}><circle cx="12" cy="12" r="9"/><path d="M12 12V5M12 12l5 3"/></g>,
     'inkoop-leveranciers': <g fill="none" stroke={stroke} strokeWidth={sw}><path d="M4 7h16l-1 12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 7z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></g>,
     'duurzaamheid': <g fill="none" stroke={stroke} strokeWidth={sw}><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></g>,
@@ -220,5 +221,16 @@ function Footer() {
   );
 }
 
+/* ===== Suggestie blok ===== */
+function SuggestieBlok() {
+  return (
+    <div className="side-card" style={{ flexShrink: 0, width: 260, textAlign: 'center' }}>
+      <h4>Suggestiebox</h4>
+      <p style={{ margin: '0 0 14px', color: 'var(--ink-700)', fontSize: 13, lineHeight: 1.5 }}>Vragen of aanvullingen? Help het raamwerk verbeteren met jouw praktijkervaring.</p>
+      <a className="btn btn-sm btn-ghost" href="https://forms.office.com/e/6Hn6uJGbn6" target="_blank" rel="noopener noreferrer" style={{ width: '100%', justifyContent: 'center' }}>Suggestie indienen</a>
+    </div>
+  );
+}
+
 /* ===== Helpers exposed ===== */
-Object.assign(window, { Icon, DomainGlyph, Brandbar, Navbar, Footer, useRoute, navigate });
+Object.assign(window, { Icon, DomainGlyph, Brandbar, Navbar, Footer, useRoute, navigate, SuggestieBlok });

@@ -3,12 +3,12 @@ id: data-logbescherming
 title: Data- en logbescherming (privacy-by-design)
 summary: >
   LLM's kunnen gevoelige gegevens lekken via memorisatie, logs, telemetrie of
-  foutieve integraties. Dataminimalisatie, PII-filtering, contractuele
-  borging en gepseudonimiseerde logs zijn de kernmaatregelen — anders worden
-  je eigen logs het volgende doelwit.
-domains: [beveiliging, compliance, ethiek-mensenrechten]
+  foutieve integraties. Dataminimalisatie, PII-filtering, contractuele borging en
+  gepseudonimiseerde logs zijn de kernmaatregelen — anders worden je eigen logs
+  het volgende doelwit.
+domains: [beveiliging]
 phases: [Pilot, Productie]
-levels: []
+levels: [Developer/ Engineer]
 sources:
   - owasp-sensitive-info
   - nist-ai-600-1

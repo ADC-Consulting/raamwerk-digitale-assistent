@@ -6,9 +6,9 @@ summary: >
   burgers direct raken nooit volledig zelfstandig nemen. AVG art. 22 en de
   AI-verordening vragen om expliciet vastgelegde menselijke controle die in de
   praktijk ook standhoudt.
-domains: [ethiek-mensenrechten, governance, compliance]
+domains: [evaluatie-assistent]
 phases: [Pilot, Productie]
-levels: []
+levels: [Projectmanager]
 sources:
   - algoritmekader-menselijke-controle
   - algoritmekader-menselijke-tussenkomst

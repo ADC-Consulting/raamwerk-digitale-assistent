@@ -1,3 +1,4 @@
+/* global SuggestieBlok */
 // Begrippenlijst — lettergroepen gemarkeerd met een inline header.
 
 const gloss2Style = {
@@ -133,10 +134,13 @@ function Glossary2() {
 
   return (
     <div className="container" style={{ fontFamily: 'Arial, sans-serif', color: '#1F2A36', paddingBottom: 56 }}>
-      <div style={{ marginBottom: 18 }}>
-        <span className="eyebrow">Begrippenlijst</span>
-        <h1 style={{ marginTop: 6, fontSize: 38 }}>Begrippenlijst</h1>
-        <p className="lede" style={{ marginTop: 10 }}>De begrippen, afkortingen en kaders die in dit dossier voorkomen — kort gedefinieerd, met verwijzingen naar verwante termen en de oorspronkelijke bron.</p>
+      <div style={{ marginBottom: 18, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
+        <div>
+          <span className="eyebrow">Begrippenlijst</span>
+          <h1 style={{ marginTop: 6, fontSize: 38 }}>Begrippenlijst</h1>
+          <p className="lede" style={{ marginTop: 10 }}>De begrippen, afkortingen en kaders die in dit dossier voorkomen — kort gedefinieerd, met verwijzingen naar verwante termen en de oorspronkelijke bron.</p>
+        </div>
+        <SuggestieBlok />
       </div>
 
       <div style={gloss2Style.toolbar}>

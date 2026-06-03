@@ -4,14 +4,13 @@ Praktisch raamwerk voor overheidsorganisaties die digitale assistenten verantwoo
 
 ---
 
-## Legenda
+## Inhoudsopgave
 
-| Symbool | Betekenis |
-|--------|-----------|
-| `content/` | Hier pas je tekst en data aan |
-| `js/data.js` | Gegenereerd bestand — nooit handmatig aanpassen |
-| `scripts/build.py` | Zet `content/` om naar `js/data.js` |
-| `scripts/watch.py` | Doet hetzelfde automatisch bij elke opgeslagen wijziging |
+- [Lokaal starten](#lokaal-starten)
+- [Content aanpassen](#content-aanpassen)
+- [Bestandsstructuur](#bestandsstructuur)
+- [Afbeeldingen bij practices](#afbeeldingen-bij-practices)
+- [index.html](#indexhtml)
 
 ---
 
@@ -34,15 +33,13 @@ Open `http://localhost:8000` in de browser.
 
 Alle inhoud staat in `content/`. Na een wijziging moet `js/data.js` opnieuw gegenereerd worden.
 
-### Automatisch (aanbevolen)
-
-Start de watch-script in een apart terminalvenster. Zolang dit venster open staat, wordt `data.js` automatisch bijgewerkt elke keer als je een bestand opslaat:
+**Automatisch (aanbevolen)** — start de watcher in een apart terminalvenster:
 
 ```bash
 python3 scripts/watch.py
 ```
 
-### Handmatig
+**Handmatig:**
 
 ```bash
 python3 scripts/build.py
@@ -52,16 +49,16 @@ python3 scripts/build.py
 
 ---
 
-## Bestanden
+## Bestandsstructuur
 
 ### Content (aanpassen)
 
 | Bestand | Inhoud |
 |--------|--------|
-| `content/domains/*.md` | Domeinpagina's (wat, waarom, samenhang) |
+| `content/domains/*.md` | Domeinpagina's |
 | `content/practices/*.md` | Good practices met filters en bronnen |
 | `content/bronnen.yaml` | Alle bronnen en referenties met URL |
-| `content/glossery.yaml` | Begrippenlijst — IDs beginnen met `gloss-`, `seeAlso` verwijst naar IDs uit `bronnen.yaml` |
+| `content/glossery.yaml` | Begrippenlijst (`gloss-` IDs, `seeAlso` verwijst naar `bronnen.yaml`) |
 | `content/home.yaml` | Tekst op de homepage |
 | `content/context_raamwerk.yaml` | Tekst op de 'Over'-pagina |
 | `content/filters.yaml` | Filteropties (fasen, niveaus) |
@@ -78,23 +75,39 @@ python3 scripts/build.py
 js/       ← React-componenten
 css/      ← stijlen
 scripts/  ← build- en watch-script
+docs/     ← statische assets en afbeeldingen voor practices
 ```
+
+---
+
+## Afbeeldingen bij practices
+
+Afbeeldingen die bij een good practice horen staan in `docs/docs_for_GP/`. Je koppelt een afbeelding aan een practice via het `image`-veld in de frontmatter:
+
+```yaml
+---
+id: mijn-practice
+title: Titel van de practice
+image: docs_for_GP/mijn-afbeelding.png
+---
+```
+
+Plaats het bestand in `docs/docs_for_GP/` en verwijs er vanuit de frontmatter naar met het relatieve pad `docs_for_GP/<bestandsnaam>`. De afbeelding wordt dan automatisch getoond op de practicepagina.
+
+De map `docs/` bevat ook de siteassets (`favicon.ico`, `logo.png`) — die hoef je normaal niet aan te passen.
 
 ---
 
 ## index.html
 
-Het ingangspunt van de website. Laadt alle scripts in de juiste volgorde:
+Het ingangspunt van de website. Laadt React 18 en Babel via CDN, dan `js/data.js`, en daarna de JSX-componenten in volgorde:
 
-1. **React 18** en **Babel** — geladen via CDN (geen lokale installatie nodig)
-2. **`js/data.js`** — gegenereerde data (domeinen, practices, bronnen, begrippenlijst)
-3. **JSX-componenten** — in deze volgorde:
-   - `tweaks-panel.jsx` — ontwikkelaarspaneel
-   - `chrome.jsx` — navigatie en pagina-omhulsel
-   - `diagram.jsx` — het interactieve raamwerkdiagram
-   - `pages.jsx` — domein- en practicepagina's
-   - `bronnen.jsx` — bronnenlijst
-   - `glossary.jsx` — begrippenlijst
-   - `app.jsx` — hoofdcomponent die alles samenbrengt
+1. `tweaks-panel.jsx`
+2. `chrome.jsx`
+3. `diagram.jsx`
+4. `pages.jsx`
+5. `bronnen.jsx`
+6. `glossary.jsx`
+7. `app.jsx` ← altijd als laatste
 
-> De volgorde van de scripts is belangrijk: `data.js` moet als eerste geladen zijn, `app.jsx` als laatste. Voeg nieuwe componenten toe vóór `app.jsx`.
+> Voeg nieuwe componenten toe vóór `app.jsx`.

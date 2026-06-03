@@ -1,8 +1,8 @@
 ---
 id: compliance
-nr: 8
+nr: 9
 title: Compliance
-short: Naleving van regels, normen en wetgeving — AVG, AI Act, sectorale kaders — vertaald naar aantoonbaar gedrag van de assistent.
+short: Naleving van regels, normen en wetgeving vertaald naar aantoonbaar gedrag van de assistent.
 status: published
 samenhang_blokken:
   - naam: Kennis en capaciteit
