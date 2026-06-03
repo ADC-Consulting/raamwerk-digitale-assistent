@@ -1,6 +1,6 @@
 ---
 id: ethiek-mensenrechten
-nr: 7
+nr: 8
 title: Ethiek & Mensenrechten
 short: Het bewust afwegen van waarden en grondrechten bij de inzet van een digitale assistent — wat wenselijk is én wat juridisch verplicht is.
 status: published

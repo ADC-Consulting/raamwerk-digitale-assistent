@@ -6,9 +6,9 @@ summary: >
   aantoonbaar compliant moeten zijn. Auditbaarheid zorgt dat gedrag achteraf
   reconstrueerbaar is; monitoring zorgt dat afwijkingen in real-time worden
   gesignaleerd en opgepakt.
-domains: [compliance, beveiliging, governance]
+domains: [compliance, beveiliging]
 phases: [Pilot, Productie]
-levels: []
+levels: [Projectmanager]
 sources:
   - splunk-siem-blog
   - splunk

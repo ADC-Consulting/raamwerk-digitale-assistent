@@ -3,12 +3,12 @@ id: ethische-impact-iama
 title: Breng de ethische en grondrechtelijke impact in kaart (IAMA)
 summary: >
   Een digitale assistent kan grondrechten raken en ethische dilemma's oproepen
-  zonder dat dit bij de lancering zichtbaar is. Formele toetsing (IAMA) en
-  ethisch gesprek (ABE, DEDA) zijn complementair en vroeg in het proces het
-  meest effectief.
-domains: [ethiek-mensenrechten, compliance, governance]
-phases: [PoC, Pilot, Productie]
-levels: []
+  zonder dat dit bij de lancering zichtbaar is. Formele toetsing (IAMA) en ethisch
+  gesprek (ABE, DEDA) zijn complementair en vroeg in het proces het meest
+  effectief.
+domains: [ethiek-mensenrechten, compliance]
+phases: [Pilot, Productie]
+levels: [Compliance officer]
 sources:
   - iama
   - iama-toelichting

@@ -5,7 +5,7 @@ summary: >
   Offline validatie betekent testen met een vaste set testvragen vóórdat echte
   gebruikers de assistent gebruiken. Het is de snelste manier om regressies te
   vangen en de basis voor latere online evaluatie in productie.
-domains: [antwoordkwaliteit]
+domains: [evaluatie-assistent]
 phases: [PoC, Pilot]
 levels: [Projectmanager, Developer/ Engineer]
 sources: []

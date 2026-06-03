@@ -4,11 +4,11 @@ title: Prompt-injection- en RAG-hardening (guardrails)
 summary: >
   Prompt injection is volgens OWASP de belangrijkste risicocategorie voor
   LLM-applicaties. Mitigatie vereist een combinatie van technische laag
-  (guardrails), architectuur (validatie van RAG-passages, beperkte autoriteit)
-  en beleid (human-in-the-loop voor gevoelige acties).
-domains: [beveiliging, antwoordkwaliteit]
+  (guardrails), architectuur (validatie van RAG-passages, beperkte autoriteit) en
+  beleid (human-in-the-loop voor gevoelige acties).
+domains: [beveiliging]
 phases: [Pilot, Productie]
-levels: []
+levels: [Developer/ Engineer, Compliance officer]
 sources:
   - owasp-prompt-injection
   - nvidia-nemo-guardrails

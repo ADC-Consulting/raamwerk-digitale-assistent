@@ -1,13 +1,14 @@
 ---
 id: infrastructuur-keuze
-title: Monitoring, evaluatie en LLMOps - meten is weten, ook voor AI
+title: Bewuste infrastructuurkeuze - soeverein waar het moet, flexibel waar het kan
 summary: >
-  LLMOps werkt wezenlijk anders dan traditioneel applicatiebeheer. Naast latency
-  en beschikbaarheid moeten ook antwoordkwaliteit, hallucinaties, tokengebruik en
-  kosten worden bewaakt.
-domains: [infrastructuur-data]
-phases: [Productie]
-levels: [Developer/ Engineer]
+  De keuze voor AI-infrastructuur raakt aan digitale soevereiniteit, compliance en
+  continuïteit. Het principe 'open waar kan, beschermen waar moet' vertaalt zich
+  naar een risico-gesegmenteerde aanpak: classificeer werklasten op gevoeligheid
+  en kies per segment de passende infrastructuur.
+domains: [infrastructuur-data, digitale-soevereiniteit]
+phases: [Pilot, Productie]
+levels: [Bestuurlijk]
 sources:
   - visie-digitale-autonomie
   - vlam-ai

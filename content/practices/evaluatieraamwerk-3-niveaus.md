@@ -2,13 +2,14 @@
 id: evaluatieraamwerk-3-niveaus
 title: Richt een evaluatieraamwerk in langs drie dimensies
 summary: >
-  Een goede evaluatiestrategie houdt rekening met drie dimensies tegelijk —
+  Een goede evaluatiestrategie houdt rekening met drie dimensies tegelijk:
   organisatie (welke rol heeft welk signaal nodig), projectfase (PoC, pilot,
   productie) en AI-use-case (elke assistent heeft eigen succescriteria). Maak alle
   drie expliciet voordat je metrics kiest.
-domains: [antwoordkwaliteit]
+domains: [evaluatie-assistent]
 phases: [PoC, Pilot, Productie]
 levels: [Bestuur/ beleidsmaker, Projectmanager, Developer/ Engineer, Compliance officer]
+image: evaluatieraamwerk.png
 sources:
   - tno-ai-evaluatie
 ---

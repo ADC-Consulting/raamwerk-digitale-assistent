@@ -3,12 +3,12 @@ id: transparantie-uitlegbaarheid
 title: Transparantie en uitlegbaarheid — inzichtelijk maken hoe de assistent werkt en beslist
 summary: >
   Gebruikers en toezichthouders verwachten openheid over hoe een digitale
-  assistent tot antwoorden komt. Transparantie is niet alleen een ethische
-  keuze maar een wettelijke verplichting onder de EU AI Act, met concrete
-  ontwerp- en documentatie-eisen.
-domains: [compliance, gebruikerservaring, ethiek-mensenrechten]
+  assistent tot antwoorden komt. Transparantie is niet alleen een ethische keuze
+  maar een wettelijke verplichting onder de EU AI Act, met concrete ontwerp- en
+  documentatie-eisen.
+domains: [compliance, gebruikerservaring]
 phases: [Pilot, Productie]
-levels: []
+levels: [Projectmanager, Compliance officer]
 sources:
   - ec-transparante-ai
   - transparantie-format

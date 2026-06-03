@@ -1,22 +1,20 @@
 ---
 id: security-monitoring-incident
-title: Monitoring, detectie en incidentrespons (security)
+title: Richt real-time monitoring en auditbaarheid in
 summary: >
-  AI-risico's zijn dynamisch — nieuwe aanvalstechnieken ontstaan doorlopend.
-  Continu loggen, AI-specifieke detectieregels in een SIEM, en incident-
-  playbooks afgestemd op de Cyberbeveiligingswet zijn essentieel om in
-  productie grip te houden.
-domains: [beveiliging, compliance, governance]
+  Een digitale assistent genereert dagelijks grote hoeveelheden interacties die
+  aantoonbaar compliant moeten zijn. Auditbaarheid zorgt dat gedrag achteraf
+  reconstrueerbaar is; monitoring zorgt dat afwijkingen in real-time worden
+  gesignaleerd en opgepakt.
+domains: [compliance, beveiliging]
 phases: [Pilot, Productie]
-levels: []
+levels: [Projectmanager, Developer/ Engineer]
 sources:
-  - nist-ai-600-1
-  - nis2-ncsc
-  - ncsc-wet-regelgeving
-  - enisa-threat-landscape
-  - microsoft-pyrit
-  - nvidia-garak
-  - deepteam
+  - splunk-siem-blog
+  - splunk
+  - microsoft-sentinel
+  - coralogix-guardrails
+  - credo-ai
 ---
 
 Log prompts, tool-calls en belangrijke tussenstappen gestructureerd, met metadata over gebruiker, model-versie en context: zonder die context kun je incidenten niet reconstrueren. "We weten dat er iets fout ging maar niet wat" is geen incidentrespons — het is een rapportage achteraf.

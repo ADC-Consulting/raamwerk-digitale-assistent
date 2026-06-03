@@ -2,13 +2,13 @@
 id: buy-vs-build
 title: Maak een bewuste buy-vs-build-afweging
 summary: >
-  De keuze om een digitale assistent zelf te bouwen, te kopen of te combineren
-  is geen IT-keuze maar een strategische beslissing die compliance, kennis,
-  soevereiniteit en kosten op de lange termijn bepaalt. Maak de afweging
-  expliciet en op basis van capaciteiten, niet ad hoc per offerte.
-domains: [compliance, kennis-capaciteit, digitale-soevereiniteit, governance]
+  De keuze om een digitale assistent zelf te bouwen, te kopen of te combineren is
+  geen IT-keuze maar een strategische beslissing die compliance, kennis,
+  soevereiniteit en kosten op de lange termijn bepaalt. Maak de afweging expliciet
+  en op basis van capaciteiten, niet ad hoc per offerte.
+domains: [compliance, kennis-capaciteit, digitale-soevereiniteit]
 phases: [PoC, Pilot, Productie]
-levels: []
+levels: [Bestuur/ beleidsmaker, Projectmanager]
 sources:
   - algoritmekader
   - visie-digitale-autonomie

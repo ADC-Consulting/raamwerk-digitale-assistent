@@ -7,7 +7,7 @@ summary: >
   (statisch → dynamisch), executie-autonomie (mens-gestuurd → autonoom). Hoe meer
   naar rechts, hoe zwaarder de nadruk op compliance, consistentie, bias en
   technische robuustheid.
-domains: [antwoordkwaliteit]
+domains: [evaluatie-assistent]
 phases: [PoC, Pilot, Productie]
 levels: [Projectmanager, Bestuur/ beleidsmaker, Developer/ Engineer, Compliance officer]
 sources:

@@ -2,13 +2,13 @@
 id: exit-zeven-lagen
 title: Ontwerp exit op zeven lagen
 summary: >
-  Vendor lock-in zit zelden bij het LLM zelf — dat is doorgaans het makkelijkst
-  te vervangen. De zeven lagen hieronder geven een volledig beeld van waar
-  lock-in en exit-beperkingen daadwerkelijk ontstaan, en sluiten aan op
-  SWIPO, EU Data Act en EU Cloud Code of Conduct.
-domains: [digitale-soevereiniteit, governance, compliance]
+  Vendor lock-in zit zelden bij het LLM zelf — dat is doorgaans het makkelijkst te
+  vervangen. De zeven lagen hieronder geven een volledig beeld van waar lock-in en
+  exit-beperkingen daadwerkelijk ontstaan, en sluiten aan op SWIPO, EU Data Act en
+  EU Cloud Code of Conduct.
+domains: [digitale-soevereiniteit]
 phases: [Pilot, Productie]
-levels: []
+levels: [Projectmanager, Bestuur/ beleidsmaker]
 sources:
   - eu-data-act
   - swipo

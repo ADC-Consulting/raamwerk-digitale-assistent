@@ -3,12 +3,12 @@ id: bias-monitoring
 title: Meet en monitor actief of de assistent handelt naar waarden en rechten
 summary: >
   Een digitale assistent kan discriminerende effecten hebben of grondrechten
-  schenden zonder dat dit zichtbaar is in dagelijks gebruik. Wie het niet
-  actief meet — met een combinatie van gestructureerde tools en een ethische
-  test-set — weet het niet.
-domains: [ethiek-mensenrechten, antwoordkwaliteit, governance]
+  schenden zonder dat dit zichtbaar is in dagelijks gebruik. Wie het niet actief
+  meet — met een combinatie van gestructureerde tools en een ethische test-set —
+  weet het niet.
+domains: [ethiek-mensenrechten]
 phases: [Pilot, Productie]
-levels: []
+levels: [Projectmanager]
 sources:
   - algoritmekader-bias
   - algoritmekader-biastoets

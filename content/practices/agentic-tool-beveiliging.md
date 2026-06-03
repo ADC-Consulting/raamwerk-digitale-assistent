@@ -2,13 +2,13 @@
 id: agentic-tool-beveiliging
 title: Tool- en integratie-beveiliging voor agentische assistenten
 summary: >
-  Zodra een assistent via tools of API's acties kan uitvoeren, ontstaat het
-  risico van excessive agency — acties buiten de bedoelde scope, vaak
-  aangestuurd door verborgen instructies. Sandboxing, allowlists,
-  policy-engines en menselijke tussenkomst zijn essentieel.
-domains: [beveiliging, infrastructuur-data, functionaliteit]
+  Zodra een assistent via tools of API's acties kan uitvoeren, ontstaat het risico
+  van excessive agency — acties buiten de bedoelde scope, vaak aangestuurd door
+  verborgen instructies. Sandboxing, allowlists, policy-engines en menselijke
+  tussenkomst zijn essentieel.
+domains: [beveiliging]
 phases: [Pilot, Productie]
-levels: []
+levels: [Projectmanager, Developer/ Engineer]
 sources:
   - owasp-agentic-top10
   - owasp-excessive-agency

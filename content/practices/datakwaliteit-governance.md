@@ -5,7 +5,7 @@ summary: >
   RAG-systemen falen vaker door slechte data-engineering dan door slechte
   taalmodellen. Het structureel betrekken van domeinexperts is de grootste
   bottleneck en tegelijk de belangrijkste succesfactor.
-domains: [infrastructuur-data]
+domains: [functionaliteit]
 phases: [Pilot, Productie, PoC]
 levels: [Developer/ Engineer, Projectmanager]
 sources:

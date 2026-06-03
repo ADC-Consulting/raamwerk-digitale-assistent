@@ -2,12 +2,12 @@
 id: meet-energie-emissies
 title: Meet energie en emissies per use case
 summary: >
-  Je kunt niet sturen op wat je niet meet. Kies één hoofdmetriek (zoals
-  gram CO₂e per afgeronde case), instrumenteer je pipeline met meettools en
-  rapporteer richting CSRD — zonder cijfers is duurzaamheidsbeleid theorie.
-domains: [duurzaamheid, governance, compliance]
+  Je kunt niet sturen op wat je niet meet. Kies één hoofdmetriek (zoals gram CO₂e
+  per afgeronde case), instrumenteer je pipeline met meettools en rapporteer
+  richting CSRD — zonder cijfers is duurzaamheidsbeleid theorie.
+domains: [duurzaamheid]
 phases: [Pilot, Productie]
-levels: []
+levels: [Developer/ Engineer, Projectmanager]
 sources:
   - sci-for-ai
   - codecarbon

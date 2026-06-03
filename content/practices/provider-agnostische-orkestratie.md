@@ -1,21 +1,21 @@
 ---
 id: provider-agnostische-orkestratie
-title: Bouw een provider-agnostische orkestratielaag
+title: Meet en monitor actief of de assistent handelt naar waarden en rechten
 summary: >
   Koppel de assistent los van één leverancier door een tussenlaag te bouwen die
   meerdere providers achter dezelfde standaard wegzet (de-facto OpenAI Chat
   Completions + MCP voor tools). Abstractielaag eerst, modelkeuze daarna.
-domains: [digitale-soevereiniteit, infrastructuur-data]
-phases: [PoC, Pilot, Productie]
-levels: []
+domains: [evaluatie-assistent, compliance]
+phases: [Pilot, Productie]
+levels: [Projectmanager]
 sources:
-  - litellm
-  - mcp-protocol
-  - surf-ai-hub
-  - govchat-nl
-  - opengem-chatbot
-  - open-webui
-  - vlam-ai
+  - algoritmekader-bias
+  - algoritmekader-biastoets
+  - algoritmekader-monitoring
+  - bias-detection-tool
+  - fairlearn
+  - aequitas
+  - ai-fairness-360
 ---
 
 Zet LiteLLM (of vergelijkbaar) als centrale proxy: providers wisselen dan via configuratie in plaats van via een code-release. Dat verandert "we switchen ooit van leverancier" van een project naar een operationele beslissing.

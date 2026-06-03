@@ -6,9 +6,9 @@ summary: >
   fijnmazige IAM op twee niveaus: de eindgebruiker (wie mag wat vragen) en de
   assistent zelf (welke tools, data en systemen mag hij gebruiken). Least
   privilege en need-to-know zijn de kernprincipes.
-domains: [beveiliging, compliance, governance]
+domains: [beveiliging]
 phases: [Pilot, Productie]
-levels: []
+levels: [Projectmanager]
 sources:
   - bio2
   - nis2-ncsc

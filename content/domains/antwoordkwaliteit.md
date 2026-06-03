@@ -1,6 +1,6 @@
 ---
 id: antwoordkwaliteit
-nr: 1
+nr: 2
 title: Kwaliteit van de output
 short: De mate waarin de output relevant, correct, herleidbaar en passend is bij input, context en gebruiker — gemeten én verbeterd in elke stap van de keten.
 status: published

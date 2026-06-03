@@ -1631,6 +1631,309 @@
     AutoGen) en overwegingen rond menselijk toezicht.
   url: https://stackviv.ai/blog/agentic-ai-multi-agent-systems-guide
 
+- id: rijksbrede-strategie-it-sourcing
+  title: Rijksbrede Strategie IT-sourcing
+  categorie: Beleidsdocument
+  omschrijving: >
+    Rijksbrede strategie van de Rijksoverheid om kwetsbaarheden en risico's in
+    IT-sourcing structureel aan te pakken en meer grip te krijgen op digitale
+    autonomie, continuïteit en leveranciersafhankelijkheden.
+  url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2026/02/85096-BZK-Rijksbrede-Strategie-IT-sourcing-TG.pdf
+
+- id: rijksbrede-handreiking-it-sourcing
+  title: Rijksbrede Handreiking IT-sourcing
+  categorie: Raamwerk
+  omschrijving: >
+    Praktische handreiking voor organisaties binnen de Rijksoverheid met een
+    IT-dienstenmodel, stappenplan voor het IT-sourcingproces en een
+    afwegingskader voor sourcingkeuzes.
+  url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2026/02/85096-BZK-Rijksbrede-Handreiking-IT-sourcing-TG.pdf
+
+- id: build-vs-buy-thoughtworks
+  title: Build vs. Buy – How to Decide Between Building Software In-House or Buying Off the Shelf
+  categorie: Raamwerk
+  omschrijving: >
+    Raamwerk dat organisaties helpt bij de keuze tussen zelf software
+    ontwikkelen of bestaande oplossingen inkopen, met afwegingskaders, risico's
+    en best practices.
+  url: https://www.thoughtworks.com/content/dam/thoughtworks/documents/e-book/tw_ebook_build_vs_buy_2022.pdf
+
+- id: ibm-ai-team-rollen
+  title: "IBM – Building Your AI Team: The Roles Your Enterprise Needs"
+  categorie: Artikel
+  omschrijving: >
+    Artikel over de belangrijkste rollen, competenties en samenwerking binnen
+    AI-teams in grotere organisaties.
+  url: https://www.ibm.com/think/insights/building-your-ai-team-the-roles-your-enterprise-needs
+
+- id: rasa-conversational-ai-teams
+  title: Rasa – Building a Conversational AI Team
+  categorie: Artikel
+  omschrijving: >
+    Online gids over teamstructuren, kernrollen, processen en schaalbaarheid van
+    conversational AI-teams, met praktische best practices voor organisaties.
+  url: https://rasa.com/docs/learn/best-practices/conversational-ai-teams/
+
+- id: informatiehuishouding-rijksoverheid
+  title: Informatiehuishouding Rijksoverheid
+  categorie: Kennisplatform
+  omschrijving: >
+    Website van de Rijksoverheid met kaders, richtlijnen, hulpmiddelen en
+    praktijkvoorbeelden voor de inrichting en verbetering van de
+    informatiehuishouding.
+  url: https://www.informatiehuishouding.nl/
+
+- id: nn-zakelijk-innovatie
+  title: Innovatie werknemers stimuleren – NN Zakelijk
+  categorie: Artikel
+  omschrijving: >
+    Artikel met tips en voorbeelden voor organisaties om innovatie onder
+    werknemers te stimuleren, onder meer via cultuur, leiderschap en concrete
+    initiatieven.
+  url: https://www.nn.nl/Zakelijk/Ondernemen/Innovatie-werknemers-stimuleren.htm
+
+- id: coursera-hackathon
+  title: Wat is een hackathon? – Coursera
+  categorie: Artikel
+  omschrijving: >
+    Toelichtend artikel over wat een hackathon is, hoe het werkt, welke doelen
+    het dient en wat deelnemers en organisaties ermee kunnen bereiken.
+  url: https://www.coursera.org/articles/what-is-a-hackathon
+
+- id: hackathonopmaat
+  title: Hackathon methode – Hackathon op maat
+  categorie: Raamwerk
+  omschrijving: >
+    Website die de hackathonmethode uitlegt, met stappenplan, werkvormen en
+    voorbeelden voor het organiseren van resultaatgerichte hackathons.
+  url: https://hackathonopmaat.nl/hackathon-methode/
+
+- id: it-academie-rijk-ai
+  title: Artificiële intelligentie – IT-Academie Rijk
+  categorie: Kennisplatform
+  omschrijving: >
+    Overzichtspagina met uitleg, leerpaden, trainingen en inspiratiebronnen over
+    artificiële intelligentie voor professionals binnen de (Rijks)overheid.
+  url: https://www.it-academieoverheid.nl/onderwerpen/a/artificiele-intelligentie
+
+- id: digitaleoverheid-ai-geletterdheid
+  title: Wat je moet weten over AI-geletterdheid – Digitale Overheid
+  categorie: Artikel
+  omschrijving: >
+    Artikel over het belang van AI-geletterdheid voor inwoners, professionals en
+    bestuurders, met uitleg, voorbeelden en aanknopingspunten voor beleid en
+    praktijk.
+  url: https://www.digitaleoverheid.nl/achtergrondartikelen/wat-je-moet-weten-over-ai-geletterdheid/
+
+- id: ai-cursus-overheid-dsp
+  title: AI Cursus Overheid – Data Science Partners
+  categorie: Training
+  omschrijving: >
+    Praktijkgerichte AI-cursus speciaal voor overheden, gericht op
+    kennisopbouw, bewustwording en het verantwoord toepassen van AI in de
+    publieke sector.
+  url: https://datasciencepartners.nl/ai-cursus-overheid/
+
+- id: reijn-buddy-systeem
+  title: Hoe implementeer je effectief een buddy-systeem – Reijn HRM
+  categorie: Artikel
+  omschrijving: >
+    Praktisch artikel over het opzetten en effectief implementeren van een
+    buddy-systeem binnen organisaties, met aandacht voor doelen, randvoorwaarden
+    en stappenplan.
+  url: https://www.reijnhrm.nl/kennis/hoe-implementeer-je-effectief-een-buddy-systeem
+
+- id: rasci-generatieve-ai
+  title: RASCI Generatieve AI
+  categorie: Beleidskader
+  omschrijving: >
+    De Overheidsbrede Handreiking Generatieve AI hanteert de RASCI variant,
+    waarin ook Support expliciet wordt benoemd: wie ondersteunt de uitvoering.
+  url: https://open.overheid.nl/documenten/9c273b71-cebb-4e11-b06f-fa20f7b4b90e/file
+
+- id: klokkenluiden-bezwaar-beroep
+  title: Klokkenluiden, bezwaar en beroep inrichten
+  categorie: Verplicht kader
+  omschrijving: >
+    De handreiking generatieve AI vanuit de overheid in hoofdstuk 8, pagina 21,
+    binnen het thema Governance een aantal eisen rondom klokkenluiden, bezwaar
+    en beroep rondom directe en indirecte besluiten die voortkomen uit de inzet
+    van generatieve AI.
+  url: https://open.overheid.nl/documenten/9c273b71-cebb-4e11-b06f-fa20f7b4b90e/file
+
+- id: iso-42001
+  title: ISO/IEC 42001 — AI Management System Standard (2023)
+  categorie: Raamwerk
+  omschrijving: >
+    Internationale norm met eisen aan AI system ownership en accountability;
+    biedt een managementsysteemkader voor verantwoorde ontwikkeling en inzet
+    van AI.
+  url: https://www.iso.org/standard/81230.html
+
+- id: sibony-besluitvorming
+  title: "Olivier Sibony – You're About to Make a Terrible Mistake"
+  categorie: Artikel
+  omschrijving: >
+    Boek over besluitvormingsvalkuilen (groupthink, overconfidence, persuasive
+    storytelling) en hoe je deze systematisch voorkomt door tegenspraak en
+    dialoog te organiseren.
+  url: https://oliviersibony.com/books/youre-about-to-make-a-terrible-mistake/
+
+- id: deeploy
+  title: Deeploy
+  categorie: Tools
+  omschrijving: >
+    Soevereine Nederlandse optie voor AI-governance: registratie, monitoring en
+    compliance dichter op model deployment en operations.
+  url: https://www.deeploy.ml
+
+- id: azure-vm-scale-sets
+  title: Azure Virtual Machine Scale Sets & AKS Cluster Autoscaler
+  categorie: Tools
+  omschrijving: >
+    Azure diensten die automatisch het aantal VM-instances en Kubernetes
+    nodes/pods schalen op basis van gebruik en belasting.
+  url: https://learn.microsoft.com/azure/virtual-machine-scale-sets/overview
+
+- id: prometheus
+  title: Prometheus
+  categorie: Tools
+  omschrijving: >
+    Open source monitoring- en alertingsysteem dat metrische data verzamelt en
+    ontsluit via een krachtige querytaal.
+  url: https://prometheus.io/
+
+- id: grafana
+  title: Grafana
+  categorie: Tools
+  omschrijving: >
+    Open source platform voor het visualiseren en dashboarden van metrische
+    data uit diverse monitoringbronnen.
+  url: https://grafana.com/
+
+- id: google-sre-slo
+  title: Service Level Objectives – Google SRE Book
+  categorie: Documentatie
+  omschrijving: >
+    Hoofdstuk uit het Google SRE-boek over het definiëren, meten en beheren
+    van service level objectives (SLO's).
+  url: https://sre.google/sre-book/service-level-objectives/
+
+- id: sloth-slo
+  title: Sloth
+  categorie: Tools
+  omschrijving: >
+    Open source tool voor het definiëren en genereren van SLO-configuraties
+    voor diverse observability-platformen.
+  url: https://sloth.dev/
+
+- id: model-routing-brenndoerfer
+  title: Model Routing, Selection, A/B Testing & Cascades Strategies – Brenndoerfer
+  categorie: Artikel
+  omschrijving: >
+    Artikel over strategieën voor model routing, modelselectie, A/B testen en
+    cascade-architecturen bij het inzetten van meerdere LLM-modellen in één
+    toepassing.
+  url: https://mbrenndoerfer.com/writing/model-routing-selection-ab-testing-cascades-strategies
+
+- id: aws-multi-llm-routing
+  title: Multi-LLM Routing Strategies for Generative AI Applications on AWS
+  categorie: Documentatie
+  omschrijving: >
+    AWS-blog over strategieën om meerdere LLM's te routeren en combineren in
+    generatieve AI-toepassingen.
+  url: https://aws.amazon.com/blogs/machine-learning/multi-llm-routing-strategies-for-generative-ai-applications-on-aws/
+
+- id: merge-llm-routing
+  title: LLM Routing – What It Is and How It Works (Merge)
+  categorie: Documentatie
+  omschrijving: >
+    Blogartikel van Merge over concepten en strategieën voor LLM-routing in
+    AI-applicaties.
+  url: https://www.merge.dev/blog/llm-routing
+
+- id: langchain
+  title: LangChain
+  categorie: Tools
+  omschrijving: >
+    Framework voor het bouwen van LLM-applicaties, met ondersteuning voor
+    chaining, routing tussen modellen, memory en integraties met externe tools.
+  url: https://www.langchain.com/
+
+- id: semantic-kernel
+  title: Microsoft Semantic Kernel
+  categorie: Tools
+  omschrijving: >
+    Open source SDK van Microsoft voor het bouwen van AI-applicaties met
+    LLM's, inclusief plugins, planning, memory en orchestration.
+  url: https://learn.microsoft.com/en-us/semantic-kernel/overview/
+
+- id: ibm-prompt-caching
+  title: What is Prompt Caching? – IBM
+  categorie: Artikel
+  omschrijving: >
+    Artikel dat uitlegt wat prompt caching is, hoe het werkt en hoe
+    organisaties het kunnen inzetten om prestaties en kosten van generatieve
+    AI-toepassingen te optimaliseren.
+  url: https://www.ibm.com/think/topics/prompt-caching
+
+- id: aws-llm-caching
+  title: Optimize LLM Response Costs and Latency with Effective Caching (AWS)
+  categorie: Blog
+  omschrijving: >
+    Technische blog over strategieën en patterns om met caching de kosten en
+    latency van LLM-toepassingen op AWS te optimaliseren.
+  url: https://aws.amazon.com/blogs/database/optimize-llm-response-costs-and-latency-with-effective-caching/
+
+- id: databricks-semantic-caching
+  title: Building a Cost-Optimized Chatbot with Semantic Caching (Databricks)
+  categorie: Blog
+  omschrijving: >
+    Blogartikel met een architectuur en stappenplan voor het inzetten van
+    semantische caching om LLM-chatbots goedkoper en sneller te maken.
+  url: https://www.databricks.com/blog/building-cost-optimized-chatbot-semantic-caching
+
+- id: redis-distributed-caching
+  title: Distributed Caching – Redis
+  categorie: Artikel
+  omschrijving: >
+    Uitlegartikel over wat distributed caching is, hoe het werkt en welke
+    voordelen het biedt voor schaalbare, performante applicaties.
+  url: https://redis.io/glossary/distributed-caching/
+
+- id: datadog-llm-evaluation
+  title: LLM Evaluation Framework & Best Practices – Datadog
+  categorie: Artikel
+  omschrijving: >
+    Artikel met best practices en een raamwerk voor het opzetten van
+    LLM-evaluatie, monitoring en metriek in productieomgevingen.
+  url: https://www.datadoghq.com/blog/llm-evaluation-framework-best-practices/
+
+- id: ibm-rlhf
+  title: Reinforcement Learning from Human Feedback (RLHF) – IBM
+  categorie: Documentatie
+  omschrijving: >
+    IBM-artikel dat het concept, de werking en toepassingen van Reinforcement
+    Learning from Human Feedback (RLHF) bij het trainen van AI-modellen
+    uitlegt.
+  url: https://www.ibm.com/think/topics/rlhf
+
+- id: azure-application-insights
+  title: Azure Application Insights
+  categorie: Tools
+  omschrijving: >
+    Azure-dienst voor het monitoren van applicatieprestaties, beschikbaarheid
+    en gebruik, inclusief telemetry, logging en dashboards.
+  url: https://learn.microsoft.com/nl-nl/azure/azure-monitor/app/app-insights-overview
+
+- id: matomo
+  title: Matomo
+  categorie: Tools
+  omschrijving: >
+    Open source webanalyseplatform voor het meten van bezoekersgedrag,
+    conversies en gebruik, als alternatief voor commerciële analyticsdiensten.
+  url: https://matomo.org/
+
 - id: llm-council
   title: Karpathy llm-council
   categorie: Tools

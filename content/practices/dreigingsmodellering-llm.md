@@ -2,13 +2,13 @@
 id: dreigingsmodellering-llm
 title: Breng LLM-specifieke dreigingen in kaart
 summary: >
-  Traditionele webapplicatie-threat-modelling (STRIDE) dekt onvoldoende de
-  nieuwe aanvalsvectoren van LLM-gebaseerde assistenten. Gebruik OWASP LLM Top
-  10, OWASP Agentic Top 10 en MITRE ATLAS om scenario's systematisch te
-  identificeren en het ontwerp daarop af te stemmen.
-domains: [beveiliging, infrastructuur-data, governance]
-phases: [PoC, Pilot, Productie]
-levels: []
+  Traditionele webapplicatie-threat-modelling (STRIDE) dekt onvoldoende de nieuwe
+  aanvalsvectoren van LLM-gebaseerde assistenten. Gebruik OWASP LLM Top 10, OWASP
+  Agentic Top 10 en MITRE ATLAS om scenario's systematisch te identificeren en het
+  ontwerp daarop af te stemmen.
+domains: [beveiliging]
+phases: [Pilot, Productie, PoC]
+levels: [Projectmanager, Developer/ Engineer]
 sources:
   - owasp-llm-top10
   - owasp-agentic-top10

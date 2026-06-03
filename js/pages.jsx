@@ -409,6 +409,7 @@ function PracticeDetail({ id }) {
               return <p key={i}>{b}</p>;
             })}
           </div>
+          {p.image && <img src={'docs/' + p.image} alt="" style={{ width: '100%', margin: '1.5rem 0', borderRadius: 8 }} />}
 
           {p.sources && p.sources.length > 0 && (
             <>

@@ -1,8 +1,8 @@
 ---
-id: gebruikerservaring
-nr: 3
-title: Gebruikservaring en toegankelijkheid
-short: Hoe burger en medewerker de assistent ervaren in de praktijk.
+id: evaluatie-assistent
+nr: 1
+title: Evaluatie digitale assistent
+short: xxx
 status: coming-soon
 ---
 

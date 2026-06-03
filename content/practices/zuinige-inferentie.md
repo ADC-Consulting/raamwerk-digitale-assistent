@@ -3,12 +3,12 @@ id: zuinige-inferentie
 title: Maak inferentie zuinig per aanroep
 summary: >
   Bij een volwassen assistent ligt 80–90% van de footprint in inferentie. Kleine
-  ingrepen in promptontwerp, RAG-configuratie en caching leveren dan het
-  grootste effect — mits gemeten tegen een kwaliteitsbenchmark, want
-  overoptimalisatie kan nauwkeurigheid kosten.
-domains: [duurzaamheid, technische-prestaties, infrastructuur-data, gebruikerservaring]
+  ingrepen in promptontwerp, RAG-configuratie en caching leveren dan het grootste
+  effect — mits gemeten tegen een kwaliteitsbenchmark, want overoptimalisatie kan
+  nauwkeurigheid kosten.
+domains: [duurzaamheid]
 phases: [Pilot, Productie]
-levels: []
+levels: [Projectmanager]
 sources:
   - arxiv-rag-energy
   - arxiv-babbling-suppression

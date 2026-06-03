@@ -6,9 +6,9 @@ summary: >
   infrastructuur waar zij bestuurlijke en juridische grip op heeft. Documenteer
   jurisdictie van leverancier én sub-processors, niet alleen server-locatie, en
   borg operationele soevereiniteit contractueel.
-domains: [digitale-soevereiniteit, infrastructuur-data, compliance, governance]
+domains: [digitale-soevereiniteit]
 phases: [Pilot, Productie]
-levels: []
+levels: [Bestuur/ beleidsmaker]
 sources:
   - bbn2-gemeenten
   - surf-snellius

@@ -1,6 +1,6 @@
 ---
 id: duurzaamheid
-nr: 5
+nr: 6
 title: Duurzaamheid
 short: De milieu-impact van een digitale assistent over de hele levenscyclus — energie, CO₂, water, hardware — en hoe je die actief stuurt.
 status: published

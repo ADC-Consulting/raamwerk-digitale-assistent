@@ -57,6 +57,7 @@ def render_practices(practices):
         lines.append(f'    domains: {js_value(p["domains"])}, phases: {js_value(p["phases"])}, levels: {js_value(p["levels"])},')
         lines.append(f'    body: {js_value(p["body"])},')
         lines.append(f'    sources: {js_value(p["sources"])},')
+        lines.append(f'    image: {js_value(p.get("image", ""))},')
         lines.append('  },')
     lines.append('];')
     return '\n'.join(lines)
