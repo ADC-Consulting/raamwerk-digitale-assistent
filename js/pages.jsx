@@ -1,4 +1,4 @@
-/* global React, navigate, FrameworkDiagram, DomainGlyph, Icon, BronnenLijst */
+/* global React, navigate, FrameworkDiagram, DomainGlyph, Icon, BronnenLijst, SuggestieBlok */
 const { useState: useS, useMemo: useM } = React;
 
 const RAAM = window.RAAMWERK;
@@ -94,7 +94,7 @@ function DomeinenPage() {
   };
   return (
     <div className="container">
-      <div className="section-title-row" style={{ marginBottom: 18 }}>
+      <div className="section-title-row" style={{ marginBottom: 18, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
         <div>
           <span className="eyebrow">Overzicht</span>
           <h1 style={{ marginTop: 6, fontSize: 38 }}>Domeinen van het raamwerk</h1>
@@ -102,6 +102,7 @@ function DomeinenPage() {
             Het raamwerk omvat vier fundamenten en negen domeinen die samen de digitale assistent vormen. Klik op een domein voor de volledige beschrijving, good practices en bronnen.
           </p>
         </div>
+        <SuggestieBlok />
       </div>
 
       <div className="section-header" style={{ display: 'flex', alignItems: 'baseline', gap: 16, margin: '40px 0 4px' }}>
@@ -150,10 +151,13 @@ function DomeinDetail({ id }) {
           <strong>Binnenkort beschikbaar</strong> — dit {typeLabel} is nog in review. De inhoud op deze pagina is een eerste opzet en kan nog veranderen.
         </div>
       )}
-      <div className="detail-header">
-        <span className="eyebrow">{isFundament ? 'Fundament' : 'Domein'} {String(d.nr).padStart(2, '0')}</span>
-        <h1>{d.title}</h1>
-        <p className="lede" style={{ fontSize: 19 }}>{d.short}</p>
+      <div className="detail-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
+        <div>
+          <span className="eyebrow">{isFundament ? 'Fundament' : 'Domein'} {String(d.nr).padStart(2, '0')}</span>
+          <h1>{d.title}</h1>
+          <p className="lede" style={{ fontSize: 19 }}>{d.short}</p>
+        </div>
+        <SuggestieBlok />
       </div>
 
       <div className="detail-with-toc">
@@ -235,13 +239,6 @@ function DomeinDetail({ id }) {
           </Section>
         </div>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: 40 }}>
-        <div className="side-card" style={{ width: 320, textAlign: 'center' }}>
-          <h4>Vragen of aanvullingen?</h4>
-          <p style={{ margin: '0 0 12px', color: 'var(--ink-700)', fontSize: 13 }}>Help het raamwerk verbeteren met jouw praktijkervaring.</p>
-          <button className="btn btn-sm btn-ghost" onClick={() => alert('Suggestie indienen')}><Icon.Suggest/> Suggestie indienen</button>
-        </div>
-      </div>
     </div>
   );
 }
@@ -277,7 +274,7 @@ function PracticesPage() {
 
   return (
     <div className="container">
-      <div className="section-title-row" style={{ marginBottom: 18 }}>
+      <div className="section-title-row" style={{ marginBottom: 18, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
         <div>
           <span className="eyebrow">Praktijk</span>
           <h1 style={{ marginTop: 6, fontSize: 38 }}>Overzicht Good Practices</h1>
@@ -285,6 +282,7 @@ function PracticesPage() {
             {RAAM.PRACTICES.length} concrete handvatten, methoden en technieken voor de (door)ontwikkeling van digitale assistenten.
           </p>
         </div>
+        <SuggestieBlok />
       </div>
 
       <div className="searchbar" style={{ marginBottom: 24 }}>
@@ -391,10 +389,13 @@ function PracticeDetail({ id }) {
         <a href="#/practices">Good Practices</a><span className="sep">/</span>
         <span>{p.title}</span>
       </div>
-      <div className="detail-header">
-        <span className="eyebrow">Good Practice</span>
-        <h1>{p.title}</h1>
-        <p className="lede" style={{ fontSize: 19 }}>{p.summary}</p>
+      <div className="detail-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
+        <div>
+          <span className="eyebrow">Good Practice</span>
+          <h1>{p.title}</h1>
+          <p className="lede" style={{ fontSize: 19 }}>{p.summary}</p>
+        </div>
+        <SuggestieBlok />
       </div>
 
       <div className="detail-grid">
@@ -453,10 +454,13 @@ function OverPage() {
   const sectionIds = o.sections.map((_, i) => 'over-sec-' + i);
   return (
     <div className="container">
-      <div className="detail-header">
-        <span className="eyebrow">{o.eyebrow}</span>
-        <h1>{o.title}</h1>
-        <p className="lede" style={{ fontSize: 19 }}>{o.lede}</p>
+      <div className="detail-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
+        <div>
+          <span className="eyebrow">{o.eyebrow}</span>
+          <h1>{o.title}</h1>
+          <p className="lede" style={{ fontSize: 19 }}>{o.lede}</p>
+        </div>
+        <SuggestieBlok />
       </div>
 
       <div className="detail-with-toc">

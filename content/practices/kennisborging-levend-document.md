@@ -1,6 +1,6 @@
 ---
 id: kennisborging-levend-document
-title: Kennisborging – Levend kennisdocument
+title: Creëer een levend kennisdocument voor kennisborging
 summary: >
   Een organisatie beheert een centraal, doorlopend bijgehouden document waarin
   ervaringen, veelgemaakte fouten, aanpassingen en geleerde lessen worden

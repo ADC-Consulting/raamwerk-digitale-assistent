@@ -6,7 +6,7 @@ summary: >
   beoordelen en weet wanneer doorklikken of escaleren) en richting de admin (zodat
   het beheer-team drift, incidenten en patronen ziet). Disclaimers alleen zijn
   zwakke risicobeheersing — combineer ze met andere maatregelen.
-domains: [evaluatie-assistent, gebruikerservaring]
+domains: [evaluatie-assistent, antwoordkwaliteit, gebruikerservaring]
 phases: [Pilot, Productie]
 levels: [Projectmanager, Developer/ Engineer]
 sources:

@@ -26,6 +26,7 @@ function _annulus(cx, cy, rOut, rIn, startA, endA) {
    so each chip can be a <g> translated to its orbit position. Stroke is white,
    1.4 px, rounded caps. */
 const CHIP_GLYPH = {
+  'evaluatie-assistent':      <g><circle cx="0" cy="0" r="5.5"/><path d="m4 4 3 3"/><path d="M-3 2 l2-3 2 2 2-4"/></g>,
   'antwoordkwaliteit':       <g><path d="M-7 -5h12M-7 0h8M-7 5h5"/><path d="m2 3 2 2 5-5"/></g>,
   'gebruikerservaring':      <g><circle cx="0" cy="-3" r="3"/><path d="M-7 7c1.4-3.2 3.6-4.5 7-4.5s5.6 1.3 7 4.5"/></g>,
   'technische-prestaties':   <g><path d="M-8 6h16"/><path d="m-7 2 4-5 4 3 6-8"/></g>,

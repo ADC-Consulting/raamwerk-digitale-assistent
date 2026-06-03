@@ -2,7 +2,7 @@
 id: functionaliteit
 nr: 5
 title: Functionaliteit
-short: De concrete mogelijkheden van de assistent — van conversatievermogen en foutafhandeling tot integraties en taakuitvoering.
+short: De concrete mogelijkheden van de assistent, van conversatievermogen en foutafhandeling tot integraties en taakuitvoering.
 status: published
 samenhang_blokken:
   - naam: Infrastructuur & Data

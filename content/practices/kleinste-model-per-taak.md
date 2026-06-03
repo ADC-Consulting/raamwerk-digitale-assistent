@@ -6,7 +6,7 @@ summary: >
   algemene modellen voor eenvoudige taken is ecologisch en financieel inefficiënt.
   Begin klein, meet, en schaal alleen op wanneer de kwaliteit aantoonbaar
   tekortschiet.
-domains: [technische-prestaties, antwoordkwaliteit, duurzaamheid]
+domains: [technische-prestaties, duurzaamheid]
 phases: [Pilot, Productie]
 levels: [Developer/ Engineer]
 sources:

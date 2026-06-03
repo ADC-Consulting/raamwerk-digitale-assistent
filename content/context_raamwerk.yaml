@@ -24,21 +24,17 @@ sections:
     body: >
       Het raamwerk digitale assistenten is bedoeld voor iedereen binnen publieke organisaties die betrokken is bij het ontwikkelen, beoordelen of inzetten van digitale assistenten. 
       Dat zijn niet alleen technische teams, maar ook beleidsmakers, managers en bestuurders. 
-      De toolbox is zo opgezet dat iedere gebruiker de voor hem of haar relevante onderdelen snel kan vinden, ongeacht de fase waarin de organisatie of het project zich bevindt. 
+      De toolbox is zo opgezet dat iedere gebruiker snel de voor diegene relevante onderdelen kan vinden, inclusief de fase waarin de organisatie of het project zich bevindt.
 
   - heading: Wat verstaan wij onder een digitale assistent?
     body:
       - >
         Een digitale assistent is een slimme, geautomatiseerde dienst op basis van Gen-AI die via digitale kanalen interactief met gebruikers en/of systemen communiceert.
-        De assistent kan vragen beantwoorden, taken uitvoeren en informatie aanbieden aan mensen binnen (medewerkers) of buiten de organisatie (burgers en ondernemers).
+        Een assistent kan vragen beantwoorden, taken uitvoeren en informatie aanbieden aan mensen binnen (medewerkers) of buiten de organisatie (burgers en ondernemers).
       - >
         Een digitale assistent is meer dan een statische FAQ‑chatbot; het is een (AI‑gedreven) dienst die burgers en professionals contextueel ondersteunt en die op termijn ook echt handelingen kan uitvoeren.
 
-  
-  
-  - heading: Over deze website
-    body: >
-       Een levend document dat samen met overheidsorganisaties wordt onderhouden. Niet als afvinklijst, maar als startpunt voor gesprek en keuzes.
+
 
 sidebar:
   - label: Volgende update

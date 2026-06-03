@@ -245,7 +245,7 @@
 
 - id: deepeval
   title: DeepEval
-  categorie: Tools
+  categorie: Raamwerk
   omschrijving: >
     Framework voor 'unit testen' van chatbots: meet hoe relevant en feitelijk de
     antwoorden zijn.

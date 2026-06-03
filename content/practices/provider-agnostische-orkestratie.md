@@ -1,11 +1,11 @@
 ---
 id: provider-agnostische-orkestratie
-title: Meet en monitor actief of de assistent handelt naar waarden en rechten
+title: Voorkom vendor lock-in - Bouw een provider-agnostische orkestratielaag
 summary: >
   Koppel de assistent los van één leverancier door een tussenlaag te bouwen die
   meerdere providers achter dezelfde standaard wegzet (de-facto OpenAI Chat
   Completions + MCP voor tools). Abstractielaag eerst, modelkeuze daarna.
-domains: [evaluatie-assistent, compliance]
+domains: [infrastructuur-data]
 phases: [Pilot, Productie]
 levels: [Projectmanager]
 sources:

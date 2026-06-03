@@ -1,6 +1,6 @@
 ---
 id: innovatie-leren-door-doen
-title: Innovatie is kracht
+title: Interne capaciteiten bouw je op door te doen
 summary: >
   Medewerkers laten meegroeien met nieuwe technologie en innovatie is essentieel
   voor een toekomstbestendige organisatie. Een 'leren door te doen'-mentaliteit

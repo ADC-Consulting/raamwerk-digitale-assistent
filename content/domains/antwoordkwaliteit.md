@@ -2,7 +2,7 @@
 id: antwoordkwaliteit
 nr: 2
 title: Kwaliteit van de output
-short: De mate waarin de output relevant, correct, herleidbaar en passend is bij input, context en gebruiker — gemeten én verbeterd in elke stap van de keten.
+short: De mate waarin de output relevant, correct, herleidbaar en passend is bij input, context en gebruiker. 
 status: published
 samenhang_blokken:
   - naam: Gebruikerservaring en toegankelijkheid
@@ -27,7 +27,7 @@ sources:
   - handreiking-algoritmeregister
 ---
 
-Kwaliteit van de output gaat over de mate waarin de output van een digitale assistent relevant, correct, herleidbaar en passend is bij de input, de context en de gebruiker. Het gaat over veel meer dan modelkeuze — over het systeem als geheel, inclusief prompts, retrieval, bronnen, guardrails en interface.
+Kwaliteit van de output gaat over de mate waarin de output van een digitale assistent relevant, correct, herleidbaar en passend is bij de input, de context en de gebruiker. Het gaat over veel meer dan modelkeuze, namelijk over het systeem als geheel, inclusief prompts, retrieval, bronnen, guardrails en interface.
 
 Binnen dit domein onderscheiden we twee hoofdvragen:
 
