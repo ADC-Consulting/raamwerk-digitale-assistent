@@ -25,7 +25,7 @@ CONTENT_DIR = os.path.join(REPO_ROOT, 'content')
 DOMAINS_DIR = os.path.join(CONTENT_DIR, 'domains')
 PRACTICES_DIR = os.path.join(CONTENT_DIR, 'practices')
 
-# The raamwerk has 4 fundamenten and 9 domeinen. `nr` is unique within each group.
+# The raamwerk has 4 fundamenten and 10 domeinen. `nr` is unique within each group.
 # Mirrored in js/pages.jsx (FUND_IDS + the hardcoded list on the detail-page check).
 FUNDAMENT_IDS = frozenset({
     'cultuur-adoptie',
@@ -55,25 +55,51 @@ def parse_frontmatter(text, path=None):
     return yaml.safe_load(match.group(1)) or {}, match.group(2).strip()
 
 
+def _bold(text):
+    return re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
+
+
+def _md_table_to_html(para):
+    """Convert a markdown table paragraph to an HTML table, or return None."""
+    lines = [l.strip() for l in para.strip().split('\n') if l.strip()]
+    if not lines or not lines[0].startswith('|'):
+        return None
+    sep_idx = next((i for i, l in enumerate(lines) if re.match(r'^\|[-| :]+\|$', l)), None)
+    if sep_idx is None:
+        return None
+
+    def parse_row(line):
+        return [c.strip() for c in line.strip('|').split('|')]
+
+    html = ['<table class="md-table">']
+    for line in lines[:sep_idx]:
+        html.append('<tr>' + ''.join(f'<th>{_bold(c)}</th>' for c in parse_row(line)) + '</tr>')
+    for line in lines[sep_idx + 1:]:
+        html.append('<tr>' + ''.join(f'<td>{_bold(c)}</td>' for c in parse_row(line)) + '</tr>')
+    html.append('</table>')
+    return ''.join(html)
+
+
 def md_to_html(text):
-    """Minimal markdown → HTML: paragraphs, `- ` bullets, `**bold**`, soft newlines."""
+    """Minimal markdown → HTML: paragraphs, `- ` bullets, `**bold**`, tables, soft newlines."""
     html = []
     for para in text.strip().split('\n\n'):
         para = para.strip()
         if not para:
+            continue
+        table = _md_table_to_html(para)
+        if table:
+            html.append(table)
             continue
         lines = para.split('\n')
         if all(line.startswith('- ') for line in lines if line.strip()):
             items = []
             for line in lines:
                 if line.strip():
-                    item = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', line[2:])
-                    items.append(f'<li>{item}</li>')
+                    items.append(f'<li>{_bold(line[2:])}</li>')
             html.append('<ul>' + ''.join(items) + '</ul>')
         else:
-            para = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', para)
-            para = para.replace('\n', '<br/>')
-            html.append(f'<p>{para}</p>')
+            html.append(f'<p>{_bold(para).replace(chr(10), "<br/>")}</p>')
     return ''.join(html)
 
 
@@ -124,12 +150,22 @@ def load_practice_files():
     """One dict per content/practices/*.md.
 
     Body split on blank lines into a list of paragraph/bullet strings under 'body'.
+    If the body contains '<!-- tips -->', everything before it goes into 'toelichting'
+    and everything after into 'body'. Otherwise 'toelichting' is an empty list.
     Adds '_path' and '_slug'.
     """
     result = []
     for path in sorted(glob.glob(os.path.join(PRACTICES_DIR, '*.md'))):
         fm, body = parse_frontmatter(_read(path), path)
-        fm['body'] = [p.strip() for p in body.split('\n\n') if p.strip()]
+        if '<!-- tips -->' in body:
+            toelichting_raw, tips_raw = body.split('<!-- tips -->', 1)
+            fm['toelichting'] = [p.strip() for p in toelichting_raw.split('\n\n') if p.strip()]
+            fm['toelichting_html'] = md_to_html(toelichting_raw)
+            fm['body'] = [_md_table_to_html(p.strip()) or p.strip() for p in tips_raw.split('\n\n') if p.strip()]
+        else:
+            fm['toelichting'] = []
+            fm['toelichting_html'] = ''
+            fm['body'] = [_md_table_to_html(p.strip()) or p.strip() for p in body.split('\n\n') if p.strip()]
         fm['_path'] = path
         fm['_slug'] = os.path.splitext(os.path.basename(path))[0]
         result.append(fm)

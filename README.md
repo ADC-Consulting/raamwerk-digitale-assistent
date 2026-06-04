@@ -80,24 +80,6 @@ docs/     ← statische assets en afbeeldingen voor practices
 
 ---
 
-## Afbeeldingen bij practices
-
-Afbeeldingen die bij een good practice horen staan in `docs/docs_for_GP/`. Je koppelt een afbeelding aan een practice via het `image`-veld in de frontmatter:
-
-```yaml
----
-id: mijn-practice
-title: Titel van de practice
-image: docs_for_GP/mijn-afbeelding.png
----
-```
-
-Plaats het bestand in `docs/docs_for_GP/` en verwijs er vanuit de frontmatter naar met het relatieve pad `docs_for_GP/<bestandsnaam>`. De afbeelding wordt dan automatisch getoond op de practicepagina.
-
-De map `docs/` bevat ook de siteassets (`favicon.ico`, `logo.png`) — die hoef je normaal niet aan te passen.
-
----
-
 ## index.html
 
 Het ingangspunt van de website. Laadt React 18 en Babel via CDN, dan `js/data.js`, en daarna de JSX-componenten in volgorde:

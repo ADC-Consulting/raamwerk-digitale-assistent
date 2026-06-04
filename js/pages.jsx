@@ -8,6 +8,31 @@ const RAAM = window.RAAMWERK;
 
 const FASES = ["PoC", "Pilot", "Productie"];
 
+function renderInlineMd(text) {
+  const parts = text.split(/\*\*(.*?)\*\*/g);
+  return parts.map((part, i) => i % 2 === 1 ? <strong key={i}>{part}</strong> : part);
+}
+
+function ToelichtingBlock({ items }) {
+  return (
+    <div className="toelichting-block">
+      {items.map((text, i) => {
+        if (text.startsWith('- ') || text.includes('\n- ')) {
+          const lines = text.split('\n').filter(l => l.trim());
+          return (
+            <ul key={i} className="toelichting-list">
+              {lines.map((line, j) => (
+                <li key={j}>{renderInlineMd(line.replace(/^- /, ''))}</li>
+              ))}
+            </ul>
+          );
+        }
+        return <p key={i} className="toelichting-para">{renderInlineMd(text)}</p>;
+      })}
+    </div>
+  );
+}
+
 
 /* ============================== COLLAPSIBLE SECTION ============================== */
 function Section({ title, children, id, defaultOpen = false }) {
@@ -40,7 +65,7 @@ function HomePage() {
           <p className="lede" style={{ fontSize: 16 }}>{h.lede_sub}</p>
           <div className="hero-meta">
             <div className="stat"><span className="num">4</span><span className="lbl">Fundamenten</span></div>
-            <div className="stat"><span className="num">9</span><span className="lbl">Domeinen</span></div>
+            <div className="stat"><span className="num">10</span><span className="lbl">Domeinen</span></div>
             <div className="stat"><span className="num">{RAAM.PRACTICES.length}</span><span className="lbl">Good Practices</span></div>
           </div>
           <div className="hero-cta">
@@ -101,7 +126,7 @@ function DomeinenPage() {
           <span className="eyebrow">Overzicht</span>
           <h1 style={{ marginTop: 6, fontSize: 38 }}>Domeinen van het raamwerk</h1>
           <p className="lede" style={{ marginTop: 10 }}>
-            Het raamwerk omvat vier fundamenten en negen domeinen die samen de digitale assistent vormen. Klik op een domein voor de volledige beschrijving, good practices en bronnen.
+            Het raamwerk omvat vier fundamenten en tien domeinen die samen de digitale assistent vormen. Klik op een domein voor de volledige beschrijving, good practices en bronnen.
           </p>
         </div>
         <SuggestieBlok />
@@ -445,9 +470,16 @@ function PracticeDetail({ id }) {
 
       <div className="detail-grid">
         <div className="detail-body">
+          {p.toelichting_html
+            ? <div className="toelichting-block" dangerouslySetInnerHTML={{ __html: p.toelichting_html }} />
+            : p.toelichting && p.toelichting.length > 0 && <ToelichtingBlock items={p.toelichting} />
+          }
           <h2>Praktische tips</h2>
           <div className="practice-tips">
             {p.body.map((b, i) => {
+              if (b.startsWith('<table')) {
+                return <div key={i} dangerouslySetInnerHTML={{ __html: b }} />;
+              }
               const colon = b.indexOf(': ');
               if (colon > 0) {
                 return <p key={i}><strong>{b.slice(0, colon)}:</strong> {b.slice(colon + 2)}</p>;

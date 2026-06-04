@@ -1,6 +1,6 @@
 ---
 id: governance-rollen-eigenaarschap
-title: Beleg twee nieuwe verantwoordelijkheden in de AI-governance – een domeinverantwoordelijke en een besluit-eigenaar
+title: Beleg twee nieuwe verantwoordelijkheden in de AI-governance, een domeinverantwoordelijke en een besluit-eigenaar
 summary: >
   Bij AI-governance moet het zwaartepunt verschuiven van het beheren van inputs
   (data) naar het verantwoorden van outputs (besluiten). Twee nieuwe rollen vullen
@@ -24,6 +24,6 @@ Dit vraagt om twee nieuwe rollen naast de bestaande functies als data-eigenaar e
 | Tijdshorizon | Doorlopend, structureel | Per beslissing, operationeel |
 | Taken | Monitort gebruik, signaleert problemen in de uitvoering, eerste aanspreekpunt | Interpreteert output, keurt goed, escaleert of overruled |
 
-**Geef de domeinverantwoordelijke toegang tot gebruiksdata van de assistent** – Zorg dat zij inzicht hebben in hoe de assistent wordt ingezet binnen hun domein, welke vragen worden gesteld en waar de uitvoer afwijkt. Zonder data kan een eigenaar geen gefundeerd oordeel vellen over kwaliteit of risico's.
+Geef de domeinverantwoordelijke toegang tot gebruiksdata van de assistent: Zorg dat zij inzicht hebben in hoe de assistent wordt ingezet binnen hun domein, welke vragen worden gesteld en waar de uitvoer afwijkt. Zonder data kan een eigenaar geen gefundeerd oordeel vellen over kwaliteit of risico's.
 
-**Maak besluit-eigenaarschap zichtbaar in het werkproces** – De medewerker die op basis van de assistent een beslissing neemt, moet weten dat hij of zij besluit-eigenaar is. Dit kan zo simpel zijn als een tekst in het systeem die bevestigt: "U bent verantwoordelijk voor dit besluit, de assistent ondersteunt u."
+Maak besluit-eigenaarschap zichtbaar in het werkproces: De medewerker die op basis van de assistent een beslissing neemt, moet weten dat hij of zij besluit-eigenaar is. Dit kan zo simpel zijn als een tekst in het systeem die bevestigt: "U bent verantwoordelijk voor dit besluit, de assistent ondersteunt u."
