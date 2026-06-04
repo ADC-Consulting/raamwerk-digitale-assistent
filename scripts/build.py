@@ -55,6 +55,8 @@ def render_practices(practices):
         lines.append(f'    id: {js_value(p["id"])}, title: {js_value(p["title"])},')
         lines.append(f'    summary: {js_value(p["summary"])},')
         lines.append(f'    domains: {js_value(p["domains"])}, phases: {js_value(p["phases"])}, levels: {js_value(p["levels"])},')
+        lines.append(f'    toelichting: {js_value(p.get("toelichting", []))},')
+        lines.append(f'    toelichting_html: {js_value(p.get("toelichting_html", ""))},')
         lines.append(f'    body: {js_value(p["body"])},')
         lines.append(f'    sources: {js_value(p["sources"])},')
         lines.append(f'    image: {js_value(p.get("image", ""))},')

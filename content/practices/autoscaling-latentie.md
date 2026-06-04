@@ -21,12 +21,14 @@ Met horizontale schaling kan de werkbelasting van de digitale assistent worden v
 
 Via deze manier kan de assistent 24/7 beschikbaar blijven, voldoet hij aan SLA's (bijvoorbeeld 99,9% uptime) en kan hij grootschalige conversational AI-workloads dragen.
 
-**Configureer meervoudige autoscaling-triggers** – Stel autoscaling in op responstijd (bijv. >200 ms) én wachtrijlengte, zodat je vroegtijdig opschaalt.
+<!-- tips -->
 
-**Pas predictive scaling toe** – Gebruik predictive scaling om extra servers vóór bekende piekdrukte te starten en houd een kleine set voorverwarmde inference-instances aan.
+Configureer meervoudige autoscaling-triggers: Stel autoscaling in op responstijd (bijv. >200 ms) én wachtrijlengte, zodat je vroegtijdig opschaalt.
 
-**Richt end-to-end monitoring in** – Gebruik monitoringtools zoals Prometheus, Grafana of het dashboard van je cloudprovider om je systeem te volgen, inclusief latency en foutpercentages per pad.
+Pas predictive scaling toe: Gebruik predictive scaling om extra servers vóór bekende piekdrukte te starten en houd een kleine set voorverwarmde inference-instances aan.
 
-**Gebruik autoscaling tools** – Handige tools om automatisch te schalen zijn bijvoorbeeld KEDA of Azure Autoscale.
+Richt end-to-end monitoring in: Gebruik monitoringtools zoals Prometheus, Grafana of het dashboard van je cloudprovider om je systeem te volgen, inclusief latency en foutpercentages per pad.
 
-**Stel duidelijke latency SLO's per vraagtype vast** – Bepaal voor elke categorie verzoeken een concrete prestatienorm, zoals: "95% van de eenvoudige vragen wordt binnen 0,5 s beantwoord" of "99% van de statusvragen binnen 1 s". Gebruik deze Service Level Objectives (SLO) vervolgens als uitgangspunt voor ontwerp en inrichting van autoscaling, capaciteit en monitoring. Een voorbeeld open-source tool voor het definiëren en genereren van SLO-configuraties is Sloth.
+Gebruik autoscaling tools: Handige tools om automatisch te schalen zijn bijvoorbeeld KEDA of Azure Autoscale.
+
+Stel duidelijke latency SLO's per vraagtype vast: Bepaal voor elke categorie verzoeken een concrete prestatienorm, zoals: "95% van de eenvoudige vragen wordt binnen 0,5 s beantwoord" of "99% van de statusvragen binnen 1 s". Gebruik deze Service Level Objectives (SLO) vervolgens als uitgangspunt voor ontwerp en inrichting van autoscaling, capaciteit en monitoring. Een voorbeeld open-source tool voor het definiëren en genereren van SLO-configuraties is Sloth.

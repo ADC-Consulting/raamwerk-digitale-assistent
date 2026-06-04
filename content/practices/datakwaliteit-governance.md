@@ -15,7 +15,7 @@ sources:
   - berthub-opentk
 ---
 
-Stel een bronwitte-lijst samen van uitsluitend goedgekeurde, gezaghebbende bronnen. Het overheid.nl-team werkt met drie pragmatische bronnen: Samenwerkende Catalogi (incl. UPL), Wegwijzer.overheid.nl en ca. 2.500 Q&A's van Rijksoverheid.nl.
+Stel een bronwitte-lijst samen van uitsluitend goedgekeurde, gezaghebbende bronnen: Het overheid.nl-team werkt met drie pragmatische bronnen: Samenwerkende Catalogi (incl. UPL), Wegwijzer.overheid.nl en ca. 2.500 Q&A's van Rijksoverheid.nl.
 
 Bouw een golden dataset op: een verzameling vragen met verwachte antwoorden als referentie voor evaluatie. Gebruik historische data als je een bestaande tool vervangt. Waar experts ontbreken, kan AI synthetische datasets genereren, mits experts deze reviewen.
 

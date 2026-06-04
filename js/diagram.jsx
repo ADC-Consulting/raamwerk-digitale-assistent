@@ -181,7 +181,7 @@ function FrameworkDiagram({ onSelectDomain, onSelectAll }) {
   return (
     <div className={'diagram-wrap' + (open ? ' is-open' : '')}>
       <svg className="diagram-svg" viewBox={`0 0 ${SIZE} ${SIZE}`} role="img"
-           aria-label="Raamwerk diagram. Klik op de kern om de negen domeinen te onthullen.">
+           aria-label="Raamwerk diagram. Klik op de kern om de tien domeinen te onthullen.">
         <defs>
           <filter id="b1-shadow" x="-30%" y="-30%" width="160%" height="160%">
             <feDropShadow dx="0" dy="6" stdDeviation="10" floodOpacity=".10"/>
@@ -286,7 +286,7 @@ function FrameworkDiagram({ onSelectDomain, onSelectAll }) {
            tabIndex={0}
            role="button"
            aria-expanded={open}
-           aria-label={open ? 'Sluit het overzicht van de negen domeinen' : 'Klik om de negen domeinen te onthullen'}
+           aria-label={open ? 'Sluit het overzicht van de tien domeinen' : 'Klik om de tien domeinen te onthullen'}
            style={{ cursor: 'pointer' }}>
           <circle cx={cx} cy={cy} r="75" fill="url(#b1-center)" filter="url(#b1-shadow)"/>
           <text x={cx} y={cy - 10} textAnchor="middle" dominantBaseline="central"
