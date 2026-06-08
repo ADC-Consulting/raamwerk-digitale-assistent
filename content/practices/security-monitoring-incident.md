@@ -13,8 +13,14 @@ sources:
   - splunk-siem-blog
   - splunk
   - microsoft-sentinel
-  - coralogix-guardrails
-  - credo-ai
+  - nis2-ncsc
+  - enisa-threat-landscape
+  - ncsc-nl-building-trust
+  - microsoft-pyrit
+  - nvidia-garak
+  - deepteam
+  - owasp-llm-top10
+  - mitre-atlas
 ---
 
 Log prompts, tool-calls en belangrijke tussenstappen gestructureerd, met metadata over gebruiker, model-versie en context: zonder die context kun je incidenten niet reconstrueren. "We weten dat er iets fout ging maar niet wat" is geen incidentrespons — het is een rapportage achteraf.

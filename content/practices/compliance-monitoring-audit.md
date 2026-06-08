@@ -1,11 +1,12 @@
 ---
 id: compliance-monitoring-audit
-title: Richt real-time monitoring en auditbaarheid in
+title: Richt auditeerbare logging en compliance-monitoring in
 summary: >
   Een digitale assistent genereert dagelijks grote hoeveelheden interacties die
-  aantoonbaar compliant moeten zijn. Auditbaarheid zorgt dat gedrag achteraf
-  reconstrueerbaar is; monitoring zorgt dat afwijkingen in real-time worden
-  gesignaleerd en opgepakt.
+  aantoonbaar compliant moeten zijn. Centrale, onveranderbare logging maakt gedrag
+  achteraf reconstrueerbaar; real-time monitoring signaleert niet-compliant output;
+  en een helder retentiebeleid met periodieke audits toont toezichthouders dat de
+  organisatie in control is.
 domains: [compliance, beveiliging]
 phases: [Pilot, Productie]
 levels: [Projectmanager]
