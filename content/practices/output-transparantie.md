@@ -1,13 +1,13 @@
 ---
 id: output-transparantie
-title: Maak de kwaliteit van de output transparant voor gebruiker én beheer
+title: Maak de kwaliteit van de output transparant voor gebruiker en beheer
 summary: >
   Transparantie over de kwaliteit van de output heeft twee doelgroepen: de gebruiker,
   die met bronvermelding, onzekerheidssignalen en een escalatieoptie zelf een antwoord
   kan beoordelen, en het beheerteam, dat via dashboards en traceerbare logging drift,
   incidenten en kwaliteitspatronen ziet. Disclaimers alleen zijn zwakke
-  risicobeheersing — combineer ze met technische maatregelen zoals hallucinatiedetectie
-  en escalatie bij lage confidence. Deze praktijk gaat over hóe goed de antwoorden zijn,
+  risicobeheersing. Combineer ze met technische maatregelen zoals hallucinatiedetectie
+  en escalatie bij lage confidence. Deze praktijk gaat over hoe goed de antwoorden zijn,
   niet over de wettelijke uitleg van hoe het systeem werkt.
 domains: [evaluatie-assistent, antwoordkwaliteit, gebruikerservaring]
 phases: [Pilot, Productie]
@@ -18,15 +18,15 @@ sources:
   - langfuse
   - gov-uk-chat
 ---
-Toon bronvermeldingen bij elk feitelijk antwoord: koppel passages in het antwoord aan de oorspronkelijke bron, zodat verificatie mogelijk is. Bronvermelding zonder klikbare links voegt weinig waarde toe — maak het verifiëren laagdrempelig.
+Toon bronvermeldingen bij elk feitelijk antwoord: koppel passages in het antwoord aan de oorspronkelijke bron, zodat verificatie mogelijk is. Bronvermelding zonder klikbare links voegt weinig waarde toe. Maak het verifiëren laagdrempelig.
 
-Communiceer onzekerheid expliciet: een confidence-indicator of formulering als "ik weet het niet zeker, controleer dit bij…" voorkomt vals vertrouwen. Een assistent die altijd zeker klinkt, wordt overschat — wat verkeerde beslissingen door gebruikers veroorzaakt.
+Communiceer onzekerheid expliciet: een confidence-indicator of formulering als "ik weet het niet zeker, controleer dit bij…" voorkomt vals vertrouwen. Een assistent die altijd zeker klinkt, wordt overschat. Gebruikers nemen dan verkeerde beslissingen.
 
-Herken het risico van schijntransparantie: bronverwijzingen verschuiven verantwoordelijkheid naar de burger. Als een burger het antwoord overneemt zonder de bron aan te klikken (zoals bij Google-snippets), is transparantie alleen op papier verleend. Disclaimers zijn zwakke risicomaatregelen — combineer altijd met technische maatregelen (lage confidence → escalatie, hallucinatiedetectie → blokkade).
+Herken het risico van schijntransparantie: bronverwijzingen verschuiven verantwoordelijkheid naar de burger. Als een burger het antwoord overneemt zonder de bron aan te klikken (zoals bij Google-snippets), is transparantie alleen op papier verleend. Disclaimers zijn zwakke risicomaatregelen. Combineer ze altijd met technische maatregelen (lage confidence → escalatie, hallucinatiedetectie → blokkade).
 
 Bouw een admin-dashboard met drempelwaarden per kwaliteitscriterium: stel alarmen in die afgaan bij overschrijding van kritieke drempels (hallucination-rate, refusal-rate, escalation-rate). Een dashboard zonder drempels is een nieuwsfeed, geen besturing.
 
-Log iedere interactie traceerbaar: vraag, opgehaalde bronnen, prompt, antwoord, judge-scores, gebruikersfeedback. Tools zoals MLflow, LangSmith en Langfuse zijn hiervoor geschikt. Zonder traceerbare logs kun je een incident niet reconstrueren — en zonder reconstructie geen verbetering.
+Log iedere interactie traceerbaar: vraag, opgehaalde bronnen, prompt, antwoord, judge-scores, gebruikersfeedback. Tools zoals MLflow, LangSmith en Langfuse zijn hiervoor geschikt. Zonder traceerbare logs kun je een incident niet reconstrueren, en zonder reconstructie geen verbetering.
 
 Plan periodieke ethische en kwaliteitsaudits: agendeer review-momenten waarin domeinexperts steekproefsgewijs antwoorden bekijken. Automatische metingen vangen veel maar niet alles; menselijke ogen vangen patronen die metrics niet kunnen meten.
 
