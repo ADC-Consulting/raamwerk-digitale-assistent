@@ -1,11 +1,14 @@
 ---
 id: output-transparantie
-title: Bied transparantie aan gebruiker én admin over de kwaliteit van de output
+title: Maak de kwaliteit van de output transparant voor gebruiker én beheer
 summary: >
-  Transparantie heeft twee kanten: richting de gebruiker (zodat die antwoorden kan
-  beoordelen en weet wanneer doorklikken of escaleren) en richting de admin (zodat
-  het beheer-team drift, incidenten en patronen ziet). Disclaimers alleen zijn
-  zwakke risicobeheersing — combineer ze met andere maatregelen.
+  Transparantie over de kwaliteit van de output heeft twee doelgroepen: de gebruiker,
+  die met bronvermelding, onzekerheidssignalen en een escalatieoptie zelf een antwoord
+  kan beoordelen, en het beheerteam, dat via dashboards en traceerbare logging drift,
+  incidenten en kwaliteitspatronen ziet. Disclaimers alleen zijn zwakke
+  risicobeheersing — combineer ze met technische maatregelen zoals hallucinatiedetectie
+  en escalatie bij lage confidence. Deze praktijk gaat over hóe goed de antwoorden zijn,
+  niet over de wettelijke uitleg van hoe het systeem werkt.
 domains: [evaluatie-assistent, antwoordkwaliteit, gebruikerservaring]
 phases: [Pilot, Productie]
 levels: [Projectmanager, Developer/ Engineer]
@@ -15,12 +18,9 @@ sources:
   - langfuse
   - gov-uk-chat
 ---
-
 Toon bronvermeldingen bij elk feitelijk antwoord: koppel passages in het antwoord aan de oorspronkelijke bron, zodat verificatie mogelijk is. Bronvermelding zonder klikbare links voegt weinig waarde toe — maak het verifiëren laagdrempelig.
 
 Communiceer onzekerheid expliciet: een confidence-indicator of formulering als "ik weet het niet zeker, controleer dit bij…" voorkomt vals vertrouwen. Een assistent die altijd zeker klinkt, wordt overschat — wat verkeerde beslissingen door gebruikers veroorzaakt.
-
-Bied een handover naar mens aan: bij complexe of onzekere vragen moet de gebruiker laagdrempelig naar een ambtenaar kunnen schakelen. Een handover die diep in een menu verstopt zit, faalt voor wie het meest hulp nodig heeft.
 
 Herken het risico van schijntransparantie: bronverwijzingen verschuiven verantwoordelijkheid naar de burger. Als een burger het antwoord overneemt zonder de bron aan te klikken (zoals bij Google-snippets), is transparantie alleen op papier verleend. Disclaimers zijn zwakke risicomaatregelen — combineer altijd met technische maatregelen (lage confidence → escalatie, hallucinatiedetectie → blokkade).
 
