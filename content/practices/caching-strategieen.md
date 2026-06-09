@@ -15,16 +15,16 @@ sources:
   - redis-distributed-caching
 ---
 
-Er bestaan verschillende caching technieken:
+Er bestaan verschillende cachingtechnieken:
 
 - **Prompt caching:** In plaats van dezelfde invoertokens steeds opnieuw te verwerken, bewaart de service een tijdelijke cache van verwerkte berekeningen om de algehele prestaties te verbeteren.
 - **Request-response caching (exacte match):** Slaat verzoeken en hun resultaten op, zodat wanneer hetzelfde verzoek opnieuw wordt gedaan, het opgeslagen antwoord snel kan worden geleverd zonder het verzoek opnieuw te hoeven verwerken.
-- **Semantische caching (betekenismatch):** Het systeem interpreteert en slaat de semantische betekenis van gebruikersvragen op, waardoor informatie kan worden opgehaald op basis van intentie, en niet alleen op basis van letterlijke overeenkomsten.
+- **Semantische caching (betekenismatch):** Het systeem interpreteert en slaat de semantische betekenis van gebruikersvragen op, waardoor informatie kan worden opgehaald op basis van intentie, niet alleen op basis van letterlijke overeenkomsten.
 - **In-memory caching:** Bewaart context tijdelijk in het geheugen binnen één sessie of voor korte duur, zodat vervolgvragen sneller kunnen worden afgehandeld.
 
 <!-- tips -->
 
-Het gebruik van caching kan de kosten met tientallen procenten verlagen en de responstijd flink verbeteren, vooral bij veel herhaalde of vergelijkbare vragen in productieomgevingen.
+Caching kan de kosten met tientallen procenten verlagen en de responstijd flink verbeteren, vooral bij veel herhaalde of vergelijkbare vragen in productieomgevingen.
 
 Bepaal doel en scope: Leg vast waarom je wilt cachen (kosten, latency, piekbelasting) en welke onderdelen je gaat cachen (LLM-antwoorden, RAG-resultaten, API-calls, sessiecontext).
 

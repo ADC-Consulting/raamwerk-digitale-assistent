@@ -1,6 +1,6 @@
 ---
 id: contextueel-conversatievermogen
-title: Contextueel conversatievermogen — Dialogue State Tracking
+title: Contextueel conversatievermogen – Dialogue State Tracking
 summary: >
   Een goede assistent bewaart de samenhang in een gesprek door de dialoogstatus
   actief bij te houden over meerdere beurten heen. Onderwerp, identifiers, rol en
@@ -25,7 +25,7 @@ Definieer resetregels voor het geheugen: bepaal in je AVG- en bewaartermijnenbel
 
 Bevestig kritieke stappen: laat de assistent bij onomkeerbare acties eerst expliciet samenvatten wat er gaat gebeuren ("Ik ga zaak 1234 sluiten, klopt dat?"). De kosten van een verkeerde aanname op een kritieke actie zijn altijd hoger dan de kosten van één bevestigingsstap.
 
-Onderscheid contextgeheugen mét login (zaakgericht portaal, gekoppeld aan accountID) van contextgeheugen zónder login (anonieme sessie via sessieID of cookie). De technische implementatie verschilt; de UX-verwachting ("je herkent me toch nog?") moet bij beide passen.
+Onderscheid contextgeheugen met login (zaakgericht portaal, gekoppeld aan accountID) van contextgeheugen zonder login (anonieme sessie via sessieID of cookie). De technische implementatie verschilt; de UX-verwachting ("je herkent me toch nog?") moet bij beide passen.
 
 Gebruik standaarddatasets voor ontwerp en evaluatie: referentiedatasets zoals MultiWOZ en Schema-Guided Dialogue zijn ontwikkeld om dialoogsystemen te trainen en evalueren op het bijhouden van dialoogstatus over meerdere domeinen. Ontwerp je eigen DST-evaluatie naar deze benchmarks.
 
