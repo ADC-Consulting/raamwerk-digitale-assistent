@@ -5,7 +5,7 @@ summary: >
   De gekozen modellen hebben rechtstreeks invloed op responstijden, benodigde
   infrastructuur en schaalbaarheid. Gebruik meetbare indicatoren zoals
   nauwkeurigheid, foutpercentage en responstijd om te bepalen of een model
-  technisch én functioneel voldoende geschikt is voor de beoogde toepassing.
+  technisch en functioneel voldoende geschikt is voor de beoogde toepassing.
 domains: [technische-prestaties]
 phases: [Pilot, Productie]
 levels: [Developer/ Engineer]
@@ -14,7 +14,7 @@ sources:
   - datadog-llm-evaluation
 ---
 
-Het is essentieel om ook de modellen te beoordelen die jouw digitale assistent aansturen. De gekozen modellen hebben rechtstreeks invloed op responstijden, benodigde infrastructuur en de schaalbaarheid van de oplossing bij toenemend gebruik. Gebruik daarom meetbare indicatoren, zoals nauwkeurigheid, foutpercentage en responstijd, om te bepalen of een model technisch én functioneel voldoende geschikt is voor de beoogde toepassing.
+Beoordeel ook de modellen die jouw digitale assistent aansturen. De gekozen modellen hebben rechtstreeks invloed op responstijden, benodigde infrastructuur en de schaalbaarheid van de oplossing bij toenemend gebruik. Gebruik daarom meetbare indicatoren, zoals nauwkeurigheid, foutpercentage en responstijd, om te bepalen of een model technisch en functioneel voldoende geschikt is voor de beoogde toepassing.
 
 <!-- tips -->
 

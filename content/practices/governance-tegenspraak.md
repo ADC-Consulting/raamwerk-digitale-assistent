@@ -19,4 +19,4 @@ Besluiten over een digitale assistent zijn vaak strategisch (hoe zien we de rol 
 
 Wijs een devil's advocate aan bij grote besluiten: Geef één persoon expliciet de rol om kritische vragen te stellen en alternatieve scenario's te verkennen. Bijvoorbeeld door te vragen of de assistent überhaupt het juiste middel is om een doel te bereiken. Dit doorbreekt groupthink, omdat tegenspraak een formele rol krijgt in plaats van afhangt van persoonlijke moed.
 
-Stel jezelf zes vragen over het besluitvormingsproces: Is het besluitvormingsproces goed opgezet (heldere fases, voldoende tijd)? Zijn afwijkende meningen uitgenodigd? Zijn experts onafhankelijk om hun mening gevraagd? Zijn alle relevante dimensies besproken? Hebben we voldoende verkend wat onze ambitie écht inhoudt? Hebben we ervaring met dit type besluit?
+Stel jezelf zes vragen over het besluitvormingsproces: Is het besluitvormingsproces goed opgezet (heldere fases, voldoende tijd)? Zijn afwijkende meningen uitgenodigd? Zijn experts onafhankelijk om hun mening gevraagd? Zijn alle relevante dimensies besproken? Hebben we voldoende verkend wat onze ambitie echt inhoudt? Hebben we ervaring met dit type besluit?

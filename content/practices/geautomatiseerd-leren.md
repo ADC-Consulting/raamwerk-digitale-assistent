@@ -16,7 +16,7 @@ sources:
   - label-studio
 ---
 
-Bij geautomatiseerd leren gebruikt de digitale assistent gegevens uit echte gesprekken om modellen en regels systematisch te verbeteren. De assistent verwerkt continu gebruiksdata en kwaliteitsmetingen in een vast verbeterproces, waarin duidelijk is welke signalen worden meegenomen en hoe deze doorwerken in modelupdates. Gevoelige of complexe onderwerpen krijgen daarbij extra aandacht via een human-in-the-loop stap, zodat fouten in kritieke domeinen zoveel mogelijk worden voorkomen. Alle stappen in dit leerproces worden centraal vastgelegd, zodat verbeteringen herleidbaar zijn en voldoen aan de eisen rond governance, audits en AVG.
+Bij geautomatiseerd leren gebruikt de digitale assistent gegevens uit echte gesprekken om modellen en regels systematisch te verbeteren. De assistent verwerkt continu gebruiksdata en kwaliteitsmetingen in een vast verbeterproces. Daarin is duidelijk welke signalen meetellen en hoe ze doorwerken in modelupdates. Gevoelige of complexe onderwerpen krijgen daarbij extra aandacht via een human-in-the-loop-stap, zodat fouten in kritieke domeinen zoveel mogelijk worden voorkomen. Alle stappen in dit leerproces worden centraal vastgelegd, zodat verbeteringen herleidbaar zijn en voldoen aan de eisen rond governance, audits en AVG.
 
 <!-- tips -->
 

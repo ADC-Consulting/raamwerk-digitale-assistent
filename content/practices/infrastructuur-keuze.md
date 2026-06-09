@@ -1,13 +1,13 @@
 ---
 id: infrastructuur-keuze
-title: Bewuste infrastructuur- en hostingkeuze - soeverein waar het moet, flexibel waar het kan
+title: Bewuste infrastructuur- en hostingkeuze – soeverein waar het moet, flexibel waar het kan
 summary: >
-  De keuze voor AI-infrastructuur én hosting raakt aan digitale soevereiniteit,
+  De keuze voor AI-infrastructuur en hosting raakt aan digitale soevereiniteit,
   compliance en continuïteit. Het principe 'open waar kan, beschermen waar moet'
   vertaalt zich naar een risico-gesegmenteerde aanpak: classificeer werklasten op
   gevoeligheid en kies per segment de passende infrastructuur. Documenteer daarbij
-  de jurisdictie van leverancier én sub-processors — niet alleen de server-locatie
-  — en borg operationele soevereiniteit contractueel.
+  de jurisdictie van leverancier en sub-processors (niet alleen de server-locatie)
+  en borg operationele soevereiniteit contractueel.
 domains: [infrastructuur-data, digitale-soevereiniteit]
 phases: [Pilot, Productie]
 levels: [Bestuurlijk]
@@ -23,17 +23,17 @@ sources:
 ---
 
 
-Kies open-source modellen conform 'Open, tenzij…'-beleid: geef de voorkeur aan open-weight modellen waar dat kan. Meerdere Nederlandse bouwteams doen dit al — het overheid.nl-team werkt met Mistral en WetWijzer Bedrijven is volledig open-source gerealiseerd.
+Kies open-source modellen conform 'Open, tenzij…'-beleid: geef de voorkeur aan open-weight modellen waar dat kan. Meerdere Nederlandse bouwteams doen dit al. Het overheid.nl-team werkt met Mistral, en WetWijzer Bedrijven is volledig open-source gerealiseerd.
 
-Classificeer werklasten en data op gevoeligheid en kies per segment de passende infrastructuur: vertrouwelijke werklasten horen soeverein of on-premise (bijvoorbeeld via VLAM.AI), gevoelige data in een Europese soevereine cloud, en openbare informatie kan op publieke cloud met EU-databoundary. Synthetische demo-data op een commerciële API kan prima, maar BBN2+-werklasten en persoonsgegevens horen op soevereine infrastructuur — een classificatie-matrix die aan infrastructuur- en hosting-keuzes is gekoppeld voorkomt sluipende soevereiniteits-erosie.
+Classificeer werklasten en data op gevoeligheid en kies per segment de passende infrastructuur: vertrouwelijke werklasten horen soeverein of on-premise (bijvoorbeeld via VLAM.AI), gevoelige data in een Europese soevereine cloud en openbare informatie kan op publieke cloud met EU-databoundary. Synthetische demo-data op een commerciële API kan prima, maar BBN2+-werklasten en persoonsgegevens horen op soevereine infrastructuur. Een classificatie-matrix die aan infrastructuur- en hosting-keuzes is gekoppeld, voorkomt sluipende soevereiniteits-erosie.
 
-Documenteer de vestigingsplaats van de leverancier én alle sub-processors, niet alleen de server-locatie: de toepasselijke jurisdictie volgt niet de fysieke server maar de controlerende entiteit. Een server in Amsterdam beheerd door een Amerikaanse moederonderneming valt onder Amerikaans recht; selecteer daarom bij commerciële hosting bij voorkeur Nederlandse aanbieders onder Nederlands recht (de Dutch Cloud Community is een vindbare lijst om mee te beginnen).
+Documenteer de vestigingsplaats van de leverancier en alle sub-processors, niet alleen de server-locatie: de toepasselijke jurisdictie volgt niet de fysieke server, maar de controlerende entiteit. Een server in Amsterdam beheerd door een Amerikaanse moederonderneming valt onder Amerikaans recht; selecteer daarom bij commerciële hosting bij voorkeur Nederlandse aanbieders onder Nederlands recht (de Dutch Cloud Community is een vindbare lijst om mee te beginnen).
 
-Neem exit-strategieën op als harde eis bij iedere infrastructuurkeuze: digitale soevereiniteit draait om meer dan waar data staat — het gaat om zeggenschap en reële exit-mogelijkheden, en dat geldt vooral bij niet-open-source componenten.
+Neem exit-strategieën op als harde eis bij iedere infrastructuurkeuze: digitale soevereiniteit draait om meer dan waar data staat. Het gaat om zeggenschap en reële exit-mogelijkheden, en dat geldt vooral bij niet-open-source componenten.
 
-Borg operationele soevereiniteit contractueel: leg in SLA en DPA vast welk personeel toegang heeft tot data en modellen, welke sub-processors in de keten zitten, en welke kill-switch- of opschortingsclausules de leverancier kan inroepen. Documenteer dit per dienst en herzie het jaarlijks — leveranciers herstructureren en sub-processors wisselen.
+Borg operationele soevereiniteit contractueel: leg in SLA en DPA vast welk personeel toegang heeft tot data en modellen, welke sub-processors in de keten zitten en welke kill-switch- of opschortingsclausules de leverancier kan inroepen. Documenteer dit per dienst en herzie het jaarlijks. Leveranciers herstructureren en sub-processors wisselen.
 
-Maak hosting-locatie onderdeel van je inkoopvoorwaarden en aanbesteding: stel concrete eisen over datacenter-locatie en sub-processor-transparantie. Achteraf onderhandel je vanuit een veel zwakkere positie; vóóraf is het standaard.
+Maak hosting-locatie onderdeel van je inkoopvoorwaarden en aanbesteding: stel concrete eisen over datacenter-locatie en sub-processor-transparantie. Achteraf onderhandel je vanuit een veel zwakkere positie; vooraf is het standaard.
 
 Hanteer een bewuste inkoopstrategie voor rekenkracht: sluit aan bij overheidsbrede inkoopkanalen zoals MaaS/1 STIP voor strategische inkoop van GPU-capaciteit.
 

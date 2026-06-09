@@ -1,9 +1,9 @@
 ---
 id: model-deployment
-title: Model hosting en deployment - open, versioneerbaar en routeerbaar
+title: Model hosting en deployment – open, versioneerbaar en routeerbaar
 summary: >
-  Taalmodellen draaien in productie vergt concrete keuzes over inference-engines,
-  modelversies en routering. Open standaarden en versionering zijn essentieel voor
+  Taalmodellen in productie draaien vergt concrete keuzes over inference-engines,
+  modelversies en routering. Open standaarden en versionering zijn onmisbaar voor
   reproduceerbaarheid, auditeerbaarheid en exit-mogelijkheden.
 domains: [infrastructuur-data, digitale-soevereiniteit]
 phases: [Pilot, Productie]
