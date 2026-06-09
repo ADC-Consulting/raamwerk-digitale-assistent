@@ -2,7 +2,7 @@
 id: innovatie-leren-door-doen
 title: Interne capaciteiten bouw je op door te doen
 summary: >
-  Medewerkers laten meegroeien met nieuwe technologie en innovatie is essentieel
+  Medewerkers laten meegroeien met nieuwe technologie en innovatie is nodig
   voor een toekomstbestendige organisatie. Een 'leren door te doen'-mentaliteit
   verbindt leren en praktijk via sandboxes, hackathons en praktijkgerichte
   trainingen.
@@ -16,7 +16,7 @@ sources:
   - onegov-hackathon
 ---
 
-Medewerkers laten meegroeien met nieuwe technologie en innovatie is essentieel. Zo kunnen zij beter inspelen op veranderingen, hun werk efficiënter en met hogere kwaliteit uitvoeren én zich blijvend ontwikkelen in hun rol.
+Medewerkers moeten kunnen meegroeien met nieuwe technologie en innovatie. Zo kunnen zij beter inspelen op veranderingen, hun werk efficiënter en met hogere kwaliteit uitvoeren en zich blijvend ontwikkelen in hun rol.
 
 Een 'leren door te doen'-mentaliteit speelt daarbij een belangrijke rol. Die stimuleer je door leren en praktijk zoveel mogelijk met elkaar te verbinden. Dat kun je onder andere doen door veilige experimenteeromgevingen te creëren, medewerkers eenvoudig toegang te geven tot nieuwe tools en software, ruimte te maken voor intensieve samenwerksessies en gerichte leer- en ontwikkelactiviteiten aan te bieden. Op die manier wordt leren een vanzelfsprekend onderdeel van het dagelijkse werk.
 

@@ -1,6 +1,6 @@
 ---
 id: rag-pijplijn
-title: RAG-pijplijnarchitectuur - betrouwbaar ophalen en dan verifieerbaar antwoorden
+title: RAG-pijplijnarchitectuur – betrouwbaar ophalen en dan verifieerbaar antwoorden
 summary: >
   Retrieval-Augmented Generation (RAG) is de meest gebruikte architectuur voor
   digitale assistenten die antwoorden moeten baseren op actuele, betrouwbare

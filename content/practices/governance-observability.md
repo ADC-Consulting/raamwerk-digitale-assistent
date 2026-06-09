@@ -21,4 +21,4 @@ Kies bewust voor een AI-governance tool: Voor organisaties met meerdere assisten
 
 Integreer governance-logs met bestaande SIEM en SOAR: Zorg dat alle relevante logs uit het AI-platform worden geïntegreerd in bestaande security monitoring. Hierdoor wordt AI-specifieke telemetrie onderdeel van het bredere security- en complianceproces.
 
-Stel drempelwaarden vast en automatiseer alarmen: Bepaal vooraf wanneer een metric over een drempel gaat (bijvoorbeeld score drift boven X procent, of escalatierate boven Y procent) en zorg dat de juiste persoon automatisch wordt geïnformeerd. Zo blijft governance proactief in plaats van reactief.
+Stel drempelwaarden vast en automatiseer alarmen: Bepaal vooraf wanneer een metric over een drempel gaat (bijvoorbeeld score drift boven X procent of escalatierate boven Y procent) en zorg dat de juiste persoon automatisch wordt geïnformeerd. Zo blijft governance proactief in plaats van reactief.

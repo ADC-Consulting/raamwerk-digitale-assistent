@@ -31,4 +31,4 @@ Bouw een centrale router service: Maak een kleine service (bijv. in Python/TypeS
 
 Configureer model- en service-endpoints: Leg per route in configuratie (YAML/JSON/env vars) vast welk endpoint, model, time-out, tokenlimiet en beleid worden gebruikt, zodat je later makkelijk kunt wisselen of uitbreiden.
 
-Koppel logging, metrics en SLO's: Stuur vanuit de router alle logs en metrics (route, model, latency, fouten) naar je observability-platform, bijvoorbeeld Prometheus als metrics-bron met Grafana voor dashboards en alerting, en leg je SLO's declaratief vast met een tool als Sloth, zodat je routingstrategie meetbaar en bijstuurbaar is.
+Koppel logging, metrics en SLO's: Stuur vanuit de router alle logs en metrics (route, model, latency, fouten) naar je observability-platform, bijvoorbeeld Prometheus als metrics-bron met Grafana voor dashboards en alerting. Leg je SLO's declaratief vast met een tool als Sloth, zodat je routingstrategie meetbaar en bijstuurbaar is.
