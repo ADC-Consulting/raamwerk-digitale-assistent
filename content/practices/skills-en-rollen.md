@@ -26,7 +26,7 @@ Definieer een kernteam per volwassenheidsfase en complexiteit: Voor een eenvoudi
 
 Maak expliciet wat je koopt en wat je zelf doet: Bij een buy-strategie kun je ontwikkeling en hosting uitbesteden, maar borg intern altijd regie, architectuur- en datakennis, en een product owner die het inhoudelijke gesprek met de leverancier kan voeren.
 
-Borg een interne product owner als brug tussen developers, eindgebruikers en management: laat je een assistent ontwikkelen, dan is dit de sleutelrol. De product owner moet kunnen vertalen tussen de technische taal van developers, de werkpraktijk en behoeften van eindgebruikers (zowel werkzoekenden als werkcoaches) en de strategische, sturende taal van management. Alleen met dat drietalige profiel stuur je de leverancier inhoudelijk aan en krijg je wat je nodig hebt, in plaats van een speelbal van het ontwikkelbureau te worden. Eén persoon die alleen de techniek óf alleen het management begrijpt, is niet genoeg.
+Borg een interne product owner als brug tussen developers, eindgebruikers en management: laat je een assistent ontwikkelen, dan is dit de sleutelrol. De product owner moet kunnen vertalen tussen de technische taal van developers, de werkpraktijk en behoeften van eindgebruikers en de strategische, sturende taal van management. 
 
 Organiseer capaciteit voor de hele levenscyclus: Reserveer tijd en middelen niet alleen voor de initiële bouw of implementatie, maar ook voor beheer, monitoring (kwaliteit, bias, veiligheid), doorontwikkeling en opleiding van medewerkers.
 

@@ -22,12 +22,8 @@ Bij geautomatiseerd leren gebruikt de digitale assistent gegevens uit echte gesp
 
 Verzamel directe gebruikersfeedback: Vraag na elk antwoord om eenvoudige feedback (bijvoorbeeld een duimpje omhoog/omlaag) om gerichte stuurinformatie te verzamelen. Reinforcement Learning from Human Feedback (RLHF) kan dienen als kader om deze signalen systematisch te benutten voor modelverbetering.
 
-Bouw een feedbackfunctie in het werkcoach-dashboard: laat werkcoaches een antwoord direct in hun dashboard corrigeren, markeren of becommentariëren, niet alleen een duimpje omhoog of omlaag voor de burger. De terugkoppeling van de professional is een hoogwaardig leersignaal dat de verbetercyclus voedt, en een ingebouwde knop verlaagt de drempel om dat structureel te doen.
-
-Laat het feedbackmechanisme meegroeien met de volwassenheid van de assistent: start in V1 (PoC en pilot) met usertests en informele feedback van werkcoaches, en bouw in V2 (productie) een gestructureerde feedbackfunctie in het dashboard, zodat terugkoppeling onderdeel wordt van het dagelijkse proces in plaats van een losse exercitie.
+Laat het feedbackmechanisme meegroeien met de volwassenheid van de assistent: start in de PoC en pilot fase met usertests en informele feedback van gebruikers, en bouw in productie een gestructureerde feedbackfunctie in het dashboard, zodat terugkoppeling onderdeel wordt van het dagelijkse proces.
 
 Weeg expliciete feedback zwaarder: Geef expliciete feedback meer gewicht dan impliciete signalen (afgebroken chats, opnieuw gestelde vragen). Gebruik hiervoor bijvoorbeeld een analyticsplatform zoals Azure Monitor/Application Insights of het open source Matomo om expliciete en impliciete signalen te combineren.
-
-Selecteer gericht voor menselijke review: Selecteer onzekere of gevoelige gevallen expliciet voor menselijke review, zodat je leert waar de risico's het grootst zijn. Gebruik hiervoor tooling voor review queues, zoals het open source Label Studio, of ontwikkel een eigen review dashboard waarin geselecteerde cases automatisch worden ingeschoten.
 
 Rol modelversies gefaseerd uit: Rol nieuwe modelversies eerst uit naar een klein deel van het verkeer (bijvoorbeeld 5%) en vergelijk de resultaten met de bestaande versie, voordat je de uitrol stapsgewijs vergroot en uiteindelijk volledig overschakelt.

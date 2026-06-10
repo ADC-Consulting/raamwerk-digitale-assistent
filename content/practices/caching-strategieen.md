@@ -4,7 +4,7 @@ title: Caching voor een snellere en goedkopere digitale assistent
 summary: >
   Caching zorgt ervoor dat de digitale assistent eerdere resultaten en gedeelde
   antwoorden slim hergebruikt in plaats van bij elke vraag alles opnieuw door het
-  LLM te laten uitrekenen. Het juist combineren van cachingstrategieën kan kosten verlagen en de responstijd flink verbeteren.
+  LLM te laten uitrekenen. Het juist combineren van cachingstrategieën kan kosten verlagen en de responstijd verbeteren.
 domains: [technische-prestaties]
 phases: [Pilot, Productie]
 levels: [Developer/ Engineer]
@@ -15,7 +15,7 @@ sources:
   - redis-distributed-caching
 ---
 
-Er bestaan verschillende cachingtechnieken:
+Caching kan de kosten met tientallen procenten verlagen en de responstijd flink verbeteren, vooral bij veel herhaalde of vergelijkbare vragen in productieomgevingen. Er bestaan verschillende cachingtechnieken:
 
 - **Prompt caching:** In plaats van dezelfde invoertokens steeds opnieuw te verwerken, bewaart de service een tijdelijke cache van verwerkte berekeningen om de algehele prestaties te verbeteren.
 - **Request-response caching (exacte match):** Slaat verzoeken en hun resultaten op, zodat wanneer hetzelfde verzoek opnieuw wordt gedaan, het opgeslagen antwoord snel kan worden geleverd zonder het verzoek opnieuw te hoeven verwerken.
@@ -24,7 +24,6 @@ Er bestaan verschillende cachingtechnieken:
 
 <!-- tips -->
 
-Caching kan de kosten met tientallen procenten verlagen en de responstijd flink verbeteren, vooral bij veel herhaalde of vergelijkbare vragen in productieomgevingen.
 
 Bepaal doel en scope: Leg vast waarom je wilt cachen (kosten, latency, piekbelasting) en welke onderdelen je gaat cachen (LLM-antwoorden, RAG-resultaten, API-calls, sessiecontext).
 

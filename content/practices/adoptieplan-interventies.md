@@ -3,7 +3,7 @@ id: adoptieplan-interventies
 title: Maak een adoptieplan met gerichte interventies
 summary: >
   Vertaal de persona-analyse naar een concreet adoptieplan voor het gebruik van digitale assistentne: individuele
-  adoptie-interventies gestructureerd via ADKAR, organisatie-niveau interventies
+  adoptie-interventies gestructureerd via ADKAR (Awareness, Desire, Knowledge, Ability, Reinforcement), organisatie-niveau interventies
   rond OR en sociale plannen, en een communicatieplan dat de visie omzet in een
   verhaal vanuit de gebruiker.
 domains: [cultuur-adoptie]
@@ -18,14 +18,12 @@ Gebruik het ADKAR-model voor adoptie op individueel niveau: ADKAR (Awareness, De
 
 Vroege betrokkenheid van de OR: betrek de ondernemingsraad vanaf de ideefase, niet pas bij besluitvorming. Een OR die zelf de keuzes mede ontwerpt, brengt minder weerstand in en kan tegelijk de zorgen vroeg signaleren.
 
-Begin opt-in met een kerngroep en schaal pas op bij bewijs: start de uitrol vrijwillig met een kerngroep van geïnteresseerde voorlopers (zie de persona- en drijfveren-analyse) in plaats van het gebruik meteen te verplichten. Laat zo snel mogelijk concrete voordelen zien, communiceer open over wat goed én fout gaat, en koppel zowel verdere opschaling als een eventuele latere verplichtstelling expliciet aan aantoonbaar goede resultaten. Gebruik daarvoor de leading- en lagging-indicatoren uit de tip "Maak interventies meetbaar". Te vroeg verplichten ondermijnt vertrouwen en adoptie; bewijs eerst de waarde, breid daarna uit.
+Begin opt-in met een kerngroep en schaal op bij bewijs: start de uitrol vrijwillig met een kerngroep van geïnteresseerde voorlopers in plaats van het gebruik meteen te verplichten. Laat zo snel mogelijk concrete voordelen zien, communiceer open over wat goed én fout gaat, en koppel zowel verdere opschaling als een eventuele latere verplichtstelling expliciet aan aantoonbaar goede resultaten. Gebruik daarvoor de leading- en lagging-indicatoren uit de tip "Maak interventies meetbaar". Te vroeg verplichten ondermijnt vertrouwen en adoptie; bewijs eerst de waarde, breid daarna uit.
 
-Transparantie over impact: deel impact-assessments en verwachte effecten op functies actief met medewerkers. Onzekerheid over baan-impact remt adoptie sterker dan technische bezwaren.
+Transparantie over impact: deel impact-assessments en verwachte effecten op functies actief met medewerkers. Onzekerheid over de impact op werk remt adoptie sterker dan technische bezwaren.
 
-Gezamenlijk leren rond AI-geletterdheid: bied AI-geletterdheidstraining ook voor OR-leden (bijvoorbeeld de cursus "Toekomst van de OR met AI" van KCOR), zodat zij volwaardige gesprekspartners zijn over AI-keuzes.
+Gezamenlijk leren rond AI-geletterdheid: bied AI-geletterdheidstraining ook voor OR-leden, zodat zij volwaardige gesprekspartners zijn over AI-keuzes.
 
-Proactieve sociale plannen: regel individuele begeleiding en omscholing voordat functies wijzigen, niet erna. Dat zet de toon dat de organisatie verantwoordelijkheid neemt voor de transitie.
+Communicatieplan vanuit gebruikersperspectief: vertaal de visie en strategie uit het AI-transformatieprogramma naar een veranderverhaal vanuit het perspectief van de gebruiker. Gebruik dat als basis voor alle communicatie. De gemeente Breda formuleerde AI-adoptie, bijvoorbeeld, effectief als een reis (zie de VNG-reisgids voor verantwoorde inzet AI bij gemeenten).
 
-Communicatieplan vanuit gebruikersperspectief: vertaal de visie en strategie uit het AI-transformatieprogramma naar een veranderverhaal vanuit het perspectief van de gebruiker. Gebruik dat als basis voor alle communicatie. De gemeente Breda formuleerde AI-adoptie effectief als een reis (zie de VNG-reisgids voor verantwoorde inzet AI bij gemeenten).
-
-Maak interventies meetbaar: leg per drijfveer een leading indicator en een lagging indicator vast. Denk aan het aantal deelnemers aan een workshop (leading) versus de gebruiksfrequentie zes weken later (lagging). Zonder die meting weet je niet welke interventies werken en blijft het bij goede bedoelingen.
+Maak interventies meetbaar: leg per drijfveer een leading indicator en een lagging indicator vast. Denk aan het aantal deelnemers aan een workshop (leading) versus de gebruiksfrequentie zes weken later (lagging). Zonder die meting weet je niet welke interventies werken.

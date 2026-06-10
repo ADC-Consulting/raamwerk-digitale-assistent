@@ -26,12 +26,12 @@ Laag 3 – RAG-data en chunks: eigen chunking-pijplijn, brondocumenten in S3-com
 
 Laag 4 – Vector store: kies Qdrant (Apache 2.0), Weaviate, PGVector, Milvus of een vergelijkbare open-source storage. Een proprietary vector-format is een onzichtbare lock-in die pas zichtbaar wordt als de re-embedding-rekening binnenkomt.
 
-Laag 5 – Orkestratie: eigen Python- of TypeScript-code met één abstractielaag, geen Copilot Studio of Azure AI Studio-flows voor productiepaden. Flow-builders zijn handig voor prototypen, dodelijk voor exit.
+Laag 5 – Orkestratie: eigen Python- of TypeScript-code met een abstractielaag, geen Copilot Studio of Azure AI Studio-flows voor productiepaden. 
 
 Laag 6 – Fine-tune-artefacten: als je fine-tunet, sla de fine-tune-data en artefacten op los van het model en de provider. Een fine-tune die alleen in vendor-storage bestaat, kun je niet meeverhuizen.
 
 Laag 7 – Observability en evals: stuur OpenTelemetry naar eigen Grafana, Loki of vergelijkbaar in plaats van een vendor-specifieke monitoring-stack. Self-hostable opties zoals Langfuse zijn beschikbaar; observability is anders de eerste laag die je verliest bij switching omdat historische metrieken vendor-eigendom worden.
 
-Verbind de zeven lagen met inkoop en contract: leg per laag concreet vast welke exit-clausules gelden (SWIPO en de EU Cloud Code of Conduct geven referentieformuleringen) en oefen exit-procedures periodiek. Een exit die alleen op papier staat, werkt in de praktijk nooit.
+Verbind de zeven lagen met inkoop en contract: leg per laag concreet vast welke exit-clausules gelden (SWIPO en de EU Cloud Code of Conduct geven referentieformuleringen) en oefen exit-procedures periodiek.
 
 Test exit minstens jaarlijks als drill: simuleer overgang van provider A naar provider B op de zeven lagen tegelijk. De observaties uit zo'n drill (wat duurde te lang, waar liep welke laag vast) zijn de planning-input voor het volgende exit-jaar.

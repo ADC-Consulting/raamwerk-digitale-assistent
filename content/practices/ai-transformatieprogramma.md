@@ -20,7 +20,7 @@ Doe een AI-volwassenheidsonderzoek voordat je de strategie vertaalt naar acties:
 
 Maak een analyse van het type transformatie dat nodig is: bepaal op basis van verandervermogen, veranderfilosofie, scope en energie of je inzet op brede mobilisatie, op selectieve voorlopers of op een hybride aanpak.
 
-Stel een AI-transformatieplan op, geleid door een centraal programmabureau: dat bureau beheert en actualiseert een portfolio van AI-toepassingen, randvoorwaarden-initiatieven en processen op basis van meetbare impact. Het zorgt ook voor organisatiebrede adoptie.
+Stel een AI-transformatieplan op, geleid door een centraal team: dat team beheert en actualiseert een portfolio van AI-toepassingen, randvoorwaarden-initiatieven en processen op basis van meetbare impact. Het zorgt ook voor organisatiebrede adoptie.
 
 Beleg gedeeld eigenaarschap voor de transformatie bij business en IT samen: AI-transformatie is geen IT-project; zonder business-eigenaar landt het niet in werkprocessen en zonder technologie-eigenaar landt het niet in productie.
 

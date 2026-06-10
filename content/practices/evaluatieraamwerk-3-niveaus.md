@@ -13,4 +13,4 @@ sources:
 
 Plan evaluatie in als doorlopend werk, niet als eenmalige actie: Naarmate de assistent groeit van POC → pilot → productie, wordt evalueren steeds meer werk. Veel teams onderschatten dit en plannen er geen tijd of geld voor in. Het gevolg: de evaluatie blijft achter, en je weet op een gegeven moment niet meer of je assistent goed werkt. Reserveer uren in sprints voor evaluatie. Reserveer budget voor evaluatie tooling en wijs eigenaren aan die meten en die de evaluatie uitvoeren.  
 
-Maak één herbruikbare evaluatie-backbone: Bouw één gedeelde set evaluatie-bouwstenen (datasets, judges, dashboards, monitoring) die je hergebruikt voor meerdere AI use cases.  
+Maak één herbruikbare evaluatie-backbone: Bouw een gedeelde set evaluatie-bouwstenen (datasets, judges, dashboards, monitoring) die je hergebruikt voor meerdere AI use cases.  

@@ -4,7 +4,7 @@ title: AI-geletterdheid – AI-basistraining voor alle medewerkers
 summary: >
   Een digitale assistent functioneert alleen effectief als medewerkers begrijpen
   hoe het systeem werkt, welke beperkingen het heeft en wanneer menselijk oordeel
-  noodzakelijk blijft. Een verplichte basistraining aangevuld met cyclische
+  noodzakelijk blijft. Een  basistraining aangevuld met cyclische
   praktijksessies vormt de basis voor verantwoord gebruik.
 domains: [kennis-capaciteit]
 phases: [Productie]
@@ -15,7 +15,7 @@ sources:
   - ai-cursus-overheid-dsp
 ---
 
-Een digitale assistent functioneert alleen effectief als medewerkers goed begrijpen hoe het systeem werkt, welke beperkingen het heeft en wanneer menselijk oordeel noodzakelijk blijft. Een passende aanpak bestaat uit een verplichte basistraining die alle medewerkers AI-geletterd maakt, aangevuld met praktijkgerichte verdiepingssessies waarin zij oefenen met realistische situaties uit hun eigen werk. Samen vormen deze onderdelen de basis voor verantwoord en doelmatig gebruik. De training is geen eenmalige interventie. Het is een cyclisch leerproces dat meebeweegt met systeemupdates, gewijzigde wet- en regelgeving en nieuwe inzichten uit de praktijk.
+Een passende aanpak bestaat uit een basistraining die alle medewerkers AI-geletterd maakt, aangevuld met praktijkgerichte verdiepingssessies waarin zij oefenen met realistische situaties uit hun eigen werk. Samen vormen deze onderdelen de basis voor verantwoord en doelmatig gebruik. De training is een cyclisch leerproces dat meebeweegt met updates, gewijzigde wet- en regelgeving en nieuwe inzichten uit de praktijk.
 
 <!-- tips -->
 
