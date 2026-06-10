@@ -2,13 +2,7 @@
 id: output-transparantie
 title: Maak de kwaliteit van de output transparant voor gebruiker en beheer
 summary: >
-  Transparantie over de kwaliteit van de output heeft twee doelgroepen: de gebruiker,
-  die met bronvermelding, onzekerheidssignalen en een escalatieoptie zelf een antwoord
-  kan beoordelen, en het beheerteam, dat via dashboards en traceerbare logging drift,
-  incidenten en kwaliteitspatronen ziet. Disclaimers alleen zijn zwakke
-  risicobeheersing. Combineer ze met technische maatregelen zoals hallucinatiedetectie
-  en escalatie bij lage confidence. Deze praktijk gaat over hoe goed de antwoorden zijn,
-  niet over de wettelijke uitleg van hoe het systeem werkt.
+  Transparantie heeft twee kanten: richting de gebruiker (zodat die de antwoorden kan beoordelen en weet wanneer hij moet doorklikken naar bronnen of een mens) en richting de admin (zodat het beheer-team kwaliteitsdrift, incidenten en patronen ziet en kan ingrijpen).  
 domains: [evaluatie-assistent, antwoordkwaliteit, gebruikerservaring]
 phases: [Pilot, Productie]
 levels: [Projectmanager, Developer/ Engineer]
@@ -18,18 +12,17 @@ sources:
   - langfuse
   - gov-uk-chat
 ---
-Toon bronvermeldingen bij elk feitelijk antwoord: koppel passages in het antwoord aan de oorspronkelijke bron, zodat verificatie mogelijk is. Bronvermelding zonder klikbare links voegt weinig waarde toe. Maak het verifiëren laagdrempelig.
+Een belangrijk risico om expliciet te benoemen: bronverwijzingen verschuiven verantwoordelijkheid naar de burger. Als een burger het antwoord ziet en de bron niet aanklikt (zoals bij Google), heeft transparantie alleen op papier plaatsgevonden. Disclaimers zijn een zwakke vorm van risicomanagement — combineer ze altijd met andere maatregelen. 
 
-Communiceer onzekerheid expliciet: een confidence-indicator of formulering als "ik weet het niet zeker, controleer dit bij…" voorkomt vals vertrouwen. Een assistent die altijd zeker klinkt, wordt overschat. Gebruikers nemen dan verkeerde beslissingen.
+<!-- tips -->
+Toon bronvermeldingen bij elk feitelijk antwoord: koppel de tekstpassages aan de oorspronkelijke bron, zodat verificatie mogelijk is. 
 
-Herken het risico van schijntransparantie: bronverwijzingen verschuiven verantwoordelijkheid naar de burger. Als een burger het antwoord overneemt zonder de bron aan te klikken (zoals bij Google-snippets), is transparantie alleen op papier verleend. Disclaimers zijn zwakke risicomaatregelen. Combineer ze altijd met technische maatregelen (lage confidence → escalatie, hallucinatiedetectie → blokkade).
+Communiceer onzekerheid expliciet: een confidence-indicator of formulering als "ik weet het niet zeker, controleer dit bij…" voorkomt vals vertrouwen. 
 
-Bouw een admin-dashboard met drempelwaarden per kwaliteitscriterium: stel alarmen in die afgaan bij overschrijding van kritieke drempels (hallucination-rate, refusal-rate, escalation-rate). Een dashboard zonder drempels is een nieuwsfeed, geen besturing.
+Bied een handover naar mens aan: bij complexe of onzekere vragen moet de gebruiker laagdrempelig naar een ambtenaar kunnen schakelen. 
 
-Log iedere interactie traceerbaar: vraag, opgehaalde bronnen, prompt, antwoord, judge-scores, gebruikersfeedback. Tools zoals MLflow, LangSmith en Langfuse zijn hiervoor geschikt. Zonder traceerbare logs kun je een incident niet reconstrueren, en zonder reconstructie geen verbetering.
+Bouw een admin-dashboard met drempelwaarden per kwaliteitscriterium: zodat alarmen afgaan bij overschrijding. 
 
-Plan periodieke ethische en kwaliteitsaudits: agendeer review-momenten waarin domeinexperts steekproefsgewijs antwoorden bekijken. Automatische metingen vangen veel maar niet alles; menselijke ogen vangen patronen die metrics niet kunnen meten.
+Log iedere interactie traceerbaar: vraag, opgehaalde bronnen, prompt, antwoord, judge-scores, gebruikersfeedback. Tools zoals MLflow, LangSmith of Langfuse zijn hiervoor geschikt. 
 
-Leer van overheidsvoorbeelden zoals GOV.UK Chat: combinatie van automated evaluation (factual precision, recall, relevancy, groundedness), handmatige evaluaties (accuracy, completeness, interaction quality) en red-teaming. Werkt met golden datasets met "ideal answers"; bereikte ~90% accuracy met expliciete disclaimers ("GOV.UK Chat can make mistakes") plus bronlinks om eenvoudig na te checken.
-
-Maak het admin-dashboard begrijpelijk voor niet-engineers: drempelwaarden in business-termen ("hoeveel burgers werden geëscaleerd naar een mens?") zijn nuttiger dan in technische metrics. Anders blijft het dashboard een engineer-tool zonder bestuurlijk gebruik.
+Periodieke ethische en kwaliteitsaudits: agendeer review-momenten waarin domeinexperts steekproefsgewijs antwoorden bekijken. 

@@ -24,6 +24,8 @@ Dit vraagt om twee nieuwe rollen naast de bestaande functies als data-eigenaar e
 | Tijdshorizon | Doorlopend, structureel | Per beslissing, operationeel |
 | Taken | Monitort gebruik, signaleert problemen in de uitvoering, eerste aanspreekpunt | Interpreteert output, keurt goed, escaleert of overrulet |
 
+<!-- tips -->
+
 Geef de domeinverantwoordelijke toegang tot gebruiksdata van de assistent: Zorg dat zij inzicht hebben in hoe de assistent wordt ingezet binnen hun domein, welke vragen worden gesteld en waar de uitvoer afwijkt. Zonder data kan een eigenaar geen gefundeerd oordeel vellen over kwaliteit of risico's.
 
 Maak besluit-eigenaarschap zichtbaar in het werkproces: De medewerker die op basis van de assistent een beslissing neemt, moet weten dat hij of zij besluit-eigenaar is. Dit kan zo simpel zijn als een tekst in het systeem die bevestigt: "U bent verantwoordelijk voor dit besluit, de assistent ondersteunt u."

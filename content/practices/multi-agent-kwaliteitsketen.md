@@ -2,10 +2,7 @@
 id: multi-agent-kwaliteitsketen
 title: Verbeter kwaliteit in elke stap van de keten (RAG + multi-agent)
 summary: >
-  Antwoordkwaliteit is het resultaat van keuzes in elke stap van de pijplijn:
-  modelkeuze, input-controle, bronnen, retrieval, generatie en output-controle.
-  Een multi-agent setup met scherp afgebakende verantwoordelijkheden grijpt
-  gericht in op meerdere plekken tegelijk.
+  Antwoordkwaliteit is het resultaat van keuzes in elke stap van de pijplijn van de assistent. De sleutel ligt hierbij in het gronden van antwoorden in echte data uit de organisatie (RAG) en in het verschuiven van een reactieve chatbot naar een agentische opzet waarin meerdere gespecialiseerde agents samenwerken (multi-agent setup). In een multi-agent setup grijp je gericht op meerdere plekken in — bij de modelkeuze(s), input-controle, bronnen, retrieval, generatie en output-controle — om de kwaliteit van de output te verbeteren.  
 domains: [antwoordkwaliteit]
 phases: [Pilot, Productie]
 levels: [Developer/ Engineer]
@@ -14,21 +11,17 @@ sources:
   - helm-stanford
   - nvidia-chunking-strategy
 ---
+Bij RAG: 
 
 Diversifieer en valideer bronnen in RAG: voorkom dat één onbetrouwbare bron de output domineert; weeg op autoriteit en actualiteit. Een RAG-systeem dat één blogpost als gezaghebbend behandelt levert hallucinaties met bronvermelding op: formeel correct, inhoudelijk fout.
 
 Verbeter de kwaliteit van de opgehaalde data via chunking-strategie en relevantiecheck: een chunk is een stukje tekst waarin een groter document is opgeknipt. De keuze hoe te chunken (per pagina, per paragraaf, per semantisch blok) bepaalt of de juiste passages worden opgehaald. Combineer dat met een relevantiecheck op opgehaalde chunks. Niet alles wat lijkt te matchen is daadwerkelijk relevant.
 
-Richt een samenwerking in tussen agents met elk één duidelijk doel: één agent haalt relevante bronnen op, een tweede stelt een conceptantwoord op, een derde controleert juistheid en toon, een vierde bepaalt of escalatie naar een mens nodig is. Eén grote prompt die alles doet is moeilijker te debuggen, te testen en te verbeteren.
+Bij multi-agent setups:
 
-Koppel agents waar relevant aan een bestaande rol in de organisatie: de juridische outputcontrole valt onder de jurist; de inhoudelijke domeincheck onder de domeinexpert. Dat maakt verantwoordelijkheid expliciet en versterkt vertrouwen in de uitkomst.
-
-Voeg een input-controle-agent toe: filter out-of-scope of schadelijke vragen vóór het generatie-proces. Een vraag die niet in de scope hoort, hoeft niet door het hele systeem te lopen. Dat scheelt latency, kosten en risico.
-
-Voeg een confidence-agent toe: laat het systeem inschatten hoe zeker het is over het antwoord en escaleer naar een mens bij lage confidence. Confidence-scores aan de gebruiker tonen is ook een UX-keuze (zie de praktijk *Transparantie over de kwaliteit van de output*).
-
-Implementeer een judge-loop: laat AI-judges output evalueren en verfijnen totdat een kwaliteitsdrempel is bereikt. Dit is duurder per request maar levert bij kritieke use cases meetbaar betere antwoorden op.
-
-Kies het juiste model voor elke agent op basis van empirische evaluaties: HELM (Stanford) evalueert taalmodellen op meerdere scenario's en metrics. Wat voor een ophaal-agent werkt is niet automatisch wat voor een controle-agent werkt. Match model aan rol.
-
-Maak de afweging tussen kwaliteitsverbetering, latency en kosten expliciet: meer evaluatie- en controlestappen kunnen het systeem trager en duurder maken. Log per stap zowel kwaliteitswinst als extra latency en tokenverbruik; stop met stappen die meer kosten dan opleveren.
+- **Richt een samenwerking in tussen agents en geef elke agent één duidelijk doel**: één agent haalt relevante bronnen op, een tweede redeneert en stelt een conceptantwoord op, een derde controleert juistheid, compliance en toon, en een vierde bepaalt of escalatie naar een mens nodig is. Koppel iedere agent, wanneer relevant, aan een bestaande rol in de organisatie (bijv. de juridische outputcontrole is onder verantwoordelijkheid van de jurist). Overige voorbeelden van agents:
+  - **Voeg een input-controle toe**: filter out-of-scope of schadelijke vragen vóór het generatie-proces door een specifieke input-controle-agent toe te voegen.
+  - **Een confidence-agent**: laat het systeem inschatten hoe zeker het is over het antwoord, en escaleer naar een mens bij lage confidence.
+  - **Een judge-loop**: laat AI-"judges" output evalueren en verfijnen totdat een kwaliteitsdrempel is bereikt (zie good practice 5).
+- **Kies het juiste AI-model voor iedere agent** : HELM, een initiatief van Stanford, evalueert taalmodellen op meerdere scenario's tegelijk (bijvoorbeeld vraag en antwoord, samenvatten, redeneren) en op meerdere metrics (zoals nauwkeurigheid, robuustheid, bias, eerlijkheid).
+- **Maak de afweging tussen kwaliteitsverbetering, latency en kosten expliciet**: Er is altijd een afweging tussen het toevoegen van kwaliteitsverbeteringen met latency en kosten: meer evaluatie- en controlestappen kunnen het systeem trager en duurder maken. Log per stap zowel kwaliteitswinst als extra latency en tokenverbruik; stop met stappen die meer kosten dan opleveren.

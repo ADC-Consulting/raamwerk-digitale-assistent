@@ -8,6 +8,9 @@ phases: [Pilot, Productie]
 levels: [Compliance officer, Projectmanager]
 sources: []
 ---
+In good practice 6 van “kwaliteit van de output” beschrijven we een agentic opzet waarin meerdere gespecialiseerde agents samenwerken (multi-agent setup). De agents kan je spiegelen naar bestaande governance functies en verantwoordelijkheden binnen je organisatie. Zo blijft duidelijk wie waarvoor verantwoordelijk is en helpen agents bij het afdwingen of automatiseren van governance.  
+
+<!-- tips -->
 
 Intaker: Een agent die de vraag classificeert en bepaalt wat voor type vraag het is (informatieverzoek, klacht, aanvraag, out of scope). Vergelijkbaar met een receptie- of triagefunctie aan de balie.
 

@@ -1,6 +1,6 @@
 ---
 id: taakuitvoering
-title: Taakuitvoering – van dialoog naar betrouwbare acties in systemen
+title: Automatiseer en borg betrouwbare taakuitvoering in systemen
 summary: >
   Een assistent met echte waarde gaat verder dan antwoorden: hij voert taken uit
   in onderliggende systemen via gestructureerde flows, BPMN-procesmodellen en
@@ -17,6 +17,11 @@ sources:
   - azure-logic-apps
   - uipath
 ---
+Bij taakuitvoering is het van belang dat de assistent niet beperkt blijft tot het genereren van antwoorden, maar tevens concrete acties initieert en afrondt via de onderliggende systemen. Technisch betekent dit dat per taak een helder proces wordt gemodelleerd (bijvoorbeeld “afspraak maken” of “melding registreren”), met duidelijke stappen, benodigde gegevens en systeemkoppelingen.  
+
+In de software wordt voor elke taak een gestructureerde flow of orkestratie ingericht die bepaalt welke gegevens uit het gesprek worden opgehaald, welke API‑calls worden uitgevoerd en wanneer een taak als “afgerond” wordt gemarkeerd. Daarvoor is een goede en betrouwbare integratie tussen de systemen essentieel. (zie good practise integratie in bestaande systemen) 
+
+<!-- tips -->
 
 Modelleer een vaste flow per top-taak: breng per top-taak een heldere workflow in kaart en leg deze expliciet vast in configuratie of code. Ad-hoc taakuitvoering zonder gemodelleerde flow leidt tot onreproduceerbare uitkomsten en is niet auditeerbaar.
 
