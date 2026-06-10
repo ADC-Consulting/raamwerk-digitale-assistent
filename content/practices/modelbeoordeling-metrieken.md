@@ -11,15 +11,11 @@ sources:
   - validatiekader-llm
   - deepeval
   - datadog-llm-evaluation
-
 ---
-Het validatiekader ‘Verantwoorde inzet van LLMs voor publieke informatievoorziening’ ondersteunt organisaties bij de verantwoorde inzet van Large Language Model (LLM)-toepassingen voor publieke informatievoorziening.
-
-<!-- tips -->
 
 Begin bij de use case, niet bij de metric: Beschrijf per toepassing kort het doel van de digitale assistent (bijvoorbeeld “publieke informatie over regelingen”) en de belangrijkste risico’s (onjuiste informatie, onveilige output, misverstanden bij burgers). Kies vervolgens alleen metrieken die hier direct op aansluiten, zoals juistheid, veiligheid, begrijpelijkheid en gebruikerstevredenheid.
 
-Combineer evaluatie mét en zónder ground truth: Gebruik gelabelde cases (ground truth) voor scherp afgebakende taken zoals routing, classificatie, extractie en gestandaardiseerde Q&A. Vul dit aan met human evaluation, LLM‑as‑a‑judge en productie‑statistieken voor open‑ended antwoorden. Zo ontstaat een realistischer beeld van prestaties in de praktijk.
+Combineer evaluatie met en zonder ground truth: Gebruik gelabelde cases (ground truth) voor scherp afgebakende taken zoals routing, classificatie, extractie en gestandaardiseerde Q&A. Vul dit aan met human evaluation, LLM‑as‑a‑judge en productie‑statistieken voor open‑ended antwoorden. Zo ontstaat een realistischer beeld van prestaties in de praktijk.
 
 Zorg voor een representatieve en inclusieve testset ("golden set"): Neem in je testsets zowel veelvoorkomende als lastige, zeldzame en maatschappelijk gevoelige casussen op. Zorg dat taalniveau, vraagtypen en onderwerpen aansluiten bij de echte doelgroep en let er expliciet op dat kwetsbare groepen en edge‑cases voldoende zijn vertegenwoordigd.
 

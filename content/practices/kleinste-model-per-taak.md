@@ -17,6 +17,10 @@ sources:
   - arxiv-green-llm-techniques
   - sustain-ai-check
   - algorithmwatch-sustain
+   - vllm
+  - ollama
+  - mlflow
+  - litellm
 ---
 
 Overweeg eerst of AI nodig is: voor deterministische taken (een zoekvraag die naar één bron leidt, een lookup in een tabel, een vaste lijst antwoorden) is een klassieke database of zoekfunctie typisch ordes van grootte goedkoper en groener dan een LLM-aanroep. 
@@ -30,3 +34,5 @@ Vergelijk per taak, niet per leaderboard: een FAQ-assistent heeft andere eisen d
 Audit jaarlijks of je modelkeuze nog optimaal is: nieuwe modellen, veranderende taken en groeiende gebruikspatronen verschuiven het optimum. Een keuze die in 2026 efficiënt was, kan in 2027 verouderd zijn.
 
 Combineer modelkeuze met bredere assessment: gebruik bijvoorbeeld de AI Sustainability Check van AlgorithmWatch (SustAIn) om naast pure energie-efficiëntie ook sociale en economische duurzaamheidscriteria mee te wegen. Modelkeuze is niet alleen een technische beslissing.
+
+Gebruik een LLM-gateway: tools als LiteLLM of Bifrost bieden een uniforme interface voor meerdere LLM-providers, load balancing en failover. Dit ondersteunt direct de exit-strategie uit de Visie Digitale Autonomie en Soevereiniteit.
