@@ -6,8 +6,8 @@ summary: >
   gesprekken om modellen en regels systematisch te verbeteren. Een vast
   verbeterproces met duidelijke signalen, human-in-the-loop voor gevoelige
   gevallen en centrale logging borgt kwaliteit en compliance.
-domains: [antwoordkwaliteit]
-phases: [Pilot, Productie]
+domains: [antwoordkwaliteit, gebruikerservaring]
+phases: [PoC, Pilot, Productie]
 levels: [Developer/ Engineer]
 sources:
   - ibm-rlhf
@@ -21,6 +21,10 @@ Bij geautomatiseerd leren gebruikt de digitale assistent gegevens uit echte gesp
 <!-- tips -->
 
 Verzamel directe gebruikersfeedback: Vraag na elk antwoord om eenvoudige feedback (bijvoorbeeld een duimpje omhoog/omlaag) om gerichte stuurinformatie te verzamelen. Reinforcement Learning from Human Feedback (RLHF) kan dienen als kader om deze signalen systematisch te benutten voor modelverbetering.
+
+Bouw een feedbackfunctie in het werkcoach-dashboard: laat werkcoaches een antwoord direct in hun dashboard corrigeren, markeren of becommentariëren, niet alleen een duimpje omhoog of omlaag voor de burger. De terugkoppeling van de professional is een hoogwaardig leersignaal dat de verbetercyclus voedt, en een ingebouwde knop verlaagt de drempel om dat structureel te doen.
+
+Laat het feedbackmechanisme meegroeien met de volwassenheid van de assistent: start in V1 (PoC en pilot) met usertests en informele feedback van werkcoaches, en bouw in V2 (productie) een gestructureerde feedbackfunctie in het dashboard, zodat terugkoppeling onderdeel wordt van het dagelijkse proces in plaats van een losse exercitie.
 
 Weeg expliciete feedback zwaarder: Geef expliciete feedback meer gewicht dan impliciete signalen (afgebroken chats, opnieuw gestelde vragen). Gebruik hiervoor bijvoorbeeld een analyticsplatform zoals Azure Monitor/Application Insights of het open source Matomo om expliciete en impliciete signalen te combineren.
 

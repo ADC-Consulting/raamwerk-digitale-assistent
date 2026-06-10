@@ -8,7 +8,7 @@ summary: >
   aanvraag van net" correct worden geïnterpreteerd.
 domains: [functionaliteit, gebruikerservaring]
 phases: [Pilot, Productie, PoC]
-levels: [Developer/ Engineer]
+levels: [Projectmanager, Developer/ Engineer]
 sources:
   - dst-multidomain
   - decagon-dst
@@ -16,6 +16,8 @@ sources:
   - multiwoz
   - schema-guided-dialogue
 ---
+
+Kies bewust het interactiemodel; begin niet met een volledig vrije chat: een volledig vrije, WhatsApp-achtige chatflow voor álle functionaliteit is technisch complex én onprettig voor gebruikers. Combineer daarom vaste vraagblokken (gestructureerde formulier- of wizard-stappen) voor het verzamelen van gegevens en het afhandelen van standaardtaken met verdiepende chat alleen waar dat echt meerwaarde heeft, zoals bij uitleg of uitzonderingen. Zo werken werkzoekenden en werkcoaches in behapbare, voorspelbare delen. Leg per use case vast wanneer je een vraagblok inzet en wanneer je naar open chat schakelt; sluit hierbij aan op de vaste flow per top-taak (zie de praktijk over taakuitvoering) en de slimme routering uit Select-Then-Route.
 
 Beheer de gesprekscontext actief: zorg dat per gesprek gegevens als onderwerp, zaak- of aanvraagnummer en rol van de gebruiker worden vastgelegd en bijgewerkt. Bij assistenten zonder login gaat het om context op sessieniveau, alleen tijdens het lopende gesprek beschikbaar.
 

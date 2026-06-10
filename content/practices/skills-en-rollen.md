@@ -8,7 +8,7 @@ summary: >
   met de assistent.
 domains: [kennis-capaciteit]
 phases: [Pilot, Productie]
-levels: [Projectmanager]
+levels: [Bestuur/ beleidsmaker, Projectmanager]
 sources:
   - ibm-ai-team-rollen
   - rasa-conversational-ai-teams
@@ -24,8 +24,12 @@ Ongeacht de gekozen route blijft één constante: er moet voldoende interne slag
 
 Definieer een kernteam per volwassenheidsfase en complexiteit: Voor een eenvoudige, startende assistent: minimaal een AI coördinator/product owner, een inhoudsverantwoordelijke en iemand met technisch beheer/ontwikkelvaardigheden. Bij een complexere, organisatiebrede assistent: voeg functies toe zoals systeemarchitect, data engineer, (conversation) designer, integratiespecialist en privacy/security specialist.
 
-Maak expliciet wat je koopt en wat je zelf doet: Bij een buy-strategie kun je ontwikkeling en hosting uitbesteden, maar borg intern altijd regie, architectuur- en datakennis, en een product owner die de leverancier kan aansturen.
+Maak expliciet wat je koopt en wat je zelf doet: Bij een buy-strategie kun je ontwikkeling en hosting uitbesteden, maar borg intern altijd regie, architectuur- en datakennis, en een product owner die het inhoudelijke gesprek met de leverancier kan voeren.
+
+Borg een interne product owner als brug tussen developers, eindgebruikers en management: laat je een assistent ontwikkelen, dan is dit de sleutelrol. De product owner moet kunnen vertalen tussen de technische taal van developers, de werkpraktijk en behoeften van eindgebruikers (zowel werkzoekenden als werkcoaches) en de strategische, sturende taal van management. Alleen met dat drietalige profiel stuur je de leverancier inhoudelijk aan en krijg je wat je nodig hebt, in plaats van een speelbal van het ontwikkelbureau te worden. Eén persoon die alleen de techniek óf alleen het management begrijpt, is niet genoeg.
 
 Organiseer capaciteit voor de hele levenscyclus: Reserveer tijd en middelen niet alleen voor de initiële bouw of implementatie, maar ook voor beheer, monitoring (kwaliteit, bias, veiligheid), doorontwikkeling en opleiding van medewerkers.
+
+Richt een beheerorganisatie in, niet alleen een bouwteam: de grootste uitdaging zit vaak niet in het bouwen maar in het structureel beheren van de assistent. Beleg een herkenbare beheerorganisatie (eventueel als sub-organisatie) met een helpdesk, incident- en wijzigingsbeheer en de afhandeling van gebruikersverzoeken, met duidelijke SLA's en escalatiepaden. Scheid service-incidenten van security-incidenten maar koppel ze wel (zie de praktijk over real-time monitoring en auditbaarheid). Zodra meerdere afnemers of gemeenten de assistent gebruiken, beleg dan ook accountmanagement, productmanagement en marketing/communicatie als expliciete operationele rollen; overweeg een centrale beheerstructuur via een koepel (zie de coalitie-tip in de buy-vs-build-afweging).
 
 Laat het team meegroeien met assistent en organisatie: Begin klein in de pilotfase, evalueer jaarlijks welke nieuwe skills nodig zijn (bijvoorbeeld software engineer of UX design) en schaal gericht op in plaats van ad hoc mensen toe te voegen.

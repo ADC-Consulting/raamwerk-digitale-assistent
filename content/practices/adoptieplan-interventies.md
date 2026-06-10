@@ -18,6 +18,8 @@ Gebruik het ADKAR-model voor adoptie op individueel niveau: ADKAR (Awareness, De
 
 Vroege betrokkenheid van de OR: betrek de ondernemingsraad vanaf de ideefase, niet pas bij besluitvorming. Een OR die zelf de keuzes mede ontwerpt, brengt minder weerstand in en kan tegelijk de zorgen vroeg signaleren.
 
+Begin opt-in met een kerngroep en schaal pas op bij bewijs: start de uitrol vrijwillig met een kerngroep van geïnteresseerde voorlopers (zie de persona- en drijfveren-analyse) in plaats van het gebruik meteen te verplichten. Laat zo snel mogelijk concrete voordelen zien, communiceer open over wat goed én fout gaat, en koppel zowel verdere opschaling als een eventuele latere verplichtstelling expliciet aan aantoonbaar goede resultaten. Gebruik daarvoor de leading- en lagging-indicatoren uit de tip "Maak interventies meetbaar". Te vroeg verplichten ondermijnt vertrouwen en adoptie; bewijs eerst de waarde, breid daarna uit.
+
 Transparantie over impact: deel impact-assessments en verwachte effecten op functies actief met medewerkers. Onzekerheid over baan-impact remt adoptie sterker dan technische bezwaren.
 
 Gezamenlijk leren rond AI-geletterdheid: bied AI-geletterdheidstraining ook voor OR-leden (bijvoorbeeld de cursus "Toekomst van de OR met AI" van KCOR), zodat zij volwaardige gesprekspartners zijn over AI-keuzes.

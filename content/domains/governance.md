@@ -20,8 +20,7 @@ samenhang_blokken:
   - naam: Infrastructuur & Data
     omschrijving: "Governance-kaders bepalen wie eigenaar is van bronnen, wie toegang verleent en hoe lineage wordt vastgelegd. Infrastructuur en Data levert de technische middelen, governance levert de regels eromheen."
 sources:
-  - rasci-generatieve-ai
-  - klokkenluiden-bezwaar-beroep
+  - handreiking-genai-governance
 ---
 
 Governance gaat over de manier waarop een organisatie besluitvorming, eigenaarschap, samenwerking en verantwoording rondom de digitale assistent inricht. Concreet beantwoordt governance vier kernvragen: wie neemt welke beslissing, wie is verantwoordelijk voor de werking van de assistent, wie wordt aangesproken bij fouten, en hoe leggen we daar verantwoording over af. Het omvat zowel formele structuren (rollen, mandaten, beslismomenten) als doorlopende processen (registratie, audit, klokkenluidersregeling, juridische toetsing). Belangrijk is het onderscheid tussen data governance (wie beheert welke gegevens) en decision accountability (wie is verantwoordelijk voor de beslissingen of antwoorden die de assistent produceert). Bij digitale assistenten die zelf besluiten kunnen maken verschuift het zwaartepunt naar dat tweede.
