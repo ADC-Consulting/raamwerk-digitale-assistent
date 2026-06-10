@@ -1964,3 +1964,18 @@
     beweging Direct Duidelijk. Basis voor toegankelijke communicatie met doelgroepen
     met lage (digitale) vaardigheden.
   url: https://www.communicatierijk.nl/vakkennis/rijkswebsites/aanbevolen-richtlijnen/taalniveau-b1
+
+- id: anaconda-rag
+  title: How to Build a Retrieval-Augmented Generation Chatbot
+  categorie: Documentatie
+  omschrijving: >
+    Stapsgewijze handleiding voor het bouwen van een Retrieval-Augmented Generation (RAG) chatbot, inclusief architectuur, implementatie en best practices.
+  url: https://www.anaconda.com/blog/how-to-build-a-retrieval-augmented-generation-chatbot
+
+- id: LangChain-rag
+  title: Build a RAG agent with LangChain
+  categorie: Documentatie
+  omschrijving: >
+    Stapsgewijze handleiding voor het bouwen van een Retrieval-Augmented Generation (RAG) chatbot, inclusief architectuur, implementatie en best practices.
+  url: https://docs.langchain.com/oss/python/langchain/rag
+-  

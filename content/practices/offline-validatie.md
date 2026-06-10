@@ -17,6 +17,5 @@ Offline validatie doe je tijdens de ontwikkelfase. Online validatie zet je in zo
 
   <!-- tips -->
 
-Start in POC met een kleine offline evaluatieset: 20–50 representatieve vragen met "ideale antwoorden" zijn al voldoende om regressies te vangen. 
+Start in POC met een kleine offline evaluatieset: 20–50 representatieve vragen met "ideale antwoorden" zijn al voldoende om regressies te vangen.  Test nieuwe modelversies of prompts altijd eerst tegen de offline set voordat je dit naar productie zet voor online validatie. 
 
-Test nieuwe modelversies of prompts altijd eerst tegen de offline set voordat je dit naar productie zet voor online validatie. 
