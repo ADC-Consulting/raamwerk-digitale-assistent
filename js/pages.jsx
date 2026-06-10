@@ -450,6 +450,12 @@ function PracticeDetail({ id }) {
   const p = RAAM.PRACTICES.find(x => x.id === id);
   if (!p) return <div className="container"><h1>Good practice niet gevonden</h1></div>;
   const domainObjs = p.domains.map(did => RAAM.DOMAINS.find(d => d.id === did)).filter(Boolean);
+  const relatedPractices = RAAM.PRACTICES.filter(r =>
+    r.id !== p.id && (
+      (p.good_practise || []).includes(r.id) ||
+      (r.good_practise || []).includes(p.id)
+    )
+  );
   return (
     <div className="container">
       <div className="crumbs">
@@ -508,6 +514,18 @@ function PracticeDetail({ id }) {
               ))}
             </ul>
           </div>
+          {relatedPractices.length > 0 && (
+            <div className="side-card">
+              <h4>Samenhangende Good Practices</h4>
+              <ul>
+                {relatedPractices.map(r => (
+                  <li key={r.id}>
+                    <a onClick={(e)=>{e.preventDefault();navigate('/practices/'+r.id);}} href={'#/practices/'+r.id}>{r.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           <div className="side-card">
             <h4>Past in fase</h4>
             <div className="tag-row" style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>

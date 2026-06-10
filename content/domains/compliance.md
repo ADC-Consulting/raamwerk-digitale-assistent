@@ -29,15 +29,23 @@ sources:
   - dpia-copilot-memo
 ---
 
-Compliance bij een digitale assistent verwijst naar het geheel van regels, normen en wetgeving waaraan de assistent moet voldoen. Het gaat erom dat de assistent aantoonbaar correct, veilig en ethisch verantwoord opereert binnen geldende kaders — niet alleen op het moment van implementatie, maar doorlopend in productie.
+Compliance bij een digitale assistent verwijst naar het geheel van regels, normen en wet- en regelgeving waaraan de assistent moet voldoen. Het gaat erom dat de assistent aantoonbaar correct, veilig en ethisch verantwoord opereert binnen de geldende kaders, niet alleen tijdens de implementatie, maar ook voortdurend in de productieomgeving.
 
-Compliance valt uiteen in vier deelonderwerpen:
+Deelonderwerpen onder compliance zijn:
 
-- **Gegevensbescherming en privacy** — Het rechtmatig verwerken van persoonsgegevens van burgers en medewerkers conform de AVG/GDPR, inclusief grondslag, dataminimalisatie en bewaartermijnen.
-- **Risicobeheer** — Het systematisch in kaart brengen en beheersen van AI-gerelateerde risico's zoals bias, onjuiste informatieverstrekking en privacyschendingen, conform NIST AI RMF en ISO/IEC 23894.
-- **Transparantie** — Het aantoonbaar inzichtelijk maken van hoe de digitale assistent tot antwoorden en beslissingen komt, richting zowel gebruikers (informed consent) als toezichthouders (auditable trail).
-- **Monitoring** — Het continu bewaken van het gedrag en de prestaties van de assistent, zodat afwijkingen tijdig worden gesignaleerd en gecorrigeerd voordat ze tot compliance-incidenten leiden.
+- **Governance & verantwoordelijkheden**: het duidelijk beleggen van rollen en verantwoordelijkheden (bijvoorbeeld eigenaar, opdrachtgever, jurist, security officer) en het inrichten van besluitvorming, escalatie en incidentafhandeling rond de digitale assistent. 
 
+- **Gegevensbescherming & privacy (AVG/GDPR)**: het rechtmatig verwerken van persoonsgegevens van burgers en medewerkers conform de AVG/GDPR, inclusief grondslag, dataminimalisatie en bewaartermijnen. 
+
+- **Risicobeheer & fundamentele rechten**: het systematisch in kaart brengen en beheersen van AI-gerelateerde risico’s, zoals bias, onjuiste informatieverstrekking, privacyschendingen en schending van grondrechten (bijvoorbeeld non-discriminatie en het recht op menselijke tussenkomst), conform NIST AI RMF en ISO/IEC 23894.
+
+- **Transparantie & registratie**: het inzichtelijk maken hoe de digitale assistent tot antwoorden en beslissingen komt, richting gebruikers en toezichthouders, en waar nodig registratie in bijvoorbeeld een algoritmeregister en openbaarmaking onder de Wet open overheid (Woo).
+
+- **Informatiebeveiliging & technische robuustheid**: het beschermen van data en systemen (confidentialiteit, integriteit, beschikbaarheid) via passende technische en organisatorische maatregelen, en het zorgen dat de assistent robuust, veilig en betrouwbaar functioneert.
+
+- **Documentatie, logging & monitoring**: het vastleggen van ontwerpkeuzes, risicobeoordelingen, testen en incidenten, het bijhouden van relevante logs en het continu bewaken van gedrag en prestaties van de assistent, zodat afwijkingen tijdig worden gesignaleerd en je achteraf kunt aantonen dat aan de eisen is voldaan.
+
+ 
 ---
 
 Het hoofddoel van compliance bij een digitale assistent is waarborgen dat de assistent rechtmatig, transparant en ethisch verantwoord opereert voor alle betrokkenen. Risico's bij verwaarlozing zijn juridische aansprakelijkheid, discriminerende uitkomsten door algoritmische bias, gebrek aan transparantie en verlies van vertrouwen. Een niet-compliant assistent kan bij grootschalig gebruik ernstige maatschappelijke en juridische problemen veroorzaken — een digitale assistent verwerkt dagelijks duizenden interacties, waardoor niet-naleving snel een grote impact heeft.

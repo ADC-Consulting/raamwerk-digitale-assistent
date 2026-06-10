@@ -33,12 +33,10 @@ Belangrijkste deelonderwerpen zijn:
 
 Het hoofddoel van goed ingerichte technische prestaties in een digitale assistent is te waarborgen dat de assistent in de praktijk betrouwbaar, snel en stabiel functioneert, ook bij piekbelasting en bij complexe vragen. Slecht presterende systemen leiden tot lange wachttijden, foutmeldingen en beperkte beschikbaarheid. Dit veroorzaakt frustratie en ondermijnt het vertrouwen in digitale dienstverlening.
 
-Voor organisaties en overheden is dit extra risicovol: het vergroot de druk op ondersteunende kanalen, verstoort processen en kan de geloofwaardigheid van beleid en digitale transformatie aantasten. Daarnaast kan een onjuiste balans tussen kosten en kwaliteit de totale uitgaven onnodig verhogen; het standaard kiezen voor het meest geavanceerde model kan dan al snel overkill zijn.
+Voor organisaties en overheden is dit extra risicovol: het vergroot de druk op ondersteunende kanalen, verstoort processen en kan de geloofwaardigheid van beleid en digitale transformatie aantasten. Daarnaast kan een onjuiste balans tussen kosten en kwaliteit de totale uitgaven onnodig verhogen; het standaard kiezen voor het meest geavanceerde model kan dan al snel onnodig zijn.
 
 Goed ingerichte technische prestaties, zoals lage latency, hoge beschikbaarheid en schaalbaarheid, maken het mogelijk digitale assistenten duurzaam en op grote schaal in te zetten.
 
-Goed ingerichte technische prestaties in een digitale assistent zorgen voor:
-
-- **Burger:** Biedt snelle, voorspelbare en stabiele dienstverlening, vermindert frustratie en versterkt het vertrouwen in digitale kanalen.
-- **Organisatie:** Verkleint de druk op helpdesks, beperkt reputatieschade, maakt veilig meer automatisering mogelijk en verlaagt operationele kosten.
-- **Overheid:** Ondersteunt geloofwaardige en toekomstbestendige digitale transformatie, maakt grootschalige inzet van digitale assistenten mogelijk en waarborgt stabiele dienstverlening over kanalen en domeinen heen.
+- **Belangrijk voor de burger:**  Biedt snelle, voorspelbare en stabiele dienstverlening, vermindert frustratie en versterkt het vertrouwen in digitale kanalen.
+- **Belangrijk voor de organisatie:** Verkleint de druk op helpdesks, beperkt reputatieschade, maakt veilig meer automatisering mogelijk en verlaagt operationele kosten.
+- **Belangrijk voor de overheid als geheel:** Ondersteunt geloofwaardige en toekomstbestendige digitale transformatie, maakt grootschalige inzet van digitale assistenten mogelijk en waarborgt stabiele dienstverlening over kanalen en domeinen heen.
