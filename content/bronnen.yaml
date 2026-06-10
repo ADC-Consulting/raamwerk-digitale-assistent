@@ -1910,6 +1910,15 @@
     LLM-evaluatie, monitoring en metriek in productieomgevingen.
   url: https://www.datadoghq.com/blog/llm-evaluation-framework-best-practices/
 
+- id: validatiekader-llm
+  title: "Validatiekader Verantwoorde inzet van LLMs voor publieke informatievoorziening"
+  categorie: Raamwerk
+  omschrijving: >
+    Validatiekader voor de verantwoorde inzet van LLMs bij
+    publieke informatievoorziening, met criteria en methoden voor technische en
+    ethische beoordeling.
+  url: "https://algorithmaudit.eu/pdf-files/technical-tools/eval-gen-ai/20260313%20Validatiekader%20%27Verantwoorde%20inzet%20van%20LLMs%20voor%20publieke%20informatievoorziening%27.pdf"
+
 - id: ibm-rlhf
   title: Reinforcement Learning from Human Feedback (RLHF) – IBM
   categorie: Documentatie
