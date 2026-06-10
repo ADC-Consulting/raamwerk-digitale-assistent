@@ -237,7 +237,6 @@ function DomeinDetail({ id }) {
               { id: 'sec-waarom', label: 'Waarom is het belangrijk?' },
               ...(d.sources && d.sources.length > 0 ? [{ id: 'sec-kennis', label: 'Basiskennis' }] : []),
               { id: 'sec-practices', label: 'Good practices' },
-              { id: 'sec-keuze', label: 'Keuzemomenten' },
               { id: 'sec-samenhang', label: 'Samenhang' },
             ].map(item => (
               <li key={item.id}>
@@ -282,12 +281,6 @@ function DomeinDetail({ id }) {
                 ))}
               </div>
             )}
-          </Section>
-
-          <Section id="sec-keuze" title={`Keuzemomenten die dit ${typeLabel} raken`}>
-            {d.keuzemomenten
-              ? <div dangerouslySetInnerHTML={{ __html: d.keuzemomenten }} />
-              : <p style={{ color: 'var(--ink-500)' }}>Nog geen inhoud toegevoegd.</p>}
           </Section>
 
           <Section id="sec-samenhang" title="Samenhang met andere fundamenten en domeinen">
