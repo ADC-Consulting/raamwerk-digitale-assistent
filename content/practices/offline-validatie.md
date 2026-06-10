@@ -8,7 +8,7 @@ summary: >
 domains: [evaluatie-assistent]
 phases: [PoC, Pilot]
 levels: [Projectmanager, Developer/ Engineer]
-image: docs_for_GP/offline_validatie.png
+image: offline_validatie.png
 sources: []
 ---
 Offline validatie houdt in; testen vóórdat echte gebruikers de assistent gebruiken, met een vaste set testvragen die jij hebt klaargezet. Bij online validatie meet je terwijl echte gebruikers de assistent gebruiken in productie. 

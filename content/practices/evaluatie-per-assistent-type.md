@@ -7,7 +7,7 @@ summary: >
 domains: [evaluatie-assistent]
 phases: [PoC, Pilot, Productie]
 levels: [Projectmanager, Bestuur/ beleidsmaker, Developer/ Engineer, Compliance officer]
-image: docs_for_GP/evaluatiecriteria.png
+image: evaluatiecriteria.png
 image_top: true
 sources:
   - langwatch

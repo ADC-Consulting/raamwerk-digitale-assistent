@@ -6,7 +6,7 @@ summary: >
 domains: [evaluatie-assistent]
 phases: [PoC, Pilot, Productie]
 levels: [Bestuur/ beleidsmaker, Projectmanager, Developer/ Engineer, Compliance officer]
-image: docs_for_GP/evaluatieraamwerk.png
+image: evaluatieraamwerk.png
 sources:
   - tno-ai-evaluatie
 ---

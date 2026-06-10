@@ -470,7 +470,7 @@ function PracticeDetail({ id }) {
 
       <div className="detail-grid">
         <div className="detail-body">
-          {p.image && p.image_top && <img src={'docs/' + p.image} alt="" style={{ width: '100%', margin: '0 0 1.5rem', borderRadius: 8 }} />}
+          {p.image && p.image_top && <img src={'content/docs/' + p.image} alt="" style={{ width: '100%', margin: '0 0 1.5rem', borderRadius: 8 }} />}
           {p.toelichting_html
             ? <div className="toelichting-block" dangerouslySetInnerHTML={{ __html: p.toelichting_html }} />
             : p.toelichting && p.toelichting.length > 0 && <ToelichtingBlock items={p.toelichting} />
@@ -478,7 +478,7 @@ function PracticeDetail({ id }) {
           <h2>Praktische tips</h2>
           <div className="practice-tips">
             {p.body.map((b, i) => {
-              if (b.startsWith('<table') || b.startsWith('<ul')) {
+              if (b.startsWith('<table') || b.startsWith('<ul') || b.startsWith('<img')) {
                 return <div key={i} dangerouslySetInnerHTML={{ __html: b }} />;
               }
               const colon = b.indexOf(': ');
@@ -488,7 +488,7 @@ function PracticeDetail({ id }) {
               return <p key={i}>{b}</p>;
             })}
           </div>
-          {p.image && !p.image_top && <img src={'docs/' + p.image} alt="" style={{ width: '100%', margin: '1.5rem 0', borderRadius: 8 }} />}
+          {p.image && !p.image_top && <img src={'content/docs/' + p.image} alt="" style={{ width: '100%', margin: '1.5rem 0', borderRadius: 8 }} />}
 
           {p.sources && p.sources.length > 0 && (
             <>

@@ -21,8 +21,13 @@ Communiceer onzekerheid expliciet: een confidence-indicator of formulering als "
 
 Bied een handover naar mens aan: bij complexe of onzekere vragen moet de gebruiker laagdrempelig naar een ambtenaar kunnen schakelen. 
 
+<img src="content/docs/transparantie_vb_gebruikers.png" alt="Voorbeeld transparantie voor gebruikers" style="width: 100%; margin: 1.5rem 0; border-radius: 8px;">
+
 Bouw een admin-dashboard met drempelwaarden per kwaliteitscriterium: zodat alarmen afgaan bij overschrijding. 
+
 
 Log iedere interactie traceerbaar: vraag, opgehaalde bronnen, prompt, antwoord, judge-scores, gebruikersfeedback. Tools zoals MLflow, LangSmith of Langfuse zijn hiervoor geschikt. 
 
 Periodieke ethische en kwaliteitsaudits: agendeer review-momenten waarin domeinexperts steekproefsgewijs antwoorden bekijken. 
+
+<img src="content/docs/transparantie_vb_admin.png" alt="Voorbeeld transparantie voor admins" style="width: 100%; margin: 1.5rem 0; border-radius: 8px;">
