@@ -20,7 +20,9 @@ Maak AI een onderdeel van leiderschapsontwikkeling: in een AI-leiderschapsmodule
 
 Zet design thinking in als innovatiemethodiek: design thinking helpt om de echte pijnpunten en kansen in de organisatie te begrijpen, oplossingen te verkennen en deze te valideren met prototypes. Het Digital Playbook van BOSA (Belgische overheid) biedt kant-en-klare persona- en empathy-templates die direct toepasbaar zijn.
 
-Gebruik rapid prototyping met AI: rapid prototyping zet ideeën, inzichten of innovaties om in tastbare modellen die bewerkt en aangepast kunnen worden, in plaats van eindeloos met abstracte concepten te werken. AI-tools versnellen het maken van prototypes; hackathons, zoals de OneGov AI-hackathon, zijn een laagdrempelige manier om rapid prototyping in de praktijk te zien.
+Gebruik rapid prototyping met AI: rapid prototyping zet ideeën, inzichten of innovaties om in tastbare modellen die bewerkt en aangepast kunnen worden, in plaats van eindeloos met abstracte concepten te werken. AI-tools versnellen het maken van prototypes; hackathons, zoals de OneGov AI-hackathon, zijn een laagdrempelige manier om rapid prototyping in de praktijk te zien. AI-gegenereerde frontend- en UI-concepten kunnen het ontwerpproces sterk versnellen en helpen snel varianten te toetsen.
+
+Lever eerst een functioneel sterke MVP en accepteer good-enough design: ontwikkel iteratief met een MVP die functioneel sterk is maar visueel nog niet af. Maak van good-enough design in vroege fasen een expliciete, gedeelde afspraak, zodat discussies over afwerking de voortgang niet blokkeren. Plan verfraaiing en white-labeling (eigen huisstijl en merk) bewust in latere iteraties, na functionele validatie. Sluit aan op de gefaseerde aanpak uit de offline-validatie, en op het IP- en hergebruikperspectief uit de buy-vs-build-afweging.
 
 Ritueel Feniksprijs: beloon teams die geleerd hebben van een mislukking met een zichtbare prijs of erkenning. Dat verandert falen van iets dat verborgen blijft in iets dat actief gewaardeerd wordt.
 

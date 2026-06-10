@@ -17,6 +17,8 @@ sources:
   - qdrant
   - milvus
   - weaviate
+  - anaconda-rag
+  - LangChain-rag
 ---
 
 Implementeer hybride zoeken als standaard: combineer lexicaal zoeken (BM25) met semantisch zoeken (vector similarity).
@@ -30,3 +32,5 @@ Kies bewust je vectordatabase: voor de meeste overheidstoepassingen voldoen open
 Voeg altijd bronvermelding toe: elk antwoord moet herleidbaar zijn naar de onderliggende bron. Dit is ook een transparantieverplichting vanuit de AI-verordening.
 
 Overweeg gelaagde RAG: begin met zoeken in een beperkte laag (bijv. FAQ's); als daar geen antwoord is, zoek in een bredere laag (wetgeving). WetWijzer experimenteerde hiermee met positieve resultaten.
+
+Test RAG-componenten afzonderlijk, niet alleen de eind-output: evalueer bij een RAG-assistent de retrieval (worden de juiste bronnen en chunks opgehaald?) en de generatie (klopt het antwoord op basis van de opgehaalde bronnen?) als losse stappen. Dat geeft veel betere diagnostische informatie dan alleen kijken naar de uiteindelijke chatbot-output: je ziet of een fout in het ophalen zit of in het formuleren, en weet zo waar je moet bijsturen. Gebruik hiervoor de golden dataset met de juiste bronnen per vraag (zie de praktijk over de golden dataset) en metrieken die de stappen scheiden, zoals context precision en context recall voor retrieval en faithfulness en answer relevancy voor generatie (zie RAGAS in de praktijk over monitoring en LLMOps). 

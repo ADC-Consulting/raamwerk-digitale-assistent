@@ -2,10 +2,10 @@
 id: menselijke-controle
 title: Leg menselijke controlepunten expliciet vast
 summary: >
-  Een digitale assistent mag het werk ondersteunen, maar mag beslissingen die burgers direct raken nooit volledig zelfstandig nemen. De AVG verbiedt in artikel 22 volledig geautomatiseerde besluitvorming die rechtsgevolgen heeft of mensen in aanmerkelijke mate treft. Bij hoog-risico AI-systemen in de zin van de AI-verordening gelden bovendien aanvullende verplichtingen rond menselijk toezicht. Maar ook buiten die formele categorieën geldt: zodra een digitale assistent een rol speelt in beslissingen die burgers raken, moet expliciet worden vastgelegd waar een mens in de keten zit, welke rol die mens heeft en wat het systeem nooit zelfstandig mag beslissen. 
-domains: [evaluatie-assistent]
+  Een digitale assistent mag het werk ondersteunen, maar mag beslissingen die burgers direct raken nooit volledig zelfstandig nemen. De AVG verbiedt in artikel 22 volledig geautomatiseerde besluitvorming die rechtsgevolgen heeft of mensen in aanmerkelijke mate treft. Bij hoog-risico AI-systemen in de zin van de AI-verordening gelden bovendien aanvullende verplichtingen rond menselijk toezicht. Maar ook buiten die formele categorieën geldt: zodra een digitale assistent een rol speelt in beslissingen die burgers raken, moet expliciet worden vastgelegd waar een mens in de keten zit, welke rol die mens heeft en wat het systeem nooit zelfstandig mag beslissen. Hallucinaties blijven bovendien een hardnekkig probleem dat ook met strengere prompting niet volledig verdwijnt, waardoor menselijke controle op de output structureel noodzakelijk blijft. 
+domains: [evaluatie-assistent, gebruikerservaring]
 phases: [Pilot, Productie]
-levels: [Projectmanager]
+levels: [Projectmanager, Developer/ Engineer]
 sources:
   - algoritmekader-menselijke-controle
   - algoritmekader-menselijke-tussenkomst
@@ -18,6 +18,8 @@ Bepaal per use case welk model van menselijke controle van toepassing is: kies b
 Bij systemen waarbij de assistent veel besluiten maakt of ondersteunt, is het niet meer zinvol dat een mens elk afzonderlijk besluit beoordeelt. In dat geval verschuift de controle naar het niveau van het besluitvormingssysteem als geheel inclusief doelen, normen, data, uitzonderingen, foutpercentages, escalaties, audits en stopknoppen. Let daarbij op een valkuil van human on the loop; de mens blijft formeel verantwoordelijk, maar kijkt in de praktijk alleen naar dashboards, waarschuwingen of steekproeven. Zonder duidelijke normen en ingrijpmomenten wordt dat snel schijncontrole. 
 
 Leg vast wat het systeem nooit zelfstandig mag beslissen, en zorg dat die grens in de praktijk standhoudt: formuleer per use case welke beslissingen altijd door een mens worden genomen, ook als het systeem een advies geeft. Formele vastlegging is niet genoeg: als beoordelaars structureel de output overnemen zonder zelfstandig te oordelen, is er feitelijk geen menselijke tussenkomst meer. Monitor daarom of beoordelaars daadwerkelijk afwijken. Als dat zelden voorkomt, is dat een signaal om het proces opnieuw te beoordelen. 
+
+Maak het controlepunt concreet met een outputreviewprotocol voor de werkcoach: leg vast wat de werkcoach standaard nakijkt voordat output de werkzoekende bereikt (feitelijke claims, bronverwijzingen en de toon en passendheid voor een kwetsbare doelgroep), waar de werkcoach expliciet akkoord op moet geven voordat iets wordt doorgestuurd, en welke output verplicht mondeling met de werkzoekende wordt besproken in plaats van ongezien doorgestuurd. Zonder zo'n protocol verschilt menselijke controle per medewerker en is niet aantoonbaar wat er is gecontroleerd. Voor de technische ondersteuning van deze controle (zoals een controle-agent of judge-stap) sluit dit aan op de praktijk over kwaliteit in de keten met RAG en multi-agent.
 
 Beschrijf de verantwoordelijkheden expliciet en ga uit van meerdere betrokkenen: er is nooit één persoon verantwoordelijk voor de totale controle. Leg zo vroeg mogelijk vast wie in welke fase verantwoordelijk is voor menselijke controle, bij voorkeur in een RACI- of VERI-matrix. Leg ook vast wie eindverantwoordelijk is bij afwijkend systeemgedrag en wie het aanspreekpunt is voor signalen uit de uitvoering. De verantwoordelijkheid voor het proces mag niet op de individuele beoordelaar worden afgewenteld. 
 

@@ -1751,22 +1751,15 @@
     en stappenplan.
   url: https://www.reijnhrm.nl/kennis/hoe-implementeer-je-effectief-een-buddy-systeem
 
-- id: rasci-generatieve-ai
-  title: RASCI Generatieve AI
-  categorie: Beleidskader
-  omschrijving: >
-    De Overheidsbrede Handreiking Generatieve AI hanteert de RASCI variant,
-    waarin ook Support expliciet wordt benoemd: wie ondersteunt de uitvoering.
-  url: https://open.overheid.nl/documenten/9c273b71-cebb-4e11-b06f-fa20f7b4b90e/file
-
-- id: klokkenluiden-bezwaar-beroep
-  title: Klokkenluiden, bezwaar en beroep inrichten
+- id: handreiking-genai-governance
+  title: Overheidsbrede Handreiking Generatieve AI – governance (RASCI, klokkenluiden, bezwaar en beroep)
   categorie: Verplicht kader
   omschrijving: >
-    De handreiking generatieve AI vanuit de overheid in hoofdstuk 8, pagina 21,
-    binnen het thema Governance een aantal eisen rondom klokkenluiden, bezwaar
-    en beroep rondom directe en indirecte besluiten die voortkomen uit de inzet
-    van generatieve AI.
+    Het governance-hoofdstuk (hoofdstuk 8) van de Overheidsbrede Handreiking
+    Generatieve AI. Het hanteert de RASCI-variant voor de rolverdeling, waarin ook
+    Support expliciet wordt benoemd (wie ondersteunt de uitvoering), en beschrijft
+    eisen rondom klokkenluiden, bezwaar en beroep bij directe en indirecte besluiten
+    die voortkomen uit de inzet van generatieve AI.
   url: https://open.overheid.nl/documenten/9c273b71-cebb-4e11-b06f-fa20f7b4b90e/file
 
 - id: iso-42001
@@ -1950,3 +1943,38 @@
     onafhankelijk oordelen en je hun antwoorden aggregeert voor stabielere
     evaluatie-uitkomsten.
   url: https://github.com/karpathy/llm-council
+
+- id: greenpt
+  title: GreenPT – EU-gehoste, privacyvriendelijke AI
+  categorie: Tools
+  omschrijving: >
+    Nederlands AI-chatplatform dat modellen volledig binnen de EU host (datacenters
+    op hernieuwbare energie) en geen externe API's gebruikt, zodat data de EU niet
+    verlaat. Voorbeeld van een EU-gehoste modelaanbieder als soeverein alternatief
+    voor hyperscalers die onder de CLOUD Act vallen.
+  url: https://greenpt.com/
+
+
+- id: direct-duidelijk-b1
+  title: Taalniveau B1 / Direct Duidelijk (CommunicatieRijk)
+  categorie: Richtlijnen
+  omschrijving: >
+    Rijksrichtlijn voor begrijpelijke overheidscommunicatie op taalniveau B1
+    (eenvoudige, directe taal die vrijwel iedereen begrijpt), onderdeel van de
+    beweging Direct Duidelijk. Basis voor toegankelijke communicatie met doelgroepen
+    met lage (digitale) vaardigheden.
+  url: https://www.communicatierijk.nl/vakkennis/rijkswebsites/aanbevolen-richtlijnen/taalniveau-b1
+
+- id: anaconda-rag
+  title: How to Build a Retrieval-Augmented Generation Chatbot
+  categorie: Documentatie
+  omschrijving: >
+    Stapsgewijze handleiding voor het bouwen van een Retrieval-Augmented Generation (RAG) chatbot, inclusief architectuur, implementatie en best practices.
+  url: https://www.anaconda.com/blog/how-to-build-a-retrieval-augmented-generation-chatbot
+
+- id: LangChain-rag
+  title: Build a RAG agent with LangChain
+  categorie: Documentatie
+  omschrijving: >
+    Stapsgewijze handleiding voor het bouwen van een Retrieval-Augmented Generation (RAG) chatbot, inclusief architectuur, implementatie en best practices.
+  url: https://docs.langchain.com/oss/python/langchain/rag
