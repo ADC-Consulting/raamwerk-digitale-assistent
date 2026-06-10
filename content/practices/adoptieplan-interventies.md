@@ -2,7 +2,7 @@
 id: adoptieplan-interventies
 title: Maak een adoptieplan met gerichte interventies
 summary: >
-  Vertaal de persona-analyse naar een concreet adoptieplan: individuele
+  Vertaal de persona-analyse naar een concreet adoptieplan voor het gebruik van digitale assistentne: individuele
   adoptie-interventies gestructureerd via ADKAR, organisatie-niveau interventies
   rond OR en sociale plannen, en een communicatieplan dat de visie omzet in een
   verhaal vanuit de gebruiker.
@@ -14,7 +14,7 @@ sources:
   - vng-reisgids-ai
 ---
 
-Gebruik het ADKAR-model voor adoptie op individueel niveau: ADKAR (Awareness, Desire, Knowledge, Ability, Reinforcement) is een internationaal erkende methode voor verandermanagement. Het model is geschikt om adoptie-interventies rond een concrete AI-toepassing te structureren. Vul ADKAR per persona-segment in: welke awareness-actie nu, welke desire-trigger straks, hoe je knowledge en ability opbouwt en hoe je reinforcement borgt na livegang.
+Gebruik het ADKAR-model voor adoptie op individueel niveau: ADKAR (Awareness, Desire, Knowledge, Ability, Reinforcement) is een erkende methode voor verandermanagement. Het model is geschikt om adoptie-interventies rond een concrete AI-toepassing te structureren. Vul ADKAR per persona-segment in: welke awareness-actie nu, welke desire-trigger straks, hoe je knowledge en ability opbouwt en hoe je reinforcement borgt na livegang.
 
 Vroege betrokkenheid van de OR: betrek de ondernemingsraad vanaf de ideefase, niet pas bij besluitvorming. Een OR die zelf de keuzes mede ontwerpt, brengt minder weerstand in en kan tegelijk de zorgen vroeg signaleren.
 
