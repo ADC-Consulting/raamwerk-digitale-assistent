@@ -59,6 +59,34 @@ def _bold(text):
     return re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
 
 
+def _list_to_html(para):
+    """Convert a markdown list paragraph (flat or 2-level nested) to HTML, or return None."""
+    lines = [l for l in para.split('\n') if l.strip()]
+    if not lines or not re.match(r'^- ', lines[0]):
+        return None
+    result = ['<ul>']
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        if re.match(r'^- ', line):
+            content = line[2:]
+            sub_items = []
+            j = i + 1
+            while j < len(lines) and re.match(r'^  - ', lines[j]):
+                sub_items.append(lines[j][4:])
+                j += 1
+            if sub_items:
+                sub_html = '<ul>' + ''.join(f'<li>{_bold(s)}</li>' for s in sub_items) + '</ul>'
+                result.append(f'<li>{_bold(content)}{sub_html}</li>')
+            else:
+                result.append(f'<li>{_bold(content)}</li>')
+            i = j if sub_items else i + 1
+        else:
+            i += 1
+    result.append('</ul>')
+    return ''.join(result)
+
+
 def _md_table_to_html(para):
     """Convert a markdown table paragraph to an HTML table, or return None."""
     lines = [l.strip() for l in para.strip().split('\n') if l.strip()]
@@ -161,11 +189,11 @@ def load_practice_files():
             toelichting_raw, tips_raw = body.split('<!-- tips -->', 1)
             fm['toelichting'] = [p.strip() for p in toelichting_raw.split('\n\n') if p.strip()]
             fm['toelichting_html'] = md_to_html(toelichting_raw)
-            fm['body'] = [_md_table_to_html(p.strip()) or p.strip() for p in tips_raw.split('\n\n') if p.strip()]
+            fm['body'] = [_md_table_to_html(p.strip()) or _list_to_html(p.strip()) or p.strip() for p in tips_raw.split('\n\n') if p.strip()]
         else:
             fm['toelichting'] = []
             fm['toelichting_html'] = ''
-            fm['body'] = [_md_table_to_html(p.strip()) or p.strip() for p in body.split('\n\n') if p.strip()]
+            fm['body'] = [_md_table_to_html(p.strip()) or _list_to_html(p.strip()) or p.strip() for p in body.split('\n\n') if p.strip()]
         fm['_path'] = path
         fm['_slug'] = os.path.splitext(os.path.basename(path))[0]
         result.append(fm)

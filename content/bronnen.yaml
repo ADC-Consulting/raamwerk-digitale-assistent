@@ -1517,6 +1517,14 @@
     AI-agents met externe tools en data te verbinden.
   url: https://zapier.com/blog/mcp/
 
+- id: datacamp-mcp-servers
+  title: Top Remote MCP Servers – DataCamp
+  categorie: Documentatie
+  omschrijving: >
+    DataCamp‑blog met een overzicht van populaire remote MCP‑servers en hoe je
+    ze kunt inzetten in AI‑toepassingen.
+  url: https://www.datacamp.com/blog/top-remote-mcp-servers
+
 - id: bpmn-org
   title: BPMN (Business Process Model and Notation)
   categorie: Raamwerk

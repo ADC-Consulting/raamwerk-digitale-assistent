@@ -60,6 +60,7 @@ def render_practices(practices):
         lines.append(f'    body: {js_value(p["body"])},')
         lines.append(f'    sources: {js_value(p["sources"])},')
         lines.append(f'    image: {js_value(p.get("image", ""))},')
+        lines.append(f'    image_top: {js_value(p.get("image_top", False))},')
         lines.append('  },')
     lines.append('];')
     return '\n'.join(lines)

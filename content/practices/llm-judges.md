@@ -2,10 +2,7 @@
 id: llm-judges
 title: Gebruik LLM-judges voor schaalbare evaluatie
 summary: >
-  Een LLM-judge is een taalmodel dat andere AI-output beoordeelt. Mensen kunnen
-  niet duizend antwoorden per dag nakijken; LLM-judges wel. Houd het
-  scoringssysteem simpel (bij voorkeur binair), geef één judge één taak en
-  kalibreer continu op menselijke beoordelingen.
+  Een LLM-judge is een taalmodel dat je inzet om andere AI-output te beoordelen. In plaats van dat een mens elk antwoord nakijkt, laat je een LLM de rol van "beoordelaar" spelen: hij krijgt een vraag, een antwoord, en een set criteria, en geeft daar een oordeel over.  Het werkt onder voorwaarden: maak het scoringssysteem zo simpel mogelijk (bij voorkeur binair: goed / niet goed, met heldere uitleg wat goed en niet goed betekent), en geef een judge maximaal één complexe taak.  
 domains: [evaluatie-assistent]
 phases: [Pilot, Productie]
 levels: [Developer/ Engineer]
@@ -16,21 +13,14 @@ sources:
   - langwatch
   - llm-council
 ---
+Een LLM-judge zou je ook kunnen inzetten om antwoorden van de assistent te vergelijken met antwoorden uit de golden dataset. In de praktijk werkt dit minder goed omdat semantische gelijkenis is een onbetrouwbare proxy is voor kwaliteit. 
 
-Houd het scoringssysteem zo simpel mogelijk: bij voorkeur binair (goed / niet goed), met heldere uitleg wat goed en niet goed betekent. Vijfpuntsschalen klinken precies maar leveren onbetrouwbare metingen. Een LLM-judge kalibreert binair vrijwel altijd beter dan numeriek.
+<!-- tips -->
 
-Geef een judge maximaal één complexe taak: een judge die tegelijk feitelijke juistheid, toon en compliance moet beoordelen, geeft inconsistente uitkomsten. Eén judge per dimensie levert betere en verklaarbare resultaten op.
+Gebruik een LLM-judge om edge cases te identificeren: Een LLM judge is niet foutloos, maar hij kan duizenden antwoorden razendsnel scoren. Zijn echte waarde zit in het zichtbaar maken van de twijfelgevallen en de mogelijke fouten. Die leg je vervolgens voor aan een mens. Zo houd je menselijke review behapbaar én blijf je grip houden op kwaliteit. 
 
-Gebruik LLM-judges om edge cases te identificeren, niet als enige scheidsrechter: een LLM-judge is niet foutloos, maar kan duizenden antwoorden razendsnel scoren. De echte waarde zit in het zichtbaar maken van twijfelgevallen en mogelijke fouten. Die leg je vervolgens voor aan een mens. Zo houd je menselijke review behapbaar.
+Aggregeer meerdere judge-runs voor stabiliteit: LLMs zijn stochastisch; draai dezelfde judge meerdere keren of laat meerdere modellen oordelen (zie Karpathy's llm-council als concreet open-source voorbeeld). 
 
-Aggregeer meerdere judge-runs voor stabiliteit: LLMs zijn stochastisch. Draai dezelfde judge meerdere keren of laat meerdere modellen oordelen (Karpathy's `llm-council` is een concreet open-source voorbeeld van een multi-LLM-judge-aanpak). Aggregatie reduceert ruis aanzienlijk.
+Kalibreer continu op echte fouten: Vang negatieve gebruikersfeedback (zoals een thumbs-down of een afgekeurde actie) systematisch op: voeg het geval toe aan je evaluatieset, label het, en gebruik deze nieuwe voorbeelden om de judge-prompt aan te scherpen. 
 
-Kalibreer continu op echte fouten: vang negatieve gebruikersfeedback (thumbs-down, afgekeurde acties) systematisch op, voeg het geval toe aan de evaluatieset, label het en gebruik die nieuwe voorbeelden om de judge-prompt aan te scherpen. Een judge die niet leert van productie-fouten loopt achter de feiten aan.
-
-Zet LLM-judges in als agents in een multi-agent setup: een controle-agent specifiek voor feitelijke juistheid, één voor toon, één voor compliance ("Je mag geen uitspraken doen alsof je een dokter bent"). Eén grote judge-prompt werkt slecht; gescheiden judges met scherpe scope werken beter.
-
-Documenteer de judge-prompts als productiecode: judge-prompts versioner je in Git met PR-review, niet in een vendor-UI. Een judge-prompt is meet-instrumentarium. Wijzigingen erin beïnvloeden alle historische metingen en moeten daarom transparant zijn.
-
-Vergelijk judges met menselijke beoordeling op een gekalibreerde sample: laat een QA-analist en de LLM-judge dezelfde 100 cases scoren en vergelijk de afwijking. Pas de judge-prompt aan tot de scores convergeren. Zonder kalibratie weet je niet of de judge meet wat je denkt.
-
-Gebruik bestaande RAG-evaluatieframeworks waar mogelijk: RAGAS biedt faithfulness, answer relevancy, context precision en context recall als out-of-the-box judge-metrics. DeepEval ("Pytest voor LLM's") integreert in CI/CD. Langfuse en LangWatch bieden tracing met geïntegreerde judges. Begin daar in plaats van zelf judge-frameworks te bouwen.
+Zet LLM judges in als agents in een multi-agent setup van de assistent: Een multi-agent setup is een AI-systeem dat niet uit één groot taalmodel met één grote opdracht bestaat, maar uit meerdere kleinere "agents" die elk een eigen, afgebakende taak hebben. Samen werken ze aan het uiteindelijke antwoord. Zet bijvoorbeeld één judge in om feitelijke juistheid te toetsen, één voor toon, één voor compliance ("Je mag geen uitspraken doen alsof je een dokter bent"). Eén grote judge-prompt werkt slecht. 

@@ -1,6 +1,6 @@
 ---
 id: bias-monitoring
-title: Meet en monitor actief of de assistent handelt naar waarden en rechten
+title: Detecteer en voorkom onzichtbare schendingen van waarden en rechten door de assistent
 summary: >
   Een digitale assistent kan discriminerende effecten hebben of grondrechten
   schenden zonder dat dit zichtbaar is in dagelijks gebruik. Wie het niet actief
