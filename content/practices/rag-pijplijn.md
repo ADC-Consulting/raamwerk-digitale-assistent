@@ -27,6 +27,10 @@ Kies structuurbewuste chunking: NVIDIA's benchmark (2025) vond page-level chunki
 
 Gebruik een Nederlands embeddingmodel: de E5-NL-modellen zijn open source beschikbaar op Hugging Face en zijn op dit moment de beste beschikbare embeddings voor het Nederlands.
 
+Diversifieer en valideer bronnen in RAG: voorkom dat één onbetrouwbare bron de output domineert.
+
+Verbeter de kwaliteit van de opgehaalde data via chunking-strategie en relevantiecheck: de keuze hoe te chunken (per pagina, per paragraaf, per semantisch blok) bepaalt of de juiste passages worden opgehaald. Combineer dat met een relevantiecheck op opgehaalde chunks. Niet alles wat lijkt te matchen is daadwerkelijk relevant.
+
 Kies bewust je vectordatabase: voor de meeste overheidstoepassingen voldoen open-source self-hostable opties zoals Qdrant, Milvus of Weaviate, of Elasticsearch als je organisatie die al draait. Voorkom lock-in op een proprietaire cloud-vectordatabase.
 
 Voeg altijd bronvermelding toe: elk antwoord moet herleidbaar zijn naar de onderliggende bron. Dit is ook een transparantieverplichting vanuit de AI-verordening.

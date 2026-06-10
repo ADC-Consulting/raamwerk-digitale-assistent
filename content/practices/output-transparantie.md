@@ -12,9 +12,6 @@ sources:
   - langfuse
   - gov-uk-chat
 ---
-Een belangrijk risico om expliciet te benoemen: bronverwijzingen verschuiven verantwoordelijkheid naar de burger. Als een burger het antwoord ziet en de bron niet aanklikt (zoals bij Google), heeft transparantie alleen op papier plaatsgevonden. Disclaimers zijn een zwakke vorm van risicomanagement — combineer ze altijd met andere maatregelen. 
-
-<!-- tips -->
 Toon bronvermeldingen bij elk feitelijk antwoord: koppel de tekstpassages aan de oorspronkelijke bron, zodat verificatie mogelijk is. 
 
 Communiceer onzekerheid expliciet: een confidence-indicator of formulering als "ik weet het niet zeker, controleer dit bij…" voorkomt vals vertrouwen. 
@@ -22,9 +19,6 @@ Communiceer onzekerheid expliciet: een confidence-indicator of formulering als "
 Bied een handover naar mens aan: bij complexe of onzekere vragen moet de gebruiker laagdrempelig naar een ambtenaar kunnen schakelen. 
 
 <img src="content/docs/transparantie_vb_gebruikers.png" alt="Voorbeeld transparantie voor gebruikers" style="width: 100%; margin: 1.5rem 0; border-radius: 8px;">
-
-Bouw een admin-dashboard met drempelwaarden per kwaliteitscriterium: zodat alarmen afgaan bij overschrijding. 
-
 
 Log iedere interactie traceerbaar: vraag, opgehaalde bronnen, prompt, antwoord, judge-scores, gebruikersfeedback. Tools zoals MLflow, LangSmith of Langfuse zijn hiervoor geschikt. 
 

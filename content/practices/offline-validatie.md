@@ -11,9 +11,7 @@ levels: [Projectmanager, Developer/ Engineer]
 image: offline_validatie.png
 sources: []
 ---
-Offline validatie houdt in; testen vóórdat echte gebruikers de assistent gebruiken, met een vaste set testvragen die jij hebt klaargezet. Bij online validatie meet je terwijl echte gebruikers de assistent gebruiken in productie. 
-
-Offline validatie doe je tijdens de ontwikkelfase. Online validatie zet je in zodra de oplossing robuust genoeg is.
+Offline validatie houdt in; testen voordat echte gebruikers de assistent gebruiken, met een vaste set testvragen die jij hebt klaargezet. Bij online validatie meet je terwijl echte gebruikers de assistent gebruiken in productie. 
 
   <!-- tips -->
 

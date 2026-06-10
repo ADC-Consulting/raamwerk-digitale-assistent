@@ -17,7 +17,7 @@ sources:
   - arxiv-green-llm-techniques
   - sustain-ai-check
   - algorithmwatch-sustain
-   - vllm
+  - vllm
   - ollama
   - mlflow
   - litellm
