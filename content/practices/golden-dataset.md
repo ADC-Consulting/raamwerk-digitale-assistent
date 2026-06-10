@@ -4,6 +4,7 @@ title: Bouw een golden dataset voor output, judges en RAG
 summary: >
   Een golden dataset is het fundament van elke evaluatiestrategie. Het is een gecureerde verzameling vragen met "ideale antwoorden" (en bij RAG: relevante bronnen per vraag) waartegen je elke wijziging in prompts, modellen of pijplijn kunt testen. Een goede golden dataset zet je één keer goed op en profiteer je het hele proces van. Tegelijk is het opbouwen ervan vaak de grootste bottleneck voor gedegen evaluatie: wie is verantwoordelijk, hoeveel samples heb je nodig en hoe maak je ze? 
 domains: [antwoordkwaliteit]
+good_practise: [modelbeoordeling-metrieken]
 phases: [Pilot, Productie]
 levels: [Projectmanager, Developer/ Engineer]
 sources: []

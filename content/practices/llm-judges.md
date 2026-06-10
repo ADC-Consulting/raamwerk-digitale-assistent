@@ -13,6 +13,9 @@ sources:
   - langwatch
   - llm-council
 ---
+
+Pas op: Wees je ervan bewust dat een LLM als 'scheidsrechter' bij evaluaties niet altijd consistent is. Dezelfde modeloutput kan bij herhaalde beoordelingen door hetzelfde model toch een andere score krijgen. Deze mogelijke inconsistentie moet expliciet als risico worden benoemd en meegenomen in het evaluatie‑ en risicobeoordeling.
+
 Een LLM-judge zou je ook kunnen inzetten om antwoorden van de assistent te vergelijken met antwoorden uit de golden dataset. In de praktijk werkt dit minder goed omdat semantische gelijkenis is een onbetrouwbare proxy is voor kwaliteit. 
 
 <!-- tips -->
@@ -24,3 +27,5 @@ Aggregeer meerdere judge-runs voor stabiliteit: LLMs zijn stochastisch; draai de
 Kalibreer continu op echte fouten: Vang negatieve gebruikersfeedback (zoals een thumbs-down of een afgekeurde actie) systematisch op: voeg het geval toe aan je evaluatieset, label het, en gebruik deze nieuwe voorbeelden om de judge-prompt aan te scherpen. 
 
 Zet LLM judges in als agents in een multi-agent setup van de assistent: Een multi-agent setup is een AI-systeem dat niet uit één groot taalmodel met één grote opdracht bestaat, maar uit meerdere kleinere "agents" die elk een eigen, afgebakende taak hebben. Samen werken ze aan het uiteindelijke antwoord. Zet bijvoorbeeld één judge in om feitelijke juistheid te toetsen, één voor toon, één voor compliance ("Je mag geen uitspraken doen alsof je een dokter bent"). Eén grote judge-prompt werkt slecht. 
+
+Houd mens‑in‑de‑loop bij gevoelige domeinen: Combineer LLM‑as‑a‑judge altijd met steekproefsgewijze menselijke review, zeker bij juridische, beleidsmatige of andere gevoelige toepassingen. Betrek inhoudsexperts (juristen, beleidsmedewerkers, vakdeskundigen) nadrukkelijk bij de beoordeling van “moeilijke” categorieën en randgevallen.
