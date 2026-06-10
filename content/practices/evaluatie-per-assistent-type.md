@@ -23,10 +23,12 @@ Voor agentische systemen evalueer per agent én end-to-end: gebruik simulaties (
 
 Bij hogere autonomie voeg expliciete guardrail-metrics toe: meet hoe vaak guardrails triggeren en of de agent binnen zijn mandaat blijft. 
 
-oorbeeld: evaluatieframework voor een consulenten-assistent: De assistent die gebruikt wordt in onderstaand voorbeeld verwerkt batches van gesprekstranscripten van consultenten met burgers. De teammanager van de consulent beoordeelt de prestaties van medewerkers op basis van een criterialijst.  
+Voorbeeld: evaluatieframework voor een consulenten-assistent: De assistent die gebruikt wordt in onderstaand voorbeeld verwerkt batches van gesprekstranscripten van consultenten met burgers. De teammanager van de consulent beoordeelt de prestaties van medewerkers op basis van een criterialijst.  
 
 | | PoC | Pilot | Productie |
 |---|---|---|---|
 | **Managers** | Bruikbaarheidsfeedback; impact op teamproductiviteit | Reductie handmatige QA-backlog bij bètagebruikers; adoptiegraad teamleads | Prestatieverbetering servicemedewerkers; aantal teamleads dat de app heeft geadopteerd |
 | **Domeinexperts** | Criteria-curatie; accuracy vs. menselijke evaluatie | Consistentiescore (% gelijke antwoorden bij vergelijkbare cases); continu finetunen van criteria | Score-drift; tevredenheid teamleads; continue evaluatie-dataset-curatie |
 | **Engineers** | Latency; error rate; label accuracy | Batch-doorvoer; usability/UX-feedback; tokenverbruik | Beschikbaarheid (SLA); kosten per evaluatie; A/B-testen prompts en modellen |
+
+

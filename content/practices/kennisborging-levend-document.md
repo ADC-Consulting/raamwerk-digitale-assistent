@@ -19,8 +19,6 @@ Een levend kennisdocument is een actueel en praktisch naslagwerk dat meegroeit m
 
 Maak concreet wat erin moet staan: Leg vast dat het kennisdocument minimaal bevat: doel & scope, overzicht van kennisdomeinen en gebruikte bronnen, log van wijzigingen en releases, beschrijving van incidenten en veelgemaakte fouten (met oorzaken en oplossingen), vastgelegde ontwerp- en beleidskeuzes, test- en evaluatieresultaten, grenzen, risico's en compliance, en escalatie- en doorverwijsafspraken.
 
-Richt één centrale en goed vindbare plek in: Kies een vaste locatie, zoals het intranet of een kennisbank, en verwijs hier standaard naar in trainingen en communicatie.
-
 Beleg het eigenaarschap bij de AI-coördinator: Maak de AI-coördinator verantwoordelijk voor de actualiteit, ordening en kwaliteit van het document. Zonder duidelijk eigenaarschap verwatert de inhoud en verliest het document snel zijn waarde.
 
 Verlaag de drempel voor medewerkers om bij te dragen: Stel eenvoudige formats of sjablonen beschikbaar waarmee medewerkers ervaringen en fouten kunnen vastleggen. Hoe toegankelijker het proces, hoe groter de kans op een volledig en actueel kennisdocument.

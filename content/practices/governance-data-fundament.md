@@ -13,6 +13,4 @@ Maak een gap-analyse tussen het bestaande data governance fundament en de benodi
 
 Vertaal data governance principes naar AI-specifieke governance processen: Wat in data governance "data lineage" heet, wordt "prompt en bron lineage": welke vraag leidde tot welke opgehaalde bronnen en welk antwoord. Wat "data classificatie" heet, wordt "use case classificatie" (hoog risico of impactvol volgens het Algoritmeregister). Wat "datakwaliteit" heet, wordt "antwoordkwaliteit" (brongetrouwheid, hallucinatierate, drift).
 
-Balanceer innovatiekracht met zorgvuldigheid bij het maken van een RACI: Maak eerst een compleet taakoverzicht en vul daarna de RACI in. Gebruik bestaande functies als basis en wijs per taak één eindverantwoordelijke aan. Betrek genoeg stakeholders om kwaliteit en draagvlak te borgen, maar niet zoveel dat besluitvorming vastloopt.
-
-Stel multidisciplinaire AI-teams samen vanaf de PoC: Zodat dit team eigenaarschap kan nemen voor de gehele keten van de assistent (van ontwerp tot gebruik en monitoring). AI ontwikkelt zich wekelijks, risico's verschuiven en use cases moeten dynamisch worden geprioriteerd. Behandel het werk van dit multidisciplinaire team als een levend portfolio waarin geleerd, gestopt en geschaald wordt op basis van bewijs.
+Stel multidisciplinaire AI-teams samen vanaf de PoC: Zodat dit team eigenaarschap kan nemen voor de gehele keten van de assistent (van ontwerp tot gebruik en monitoring). AI ontwikkelt zich wekelijks, risico's verschuiven en use cases moeten dynamisch worden geprioriteerd. 

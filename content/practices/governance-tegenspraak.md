@@ -13,7 +13,7 @@ sources:
   - sibony-besluitvorming
 ---
 
-Besluiten over een digitale assistent zijn vaak strategisch (hoe zien we de rol van een assistent in de dienstverlening van de toekomst) en technisch complex. Onderzoek naar besluitvorming laat zien dat zelfs ervaren leiders systematisch in denkfouten trappen wanneer ze zulke besluiten alleen of in te kleine kring nemen. Persuasive storytelling, groupthink, overconfidence en intuïtie zorgen ervoor dat risico's worden onderschat, alternatieven niet worden onderzocht en tegengeluiden ongehoord blijven. Goede governance organiseert daarom expliciet tegenspraak en dialoog rondom belangrijke besluiten over de assistent.
+Besluiten over een digitale assistent zijn vaak strategisch (hoe zien we de rol van een assistent in de dienstverlening van de toekomst) en technisch complex. Onderzoek naar besluitvorming laat zien dat zelfs ervaren leiders systematisch in denkfouten trappen wanneer ze zulke besluiten alleen of in te kleine kring nemen. Goede governance organiseert daarom expliciet tegenspraak en dialoog rondom belangrijke besluiten over de assistent.
 
 <!-- tips -->
 

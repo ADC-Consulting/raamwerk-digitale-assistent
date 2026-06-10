@@ -19,13 +19,13 @@ sources:
   - algorithmwatch-sustain
 ---
 
-Overweeg eerst of AI nodig is: voor deterministische taken (een zoekvraag die naar één bron leidt, een lookup in een tabel, een vaste lijst antwoorden) is een klassieke database of zoekfunctie typisch ordes van grootte goedkoper en groener dan een LLM-aanroep. AI is geen default-keuze; AI is een keuze met kosten.
+Overweeg eerst of AI nodig is: voor deterministische taken (een zoekvraag die naar één bron leidt, een lookup in een tabel, een vaste lijst antwoorden) is een klassieke database of zoekfunctie typisch ordes van grootte goedkoper en groener dan een LLM-aanroep. 
 
-Start met het kleinste model op je golden dataset: meet kwaliteit en energie/tokens. Upgrade pas naar een grotere klasse als de kwaliteit aantoonbaar tekortschiet op jouw taak. UNESCO en meerdere studies wijzen op Small Language Models (SLM's) als structureel minder energie-intensief alternatief voor smalle, domeinspecifieke taken, mits ze afdoende zijn gefinetuned.
+Gebruik een router (small/large model routing): stuur eenvoudige prompts naar een kleiner model en alleen complexe prompts naar een groter model. Dit is de techniek met het hoogste aangetoonde energie-rendement bij behoud van kwaliteit, met besparingen van 40–70%.
+
+Start met het kleinste model op je golden dataset: meet kwaliteit en energie/tokens. Upgrade pas naar een grotere klasse als de kwaliteit aantoonbaar tekortschiet op jouw taak.  Small Language Models (SLM's) zijn een goed en minder energie-intensief alternatief voor domeinspecifieke taken, mits ze afdoende zijn gefinetuned.
 
 Vergelijk per taak, niet per leaderboard: een FAQ-assistent heeft andere eisen dan een agent die documenten doorzoekt. Tools zoals de AI Energy Score en de ML.Energy Leaderboard geven energie-efficiëntie per taaktype. Gebruik die in plaats van algemene rankings die je use case niet kennen.
-
-Gebruik een router (small/large model routing): stuur eenvoudige prompts naar een kleiner model en alleen complexe prompts naar een groter model. Dit is de techniek met het hoogste aangetoonde energie-rendement bij behoud van kwaliteit, met besparingen van 40–70% volgens empirische studies.
 
 Audit jaarlijks of je modelkeuze nog optimaal is: nieuwe modellen, veranderende taken en groeiende gebruikspatronen verschuiven het optimum. Een keuze die in 2026 efficiënt was, kan in 2027 verouderd zijn.
 
