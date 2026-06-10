@@ -17,18 +17,16 @@ sources:
   - dpia-ap
 ---
 
-Definieer datagebruik per personalisatie-element expliciet: leg per personalisatie-element vast welke informatie van de gebruiker wordt gebruikt, met welk doel en onder welke bewaartermijn. Vage personalisatie ("alles wat we van de gebruiker weten") is een AVG-risico en een schaduwlogica die niemand kan uitleggen.
+Centraliseer het gebruikersprofiel in één service: houd het profiel (rol, afdeling, taalvoorkeur, veelgebruikte diensten) bij in een centrale service in plaats van losse profielen per kanaal, en laad het profiel aan het begin van elk gesprek in de context. Verspreide profielen lopen onvermijdelijk uit elkaar.
 
-Centraliseer het gebruikersprofiel in één service: houd het profiel (rol, afdeling, taalvoorkeur, veelgebruikte diensten) bij in één centrale service in plaats van losse profielen per kanaal, en laad het profiel aan het begin van elk gesprek in de context. Verspreide profielen lopen onvermijdelijk uit elkaar.
+Implementeer een voorkeurenpagina: maak een eenvoudige pagina waar gebruikers hun instellingen kunnen inzien, aanpassen en resetten.
 
-Implementeer een voorkeurenpagina: maak een eenvoudige pagina waar gebruikers hun instellingen kunnen inzien, aanpassen en resetten. Personalisatie zonder controle door de gebruiker is paternalisme; controle is een AVG-verplichting (recht op rectificatie, recht op bezwaar) en een vertrouwensvoorwaarde.
-
-Voer standaard een DPIA of PIA uit bij nieuwe personalisatievormen: leg privacyrisico's en bijbehorende mitigerende maatregelen vast voordat een nieuwe personalisatie live gaat. De Autoriteit Persoonsgegevens biedt handvatten. Gebruik die in plaats van zelf uit te vinden wanneer een DPIA verplicht is.
+Voer standaard een DPIA of PIA uit bij nieuwe personalisatievormen: leg privacyrisico's en bijbehorende mitigerende maatregelen vast voordat een nieuwe personalisatie live gaat. De Autoriteit Persoonsgegevens biedt handvatten.
 
 Zet een AI-interface op met gebruikersprofielen: tools zoals LibreChat (open-source AI-platform met gebruikersaccounts en gescheiden context) of Open WebUI (zelf-hostbaar, persistente chatgeschiedenis per gebruiker) bieden de infrastructuur voor profielgebonden personalisatie zonder dat je het zelf moet bouwen.
 
-Bouw personalisatie configuratie-gedreven, niet model-gedreven: regels moeten expliciet, leesbaar en aanpasbaar zijn, geen "schaduwlogica" in prompts of model-finetuning. Een collega moet over twee jaar nog kunnen uitleggen waarom de assistent rol X anders behandelt dan rol Y.
+Bouw personalisatie configuratie-gedreven, niet model-gedreven: regels moeten expliciet, leesbaar en aanpasbaar zijn. Een collega moet over twee jaar nog kunnen uitleggen waarom de assistent rol X anders behandelt dan rol Y.
 
 Geef per personalisatie-effect een opt-out: niet elke gebruiker wil dezelfde mate van personalisatie. Sommige burgers willen expliciet geen profielgebaseerde behandeling. Geef die optie en eerbiedig hem.
 
-Test personalisatie op bias: persona-gebonden antwoorden mogen kwaliteit aanpassen aan rol of taalniveau, maar nooit groepen systematisch nadelig behandelen. Koppel personalisatie aan een bias-test (zie de praktijk *Meet en monitor actief of de assistent handelt naar waarden en rechten*).
+Test personalisatie op bias: persona-gebonden antwoorden mogen kwaliteit aanpassen aan rol of taalniveau, maar nooit groepen systematisch nadelig behandelen. Koppel personalisatie aan een bias-test.
