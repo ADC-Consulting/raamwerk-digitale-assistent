@@ -24,7 +24,7 @@ sources:
 
 Ethiek en mensenrechten stellen verschillende maar verwante vragen aan de inzet van een digitale assistent. **Ethiek** gaat over wat wenselijk, verantwoord en moreel juist is: welke toepassingen wil een organisatie inzetten, voor wie, en onder welke voorwaarden? **Mensenrechten** gaan over wat juridisch beschermd moet worden: privacy, non-discriminatie, vrijheid van meningsuiting, toegang tot publieke diensten en menselijke waardigheid. Ethiek vraagt wat een organisatie wil; mensenrechten vragen wat zij verplicht is — en beide vragen zijn nodig.
 
-Als overheid heb je een bijzondere verantwoordelijkheid. Algoritmes en digitale assistenten kunnen grondrechten schenden, ook zonder dat dit de bedoeling is. Het gaat om rechten verankerd in de Nederlandse Grondwet en Europese mensenrechtenverdragen. Maar verantwoord handelen gaat verder dan juridische naleving: het vraagt aantoonbare transparantie over welke afwegingen zijn gemaakt, hoe het systeem werkt en wat de gevolgen zijn voor mensen die het niet zelf hebben gekozen.
+Als overheidsinstantie heb je een bijzondere verantwoordelijkheid. Algoritmes en digitale assistenten kunnen grondrechten schenden, ook zonder dat dit de bedoeling is. Verantwoord handelen gaat verder dan juridische naleving: het vraagt aantoonbare transparantie over welke afwegingen zijn gemaakt, hoe het systeem werkt en wat de gevolgen zijn voor mensen die het niet zelf hebben gekozen.
 
 Het fundament beslaat vier deelonderwerpen:
 

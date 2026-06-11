@@ -26,7 +26,6 @@ sources:
   - algoritmekader-vereisten
   - dpia-ap
   - dpia-fraia-voorbeeld
-  - dpia-copilot-memo
 ---
 
 Compliance bij een digitale assistent verwijst naar het geheel van regels, normen en wet- en regelgeving waaraan de assistent moet voldoen. Het gaat erom dat de assistent aantoonbaar correct, veilig en ethisch verantwoord opereert binnen de geldende kaders, niet alleen tijdens de implementatie, maar ook voortdurend in de productieomgeving.
