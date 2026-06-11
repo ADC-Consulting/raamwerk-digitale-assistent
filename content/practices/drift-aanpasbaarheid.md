@@ -2,7 +2,7 @@
 id: drift-aanpasbaarheid
 title: Aanpasbaarheid – adaptief leren bij dataverandering
 summary: >
-  Wanneer wetgeving of beleid wijzigt, moet de Digitale Assistent deze veranderingen snel en gecontroleerd kunnen verwerken. Dit door je om op een juiste manier je RAG te bouwen. 
+  Wanneer wetgeving of beleid wijzigt, moet de digitale assistent deze veranderingen snel en gecontroleerd kunnen verwerken. Dit door je om op een juiste manier je RAG te bouwen. 
 domains: [antwoordkwaliteit, infrastructuur-data]
 good_practise: [geautomatiseerd-leren, rag-pijplijn]
 phases: [Productie]
