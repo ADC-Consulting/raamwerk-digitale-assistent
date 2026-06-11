@@ -22,9 +22,7 @@ Begrens outputlengte expliciet: stel `max_tokens` in en geef in de system-prompt
 
 Stream responses naar de gebruiker: de gebruiker ziet het antwoord eerder en je kunt de generatie vroegtijdig afbreken als het antwoord compleet is. Dat is winst op latency en op energie.
 
-Cache agressief: veelgestelde vragen ("waar vraag ik huurtoeslag aan?") horen niet elke keer het volledige RAG+LLM-pad te doorlopen. Vector-databases zoals Milvus, Qdrant en pgvector ondersteunen semantische caching, waarbij vergelijkbare queries op basis van embedding-similariteit hergebruikt worden.
-
-Tune RAG-configuratie gericht op zowel kwaliteit als energie: chunking-grootte, retrieval-thresholds en het aantal opgehaalde passages hebben elk een effect op beide dimensies. SIG en VU Amsterdam vonden dat over-aggressieve chunking weliswaar energie spaart maar de antwoordkwaliteit substantieel verlaagt. Meet beide voordat je optimaliseert.
+Cache agressief: veelgestelde vragen ("waar vraag ik huurtoeslag aan?") horen niet elke keer het volledige RAG+LLM-pad te doorlopen. 
 
 Pas op voor over-agentificatie: elke extra agent-stap in een multi-agent-setup voegt tokens en latency toe. Ga per use-case na of een extra controle-agent echt waarde toevoegt, of dat een eenvoudige guardrail-regel volstaat. De afweging is risicogestuurd: hoge-impact-use-cases rechtvaardigen mogelijk een aparte controle-agent, bij laag risico volstaat een goedkope guardrail.
 
