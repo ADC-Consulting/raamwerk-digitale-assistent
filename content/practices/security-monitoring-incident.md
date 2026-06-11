@@ -7,6 +7,7 @@ summary: >
   reconstrueerbaar is; monitoring zorgt dat afwijkingen in real-time worden
   gesignaleerd en opgepakt.
 domains: [compliance, beveiliging]
+good_practise: [compliance-monitoring-audit, dreigingsmodellering-llm]
 phases: [Pilot, Productie]
 levels: [Projectmanager, Developer/ Engineer]
 sources:

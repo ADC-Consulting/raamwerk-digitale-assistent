@@ -7,6 +7,7 @@ summary: >
   twee-sporenbeleid (nu experimenteren en parallel toewerken naar meer autonomie)
   en met een comply-or-explain-register dat elke keuze groen, oranje of rood labelt.
 domains: [digitale-soevereiniteit, governance]
+good_practise: [exit-zeven-lagen, infrastructuur-keuze, provider-agnostische-orkestratie]
 phases: [PoC, Pilot, Productie]
 levels: [Bestuur/ beleidsmaker, Projectmanager]
 sources:

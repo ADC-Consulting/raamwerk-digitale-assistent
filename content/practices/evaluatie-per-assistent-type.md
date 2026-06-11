@@ -5,6 +5,7 @@ summary: >
   De definitie van een digitale assistent kent vier kenmerken-assen (initiatie, taakuitvoering, informatietoegang, executie-autonomie). Hoe meer naar rechts op deze assen (proactief, agentisch, dynamisch, autonoom), 
   hoe zwaarder de nadruk op compliance, consistentie, bias en technische robuustheid. Meer autonomie en complexiteit brengen meer risico en daarmee meer behoefte aan governance-gerichte indicatoren.
 domains: [evaluatie-assistent]
+good_practise: [evaluatieraamwerk-3-niveaus, indicatoren-per-stakeholder]
 phases: [PoC, Pilot, Productie]
 levels: [Projectmanager, Bestuur/ beleidsmaker, Developer/ Engineer, Compliance officer]
 image: evaluatiecriteria.png

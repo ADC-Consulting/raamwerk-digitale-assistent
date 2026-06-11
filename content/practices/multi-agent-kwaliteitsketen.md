@@ -4,6 +4,7 @@ title: Verbeter kwaliteit in elke stap van de keten (RAG + multi-agent)
 summary: >
   Antwoordkwaliteit is het resultaat van keuzes in elke stap van de pijplijn van de assistent. De sleutel ligt hierbij in het gronden van antwoorden in echte data uit de organisatie (RAG) en in het verschuiven van een reactieve chatbot naar een agentische opzet waarin meerdere gespecialiseerde agents samenwerken (multi-agent setup). In een multi-agent setup grijp je gericht op meerdere plekken in — bij de modelkeuze(s), input-controle, bronnen, retrieval, generatie en output-controle — om de kwaliteit van de output te verbeteren. Spiegel die agents aan bestaande organisatie- en governance-rollen, zodat duidelijk blijft wie waarvoor verantwoordelijk is.
 domains: [antwoordkwaliteit, governance]
+good_practise: [llm-judges, rag-pijplijn]
 phases: [Pilot, Productie]
 levels: [Developer/ Engineer, Compliance officer, Projectmanager]
 sources:

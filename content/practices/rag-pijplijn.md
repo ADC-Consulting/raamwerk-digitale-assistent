@@ -7,6 +7,7 @@ summary: >
   bronnen. De kwaliteit hangt niet af van het taalmodel alleen, maar vooral van
   hoe goed de retrieval werkt.
 domains: [infrastructuur-data, functionaliteit]
+good_practise: [datakwaliteit-governance, drift-aanpasbaarheid, multi-agent-kwaliteitsketen]
 phases: [PoC, Pilot, Productie]
 levels: [Developer/ Engineer]
 sources:

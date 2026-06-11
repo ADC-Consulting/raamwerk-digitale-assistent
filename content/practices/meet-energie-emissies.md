@@ -6,6 +6,7 @@ summary: >
   per afgeronde case), instrumenteer je pipeline met meettools en rapporteer
   richting CSRD. Zonder cijfers is duurzaamheidsbeleid theorie.
 domains: [duurzaamheid]
+good_practise: [kleinste-model-per-taak, zuinige-inferentie]
 phases: [Pilot, Productie]
 levels: [Developer/ Engineer, Projectmanager]
 sources:

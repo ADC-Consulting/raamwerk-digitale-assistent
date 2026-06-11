@@ -7,6 +7,7 @@ summary: >
   effect, mits gemeten tegen een kwaliteitsbenchmark, want overoptimalisatie kan
   nauwkeurigheid kosten.
 domains: [duurzaamheid]
+good_practise: [caching-strategieen, kleinste-model-per-taak, meet-energie-emissies, response-streaming]
 phases: [Pilot, Productie]
 levels: [Projectmanager]
 sources:

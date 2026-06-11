@@ -8,6 +8,7 @@ summary: >
   de jurisdictie van leverancier en sub-processors (niet alleen de server-locatie)
   en borg operationele soevereiniteit contractueel.
 domains: [infrastructuur-data, digitale-soevereiniteit]
+good_practise: [digitale-autonomie-routekaart, exit-zeven-lagen]
 phases: [Pilot, Productie]
 levels: [Bestuur/ beleidsmaker]
 sources:

@@ -7,6 +7,7 @@ summary: >
   rond OR en sociale plannen, en een communicatieplan dat de visie omzet in een
   verhaal vanuit de gebruiker.
 domains: [cultuur-adoptie]
+good_practise: [ai-transformatieprogramma, persona-drijfveren-analyse]
 phases: [Pilot, Productie]
 levels: [Projectmanager]
 sources:

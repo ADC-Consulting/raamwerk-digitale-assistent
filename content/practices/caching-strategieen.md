@@ -6,6 +6,7 @@ summary: >
   antwoorden slim hergebruikt in plaats van bij elke vraag alles opnieuw door het
   LLM te laten uitrekenen. Het juist combineren van cachingstrategieën kan kosten verlagen en de responstijd verbeteren.
 domains: [technische-prestaties]
+good_practise: [schaalbaarheid-productie, zuinige-inferentie]
 phases: [Pilot, Productie]
 levels: [Developer/ Engineer]
 sources:

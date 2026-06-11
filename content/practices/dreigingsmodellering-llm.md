@@ -10,6 +10,7 @@ summary: >
   architectuur (validatie van RAG-passages, beperkte autoriteit) en beleid
   (human-in-the-loop voor gevoelige acties).
 domains: [beveiliging]
+good_practise: [data-logbescherming, iam-assistenten, security-monitoring-incident]
 phases: [Pilot, Productie, PoC]
 levels: [Projectmanager, Developer/ Engineer]
 sources:

@@ -6,6 +6,7 @@ summary: >
   meerdere providers achter dezelfde standaard wegzet (de-facto OpenAI Chat
   Completions + MCP voor tools). Abstractielaag eerst, modelkeuze daarna.
 domains: [infrastructuur-data]
+good_practise: [digitale-autonomie-routekaart, exit-zeven-lagen]
 phases: [Pilot, Productie]
 levels: [Projectmanager]
 sources:

@@ -5,6 +5,7 @@ summary: >
   Engineers, domeinexperts en managers kijken naar verschillende signalen in het beoordelen van de kwaliteit van een assistent. Het grootste verschil tussen klassieke Machine Learning (ML) en 
   GenAI zit in de soft metrics die outputkwaliteit meten. Deze soft metrics zijn voor GenAI  belangrijker dan voor klassieke AI modellen. 
 domains: [evaluatie-assistent]
+good_practise: [evaluatie-per-assistent-type]
 phases: [Pilot, Productie, PoC]
 levels: [Bestuur/ beleidsmaker, Projectmanager, Developer/ Engineer, Compliance officer]
 sources: []

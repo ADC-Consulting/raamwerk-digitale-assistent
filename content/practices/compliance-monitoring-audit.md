@@ -7,6 +7,7 @@ summary: >
   achteraf reconstrueerbaar en een helder retentiebeleid met periodieke audits toont toezichthouders dat de
   organisatie in controle is.
 domains: [compliance, beveiliging]
+good_practise: [governance-observability, security-monitoring-incident]
 phases: [Pilot, Productie]
 levels: [Projectmanager]
 sources:

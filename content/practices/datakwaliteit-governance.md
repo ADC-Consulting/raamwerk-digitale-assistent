@@ -6,6 +6,7 @@ summary: >
   taalmodellen. Het structureel betrekken van domeinexperts is de grootste
   bottleneck en tegelijk de belangrijkste succesfactor.
 domains: [functionaliteit]
+good_practise: [governance-data-fundament, rag-pijplijn]
 phases: [Pilot, Productie, PoC]
 levels: [Developer/ Engineer, Projectmanager]
 sources:

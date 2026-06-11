@@ -7,6 +7,7 @@ summary: >
   gebruikersgroepen, en breng per persona in kaart wat hen drijft om de digitale
   assistent al dan niet te gebruiken.
 domains: [cultuur-adoptie]
+good_practise: [adoptieplan-interventies]
 phases: [Pilot, Productie]
 levels: [Projectmanager]
 sources: []

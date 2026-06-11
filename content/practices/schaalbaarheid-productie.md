@@ -6,6 +6,7 @@ summary: >
   schaalbaarheid. Auto-scaling, caching en burst-capaciteit bepalen of de dienst
   kan meegroeien met het gebruik.
 domains: [technische-prestaties, infrastructuur-data]
+good_practise: [autoscaling-latentie, caching-strategieen]
 phases: [Productie, Pilot]
 levels: [Developer/ Engineer]
 sources:

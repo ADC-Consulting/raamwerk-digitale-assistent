@@ -7,6 +7,7 @@ summary: >
   gesprek (ABE, DEDA) zijn complementair en vroeg in het proces het meest
   effectief.
 domains: [ethiek-mensenrechten, compliance]
+good_practise: [bias-monitoring, risicobeoordeling-ai, transparantie-uitlegbaarheid]
 phases: [Pilot, Productie]
 levels: [Compliance officer]
 sources:

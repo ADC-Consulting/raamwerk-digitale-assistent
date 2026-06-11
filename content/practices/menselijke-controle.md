@@ -4,6 +4,7 @@ title: Leg menselijke controlepunten expliciet vast
 summary: >
   Een digitale assistent mag het werk ondersteunen, maar mag beslissingen die burgers direct raken nooit volledig zelfstandig nemen. De AVG verbiedt in artikel 22 volledig geautomatiseerde besluitvorming die rechtsgevolgen heeft of mensen in aanmerkelijke mate treft. Bij hoog-risico AI-systemen in de zin van de AI-verordening gelden bovendien aanvullende verplichtingen rond menselijk toezicht. Maar ook buiten die formele categorieën geldt: zodra een digitale assistent een rol speelt in beslissingen die burgers raken, moet expliciet worden vastgelegd waar een mens in de keten zit, welke rol die mens heeft en wat het systeem nooit zelfstandig mag beslissen. 
 domains: [evaluatie-assistent, gebruikerservaring]
+good_practise: [governance-rollen-eigenaarschap]
 phases: [Pilot, Productie]
 levels: [Projectmanager, Developer/ Engineer]
 sources:

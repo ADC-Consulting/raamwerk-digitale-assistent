@@ -4,6 +4,7 @@ title: Richt een evaluatieraamwerk in langs drie dimensies
 summary: >
   Een goede evaluatiestrategie houdt rekening met drie dimensies van complexiteit tegelijk: organisatie (engineers, domeinexperts en managers hebben verschillende signalen nodig), projectfase (van snelle experimenten tot robuuste productie-monitoring) en AI use case (elke assistent heeft zijn eigen definitie van succes). Door deze drie dimensies expliciet te maken, voorkom je dat teams ofwel te weinig meten (en blind opschalen) ofwel te veel meten (en verzanden in evaluatiedashboards die niemand gebruikt). De drie dimensies vormen samen een raamwerk waarin elke cel een specifieke vraag beantwoordt: welk signaal heeft welke rol nodig in welke fase voor welk type assistent? 
 domains: [evaluatie-assistent]
+good_practise: [evaluatie-per-assistent-type]
 phases: [PoC, Pilot, Productie]
 levels: [Bestuur/ beleidsmaker, Projectmanager, Developer/ Engineer, Compliance officer]
 image: evaluatieraamwerk.png

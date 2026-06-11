@@ -6,6 +6,7 @@ summary: >
   foutieve integraties. Dataminimalisatie, PII-filtering, contractuele borging en
   gepseudonimiseerde logs zijn de kernmaatregelen.
 domains: [beveiliging]
+good_practise: [dreigingsmodellering-llm]
 phases: [Pilot, Productie]
 levels: [Developer/ Engineer]
 sources:

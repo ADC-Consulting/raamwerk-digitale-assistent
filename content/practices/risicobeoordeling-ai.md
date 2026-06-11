@@ -7,6 +7,7 @@ summary: >
   risicobeoordeling maakt deze risico's inzichtelijk voordat ze in de praktijk
   manifesteren en wordt bij elke materiële wijziging herhaald.
 domains: [ethiek-mensenrechten,compliance]
+good_practise: [bias-monitoring, ethische-impact-iama]
 phases: [Pilot, Productie]
 levels: [Compliance officer, Projectmanager]
 sources:

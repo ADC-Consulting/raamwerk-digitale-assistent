@@ -7,6 +7,7 @@ summary: >
   een AI-strategie, gedeeld eigenaarschap en waardedomeinen in plaats van
   geïsoleerde use cases.
 domains: [cultuur-adoptie, governance]
+good_practise: [adoptieplan-interventies]
 phases: [Pilot, Productie]
 levels: [Bestuur/ beleidsmaker, Projectmanager]
 sources:

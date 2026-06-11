@@ -7,6 +7,7 @@ summary: >
   meet, met een combinatie van gestructureerde tools en een ethische test-set,
   weet het niet.
 domains: [ethiek-mensenrechten]
+good_practise: [ethische-impact-iama, personalisatie, risicobeoordeling-ai]
 phases: [Pilot, Productie]
 levels: [Projectmanager]
 sources:

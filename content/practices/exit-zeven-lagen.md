@@ -7,6 +7,7 @@ summary: >
   exit-beperkingen daadwerkelijk ontstaan, en sluiten aan op SWIPO, EU Data Act en
   EU Cloud Code of Conduct.
 domains: [digitale-soevereiniteit]
+good_practise: [buy-vs-build, digitale-autonomie-routekaart, infrastructuur-keuze, provider-agnostische-orkestratie]
 phases: [Pilot, Productie]
 levels: [Projectmanager, Bestuur/ beleidsmaker]
 sources:

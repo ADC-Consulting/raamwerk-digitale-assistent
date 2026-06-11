@@ -7,7 +7,7 @@ summary: >
   Begin klein, meet en schaal alleen op wanneer de kwaliteit aantoonbaar
   tekortschiet.
 domains: [technische-prestaties, duurzaamheid]
-good_practise: [modelbeoordeling-metrieken, select-then-route]
+good_practise: [meet-energie-emissies, modelbeoordeling-metrieken, select-then-route, zuinige-inferentie]
 phases: [Pilot, Productie]
 levels: [Developer/ Engineer]
 sources:

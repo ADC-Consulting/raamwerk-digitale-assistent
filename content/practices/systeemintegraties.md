@@ -6,6 +6,7 @@ summary: >
   opereert, maar op een veilige en beheersbare manier samenwerkt met bestaande
   zaaksystemen, registraties en ondersteunende tools. 
 domains: [functionaliteit, beveiliging]
+good_practise: [taakuitvoering]
 phases: [Pilot, Productie, PoC]
 levels: [Bestuur/ beleidsmaker, Developer/ Engineer, Projectmanager]
 sources:

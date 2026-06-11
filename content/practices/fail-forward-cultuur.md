@@ -7,6 +7,7 @@ summary: >
   veiligheid, vertaald naar AI-leiderschap, design-thinking, rapid prototyping en
   zichtbare rituelen rondom leren van mislukkingen.
 domains: [cultuur-adoptie]
+good_practise: [innovatie-leren-door-doen]
 phases: [PoC, Pilot, Productie]
 levels: [Bestuur/ beleidsmaker, Projectmanager, Developer/ Engineer, Compliance officer]
 sources:

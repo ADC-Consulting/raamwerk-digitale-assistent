@@ -6,6 +6,7 @@ summary: >
   werkbelasting automatisch over meerdere instanties, zodat piekvolumes worden
   opgevangen zonder prestatieverlies en de assistent 24/7 aan SLA's voldoet.
 domains: [technische-prestaties, infrastructuur-data]
+good_practise: [schaalbaarheid-productie]
 phases: [Pilot, Productie]
 levels: [Developer/ Engineer]
 sources:

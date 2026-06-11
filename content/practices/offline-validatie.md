@@ -6,6 +6,7 @@ summary: >
   gebruikers de assistent gebruiken. Het is de snelste manier om regressies te
   vangen en de basis voor latere online evaluatie in productie.
 domains: [evaluatie-assistent]
+good_practise: [golden-dataset]
 phases: [PoC, Pilot]
 levels: [Projectmanager, Developer/ Engineer]
 image: offline_validatie.png

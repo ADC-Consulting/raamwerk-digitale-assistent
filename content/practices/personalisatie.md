@@ -7,6 +7,7 @@ summary: >
   gebruikersprofiel, expliciete regels per personalisatie-element en een
   voorkeurenpagina waarop gebruikers controle houden.
 domains: [functionaliteit, gebruikerservaring]
+good_practise: [bias-monitoring]
 phases: [Pilot, Productie]
 levels: [Developer/ Engineer, Projectmanager]
 sources:

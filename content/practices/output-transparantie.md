@@ -4,6 +4,7 @@ title: Maak de kwaliteit van de output transparant voor gebruiker en beheer
 summary: >
   Transparantie heeft twee kanten: richting de gebruiker (zodat die de antwoorden kan beoordelen en weet wanneer hij moet doorklikken naar bronnen of een mens) en richting de admin (zodat het beheer-team kwaliteitsdrift, incidenten en patronen ziet en kan ingrijpen).  
 domains: [evaluatie-assistent, antwoordkwaliteit, gebruikerservaring]
+good_practise: [transparantie-uitlegbaarheid]
 phases: [Pilot, Productie]
 levels: [Projectmanager, Developer/ Engineer]
 sources:

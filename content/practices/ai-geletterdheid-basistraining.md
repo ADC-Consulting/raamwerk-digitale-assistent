@@ -7,6 +7,7 @@ summary: >
   noodzakelijk blijft. Een  basistraining aangevuld met cyclische
   praktijksessies vormt de basis voor verantwoord gebruik.
 domains: [kennis-capaciteit]
+good_practise: [innovatie-leren-door-doen]
 phases: [Productie]
 levels: [Bestuur/ beleidsmaker, Compliance officer]
 sources:

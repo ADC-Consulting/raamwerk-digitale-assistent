@@ -10,6 +10,7 @@ summary: >
   allowlists, een policy-afdwingende gateway en menselijke tussenkomst houden
   excessive agency in toom.
 domains: [beveiliging]
+good_practise: [dreigingsmodellering-llm]
 phases: [Pilot, Productie]
 levels: [Projectmanager]
 sources:

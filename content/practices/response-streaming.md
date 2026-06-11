@@ -7,6 +7,7 @@ summary: >
   wachttijd; bij kritieke of juridische tekst moet streaming juist worden uitgezet
   zodat het complete antwoord ineens beschikbaar is.
 domains: [functionaliteit, gebruikerservaring]
+good_practise: [zuinige-inferentie]
 phases: [Pilot, Productie]
 levels: [Developer/ Engineer]
 sources:

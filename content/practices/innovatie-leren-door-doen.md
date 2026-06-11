@@ -7,6 +7,7 @@ summary: >
   verbindt leren en praktijk via sandboxes, hackathons en praktijkgerichte
   trainingen.
 domains: [kennis-capaciteit]
+good_practise: [ai-geletterdheid-basistraining, fail-forward-cultuur]
 phases: [PoC, Pilot, Productie]
 levels: [Projectmanager, Developer/ Engineer]
 sources:

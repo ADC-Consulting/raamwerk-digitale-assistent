@@ -7,6 +7,7 @@ summary: >
   verbeterproces met duidelijke signalen, human-in-the-loop voor gevoelige
   gevallen en centrale logging borgt kwaliteit en compliance.
 domains: [antwoordkwaliteit, gebruikerservaring]
+good_practise: [drift-aanpasbaarheid]
 phases: [PoC, Pilot, Productie]
 levels: [Developer/ Engineer]
 sources:

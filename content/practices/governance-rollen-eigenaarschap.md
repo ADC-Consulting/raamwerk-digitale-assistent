@@ -6,6 +6,7 @@ summary: >
   (data) naar het verantwoorden van outputs (besluiten). Twee nieuwe rollen vullen
   dit gat: de domeinverantwoordelijke en de besluit-eigenaar.
 domains: [governance]
+good_practise: [governance-data-fundament, menselijke-controle]
 phases: [Pilot, Productie]
 levels: [Compliance officer, Projectmanager]
 sources:

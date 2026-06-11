@@ -6,6 +6,7 @@ summary: >
   Bouw observability in vanaf het begin, kies bewust een AI-governance tool en
   integreer governance-logs met bestaande SIEM en SOAR voor proactieve beheersing.
 domains: [governance]
+good_practise: [compliance-monitoring-audit]
 phases: [Pilot, Productie]
 levels: [Compliance officer]
 sources:

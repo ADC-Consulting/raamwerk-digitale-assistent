@@ -4,6 +4,7 @@ title: Bouw de AI-governance rondom de assistent op vanuit bestaande data govern
 summary: >
   De grootste valkuil bij het inrichten van AI governance is parallelle structuren optuigen naast wat er al staat. Veel overheidsorganisaties hebben al volwassen data governance: data eigenaren per bronsysteem, een data catalogus, classificatieprocessen, een privacy officer en vaak een ethische commissie. AI governance is geen vervanging daarvan, maar een aanvullende laag erbovenop. Hergebruik wat je hebt, voeg toe wat ontbreekt. Zo voorkom je rolverwarring, dubbele structuren en vertraging in besluitvorming. 
 domains: [governance]
+good_practise: [datakwaliteit-governance, governance-rollen-eigenaarschap]
 phases: [Pilot, Productie]
 levels: [Compliance officer, Bestuur/ beleidsmaker]
 sources:

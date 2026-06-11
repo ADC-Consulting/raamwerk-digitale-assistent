@@ -4,6 +4,7 @@ title: Gebruik LLM-judges voor schaalbare evaluatie
 summary: >
   Een LLM-judge is een taalmodel dat je inzet om andere AI-output te beoordelen. In plaats van dat een mens elk antwoord nakijkt, laat je een LLM de rol van "beoordelaar" spelen: hij krijgt een vraag, een antwoord, en een set criteria, en geeft daar een oordeel over.  Het werkt onder voorwaarden: maak het scoringssysteem zo simpel mogelijk (bij voorkeur binair: goed / niet goed, met heldere uitleg wat goed en niet goed betekent).
 domains: [evaluatie-assistent]
+good_practise: [golden-dataset, multi-agent-kwaliteitsketen]
 phases: [Pilot, Productie]
 levels: [Developer/ Engineer]
 sources:

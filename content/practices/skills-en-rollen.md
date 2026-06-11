@@ -7,6 +7,7 @@ summary: >
   build) welke rollen minimaal aanwezig moeten zijn, en laat het team meegroeien
   met de assistent.
 domains: [kennis-capaciteit]
+good_practise: [buy-vs-build]
 phases: [Pilot, Productie]
 levels: [Bestuur/ beleidsmaker, Projectmanager]
 sources:
