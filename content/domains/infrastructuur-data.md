@@ -27,12 +27,7 @@ samenhang_blokken:
     omschrijving: "Infrastructuurkeuzes beïnvloeden de adoptie. VLAM.AI en GovChat-NL maken AI laagdrempelig beschikbaar voor ambtenaren, wat de adoptie bevordert. Adoptie vereist ook AI-geletterdheid, conform de AI-verordening verplicht vanaf februari 2025."
 sources:
   - visie-digitale-autonomie
-  - handreiking-generatieve-ai
-  - bio2
-  - algoritmekader
   - algoritmeregister
-  - nora
-  - gemma
   - common-ground
   - vlam-ai
   - gpt-nl
@@ -40,8 +35,6 @@ sources:
   - govchat-nl
   - haven
   - standaard-platform
-  - wetwijzer-bedrijven
-  - nvidia-rag-blueprint
 ---
 
 Infrastructuur & Data omvat alles wat onder de motorkap zit van een digitale AI-assistent: de rekenkracht waarop hij draait, de manier waarop hij informatie ophaalt, en de processen om hem stabiel en betrouwbaar te houden. Naast hardware en software gaat het om de manier waarop data wordt beheerd, verrijkt en beschikbaar gemaakt. Dit fundament vormt de technische bodem waar assistenten op draaien.
@@ -57,9 +50,7 @@ Het fundament beslaat zes samenhangende deelonderwerpen:
 
 ---
 
-Infrastructuurkeuzes bepalen wat een digitale assistent veilig, betrouwbaar en soeverein kan leveren. Een assistent die draait op een publieke cloud-API van een Amerikaans techbedrijf heeft wezenlijk andere eigenschappen qua privacy, beschikbaarheid en kosten dan een assistent op het VLAM.AI-platform in een Overheidsdatacentrum. Infrastructuur is geen technisch detail maar een beleidsmatige keuze met directe impact op burgers en de controleerbaarheid van overheidsdienstverlening.
-
-Het doel van goede infrastructuur is een stabiel, veilig en schaalbaar technisch fundament waarop digitale assistenten betrouwbaar kunnen draaien, met behoud van digitale soevereiniteit en controle over data.
+Infrastructuurkeuzes bepalen wat een digitale assistent veilig, betrouwbaar en soeverein kan leveren. Een assistent die draait op een publieke cloud-API van een Amerikaans techbedrijf heeft wezenlijk andere eigenschappen qua privacy, beschikbaarheid en kosten dan een assistent op het VLAM.AI-platform in een Overheidsdatacentrum. Infrastructuur is hierin geen reen technisch detail maar een beleidsmatige keuze met directe impact op burgers en de controleerbaarheid van overheidsdienstverlening. Het doel van goede infrastructuur is dus een stabiel, veilig en schaalbaar technisch fundament waarop digitale assistenten betrouwbaar kunnen draaien, met behoud van digitale soevereiniteit en controle over data.
 
 Zonder goede infrastructuur loopt ieder chatbot-project uiteindelijk vast. Denk aan vendor lock-in op één commerciële LLM-provider, oncontroleerbare kosten, onduidelijkheid over waar data en logs staan, en performance-problemen zodra het gebruik groeit. Met goede infrastructuur bouw je aan lagere kosten, meer wendbaarheid en de mogelijkheid om als overheid regie te houden over je eigen technologie. Dat betekent niet dat je alle oplossingen zelf hoeft te hosten, maar wel dat je je bewust moet zijn van de beslissingen die je maakt.
 

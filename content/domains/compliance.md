@@ -37,7 +37,7 @@ Deelonderwerpen onder compliance zijn:
 
 - **Gegevensbescherming & privacy (AVG/GDPR)**: het rechtmatig verwerken van persoonsgegevens van burgers en medewerkers conform de AVG/GDPR, inclusief grondslag, dataminimalisatie en bewaartermijnen. 
 
-- **Risicobeheer & fundamentele rechten**: het systematisch in kaart brengen en beheersen van AI-gerelateerde risico’s, zoals bias, onjuiste informatieverstrekking, privacyschendingen en schending van grondrechten (bijvoorbeeld non-discriminatie en het recht op menselijke tussenkomst), conform NIST AI RMF en ISO/IEC 23894.
+- **Risicobeheer & fundamentele rechten**: het systematisch in kaart brengen en beheersen van AI-gerelateerde risico’s, zoals bias, onjuiste informatieverstrekking, privacyschendingen en schending van grondrechten (bijvoorbeeld non-discriminatie en het recht op menselijke tussenkomst), conform de AI act.
 
 - **Transparantie & registratie**: het inzichtelijk maken hoe de digitale assistent tot antwoorden en beslissingen komt, richting gebruikers en toezichthouders, en waar nodig registratie in bijvoorbeeld een algoritmeregister en openbaarmaking onder de Wet open overheid (Woo).
 

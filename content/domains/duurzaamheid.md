@@ -37,7 +37,7 @@ Duurzaamheid valt uiteen in vier samenhangende lagen die je alle vier expliciet 
 
 ---
 
-Een digitale assistent schaalt zijn voetafdruk mee met het aantal interacties. Een inefficiënte assistent wordt op schaal niet alleen duur, maar ook een zichtbare belemmering aan de klimaatdoelen die de overheid zichzelf stelt. Bij goede invulling staan daar reële voordelen tegenover: beheersbare kosten, een kleinere voetafdruk per use case, betere aansluiting bij Maatschappelijk Verantwoord Inkopen (MVI) van de rijksoverheid en een overheid die geloofwaardig blijft op haar eigen klimaatbeleid.
+Een digitale assistent schaalt zijn voetafdruk mee met het aantal interacties. Een inefficiënte assistent wordt op schaal niet alleen duur, maar ook een mogelijke belemmering aan de klimaatdoelen die de overheid zichzelf stelt. Bij goede invulling staan daar reële voordelen tegenover: beheersbare kosten, een kleinere voetafdruk per use case, betere aansluiting bij Maatschappelijk Verantwoord Inkopen (MVI) van de rijksoverheid en een overheid die geloofwaardig blijft op haar eigen klimaatbeleid.
 
 - **Belangrijk voor de burger:** Lagere overheidskosten, minder papierwerk, en vertrouwen dat de overheid vooruitdenkt over haar eigen voetafdruk. Een efficiënte assistent levert dezelfde service met minder maatschappelijke kosten.
 - **Belangrijk voor de organisatie:** Controleerbare kosten en betere regie over het AI-budget. Modelkeuze en inferentie-optimalisatie zijn de grootste kostendrijvers; duurzaamheidsmaatregelen zijn vrijwel altijd ook kostenbesparingen.

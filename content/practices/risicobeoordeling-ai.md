@@ -25,7 +25,7 @@ Gebruik bestaande impact-assessments als startpunt: het AI Impact Assessment (AI
 
 Volg internationale risico-raamwerken: het NIST AI Risk Management Framework en de norm ISO/IEC 23894:2023 bieden concrete handvatten om AI-specifieke risico's systematisch te beheersen over de hele levenscyclus. De EU AI Act classificeert AI-systemen in vier risiconiveaus, elk met eigen verplichtingen. Koppel je interne classificatie aan die niveaus.
 
-Kijk naar bestaande overheidsvoorbeelden: de gemeente Amsterdam toetst vier juridische normen om de doorontwikkeling van generatieve AI-ideeën te evalueren, prioriteren en goedkeuren (zie het Generatieve AI Afwegingskader, stap 1.B). Zulke kaders zijn werkbaar en aanpasbaar voor andere overheden.
+Kijk naar bestaande overheidsvoorbeelden: de gemeente Amsterdam toetst vier juridische normen om de doorontwikkeling van generatieve AI-ideeën te evalueren, prioriteren en goedkeuren. Zulke kaders zijn werkbaar en aanpasbaar voor andere overheden.
 
 Gebruik tooling om kwaliteit en risico's continu te monitoren: Giskard scant LLM's automatisch op bias, hallucinaties en kwetsbaarheden; DeepEval ondersteunt "unit testen" van antwoordkwaliteit; LangSmith helpt conversaties te debuggen en monitoren. Tooling vervangt menselijke beoordeling niet, maar maakt schaal en consistentie haalbaar.
 
