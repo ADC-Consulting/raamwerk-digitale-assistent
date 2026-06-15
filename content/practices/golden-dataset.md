@@ -1,31 +1,32 @@
 ---
 id: golden-dataset
-title: Bouw een golden dataset voor output, judges én RAG
+title: Bouw een golden dataset voor output, judges en RAG
 summary: >
-  Een golden dataset is het fundament van elke evaluatiestrategie — een gecureerde
-  verzameling vragen met "ideale antwoorden" (en bij RAG: de bijbehorende bronnen)
-  waartegen je elke wijziging in prompts, modellen of pijplijn kunt testen. Hij
-  groeit met de werkelijkheid mee of raakt achterhaald.
+  Een golden dataset is het fundament van elke evaluatiestrategie. Het is een gecureerde verzameling vragen met "ideale antwoorden" (en bij RAG: relevante bronnen per vraag) waartegen je elke wijziging in prompts, modellen of pijplijn kunt testen.
 domains: [antwoordkwaliteit]
+good_practise: [llm-judges, modelbeoordeling-metrieken, offline-validatie]
 phases: [Pilot, Productie]
 levels: [Projectmanager, Developer/ Engineer]
 sources: []
 ---
+Het kernprincipe: golden datasets zijn levende documenten. Voer edge cases uit de praktijk en fouten terug aan domeinexperts voor validatie en voeg ze vervolgens weer toe aan de golden dataset. Een golden dataset die niet groeit met de werkelijkheid, raakt achterhaald. 
 
-Gebruik historische data als de assistent een klassieke tool vervangt: bestaande Q&A-paren, gecureerde casussen of e-mailbeantwoording zijn een goede startset. Niet vanaf nul beginnen — gebruik wat de organisatie al heeft als seed.
+<!-- tips -->
+Gebruik historische data als de assistent een klassieke tool vervangt: bestaande Q&A-paren, gecureerde casussen of e-mailbeantwoording zijn een goede bron om mee te starten.  
 
-Laat experts voor-de-hand-liggende én edge cases maken: een dataset met alleen gemiddelde vragen meet alleen het makkelijke deel. Edge cases (uitzonderingen, gevoelige situaties, juridische randen) onthullen waar de assistent breekt.
+Laat experts voordehand-liggende én edge cases maken: zonder edge cases meet je alleen het makkelijke deel.  
 
-Gebruik AI om de dataset uit te breiden, met expert-review: een LLM kan varianten genereren (parafrases, kleinere taalvariaties, foutieve formuleringen), maar elke gegenereerde sample wordt door een mens gevalideerd voordat hij de set instroomt. Anders bouw je een dataset die het model dat hem genereerde toetst — niet een dataset die de werkelijkheid toetst.
+Voor RAG: Maak een golden dataset voor welke bronnen gevonden moeten worden bij een bepaalde input: Breng in kaart welke artikelen of chunks moeten worden opgehaald bij een bepaalde input. Dit stelt je in staat om te evalueren of je RAG-oplossing de juiste bronnen weet te identificeren.  
 
-Bouw voor RAG een aparte golden dataset met verwachte bronnen per vraag: breng in kaart welke artikelen of chunks moeten worden opgehaald bij een bepaalde input. Zo kun je evalueren of je RAG-oplossing de juiste bronnen weet te identificeren — los van of het uiteindelijke antwoord goed is.
+Kalibreer LLM-judges tegen menselijke scores: laat een QA-analist en de LLM-judge dezelfde taak scoren en vergelijk; pas de judge-prompt aan totdat de scores convergeren. 
 
-Kalibreer LLM-judges tegen menselijke scores op een sample: laat een QA-analist en de LLM-judge dezelfde set scoren en vergelijk. Pas de judge-prompt aan tot de scores convergeren. Zonder die kalibratie is je judge een willekeurige meter.
+Bouw een golden dataset op in samenwerking met diverse stakeholders: Een complete evaluatie vereist engineers, managers, domeinexperts en gebruikers die samenwerken. Engineers kunnen het niet alleen — domeinexperts en productmanagers moeten vroeg betrokken worden voor label-curatie en ground truth. 
 
-Behandel de golden dataset als levend document: voer edge cases uit de praktijk en gevonden fouten terug aan domeinexperts voor validatie en voeg ze toe aan de set. Een dataset die niet groeit met de werkelijkheid, raakt binnen maanden achterhaald.
+| Activiteit | Responsible/ accountable (doet het werk) | Consulted (geeft input) | Informed (op de hoogte gehouden) |
+|---|---|---|---|
+| Definiëren wat "goed" betekent | Domeinexpert + Manager | Engineer + Gebruiker | Team digitale assistent |
+| Evaluatie-dataset opzetten (seed samples) | Domeinexpert | Engineer + Manager | Team digitale assistent |
+| Evaluatie-dataset cureren (sampling + labelen) | Engineer + Domeinexpert | Domeinexpert | Manager |
+| Evaluaties draaien & monitoren | Engineer | Domeinexpert | Manager |
 
-Bouw de dataset in samenwerking met diverse stakeholders: engineers kunnen het niet alleen. Domeinexperts, productmanagers én gebruikers moeten vroeg betrokken worden voor label-curatie en ground truth. Een dataset zonder gebruikers-perspectief mist precies de signalen die er toe doen.
-
-Documenteer eigenaarschap in een RACI-matrix: wie definieert "goed", wie zet de dataset op, wie cureert hem, wie draait evaluaties? Zonder expliciete verdeling valt het werk tussen wal en schip — en raakt de dataset stil.
-
-Versionier de golden dataset: behandel hem als code, met PR-review op nieuwe samples en versielabels op runs. Anders weet je niet meer waartegen je een verbetering vergelijkt.
+Template: RACI-tabel evaluatie-eigenaarschap

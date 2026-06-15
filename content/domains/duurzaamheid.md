@@ -26,7 +26,7 @@ sources:
 
 Duurzaamheid van een digitale assistent gaat over de milieu-impact die ontstaat door het bouwen, trainen, gebruiken en uiteindelijk afbouwen van die assistent. Het draait primair om energieverbruik, CO₂-uitstoot, waterverbruik (voor koeling en stroomopwekking) en materiaal- en e-waste-impact van de onderliggende modellen en infrastructuur — en om het voorkomen van onnodige verspilling over de hele levenscyclus.
 
-Voor de Nederlandse overheid is dit uitgewerkt in het Eindrapport Generatieve AI en duurzaamheid (BZK / Universiteit Utrecht, januari 2025), dat duurzaamheid expliciet benoemt als randvoorwaarde voor verantwoorde inzet van generatieve AI, en het Actieplan Duurzame Digitalisering (EZK, 2024, geactualiseerd 2025) dat de digitale sector als geheel wil vergroenen. Op Europees niveau vraagt de AI-verordening (artikel 40) om standaarden voor het terugdringen van energie- en hulpbronnengebruik over de hele AI-levenscyclus.
+Voor de Nederlandse overheid is dit uitgewerkt in het <a href="https://open.overheid.nl/documenten/046804d6-7f6c-45ff-ae16-8f8db2572bbf/file" target="_blank" rel="noopener">Eindrapport Generatieve AI en duurzaamheid (BZK / Universiteit Utrecht, januari 2025)</a>, dat duurzaamheid expliciet benoemt als randvoorwaarde voor verantwoorde inzet van generatieve AI, en het <a href="https://www.tweedekamer.nl/downloads/document?id=2024D25340" target="_blank" rel="noopener">Actieplan Duurzame Digitalisering (EZK, 2024, geactualiseerd 2025)</a> dat de digitale sector als geheel wil vergroenen. Op Europees niveau vraagt de AI-verordening (artikel 40) om standaarden voor het terugdringen van energie- en hulpbronnengebruik over de hele AI-levenscyclus.
 
 Duurzaamheid valt uiteen in vier samenhangende lagen die je alle vier expliciet moet maken:
 
@@ -37,7 +37,7 @@ Duurzaamheid valt uiteen in vier samenhangende lagen die je alle vier expliciet 
 
 ---
 
-Een digitale assistent schaalt zijn voetafdruk mee met het aantal interacties. Een inefficiënte assistent wordt op schaal niet alleen duur, maar ook een zichtbare belemmering aan de klimaatdoelen die de overheid zichzelf stelt. Bij goede invulling staan daar reële voordelen tegenover: beheersbare kosten, een kleinere voetafdruk per use case, betere aansluiting bij Maatschappelijk Verantwoord Inkopen (MVI) van de rijksoverheid en een overheid die geloofwaardig blijft op haar eigen klimaatbeleid.
+Een digitale assistent schaalt zijn voetafdruk mee met het aantal interacties. Een inefficiënte assistent wordt op schaal niet alleen duur, maar ook een mogelijke belemmering aan de klimaatdoelen die de overheid zichzelf stelt. Bij goede invulling staan daar reële voordelen tegenover: beheersbare kosten, een kleinere voetafdruk per use case, betere aansluiting bij Maatschappelijk Verantwoord Inkopen (MVI) van de rijksoverheid en een overheid die geloofwaardig blijft op haar eigen klimaatbeleid.
 
 - **Belangrijk voor de burger:** Lagere overheidskosten, minder papierwerk, en vertrouwen dat de overheid vooruitdenkt over haar eigen voetafdruk. Een efficiënte assistent levert dezelfde service met minder maatschappelijke kosten.
 - **Belangrijk voor de organisatie:** Controleerbare kosten en betere regie over het AI-budget. Modelkeuze en inferentie-optimalisatie zijn de grootste kostendrijvers; duurzaamheidsmaatregelen zijn vrijwel altijd ook kostenbesparingen.

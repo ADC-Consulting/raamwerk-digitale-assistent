@@ -237,7 +237,6 @@ function DomeinDetail({ id }) {
               { id: 'sec-waarom', label: 'Waarom is het belangrijk?' },
               ...(d.sources && d.sources.length > 0 ? [{ id: 'sec-kennis', label: 'Basiskennis' }] : []),
               { id: 'sec-practices', label: 'Good practices' },
-              { id: 'sec-keuze', label: 'Keuzemomenten' },
               { id: 'sec-samenhang', label: 'Samenhang' },
             ].map(item => (
               <li key={item.id}>
@@ -282,12 +281,6 @@ function DomeinDetail({ id }) {
                 ))}
               </div>
             )}
-          </Section>
-
-          <Section id="sec-keuze" title={`Keuzemomenten die dit ${typeLabel} raken`}>
-            {d.keuzemomenten
-              ? <div dangerouslySetInnerHTML={{ __html: d.keuzemomenten }} />
-              : <p style={{ color: 'var(--ink-500)' }}>Nog geen inhoud toegevoegd.</p>}
           </Section>
 
           <Section id="sec-samenhang" title="Samenhang met andere fundamenten en domeinen">
@@ -450,6 +443,12 @@ function PracticeDetail({ id }) {
   const p = RAAM.PRACTICES.find(x => x.id === id);
   if (!p) return <div className="container"><h1>Good practice niet gevonden</h1></div>;
   const domainObjs = p.domains.map(did => RAAM.DOMAINS.find(d => d.id === did)).filter(Boolean);
+  const relatedPractices = RAAM.PRACTICES.filter(r =>
+    r.id !== p.id && (
+      (p.good_practise || []).includes(r.id) ||
+      (r.good_practise || []).includes(p.id)
+    )
+  );
   return (
     <div className="container">
       <div className="crumbs">
@@ -470,6 +469,7 @@ function PracticeDetail({ id }) {
 
       <div className="detail-grid">
         <div className="detail-body">
+          {p.image && p.image_top && <img src={'content/docs/' + p.image} alt="" style={{ width: '100%', margin: '0 0 1.5rem', borderRadius: 8 }} />}
           {p.toelichting_html
             ? <div className="toelichting-block" dangerouslySetInnerHTML={{ __html: p.toelichting_html }} />
             : p.toelichting && p.toelichting.length > 0 && <ToelichtingBlock items={p.toelichting} />
@@ -477,7 +477,7 @@ function PracticeDetail({ id }) {
           <h2>Praktische tips</h2>
           <div className="practice-tips">
             {p.body.map((b, i) => {
-              if (b.startsWith('<table')) {
+              if (b.startsWith('<table') || b.startsWith('<ul') || b.startsWith('<img')) {
                 return <div key={i} dangerouslySetInnerHTML={{ __html: b }} />;
               }
               const colon = b.indexOf(': ');
@@ -487,7 +487,7 @@ function PracticeDetail({ id }) {
               return <p key={i}>{b}</p>;
             })}
           </div>
-          {p.image && <img src={'docs/' + p.image} alt="" style={{ width: '100%', margin: '1.5rem 0', borderRadius: 8 }} />}
+          {p.image && !p.image_top && <img src={'content/docs/' + p.image} alt="" style={{ width: '100%', margin: '1.5rem 0', borderRadius: 8 }} />}
 
           {p.sources && p.sources.length > 0 && (
             <>
@@ -507,6 +507,18 @@ function PracticeDetail({ id }) {
               ))}
             </ul>
           </div>
+          {relatedPractices.length > 0 && (
+            <div className="side-card">
+              <h4>Samenhangende Good Practices</h4>
+              <ul>
+                {relatedPractices.map(r => (
+                  <li key={r.id}>
+                    <a onClick={(e)=>{e.preventDefault();navigate('/practices/'+r.id);}} href={'#/practices/'+r.id}>{r.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           <div className="side-card">
             <h4>Past in fase</h4>
             <div className="tag-row" style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>

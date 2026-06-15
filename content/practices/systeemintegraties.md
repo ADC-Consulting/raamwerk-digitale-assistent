@@ -1,35 +1,37 @@
 ---
 id: systeemintegraties
-title: Taakuitvoering — van dialoog naar betrouwbare acties in systemen
+title: Integraties met bestaande systemen (via MCP) – naadloze koppeling met kernapplicaties voor actuele data en transacties
 summary: >
-  Een assistent met echte waarde gaat verder dan antwoorden: hij voert taken uit
-  in onderliggende systemen via gestructureerde flows, BPMN-procesmodellen en
-  orchestratie-tooling. Workflow-helderheid is de voorwaarde voor controleerbare,
-  traceerbare taakuitvoering.
-domains: [functionaliteit]
+  Bij integraties gaat het erom dat de digitale assistent niet als losstaande applicatie
+  opereert, maar op een veilige en beheersbare manier samenwerkt met bestaande
+  zaaksystemen, registraties en ondersteunende tools. 
+domains: [functionaliteit, beveiliging]
+good_practise: [taakuitvoering]
 phases: [Pilot, Productie, PoC]
-levels: [Developer/ Engineer, Projectmanager]
+levels: [Bestuur/ beleidsmaker, Developer/ Engineer, Projectmanager]
 sources:
-  - bpmn-org
-  - camunda
-  - prefect
-  - apache-airflow
-  - azure-logic-apps
-  - uipath
+  - azure-integration-services
+  - mulesoft
+  - boomi
+  - wso2
+  - apache-camel
+  - zapier-mcp
+  - mcp-gateway-docker
+  - datacamp-mcp-servers
 ---
 
-Modelleer een vaste flow per top-taak: breng per top-taak een heldere workflow in kaart en leg deze expliciet vast in configuratie of code. Ad-hoc taakuitvoering zonder gemodelleerde flow leidt tot onreproduceerbare uitkomsten en is niet auditeerbaar.
+Idealiter verbind je de verschillende systemen via gestandaardiseerde API's en een centrale integratielaag (bijvoorbeeld een iPaaS-oplossing zoals Microsoft Azure Integration Services, Boomi of MuleSoft, of open-source ESB-technologie zoals WSO2 of Apache Camel), waar alle calls worden beheerd en gelogd. De assistent roept dan generieke acties aan, zoals "zaak aanmaken" of "status opvragen", terwijl de businesslogica in het bronsysteem blijft.
 
-Werk taken uit in BPMN of vergelijkbare procesmodellen: Business Process Model and Notation maakt stappen, benodigde gegevens en beslismomenten zichtbaar voor zowel ontwikkelaars als business-analisten. Camunda Modeler is een gangbare keuze; visuele modellen verlagen de drempel voor stakeholders om mee te lezen.
+Deze praktijk gaat over de koppeling zelf: hoe de assistent veilig en beheersbaar toegang krijgt tot bronsystemen en daarmee data uitwisselt. Het daadwerkelijk orkestreren en betrouwbaar afronden van taken bóvenop die koppelingen — denk aan workflows, procesmodellen en de bevestiging van onomkeerbare acties — valt onder de praktijk over taakuitvoering, die op deze integratielaag voortbouwt.
 
-Richt per taak een workflow/orkestratie in: een workflow bepaalt welke gegevens uit het gesprek worden opgehaald, welke API-calls worden gedaan en wanneer de taak "afgerond" is. Camunda, Prefect, Apache Airflow of Azure Logic Apps zijn beproefde orchestratie-platforms — kies er één en standaardiseer.
+<!-- tips -->
 
-Bouw op een stabiele integratielaag: een iPaaS of ESB (zie de praktijk *Integraties met bestaande systemen*) levert de bouwstenen voor betrouwbare taakuitvoering. Workflow-tooling roept de integratielaag aan; de assistent roept de workflow aan. Drie lagen, elk met een eigen verantwoordelijkheid.
+Combineer meerdere integratie-bouwstenen bij technisch verouderde systemen: als bronsystemen geen goede API's hebben, combineer dan verschillende technieken om de assistent toch veilig en beheersbaar te koppelen. De volgende bouwstenen helpen daarbij.
 
-Gebruik RPA als vangnet voor legacy-systemen: als er geen API's beschikbaar zijn, kunnen Robotic Process Automation-tools (zoals UiPath) handelingen in technisch verouderde platformen uitvoeren. Behandel RPA als tijdelijke brugtechnologie, niet als langetermijnstrategie — RPA is kwetsbaar voor UI-wijzigingen en levert geen schone audit-trail.
+Gebruik database-views of een datawarehouse voor alleen lezen: haal gegevens bij voorkeur uit read-only views of een datawarehouse als bronsystemen geen goede API's hebben.
 
-Markeer onomkeerbare acties expliciet: betalingen, mutaties in registraties, verzending van besluiten — vereis altijd een aparte bevestigingsstap (human-in-the-loop) en log de bevestiging als onderdeel van de audit-trail. "Per ongeluk uitgevoerd" mag geen mogelijke uitkomst zijn.
+Ondersteun bestandsuitwisseling en message queues als tussenstap: gebruik waar nodig CSV/XML-bestanden (bijvoorbeeld via SFTP, het SSH File Transfer Protocol) en bestaande message queues om gegevens periodiek te verversen of uit te wisselen.
 
-Definieer afrondingscriteria per taak: wanneer is de taak echt klaar? Bij een aanvraag: ontvangstbevestiging, opname in zaaksysteem, e-mail naar burger, status bijgewerkt. Een halfaffe taak die door de assistent als "klaar" wordt gemeld, is een datakwaliteits- én een vertrouwensincident.
+Hanteer een Model Context Protocol (MCP) aanpak aan de AI-kant: definieer standaard "tools" (zoals create_case, get_status) die de assistent kan aanroepen, en koppel deze onder water flexibel aan API, ESB of een file. Hierdoor kun je later makkelijker naar moderne koppelingen migreren zonder de assistent zelf steeds aan te passen.
 
-Test taakuitvoering met realistische scenario's: niet alleen happy path maar ook onderbrekingen, time-outs, ongeldige input en gedeeltelijke uitval van bronsystemen. Een workflow die bij een time-out een halve actie achterlaat, beschadigt vertrouwen sneller dan een goed afgehandeld foutpad.
+Doe  een gezamenlijke architectuur-, datastromen- en beveiligingsreview bij koppeling met een kernsysteem: een koppeling met een kernsysteem zoals de Centric Suite is vaak tijdrovend maar essentieel, en waar geen standaardkoppeling bestaat moet je creatief zijn (een custom API of, als laatste redmiddel, scraping). Breng vóór de bouw met alle relevante stakeholders in kaart welke datastromen lopen, waar (bijzondere) persoonsgegevens de assistent in en uit gaan, en welke beveiligings- en autorisatie-eisen gelden. Betrek daarbij minimaal het functioneel beheer of de leverancier van het kernsysteem, security en de CISO, privacy en de FG, een architect en de business-eigenaar. Leg de afspraken vast voordat je begint; achteraf herstellen is kostbaar. Verwijs voor de dataflow- en beveiligingsdiepte naar de praktijk over LLM-dreigingsmodellering en voor connectie-autorisatie naar de praktijk over Identity & Access Management voor assistenten.

@@ -26,14 +26,10 @@ sources:
   - owasp-agentic-top10
   - mitre-atlas
   - bio2
-  - nis2-ncsc
   - handreiking-generatieve-ai
-  - overheidsbreed-standpunt-genai
-  - ncsc-uk-secure-ai
-  - ncsc-nl-building-trust
 ---
 
-Beveiliging gaat over alle maatregelen om een digitale assistent en zijn omgeving te beschermen tegen aanvallen of fouten die leiden tot het lekken van gevoelige informatie, het manipuleren van antwoorden, het uitvoeren van ongewenste acties, of schade aan burgers en organisatie. Het kernprincipe is **defense-in-depth**: meerdere lagen van bescherming, zodat één falende maatregel niet meteen tot een doorbraak leidt.
+Beveiliging gaat over alle maatregelen om een digitale assistent en zijn omgeving te beschermen tegen aanvallen of fouten die leiden tot het lekken van gevoelige informatie, het manipuleren van antwoorden, het uitvoeren van ongewenste acties, of schade aan burgers en organisatie. Het kernprincipe is **defense-in-depth**: meerdere lagen van bescherming, zodat een falende maatregel niet meteen tot een doorbraak leidt.
 
 In de praktijk bestaat dit uit twee delen die je in samenhang moet aanpakken: klassieke informatiebeveiliging (toegangsbeheer, logging, netwerk- en applicatiebeveiliging die je voor elke ICT-toepassing nodig hebt) én AI-specifieke risico's die uniek zijn voor digitale assistenten:
 
@@ -53,7 +49,7 @@ Het fundament beslaat zes deelonderwerpen:
 
 ---
 
-Het hoofddoel van dit domein is het beschermen van systemen, data en gebruikers tegen misbruik van de assistent door defense-in-depth: gelaagde maatregelen op UI-, model-, retrieval-, tool- en infrastructuurniveau, zodat één falende maatregel niet tot een catastrofale doorbraak leidt.
+Het hoofddoel van dit domein is het beschermen van systemen, data en gebruikers tegen misbruik van de assistent door defense-in-depth: gelaagde maatregelen op UI-, model-, retrieval-, tool- en infrastructuurniveau, zodat een falende maatregel niet tot een catastrofale doorbraak leidt.
 
 Zonder een serieuze beveiligingsaanpak ontstaan drie concrete risico's: datalekken (gevoelige gegevens via output, logs of foutieve integraties), verstoring van continuïteit (supply-chain-aanvallen die hele ketens raken), en misbruik van de assistent zelf (aanvallers laten hem verkeerde of schadelijke informatie aan burgers geven). De gevolgen stapelen: reputatieschade, verlies van vertrouwen, en hoge herstelkosten.
 

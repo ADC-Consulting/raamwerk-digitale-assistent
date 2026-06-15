@@ -10,7 +10,7 @@ samenhang_blokken:
   - naam: Technische Prestaties
     omschrijving: "Latency en kwaliteit zijn een trade-off. Meer evaluatie- en controlestappen kunnen het systeem trager en duurder maken; log per stap zowel kwaliteitswinst als extra latency en tokenverbruik."
   - naam: Functionaliteit
-    omschrijving: "Agentische complexiteit (tools, memory) verandert de evaluatie-aanpak fundamenteel — niet meer alleen de eindoutput beoordelen maar ook tussenstappen, tool-calls en geheugenstate."
+    omschrijving: "Agentische complexiteit (tools, memory) verandert de evaluatie-aanpak fundamenteel, niet meer alleen de eindoutput beoordelen maar ook tussenstappen, tool-calls en geheugenstate."
   - naam: Ethiek & Mensenrechten
     omschrijving: "Bias als kwaliteitsindicator, FRAIA-toetsing en non-discriminatie zijn ingebed in soft metrics. Test-sets met ethische cases overlappen met kwaliteits-test-sets."
   - naam: Governance
@@ -36,9 +36,9 @@ Binnen dit domein onderscheiden we twee hoofdvragen:
 
 ---
 
-Het hoofddoel van Kwaliteit van de Output is het opbouwen van gerechtvaardigd vertrouwen in de assistent: gebruikers, beleidsmakers en toezichthouders moeten kunnen vertrouwen dat de antwoorden kloppen, navolgbaar zijn en aansluiten bij het doel van de assistent.
+Het hoofddoel van kwaliteit is het opbouwen van gerechtvaardigd vertrouwen in de assistent: gebruikers, beleidsmakers en toezichthouders moeten kunnen vertrouwen dat de antwoorden kloppen, navolgbaar zijn en aansluiten bij het doel van de assistent.
 
-Een digitale assistent is in essentie een black box: tussen input en output zit een proces dat niet direct waarneembaar is. Zonder inzicht in de kwaliteit en zonder weten hoe je kwaliteit kunt verbeteren, kun je terechtkomen in hallucinaties die als feit worden gepresenteerd, beleidsinconsistentie tussen antwoorden, of juridisch onhoudbare informatie — met als gevolg schade aan kwetsbare burgers en verlies van vertrouwen in de overheid.
+Een digitale assistent is in essentie een black box: tussen input en output zit een proces dat niet direct waarneembaar is. Zonder inzicht in de kwaliteit en zonder weten hoe je kwaliteit kunt verbeteren, kun je terechtkomen in hallucinaties die als feit worden gepresenteerd, beleidsinconsistentie tussen antwoorden, of juridisch onhoudbare informatie, met als gevolg schade aan kwetsbare burgers en verlies van vertrouwen in de overheid.
 
 Bij goede invulling levert dit aantoonbare voordelen op: snellere doorontwikkeling (vreemd gedrag wordt vroeg afgevangen), schaalbaarheid (één evaluatie-backbone bedient meerdere assistenten), aantoonbare compliance, en een sterkere businesscase doordat impact meetbaar wordt.
 
