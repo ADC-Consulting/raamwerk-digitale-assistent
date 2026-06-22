@@ -26,7 +26,6 @@ sources:
 
 Gebruik de OWASP-checklists om scenario's systematisch af te lopen: de OWASP Top 10 for LLM Applications dekt prompt injection (direct, indirect en multimodaal), data-exfiltratie, poisoning en excessive agency. Voor agentische assistenten combineer je die met de OWASP Top 10 for Agentic Applications, voor risico's rond tool-chaining, memory manipulation en agent-to-agent-trust.
 
-
 Breng dataflows expliciet in kaart: welke bronnen worden geraadpleegd, welke data verlaat het systeem, welke gebruikers zien wat en welke tools roept de assistent aan. Onzichtbare dataflows zijn een blind spot voor risicoanalys.
 
 Gebruik MITRE ATLAS voor adversariële tactieken: deze kennisbank van tactieken, technieken en case-studies specifiek voor AI-systemen geeft je een gestandaardiseerde taal voor red-teaming en samenwerking met andere overheden. 
