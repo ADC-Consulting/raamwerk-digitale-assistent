@@ -1,68 +1,349 @@
+- id: gloss-a2a-protocol
+  term: A2A-protocol (Agent-to-Agent) 
+  omschrijving: "Open protocolvoor communicatie tussen autonome AI-agents. Maakt het mogelijk dat meerdere gespecialiseerde agents taken aan elkaar doorgeven."
+  seeAlso:
+    - a2a-protocol
+
+- id: gloss-ai-act
+  term: AI Act (EU AI-verordening)
+  omschrijving: "Europese verordening die AI-systemen indeelt in risiconiveaus (onaanvaardbaar, hoog, beperkt, minimaal) en per niveau eisen stelt aan transparantie, documentatie, menselijk toezicht en conformiteitsbeoordeling. Gefaseerd van kracht vanaf 2024 met de meeste verplichtingen voor hoog-risico systemen per augustus 2026."
+  seeAlso:
+    - ai-act-platform
+    - ai-act-timeline
+
+- id: gloss-ai-agent
+  term: AI-agent (agentische AI)
+  omschrijving: "Een AI-systeem dat zelfstandig meerdere stappen uitvoert, tools aanroept en beslissingen neemt om een doel te bereiken zonder menselijke tussenkomst."
+  seeAlso:
+    - stackviv-multi-agent
+    - owasp-agentic-top10
+
+- id: gloss-ai-geletterdheid
+  term: AI-geletterdheid
+  omschrijving: "Het vermogen om te begrijpen wat AI-systemen wel en niet kunnen, hoe ze werken en welke risico's ze meebrengen. Verplicht voor alle medewerkers die AI-systemen inzetten of beoordelen op grond van de EU AI-verordening (artikel 4, van kracht vanaf februari 2025)."
+  seeAlso:
+    - digitaleoverheid-ai-geletterdheid
+    - it-academie-rijk-ai
+
 - id: gloss-algoritmekader
   term: Algoritmekader
-  omschrijving: "Het Algoritmekader van de Rijksoverheid: leidraad en concrete maatregelen voor verantwoorde inzet van algoritmes, inclusief inkoop en governance."
+  omschrijving: "Het Algoritmekader van de Rijksoverheid: Belangrijkste wetten en regels voor verantwoord gebruik van overheidsalgoritmes, met tips en hulpmiddelen."
   seeAlso:
     - algoritmekader
 
 - id: gloss-algoritmeregister
   term: Algoritmeregister
-  omschrijving: Openbaar register waarin Nederlandse overheidsorganisaties publiceren welke algoritmes en AI-toepassingen zij gebruiken.
+  omschrijving: "Openbaar register waarin Nederlandse overheidsorganisaties publiceren welke algoritmes en AI-toepassingen zij gebruiken."
   seeAlso:
     - algoritmeregister
 
+- id: gloss-altai
+  term: Assessment List for Trustworthy AI (ALTAI)
+  omschrijving: "Praktische checklist van de Europese Commissie waarmee stap voor stap gecontroleerd wordt of een AI-systeem voldoet aan de zeven vereisten voor betrouwbare AI (menselijk toezicht, technische robuustheid, privacy, transparantie, non-discriminatie, maatschappelijk welzijn en verantwoording)."
+  seeAlso:
+    - altai
+
 - id: gloss-avg
-  term: AVG
-  omschrijving: Europese privacywet (Algemene Verordening Gegevensbescherming) die regelt hoe persoonsgegevens verwerkt mogen worden. Bepalend bij iedere AI-toepassing die persoonsgegevens raakt.
+  term: Algemene verordening gegevensbescherming (AVG)
+  omschrijving: "Europese privacywet die bepaalt hoe organisaties persoonsgegevens mogen verwerken, ook bij AI‑toepassingen."
+
+- id: gloss-bias
+  term: Bias in AI-systemen
+  omschrijving: "Systematische afwijking in de uitkomsten van een AI-systeem, waardoor bepaalde groepen mensen ongelijk worden behandeld. Bias kan voortkomen uit trainingsdata, modelontwerp of de context waarin het systeem wordt ingezet. Bewust in kaart brengen en beheersen is wettelijk vereist."
+  seeAlso:
+    - algoritmekader-bias
+    - algoritmekader-biastoets
 
 - id: gloss-bio2
-  term: BIO2
-  omschrijving: Het verplichte informatiebeveiligingskader voor de Nederlandse overheid (Baseline Informatiebeveiliging Overheid v1.3). Iedere infrastructuurkeuze wordt hieraan getoetst.
+  term: Baseline Informatiebeveiliging Overheid (BIO2)
+  omschrijving: "Verplicht informatiebeveiligingskader voor alle Nederlandse overheden (v1.3), dat minimale beveiligingsmaatregelen voorschrijft en waarop elke infrastructuur- en cloudkeuze wordt getoetst."
   seeAlso:
     - bio2
+
+- id: gloss-caching
+  term: Caching
+  omschrijving: "Het tijdelijk opslaan veelgebruikte gegevens of antwoorden, zodat ze bij een volgende keer direct beschikbaar zijn zonder alles opnieuw te hoeven uitrekenen of ophalen."
+  seeAlso:
+    - ibm-prompt-caching
+    - databricks-semantic-caching
+
+- id: gloss-chunking
+  term: Chunking
+  omschrijving: "Het opdelen van documenten in kleinere tekstfragmenten (chunks) voor gebruik in een RAG-pijplijn. De chunkingstrategie (per pagina, paragraaf of semantisch blok) heeft directe invloed op de kwaliteit van de opgehaalde informatie."
+  seeAlso:
+    - nvidia-chunking-strategy
+
+- id: gloss-cloud-act
+  term: CLOUD Act
+  omschrijving: "Amerikaanse wet (Clarifying Lawful Overseas Use of Data Act) die de Amerikaanse overheid het recht geeft om data te vorderen bij in de VS gevestigde bedrijven, ook als die data fysiek in Europa staat. Reden waarom Amerikaanse cloudproviders in sommige gevallen niet voldoen aan de AVG en Nederlandse overheidseisen rondom digitale soevereiniteit."
 
 - id: gloss-common-ground
   term: Common Ground
-  omschrijving: Architectuurprincipes van VNG voor gemeentelijke IT, gericht op het loskoppelen van data en applicaties zodat data eenmaal opgeslagen en meervoudig gebruikt wordt.
+  omschrijving: "Architectuurprincipes van VNG voor gemeentelijke IT, waarbij data wordt losgekoppeld van applicaties zodat gegevens één keer worden opgeslagen en veilig, herbruikbaar en organisatiebreed kunnen worden gedeeld."
+
+
+- id: gloss-csrd
+  term: Corporate Sustainability Reporting Directive (CSRD)
+  omschrijving: "Europese richtlijn die (grote) organisaties verplicht te rapporteren over hun milieu- en sociale impact. Voor overheidsorganisaties relevant omdat AI-gerelateerde CO₂-uitstoot (Scope 3) in de rapportage meegenomen moet worden."
+  seeAlso:
+    - eindrapport-genai-duurzaamheid
+
+- id: gloss-data-governance
+  term: Data governance
+  omschrijving: "Het geheel aan afspraken, rollen en processen voor het verantwoord beheren van data: eigenaarschap, kwaliteit, toegang en levenscyclus. Bij een digitale assistent gaat het ook om welke databronnen gebruikt mogen worden en wie daar toezicht op houdt."
+
+- id: gloss-datalineage
+  term: Datalineage
+  omschrijving: "Het vastleggen en inzichtelijk maken waar data vandaan komt, hoe die is bewerkt en waar die naartoe gaat, zodat duidelijk is op welke bron een antwoord is gebaseerd en dit gecontroleerd kan worden."
+
+
+- id: gloss-deployment
+  term: Deployment
+  omschrijving: "Het in productie brengen van een AI-model of digitale assistent, inclusief containerisatie, configuratie, versiemanagement en het beschikbaar stellen via een API of gebruikersinterface."
+
+
+- id: gloss-dialogue-state-tracking
+  term: Dialogue State Tracking (DST)
+  omschrijving: "Techniek waarmee een digitale assistent de stand van een gesprek bijhoudt: welke informatie al is uitgewisseld, wat de intentie van de gebruiker is en welke stappen al zijn doorlopen."
+  seeAlso:
+    - decagon-dst
+    - dst-multidomain
+
+- id: digitale-autonomie
+  term: Digitale Autonomie
+  omschrijving: "De eigen regie over je digitale omgeving, data en keuzes: zelf bepalen welke technologie je gebruikt, hoe je data wordt ingezet en met wie je wat deelt."
+  seeAlso:
+    - visie-digitale-autonomie
 
 - id: gloss-dpia
-  term: DPIA
-  omschrijving: "Verplichte voorafgaande risicobeoordeling (Data Protection Impact Assessment) bij gegevensverwerkingen met een hoog privacyrisico. Vrijwel altijd vereist bij AI-systemen."
+  term: Data Protection Impact Assessment (DPIA)
+  omschrijving: "Verplichte voorafgaande risicobeoordeling bij gegevensverwerkingen met een hoog privacyrisico, verplicht door de AVG (artikel 35). Vrijwel altijd vereist bij AI-systemen."
+  seeAlso:
+    - dpia-ap
+
+- id: gloss-embedding
+  term: Embedding
+  omschrijving: "Een numerieke representatie (vector) van tekst waarmee betekenis wordt vastgelegd. Hierdoor kan een digitale assistent vergelijkbare teksten en vragen herkennen, ook als andere woorden worden gebruikt."
+
+- id: gloss-eu-data-act
+  term: EU Data Act
+  omschrijving: "Europese verordening die regelt wie data uit verbonden producten en diensten mag gebruiken en delen, onder welke voorwaarden. Doel is eerlijke toegang tot data, meer innovatie en bescherming van bedrijven en burgers."
+  seeAlso:
+    - eu-data-act
+
+- id: gloss-fail-forward
+  term: Fail-forward cultuur
+  omschrijving: "Organisatiecultuur waarin fouten en experimenten die mislukken worden gezien als leermomenten in plaats van mislukkingen die afgestraft worden. Essentieel voor innovatie met AI, waarbij vroeg experimenteren en leren van mislukkingen sneller tot betere resultaten leidt dan afwachten tot het perfect is."
+
+- id: gloss-fraia
+  term: Fundamental Rights and AI Assessment (FRAIA)
+  omschrijving: "Instrument voor het toetsen van grondrechtelijke risico's van AI-toepassingen, aanvullend op de DPIA en IAMA. Veelal gecombineerd uitgevoerd bij hoog-risico AI-systemen."
+  seeAlso:
+    - dpia-fraia-voorbeeld
 
 - id: gloss-gemma
-  term: GEMMA
-  omschrijving: Gemeentelijke Modelarchitectuur van VNG Realisatie. Referentiearchitectuur voor de informatievoorziening van gemeenten en vertrekpunt voor gemeentelijke AI-projecten.
+  term: Gemeentelijke Model architectuur (GEMMA)
+  omschrijving: "Referentiearchitectuur van VNG Realisatie voor de informatievoorziening van gemeenten en vertrekpunt voor gemeentelijke AI-projecten."
   seeAlso:
-    - common-ground
-    - nora
+    - gemma
+
+- id: gloss-generatieve-ai
+  term: Generatieve AI
+  omschrijving: "AI-technologie die nieuwe content genereert (tekst, afbeeldingen, code, audio) op basis van patronen in trainingsdata. Grote taalmodellen (LLM's) zijn de meest gebruikte vorm in digitale assistenten voor de overheid."
+
+- id: gloss-golden-dataset
+  term: Golden dataset
+  omschrijving: "Een gecureerde verzameling vragen met bijbehorende ideale antwoorden (en bij RAG: de relevante bronnen per vraag) die dient als meetlat voor de kwaliteit van een digitale assistent. Fungeert als regressietest bij elke wijziging in prompts, modellen of de RAG-pijplijn."
+
+- id: gloss-guardrails
+  term: Guardrails
+  omschrijving: "Technische maatregelen die de invoer en uitvoer van een taalmodel bewaken en ongewenste content, lekken van gevoelige informatie of jailbreak-pogingen blokkeren. Guardrails kunnen op regelgebaseerde of modelgebaseerde wijze worden ingericht en vormen een essentiële beveiligingslaag."
+  seeAlso:
+    - nvidia-nemo-guardrails
+    - guardrails-ai
+
+- id: gloss-hallucinatie
+  term: Hallucinatie
+  omschrijving: "Feitelijk onjuiste, verzonnen of misleidende output die een taalmodel als waar presenteert. Hallucinaties zijn een fundamenteel risico bij generatieve AI en vragen om RAG, bronvermelding, guardrails en evaluatie om ze te beperken en zichtbaar te maken."
+
+- id: gloss-human-in-the-loop
+  term: Human-in-the-loop
+  omschrijving: "Model van menselijke controle waarbij een mens elke output van de digitale assistent beoordeelt voordat een beslissing wordt genomen of actie wordt ondernomen. Vereist bij juridisch bindende beslissingen en hoog-risico toepassingen."
+  seeAlso:
+    - algoritmekader-menselijke-controle
+
+- id: gloss-human-on-the-loop
+  term: Human-on-the-loop
+  omschrijving: "Model van menselijke controle waarbij de mens toezicht houdt op het systeem en kan ingrijpen, maar niet elke individuele output hoeft te beoordelen. Geschikt voor situaties waarbij snelheid belangrijk is en het systeem een laag foutpercentage heeft."
+  seeAlso:
+    - algoritmekader-menselijke-controle
+
+- id: gloss-iama
+  term: Impact Assessment Mensenrechten en Algoritmes (IAMA)
+  omschrijving: "Een vragenlijst van de Rijksoverheid om de gevolgen van een algoritme of AI-systeem voor grondrechten systematisch in kaart te brengen. Verplicht bij hoogrisico‑toepassingen en sterk aanbevolen in de ontwerpfase van overheidsassistenten."
+  seeAlso:
+    - iama
+    - iama-toelichting
+
+- id: gloss-iam
+  term: "Identity & Access Management (IAM)"
+  omschrijving: "Het beheer van wie welke rechten heeft op systemen, data en functies. Omvat o.a. inloggen (authenticatie), toekennen van rechten (autorisatie), rolgebaseerde toegang (RBAC) en het beperken van wat de assistent zelf mag doen (least privilege)."
+
+- id: gloss-inferentie
+  term: Inferentie
+  omschrijving: "Het proces waarbij een getraind AI-model een antwoord genereert op een invoer. Inferentie is verantwoordelijk voor 80–90% van het totale energieverbruik van een productie-AI-systeem en is de belangrijkste kostendrijver bij het draaien van digitale assistenten."
+
+- id: gloss-latency
+  term: Latency (responstijd)
+  omschrijving: "De tijd tussen het indienen van een vraag door de gebruiker en het ontvangen van het eerste (of volledige) antwoord van de digitale assistent."
+
+- id: gloss-llm
+  term: Large Language Model (LLM)
+  omschrijving: "Groot taalmodel dat op enorme hoeveelheden tekst is getraind en daardoor in natuurlijke taal kan samenvatten, beantwoorden, vertalen en redeneren."
+
+- id: gloss-llm-judge
+  term: LLM-judge
+  omschrijving: "Een taalmodel dat automatisch de kwaliteit van antwoorden beoordeelt (bijv. op juistheid, relevantie en volledigheid). Dit maakt grootschalige evaluatie mogelijk, maar moet wel worden gekalibreerd met menselijke beoordelingen."
+
+- id: gloss-llmops
+  term: Large Language Model Operations (LLMOps)
+  omschrijving: "Praktijk en tooling om grote taalmodellen (LLM’s) betrouwbaar in productie te brengen en te beheren: van deployment en versiebeheer tot monitoring, kostenbewaking, veiligheid en continue verbetering van prompts en modellen."
+
+- id: gloss-maas
+  term: Model as a Service (MaaS)
+  omschrijving: "Dienstmodel waarbij een AI‑model via een API wordt aangeboden door een externe aanbieder, zodat organisaties het model kunnen gebruiken zonder zelf infrastructuur of modellen te beheren. Snel in te zetten maar geeft minder controle over data en soevereiniteit dan zelf hosten."
+
+- id: gloss-mcp
+  term: Model Context Protocol (MCP)
+  omschrijving: "Open protocol om LLM’s op een gestandaardiseerde manier te koppelen aan tools en externe systemen. Hierdoor kun je tools leverancier‑onafhankelijk definiëren en makkelijker wisselen van AI‑aanbieder zonder integraties opnieuw te bouwen."
+  seeAlso:
+    - mcp-protocol
+
+- id: gloss-metadata
+  term: Metadata
+  omschrijving: "Beschrijvende informatie over data of documenten, zoals auteur, datum, bron, versie en categorie."
+
+- id: gloss-mlops
+  term: Machine Learning Operations (MLOps)
+  omschrijving: "De praktijk van het gestandaardiseerd en herhaalbaar in productie brengen, monitoren en verbeteren van AI-modellen. Omvat versiemanagement, experiment-tracking, CI/CD-pipelines voor modellen en productie-monitoring."
+
+- id: gloss-modelrouting
+  term: Modelrouting
+  omschrijving: "Het automatisch doorsturen van gebruikersvragen naar het meest geschikte model of verwerkingspad op basis van vraagtype, risico en complexiteit. Eenvoudige vragen gaan naar lichte, snelle routes; complexe vragen naar zwaardere LLM-inference. Dit verlaagt kosten en latency."
+
+- id: gloss-multi-agent
+  term: Multi-agent systeem
+  omschrijving: "Architectuur waarin meerdere gespecialiseerde AI‑agents samen een taak uitvoeren door werk te verdelen, resultaten te delen en elkaars uitkomsten te controleren. Dit vergroot de mogelijkheden van een assistent, maar vereist duidelijke governance over het vertrouwen en de controle tussen agents onderling en tussen mens en agents."
+  seeAlso:
+    - stackviv-multi-agent
+
+- id: gloss-nis2
+  term: NIS2 (Cyberbeveiligingswet)
+  omschrijving: "Europese richtlijn (EU 2022/2555) die strengere eisen stelt aan de informatiebeveiliging en meldplicht van essentiële en belangrijke diensten. De Nederlandse implementatie (Cyberbeveiligingswet) treedt in 2026 in werking en is van toepassing op veel overheidsorganisaties."
+  seeAlso:
+    - nis2-ncsc
 
 - id: gloss-nora
-  term: NORA
-  omschrijving: Het overkoepelende architectuurkader voor de Nederlandse overheid (Nederlandse Overheid Referentie Architectuur). Beschrijft principes, standaarden en bouwblokken voor digitale dienstverlening.
+  term: Nederlandse Overheid Referentie Architectuur (NORA)
+  omschrijving: "Het overkoepelende architectuurkader voor de Nederlandse overheid. Beschrijft principes, standaarden en bouwblokken voor digitale dienstverlening."
   seeAlso:
     - bio2
 
+- id: gloss-observability
+  term: Observability
+  omschrijving: "Het vermogen om van buitenaf te zien hoe een systeem zich gedraagt, door gestructureerd te meten en te loggen (logging, metrics, tracing). Bij digitale assistenten gaat het ook om het continu volgen van antwoordkwaliteit, kosten, snelheid (latency) en afwijkingen van het gewenste gedrag."
+  seeAlso:
+    - langfuse
+    - mlflow
+    - prometheus
+
 - id: gloss-open-source
   term: Open source
-  omschrijving: "Software waarvan de broncode publiek beschikbaar is. Kernuitgangspunt van de visie Digitale Autonomie: open waar kan, beschermen waar moet."
+  omschrijving: "Software waarvan de broncode publiek beschikbaar is."
+
+- id: gloss-persona-analyse
+  term: Persona-analyse
+  omschrijving: "Het in kaart brengen van verschillende typen gebruikers van een digitale assistent, met hun behoeften, motivatie, digitale vaardigheden en verwachtingen. Dit vormt de basis voor gericht adoptiebeleid en een toegankelijk ontwerp."
+
+- id: gloss-prompt-injection
+  term: Prompt injection
+  omschrijving: "Aanvalsvorm waarbij verborgen of misleidende instructies in invoer of documenten worden verstopt, zodat de assistent zijn bedoelde regels negeert en ongewenst gedrag vertoont. Wordt in de OWASP Top 10 gezien als belangrijkste risico voor LLM‑toepassingen."
   seeAlso:
-    - visie-digitale-autonomie
+    - owasp-prompt-injection
+    - owasp-llm-top10
 
 - id: gloss-rag
-  term: RAG
-  omschrijving: Techniek (Retrieval-Augmented Generation) waarbij een taalmodel voor het antwoorden eerst relevante documenten ophaalt uit een eigen kennisbron. Beperkt hallucinaties en houdt bronnen traceerbaar.
+  term: Retrieval-Augmented Generation (RAG)
+  omschrijving: "Techniek waarbij een taalmodel eerst relevante informatie ophaalt uit eigen bronnen en die gebruikt om een antwoord te genereren. Dit verkleint de kans op hallucinaties en maakt bronnen beter herleidbaar."
+
+- id: gloss-rasci
+  term: Responsible, Accountable, Consulted, Supported, Informed (RASCI)
+  omschrijving: "Uitgebreide RACI-matrix waarin naast Responsible, Accountable, Consulted en Informed ook een expliciete Support-rol is vastgelegd: wie ondersteunt de uitvoering. In de Overheidsbrede Handreiking Generatieve AI wordt RASCI gebruikt om rollen en verantwoordelijkheden rond een digitale assistent te beschrijven."
+  seeAlso:
+    - handreiking-genai-governance
+
+- id: gloss-red-teaming
+  term: Red-teaming
+  omschrijving: "Georganiseerde aanvalstest waarbij een team actief probeert een AI-systeem te misbruiken of te laten falen (bijv. via prompt injection of jailbreaks). Verplicht bij hoogrisico‑AI en sterk aanbevolen voor elke productie-assistent."
+
+- id: gloss-response-streaming
+  term: Response streaming
+  omschrijving: "Het stap voor stap tonen van een AI‑antwoord terwijl het nog wordt gegenereerd. Dit verkleint de ervaren wachttijd en verbetert de gebruikersbeleving."
+
+
+- id: gloss-siem
+  term: Security Information and Event Management (SIEM)
+  omschrijving: "Platform dat beveiligingsgebeurtenissen uit meerdere systemen centraal verzamelt, analyseert en correleert. Helpt om afwijkend gedrag van een digitale assistent en misbruikpogingen vroegtijdig te herkennen."
+  seeAlso:
+    - splunk-siem-blog
+
+- id: gloss-slo
+  term: Service Level Objective (SLO)
+  omschrijving: "Interne, meetbare doelstelling voor de prestaties van een systeem, zoals: '95% van de vragen wordt binnen 0,5 seconde beantwoord.' "
+  seeAlso:
+    - google-sre-slo
+
+- id: gloss-sla
+  term: Service Level Agreement (SLA)
+  omschrijving: "Overeenkomst waarin minimale serviceniveaus worden vastgelegd tussen leverancier en afnemer, bijvoorbeeld over beschikbaarheid, prestaties, supporttijden en escalatieprocedures."
 
 - id: gloss-soevereiniteit
   term: Soevereiniteit
-  omschrijving: Het vermogen van Nederland om eigen digitale infrastructuur, data en kennis te beheren zonder afhankelijk te zijn van enkele buitenlandse partijen.
+  omschrijving: "Het recht en het vermogen van een staat of organisatie om zelfstandige beslissingen te nemen, zonder inmenging van buitenaf."
   seeAlso:
     - visie-digitale-autonomie
 
-- id: gloss-verantwoorde-ai
-  term: Verantwoorde AI
-  omschrijving: Verzamelterm voor de principes (transparantie, uitlegbaarheid, non-discriminatie, menselijke regie) waaraan AI-toepassingen binnen de overheid moeten voldoen.
+- id: gloss-transparantiedocument
+  term: Transparantiedocument
+  omschrijving: "Document dat voor burgers, toezichthouders en de eigen organisatie inzichtelijk maakt hoe een AI-systeem tot antwoorden of beslissingen komt. Vereist voor registratie in het Algoritmeregister."
+  seeAlso:
+    - transparantie-format
+    - ec-transparante-ai
+
+- id: gloss-validatiekader
+  term: Validatiekader
+  omschrijving: "Een gestructureerd raamwerk met criteria en methoden om vast te stellen of een digitale assistent technisch en ethisch voldoet aan de gestelde eisen voordat hij in productie gaat. Geeft ook houvast bij periodieke hertoetsing."
+  seeAlso:
+    - validatiekader-llm
+
+- id: gloss-vectordatabase
+  term: Vectordatabase
+  omschrijving: "Een database die tekst opslaat als numerieke vectorrepresentaties (embeddings) en in staat is om semantisch vergelijkbare stukken tekst snel op te zoeken."
+  seeAlso:
+    - qdrant
+    - milvus
+    - weaviate
+
+- id: gloss-vendor-lock-in
+  term: Vendor lock-in
+  omschrijving: "Situatie waarbij een organisatie zo afhankelijk is geworden van een specifieke leverancier dat overstappen technisch complex en financieel onaantrekkelijk is."
+  seeAlso:
+    - rijksbrede-strategie-it-sourcing
+    - eu-data-act
 
 - id: gloss-vlam-ai
-  term: VLAM.AI
-  omschrijving: "On-premise GPU-cluster van SSC-ICT (Veilige Lokale AI Modellen) in overheidsdatacenters met API-toegang, vlam-chat en vlam-search. Acht ministeries aangesloten."
+  term: VLAM.AI (Veilige Lokale AI Modellen)
+  omschrijving: "Vlam.ai is een lokaal AI-platform van de Nederlandse Rijksoverheid, ontwikkeld door SSC-ICT. Het stelt duizenden rijksambtenaren in staat om veilig gebruik te maken van generatieve AI voor werkgerelateerde taken."
   seeAlso:
-    - visie-digitale-autonomie
+    - vlam-ai
+
