@@ -25,3 +25,5 @@ Verplicht de basistraining voor iedereen: Zorg dat alle medewerkers een AI-basis
 Gebruik herkenbare voorbeelden uit de eigen praktijk: Verwerk casuïstiek uit de eigen organisatie in de training, zodat medewerkers direct zien hoe de stof op hun werk van toepassing is. Abstracte uitleg over AI blijft minder goed hangen dan een voorbeeld waarbij de assistent een fout maakt in een herkenbare situatie.
 
 Combineer e-learning met live sessies: Koppel digitale modules aan korte live sessies van 30–60 minuten waarin ruimte is voor vragen, misverstanden en gedeelde ervaringen. Dit verankert de kennis en verlaagt de drempel om vervolgvragen te stellen in de praktijk.
+
+Stimuleer kritisch nadenken over de output van de assistent: ontwerp interventies die gebruikers aanzetten de assistent niet klakkeloos te volgen, bijvoorbeeld door een dilemmaworkshop te ontwikkelen waarin gebruikers aan de hand van concrete morele en praktische dilemma’s (zoals: wanneer vertrouw je een antwoord wel of niet, wat doe je als de assistent iets beweert dat botst met je eigen expertise, hoe ga je om met mogelijke bias in data) leren bewuster en kritischer met de assistent om te gaan.
