@@ -119,8 +119,8 @@ function VariantD() {
   const [active, setActive] = React.useState('alle');
   const [q, setQ] = React.useState('');
   const [hover, setHover] = React.useState(null);
-  const [sortBy, setSortBy] = React.useState('recent');
-  const [sortDir, setSortDir] = React.useState('desc');
+  const [sortBy, setSortBy] = React.useState('titel');
+  const [sortDir, setSortDir] = React.useState('asc');
   const [sortOpen, setSortOpen] = React.useState(false);
   const sortRef = React.useRef(null);
 
@@ -134,11 +134,13 @@ function VariantD() {
 
   const CATEGORY_ORDER = ['beleid', 'verplicht', 'richtlijn', 'raamwerk', 'tools', 'voorbeeld', 'infra'];
 
-  const uniqueCats = [...new Set(data.map(d => d.categorie).filter(Boolean))];
+  const uniqueCats = [...new Set(data.map(d => d.categorie).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'nl'));
   const tabs = [
     { key: 'alle', label: 'Alle bronnen', count: data.length },
     ...uniqueCats.map(cat => ({ key: cat, label: cat, count: data.filter(d => d.categorie === cat).length })),
   ];
+
+  const toKey = c => ({ 'Beleidskader':'beleid','Richtlijnen':'richtlijn','Richtlijn':'richtlijn','Verplicht kader':'verplicht','Raamwerk':'raamwerk','Register':'register' }[c] || 'infra');
 
   const ql = q.toLowerCase();
   const filtered = data.filter(d => {
@@ -153,7 +155,7 @@ function VariantD() {
   const sorted = [...filtered].sort((a, b) => {
     let cmp = 0;
     if (sortBy === 'categorie') {
-      cmp = CATEGORY_ORDER.indexOf(a.typeKey) - CATEGORY_ORDER.indexOf(b.typeKey);
+      cmp = (a.categorie || '').localeCompare(b.categorie || '', 'nl');
       if (cmp === 0) cmp = a.title.localeCompare(b.title, 'nl');
     } else if (sortBy === 'titel') {
       cmp = a.title.localeCompare(b.title, 'nl');
@@ -237,7 +239,7 @@ function VariantD() {
               background:'#FFFFFF', border:'1px solid #D8D8D2', minWidth:200,
               boxShadow:'0 6px 18px rgba(11,58,102,0.10)',
             }}>
-              {['categorie', 'recent', 'titel'].map(key => {
+              {['categorie', 'titel'].map(key => {
                 const isActive = sortBy === key;
                 return (
                   <button
@@ -268,7 +270,7 @@ function VariantD() {
 
       <div>
         {sorted.map(b => {
-          const type = T[b.typeKey];
+          const type = T[toKey(b.categorie)];
           const isHover = hover === b.id;
           return (
             <div

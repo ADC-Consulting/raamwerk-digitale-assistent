@@ -20,6 +20,7 @@ sources:
   - weaviate
   - anaconda-rag
   - LangChain-rag
+  - nvidia-rag-blueprint
 ---
 
 Implementeer hybride zoeken als standaard: combineer lexicaal zoeken (BM25) met semantisch zoeken (vector similarity).

@@ -11,6 +11,7 @@ sources:
   - validatiekader-llm
   - deepeval
   - datadog-llm-evaluation
+  - artificial-analysis
 ---
 
 Begin bij de use case, niet bij de metric: Beschrijf per toepassing kort het doel van de digitale assistent (bijvoorbeeld “publieke informatie over regelingen”) en de belangrijkste risico’s (onjuiste informatie, onveilige output, misverstanden bij burgers). Kies vervolgens alleen metrieken die hier direct op aansluiten, zoals juistheid, veiligheid, begrijpelijkheid en gebruikerstevredenheid.

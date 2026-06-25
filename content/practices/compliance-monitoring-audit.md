@@ -16,6 +16,10 @@ sources:
   - microsoft-sentinel
   - coralogix-guardrails
   - credo-ai
+  - ai-act-compliance-checker
+  - navex-ai-compliance
+  - ncsc-wet-regelgeving
+  - vanta
 ---
 
 Leg alle interacties centraal vast in een logsysteem: registreer elk gesprek, elke beslissing en elke foutmelding van de digitale assistent in een centraal SIEM-systeem (bijvoorbeeld Splunk, Microsoft Sentinel of Coralogix). Voorzie elke log van een tijdstempel en uniek volgnummer, zodat interacties volledig traceerbaar zijn.

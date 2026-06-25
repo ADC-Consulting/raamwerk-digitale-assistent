@@ -1,107 +1,16 @@
-- id: abe-ecp
-  title: Aanpak Begeleidingsethiek (ABE, ECP)
-  categorie: Raamwerk
-  omschrijving: >
-    Gestructureerde methode voor ethische reflectie op technologische toepassingen, ontwikkeld door ECP; brengt diverse betrokkenen samen onder begeleiding van een moderator om risico's en handelingsopties in kaart te brengen.
-  url: https://ecp.nl/project/aanpak-begeleidingsethiek/
-
-- id: actieplan-duurzame-digitalisering
-  title: Actieplan Duurzame Digitalisering (EZK, 2024/2025)
-  categorie: Beleidskader
-  omschrijving: >
-    Nationaal actieplan van EZK om de digitale sector te vergroenen, inclusief verduurzaming van Overheidsdatacenters (ODC's) en MVI-ICT.
-  url: https://www.tweedekamer.nl/downloads/document?id=2024D25340
-
 - id: prosci-adkar
-  title: "ADKAR-model (Prosci)"
-  categorie: Raamwerk
+  title: "Prosci — ADKAR-model"
+  categorie: Artikel
   omschrijving: >
     Internationaal erkend verandermanagement-model (Awareness, Desire, Knowledge, Ability, Reinforcement) om adoptie-interventies rond de uitrol van een digitale assistent te structureren.
   url: https://www.prosci.com/blog/adkar-model
 
-- id: aequitas
-  title: Aequitas
-  categorie: Tools
-  omschrijving: >
-    Open-source toolkit voor het auditen van machine learning-modellen op bias, gericht op het genereren van auditrapportages over oneerlijke uitkomsten per groep.
-  url: https://github.com/dssg/aequitas
-
-- id: a2a-protocol
-  title: Agent 2 Agent Protocol (A2A)
-  categorie: Raamwerk
-  omschrijving: >
-    Open protocol voor communicatie tussen autonome AI-agents.
-  url: https://a2aproject.github.io/A2A/
-
 - id: stackviv-multi-agent
-  title: "Agentic AI & Multi-Agent Systems Guide (Stackviv)"
+  title: "Stackviv — Agentic AI & Multi-Agent Systems Guide"
   categorie: Richtlijnen
   omschrijving: >
     Uitgebreide gids over agentic AI en multi-agent-systemen met uitleg over kernconcepten, ontwerppatronen, coördinatie, frameworks (LangGraph, CrewAI, AutoGen) en overwegingen rond menselijk toezicht.
   url: https://stackviv.ai/blog/agentic-ai-multi-agent-systems-guide
-
-- id: ai-act-compliance-checker
-  title: AI Act Compliance Checker (EU)
-  categorie: Tools
-  omschrijving: >
-    Tool van de Europese Commissie waarmee getoetst kan worden of AI-systemen en general-purpose AI-modellen voldoen aan de eisen uit de AI Act.
-  url: https://ai-act-service-desk.ec.europa.eu/en/eu-ai-act-compliance-checker
-
-- id: ai-act-timeline
-  title: AI Act Implementation Timeline
-  categorie: Verplicht kader
-  omschrijving: >
-    Tijdlijn met de belangrijkste data voor implementatie van de EU AI-wet, inclusief de gefaseerde inwerkingtreding van verplichtingen.
-  url: https://artificialintelligenceact.eu/implementation-timeline/
-
-- id: ai-act-platform
-  title: AI Act Single Information Platform (EU)
-  categorie: Verplicht kader
-  omschrijving: >
-    Officieel EU-platform voor het laatste nieuws en informatie over de EU AI Act; centrale referentie voor compliance-teams die wijzigingen in regelgeving moeten signaleren.
-  url: https://ai-act-service-desk.ec.europa.eu/en
-
-- id: ai-cursus-overheid-dsp
-  title: AI Cursus Overheid – Data Science Partners
-  categorie: Training
-  omschrijving: >
-    Praktijkgerichte AI-cursus speciaal voor overheden, gericht op kennisopbouw, bewustwording en het verantwoord toepassen van AI in de publieke sector.
-  url: https://datasciencepartners.nl/ai-cursus-overheid/
-
-- id: ai-energy-score
-  title: AI Energy Score (Hugging Face)
-  categorie: Tools
-  omschrijving: >
-    Gestandaardiseerde energie-efficiëntie-rating per AI-model, vergelijkbaar met het EU-energielabel; helpt bij modelselectie per taaktype.
-  url: https://huggingface.github.io/AIEnergyScore/
-
-- id: ai-fairness-360
-  title: AI Fairness 360 (IBM)
-  categorie: Tools
-  omschrijving: >
-    Uitgebreide open-source toolkit met meer dan 70 fairness-metrics en technieken voor het detecteren en verminderen van bias in datasets en modellen (werkt op gestructureerde data).
-  url: https://github.com/Trusted-AI/AIF360
-
-- id: aiia-rijksoverheid
-  title: AI Impact Assessment (AIIA) — Rijksoverheid
-  categorie: Raamwerk
-  omschrijving: >
-    Rapport van de Rijksoverheid waarin de impact van AI-toepassingen wordt beoordeeld aan de hand van een AI-impactassessment; bruikbaar als template voor systematische impactbeoordeling.
-  url: https://www.rijksoverheid.nl/documenten/rapporten/2022/11/30/ai-impact-assessment-ministerie-van-infrastructuur-en-waterstaat
-
-- id: sustain-ai-check
-  title: AI Sustainability Check (AlgorithmWatch / SustAIn)
-  categorie: Raamwerk
-  omschrijving: >
-    Zelf-evaluatievragenlijst langs 13 duurzaamheidscriteria die ecologische, sociale en economische dimensies dekt; bruikbaar bij modelkeuze om brede impact in beeld te brengen.
-  url: https://sustain.algorithmwatch.org/en/how-sustainable-is-my-ai/
-
-- id: ai-transparency-ux
-  title: AI Transparency Framework (UX Design)
-  categorie: Raamwerk
-  omschrijving: >
-    Artikel dat een helder raamwerk geeft om transparantie-eisen te vertalen naar concrete ontwerpkeuzes in producten en diensten.
-  url: https://uxdesign.cc/ai-transparency-framework-cf89fa61dc1b
 
 - id: aivd-rdi-genai
   title: "AIVD & RDI — Generatieve AI; een transformatieve impact op cybersecurity"
@@ -117,47 +26,12 @@
     Nederlandse guidance van de AIVD met vijf principes voor het veilig ontwikkelen van AI-systemen, inclusief aanvalstypen (evasion, backdoor, poisoning, model inversion).
   url: https://english.aivd.nl/publications/publications/2023/02/15/ai-systems-develop-them-securely
 
-- id: algorithmwatch-sustain
-  title: AlgorithmWatch SustAIn
-  categorie: Raamwerk
-  omschrijving: >
-    Initiatief met criteria en tools voor sociale, economische én ecologische duurzaamheid van AI; bron voor bredere assessment-frameworks rond modelselectie.
-  url: https://algorithmwatch.org/en/sustain/
-
-- id: algoritmekader
-  title: Algoritmekader (BZK)
-  categorie: Raamwerk
-  omschrijving: >
-    Het Algoritmekader van de Rijksoverheid, inclusief leidraad voor inkoop van verantwoorde algoritmes en concrete maatregelen voor data en infrastructuur.
-  url: https://minbzk.github.io/Algoritmekader/
-
-- id: algoritmekader-rollen
-  title: Algoritmekader — Beschrijf rollen en verantwoordelijkheden
-  categorie: Richtlijnen
-  omschrijving: >
-    Maatregel uit het Algoritmekader voor het vastleggen van rollen en verantwoordelijkheden rondom algoritmes, inclusief toelichting op het gebruik van een RACI- of VERI-matrix.
-  url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/maatregelen/2-owp-01-rollen-en-verantwoordelijkheden/
-
 - id: algoritmekader-bias
   title: "Algoritmekader — Bias en non-discriminatie"
   categorie: Richtlijnen
   omschrijving: >
     Praktische handreiking van BZK over het herkennen en beheersen van bias in algoritmische systemen, met uitleg over direct en indirect onderscheid en het discriminatieprotocol.
   url: https://minbzk.github.io/Algoritmekader/onderwerpen/bias-en-non-discriminatie/
-
-- id: algoritmekader-monitoring
-  title: Algoritmekader — Controleer of het algoritme werkt zoals bedoeld
-  categorie: Richtlijnen
-  omschrijving: >
-    Maatregel voor het voortdurend monitoren of een algoritme functioneert in lijn met de vastgestelde doelstelling, inclusief aandacht voor statistische bias.
-  url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/maatregelen/5-ver-01-functioneren-in-lijn-met-doeleinden/index.html
-
-- id: algoritmekader-grondrechten
-  title: Algoritmekader — Grondrechten beschermen in algoritmes
-  categorie: Richtlijnen
-  omschrijving: >
-    Overzicht van de grondrechten die kunnen worden geraakt door algoritmes, met aanbevolen maatregelen en hulpmiddelen voor de overheidscontext.
-  url: https://minbzk.github.io/Algoritmekader/onderwerpen/fundamentele-rechten/
 
 - id: algoritmekader-nondiscriminatie
   title: "Algoritmekader — Handreiking non-discriminatie by design"
@@ -172,6 +46,496 @@
   omschrijving: >
     Pagina van het Algoritmekader over het IAMA met uitleg over toepassing, relevantie voor de AI-verordening en verwijzingen naar bijbehorende vereisten en maatregelen.
   url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/hulpmiddelen/IAMA/
+
+- id: it-academie-rijk-ai
+  title: "IT-Academie Rijk – Artificiële intelligentie"
+  categorie: Kennisplatform
+  omschrijving: >
+    Overzichtspagina met uitleg, leerpaden, trainingen en inspiratiebronnen over artificiële intelligentie voor professionals binnen de (Rijks)overheid.
+  url: https://www.it-academieoverheid.nl/onderwerpen/a/artificiele-intelligentie
+
+- id: azure-vm-scale-sets
+  title: "Azure Virtual Machine Scale Sets & AKS Cluster Autoscaler"
+  categorie: Tools
+  omschrijving: >
+    Azure diensten die automatisch het aantal VM-instances en Kubernetes nodes/pods schalen op basis van gebruik en belasting.
+  url: https://learn.microsoft.com/azure/virtual-machine-scale-sets/overview
+
+- id: build-vs-buy-thoughtworks
+  title: "Build vs. Buy – How to Decide Between Building Software In-House or Buying Off the Shelf"
+  categorie: Raamwerk
+  omschrijving: >
+    Raamwerk dat organisaties helpt bij de keuze tussen zelf software ontwikkelen of bestaande oplossingen inkopen, met afwegingskaders, risico's en best practices.
+  url: https://www.thoughtworks.com/content/dam/thoughtworks/documents/e-book/tw_ebook_build_vs_buy_2022.pdf
+
+- id: databricks-semantic-caching
+  title: "Databricks — Building a Cost-Optimized Chatbot with Semantic Caching"
+  categorie: Artikel
+  omschrijving: >
+    Blogartikel met een architectuur en stappenplan voor het inzetten van semantische caching om LLM-chatbots goedkoper en sneller te maken.
+  url: https://www.databricks.com/blog/building-cost-optimized-chatbot-semantic-caching
+
+- id: conversational-ai-design-patterns
+  title: "AI-Agents Plus — Conversational AI Design Patterns"
+  categorie: Richtlijnen
+  omschrijving: >
+    Overzicht van essentiële conversational-AI-patronen waarmee een digitale assistent de complexiteit van menselijke conversaties effectief kan beheersen.
+  url: https://www.ai-agentsplus.com/blog/conversational-ai-design-patterns-2026
+
+- id: dcat-ap-nl
+  title: "DCAT-AP-NL 3.0"
+  categorie: Beleid & kaders
+  omschrijving: >
+    Nederlandse profielimplementatie van de Europese DCAT-AP-standaard voor datacatalogi en lineage.
+  url: https://www.forumstandaardisatie.nl/intakeadvies-dcat-ap-nl-30
+
+- id: decagon-dst
+  title: "Decagon — What is Dialogue State Tracking?"
+  categorie: Richtlijnen
+  omschrijving: >
+    Toegankelijke uitleg van Dialogue State Tracking (DST) als methode om contextueel conversatievermogen te realiseren.
+  url: https://decagon.ai/glossary/what-is-dialogue-state-tracking-dst
+
+- id: e5-nl-embeddings
+  title: "E5-NL embedding-modellen"
+  categorie: Tools
+  omschrijving: >
+    Open-source Nederlandse embedding-modellen, beschikbaar op Hugging Face.
+  url: https://huggingface.co/models?search=e5-nl
+
+- id: eu-ai-act-art40
+  title: "EU AI Act — artikel 40 (standaarden energie-efficiëntie)"
+  categorie: Beleid & kaders
+  omschrijving: >
+    Mandaat in de Europese AI-verordening voor het ontwikkelen van harmonised standards rond energie- en hulpbronnengebruik over de hele AI-levenscyclus.
+  url: https://artificialintelligenceact.eu/article/40/
+
+- id: ec-transparante-ai
+  title: "Europese Commissie — Transparante AI-systemen"
+  categorie: Richtlijnen
+  omschrijving: >
+    Pagina met officiële Europese richtlijnen en veelgestelde vragen over transparantie en verantwoording bij AI-systemen.
+  url: https://digital-strategy.ec.europa.eu/en/faqs/guidelines-and-code-practice-transparent-ai-systems
+
+- id: govchat-nl
+  title: "GovChat-NL"
+  categorie: Tools
+  omschrijving: >
+    Open-source AI-platform voor overheden (Provincie Limburg), gebaseerd op OpenWebUI. Tweewekelijks overleg met provincies en gemeenten, goedgekeurde DPIA beschikbaar.
+  url: https://www.govchat-nl.nl/
+
+- id: gpt-nl
+  title: "GPT-NL (TNO, NFI, SURF)"
+  categorie: Tools
+  omschrijving: >
+    Soeverein open Nederlands taalmodel. Bètaversie draait bij eerste launching customers (Q1 2026); bredere uitrol najaar 2026.
+  url: https://gpt-nl.nl/
+
+- id: greenpt
+  title: "GreenPT – EU-gehoste, privacyvriendelijke AI"
+  categorie: Tools
+  omschrijving: >
+    Nederlands AI-chatplatform dat modellen volledig binnen de EU host (datacenters op hernieuwbare energie) en geen externe API's gebruikt, zodat data de EU niet verlaat. Voorbeeld van een EU-gehoste modelaanbieder als soeverein alternatief voor hyperscalers die onder de CLOUD Act vallen.
+  url: https://greenpt.com/
+
+- id: handreiking-nondiscriminatie
+  title: "Handreiking non-discriminatie by design"
+  categorie: Richtlijnen
+  omschrijving: >
+    Praktisch toepasbaar ontwerpkader dat helpt om discriminerende patronen in AI-systemen vroegtijdig te identificeren en te voorkomen, vanuit juridisch, technisch en organisatorisch perspectief.
+  url: https://www.rijksoverheid.nl/documenten/rapporten/2022/12/05/handreiking-non-discriminatie-artificial-intelligence-ai
+
+- id: anaconda-rag
+  title: "How to Build a Retrieval-Augmented Generation Chatbot"
+  categorie: Artikel
+  omschrijving: >
+    Stapsgewijze handleiding voor het bouwen van een Retrieval-Augmented Generation (RAG) chatbot, inclusief architectuur, implementatie en best practices.
+  url: https://www.anaconda.com/blog/how-to-build-a-retrieval-augmented-generation-chatbot
+
+- id: iama-lessons
+  title: "IAMA in actie — Lessons learned van 15 IAMA-trajecten"
+  categorie: Voorbeeldproject
+  omschrijving: >
+    Praktijkrapport over ervaringen met het IAMA bij gemeenten en de Belastingdienst, met concrete tips over uitvoering en wat in de praktijk goed en minder goed werkt.
+  url: https://www.rijksoverheid.nl/documenten/rapporten/2024/06/20/iama-in-actie-lessons-learned-van-15-iama-trajecten-bij-nederlandse-overheidsorganisaties
+
+- id: ibm-ai-team-rollen
+  title: "IBM – Building Your AI Team: The Roles Your Enterprise Needs"
+  categorie: Artikel
+  omschrijving: >
+    Artikel over de belangrijkste rollen, competenties en samenwerking binnen AI-teams in grotere organisaties.
+  url: https://www.ibm.com/think/insights/building-your-ai-team-the-roles-your-enterprise-needs
+
+- id: innovatiebudget-2025
+  title: "Innovatiebudget 2025 — De Virtuele AI-assistent"
+  categorie: Voorbeeldproject
+  omschrijving: >
+    Project van gemeente Amsterdam en Heerlen voor een landelijke standaard virtuele AI-assistent.
+  url: https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/innovatie/innovatiebudget/toekenning-innovatiebudget-2025/
+
+- id: innovatiegroep-gem
+  title: "Innovatiegroep-methodiek (digitale assistent GEM)"
+  categorie: Richtlijnen
+  omschrijving: >
+    Samenwerkingsmodel tussen overheidsorganisaties zoals toegepast bij de digitale assistent GEM; documentatie uit het AO-fonds Gemeenten over leren innoveren met een virtuele assistent.
+  url: https://www.aeno.nl/uploads/AO_fonds_Gemeenten_Leren-innoveren-virtuele-assistent-Gem_def.pdf
+
+- id: iso-23894
+  title: "ISO/IEC 23894:2023 — AI Risk Management"
+  categorie: Richtlijnen
+  omschrijving: >
+    Internationale norm met begeleiding voor organisaties die AI-producten of -diensten ontwikkelen, inzetten of gebruiken, om AI-specifieke risico's door de hele levenscyclus te managen.
+  url: https://www.iso.org/standard/77304.html
+
+- id: itu-l1801
+  title: "ITU-T L.1801 (februari 2026)"
+  categorie: Richtlijnen
+  omschrijving: >
+    Internationale ITU-richtlijn voor het beoordelen van milieu-impact van AI-systemen; aanvullend op nationale en Europese kaders en bruikbaar voor wereldwijde benchmarking.
+  url: https://www.itu.int/rec/T-REC-L.1801
+
+- id: llm-council
+  title: "Karpathy llm-council"
+  categorie: Tools
+  omschrijving: >
+    Open-source voorbeeld van een multi-LLM-judge-aanpak waarin meerdere modellen onafhankelijk oordelen en je hun antwoorden aggregeert voor stabielere evaluatie-uitkomsten.
+  url: https://github.com/karpathy/llm-council
+
+- id: keda
+  title: "KEDA — Kubernetes Event-driven Autoscaling"
+  categorie: Tools
+  omschrijving: >
+    Event-gedreven auto-scaler voor Kubernetes, breed inzetbaar voor AI-workloads die schalen op basis van queue-depth of inkomend verkeer.
+  url: https://keda.sh/
+
+- id: datadog-llm-evaluation
+  title: "Datadog – LLM Evaluation Framework & Best Practices"
+  categorie: Artikel
+  omschrijving: >
+    Artikel met best practices en een raamwerk voor het opzetten van LLM-evaluatie, monitoring en metriek in productieomgevingen.
+  url: https://www.datadoghq.com/blog/llm-evaluation-framework-best-practices/
+
+- id: model-routing-brenndoerfer
+  title: "Brenndoerfer – Model Routing, Selection, A/B Testing & Cascades Strategies"
+  categorie: Artikel
+  omschrijving: >
+    Artikel over strategieën voor model routing, modelselectie, A/B testen en cascade-architecturen bij het inzetten van meerdere LLM-modellen in één toepassing.
+  url: https://mbrenndoerfer.com/writing/model-routing-selection-ab-testing-cascades-strategies
+
+- id: dst-multidomain
+  title: "Multi-domain DST based on Dynamic Knowledge Fusion"
+  categorie: Richtlijnen
+  omschrijving: >
+    Overzichtsartikel over multi-domain taakgerichte dialoogsystemen, met nadruk op Dialogue State Tracking en het dynamisch combineren van kennisbronnen over domeinen heen.
+  url: https://link.springer.com/article/10.1007/s44336-026-00037-0
+
+- id: aws-multi-llm-routing
+  title: "AWS — Multi-LLM Routing Strategies for Generative AI Applications"
+  categorie: Artikel
+  omschrijving: >
+    AWS-blog over strategieën om meerdere LLM's te routeren en combineren in generatieve AI-toepassingen.
+  url: https://aws.amazon.com/blogs/machine-learning/multi-llm-routing-strategies-for-generative-ai-applications-on-aws/
+
+- id: ncsc-nl-building-trust
+  title: "NCSC NL — Building Trust in AI Through a Cyber Risk-Based Approach"
+  categorie: Richtlijnen
+  omschrijving: >
+    Internationale guidance over een risico-gebaseerde aanpak voor AI-security, mede onderschreven door NCSC-NL en AIVD.
+  url: https://www.ncsc.nl/artificial-intelligence/building-trust-ai-through-cyber-risk-based-approach
+
+- id: ncsc-webapps
+  title: "NCSC — ICT-beveiligingsrichtlijnen voor Webapplicaties"
+  categorie: Richtlijnen
+  omschrijving: >
+    Klassieke NCSC-beveiligingsrichtlijnen voor webapplicaties; blijven leidend voor het web-frontend-deel van een digitale assistent.
+  url: https://www.ncsc.nl/webapplicaties/ict-beveiligingsrichtlijnen-webapplicaties
+
+- id: ncsc-wet-regelgeving
+  title: "NCSC — Wet- en regelgeving (Cyber Resilience Act e.a.)"
+  categorie: Beleid & kaders
+  omschrijving: >
+    Overzicht van relevante EU-wetgeving voor cybersecurity (NIS2, Cyber Resilience Act en gerelateerd) zoals beheerd door NCSC.
+  url: https://www.ncsc.nl/wet-en-regelgeving
+
+- id: nis2-ncsc
+  title: "NCSC — NIS2-richtlijn / Cyberbeveiligingswet"
+  categorie: Beleid & kaders
+  omschrijving: >
+    Toelichting van het NCSC op de NIS2-richtlijn (EU 2022/2555) en de Nederlandse Cyberbeveiligingswet; strengere beveiligings- en meldplichten voor essentiële en belangrijke diensten.
+  url: https://www.ncsc.nl/cyberbeveiligingswet-nis2
+
+- id: nist-ai-600-1
+  title: "NIST AI 600-1 — Generative AI Profile"
+  categorie: Raamwerk
+  omschrijving: >
+    Uitwerking van het NIST AI RMF voor generatieve AI, met concrete acties voor o.a. prompt injection, training-data-poisoning en onbedoelde memorisatie.
+  url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf
+
+- id: nist-sp-800-218a
+  title: "NIST SP 800-218A — Secure Software Development for Generative AI"
+  categorie: Richtlijnen
+  omschrijving: >
+    AI-specifiek Secure Software Development Framework (SSDF) community-profiel met tasks voor AI-model- en systeemontwikkeling.
+  url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218A.pdf
+
+- id: nsa-securing-ai
+  title: "NSA / NCSC-UK / CISA — Guidance for Securing AI"
+  categorie: Richtlijnen
+  omschrijving: >
+    Gezamenlijke AI-beveiligingsrichtlijn van NSA, NCSC-UK, CISA en internationale partners; high-level security-principes voor AI-systemen.
+  url: https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3598020/guidance-for-securing-ai-issued-by-nsa-ncsc-uk-cisa-and-partners/
+
+- id: sibony-besluitvorming
+  title: "Olivier Sibony – You're About to Make a Terrible Mistake"
+  categorie: Artikel
+  omschrijving: >
+    Boek over besluitvormingsvalkuilen (groupthink, overconfidence, persuasive storytelling) en hoe je deze systematisch voorkomt door tegenspraak en dialoog te organiseren.
+  url: https://oliviersibony.com/books/youre-about-to-make-a-terrible-mistake/
+
+- id: owasp-prompt-injection
+  title: "OWASP LLM01:2025 — Prompt Injection"
+  categorie: Richtlijnen
+  omschrijving: >
+    Uitgewerkte definitie, voorbeelden en mitigaties voor prompt injection — de belangrijkste risicocategorie volgens de OWASP LLM Top 10.
+  url: https://genai.owasp.org/llmrisk/llm01-prompt-injection/
+
+- id: owasp-sensitive-info
+  title: "OWASP LLM02:2025 — Sensitive Information Disclosure"
+  categorie: Richtlijnen
+  omschrijving: >
+    Risico's van inadequate autorisatie en het lekken van persoonsgegevens, system prompts of API-sleutels via LLM-output of logs.
+  url: https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/
+
+- id: owasp-excessive-agency
+  title: "OWASP LLM06:2025 — Excessive Agency"
+  categorie: Richtlijnen
+  omschrijving: >
+    Risico's van te ruime tool-toegang en autonome handelingen door een agentische assistent; mitigatie via allowlists, scope-restricties en menselijke goedkeuring.
+  url: https://genai.owasp.org/llmrisk/llm062025-excessive-agency/
+
+- id: platform-ai-overheid
+  title: "Platform AI & Overheid"
+  categorie: Kennisplatform
+  omschrijving: >
+    Kennis- en netwerkplatform voor AI bij de overheid; deelt use cases, experimenten en ervaringen tussen overheidsorganisaties.
+  url: https://platformaioverheid.nl/
+
+- id: arxiv-profile-personalization
+  title: "Pro-active Personalization through Profile Customization (arXiv)"
+  categorie: Richtlijnen
+  omschrijving: >
+    Onderzoek over een agent die continu gebruikersvoorkeuren leert en bijwerkt om langdurige, consistente personalisatie in gesprekken mogelijk te maken.
+  url: https://arxiv.org/abs/2512.15302
+
+- id: rijksbrede-handreiking-it-sourcing
+  title: "Rijksbrede Handreiking IT-sourcing"
+  categorie: Richtlijnen
+  omschrijving: >
+    Praktische handreiking voor organisaties binnen de Rijksoverheid met een IT-dienstenmodel, stappenplan voor het IT-sourcingproces en een afwegingskader voor sourcingkeuzes.
+  url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2026/02/85096-BZK-Rijksbrede-Handreiking-IT-sourcing-TG.pdf
+
+- id: rijksbrede-strategie-it-sourcing
+  title: "Rijksbrede Strategie IT-sourcing"
+  categorie: Beleid & kaders
+  omschrijving: >
+    Rijksbrede strategie van de Rijksoverheid om kwetsbaarheden en risico's in IT-sourcing structureel aan te pakken en meer grip te krijgen op digitale autonomie, continuïteit en leveranciersafhankelijkheden.
+  url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2026/02/85096-BZK-Rijksbrede-Strategie-IT-sourcing-TG.pdf
+
+- id: schema-guided-dialogue
+  title: "Google Research — Schema-Guided Dialogue"
+  categorie: Tools
+  omschrijving: >
+    Schema-gebaseerde dialoogdataset die als referentiestandaard dient voor DST in API-gedreven, taakgerichte assistenten.
+  url: https://github.com/google-research-datasets/dstc8-schema-guided-dialogue
+
+- id: sci-for-ai
+  title: "Green Software Foundation — SCI for AI (ISO/IEC 21031-uitbreiding)"
+  categorie: Raamwerk
+  omschrijving: >
+    Consensus-standaard voor CO₂-intensiteit van AI-systemen, inclusief specificatie en rekenmodel voor een carbon-intensity-score per use case.
+  url: https://greensoftware.foundation/standards/sci-ai/
+
+- id: stumble-tool
+  title: "Stumble — conversational AI-prestatie-tool"
+  categorie: Tools
+  omschrijving: >
+    Tool om inzicht te krijgen in de conversational-AI-prestatie van een chatbot, inclusief afhaakmomenten en herstelpunten.
+  url: https://www.trystumble.com/
+
+- id: surf-ai-hub
+  title: "SURF AI-hub"
+  categorie: Kennisplatform
+  omschrijving: >
+    AI-hub van SURF met soevereine architectuur en use-case community voor onderwijs en overheid; bruikbaar als referentie voor provider-agnostische architectuur.
+  url: https://www.surf.nl/themas/artificial-intelligence/projecten-en-samenwerkingen/ai-hub
+
+- id: vlam-ai
+  title: "VLAM.AI (SSC-ICT)"
+  categorie: Tools
+  omschrijving: >
+    Veilige Lokale AI Modellen — on-premise GPU-cluster in overheidsdatacenters met API-toegang, vlam-chat en vlam-search. Officieel gelanceerd mei 2025; acht ministeries aangesloten.
+  url: https://www.digitaleoverheid.nl/nieuws/departementen-kiezen-voor-veilige-ai-chatbot-van-ssc-ict/
+
+- id: vng-ai-governance
+  title: "VNG AI-governancekader"
+  categorie: Beleid & kaders
+  omschrijving: >
+    Interactieve kennisbank met rollen, processtappen en kenniskaarten voor AI-governance bij gemeenten; voor en door gemeenten.
+  url: https://aigovernance.vng.nl/
+
+- id: coursera-hackathon
+  title: "Coursera – Wat is een hackathon?"
+  categorie: Artikel
+  omschrijving: >
+    Toelichtend artikel over wat een hackathon is, hoe het werkt, welke doelen het dient en wat deelnemers en organisaties ermee kunnen bereiken.
+  url: https://www.coursera.org/articles/what-is-a-hackathon
+
+- id: splunk-siem-blog
+  title: "Splunk — Wat is SIEM?"
+  categorie: Richtlijnen
+  omschrijving: >
+    Achtergrondartikel over het concept Security Information and Event Management (SIEM) en hoe dit helpt bij het centraal verzamelen, analyseren en monitoren van security-events.
+  url: https://www.splunk.com/en_us/blog/learn/siem-security-information-event-management.html
+
+- id: digitaleoverheid-ai-geletterdheid
+  title: "Digitale Overheid – Wat je moet weten over AI-geletterdheid"
+  categorie: Artikel
+  omschrijving: >
+    Artikel over het belang van AI-geletterdheid voor inwoners, professionals en bestuurders, met uitleg, voorbeelden en aanknopingspunten voor beleid en praktijk.
+  url: https://www.digitaleoverheid.nl/achtergrondartikelen/wat-je-moet-weten-over-ai-geletterdheid/
+
+- id: ibm-prompt-caching
+  title: "IBM – What is Prompt Caching?"
+  categorie: Artikel
+  omschrijving: >
+    Artikel dat uitlegt wat prompt caching is, hoe het werkt en hoe organisaties het kunnen inzetten om prestaties en kosten van generatieve AI-toepassingen te optimaliseren.
+  url: https://www.ibm.com/think/topics/prompt-caching
+
+- id: abe-ecp
+  title: "ECP — Aanpak Begeleidingsethiek (ABE)"
+  categorie: Kennisplatform
+  omschrijving: >
+    Gestructureerde methode voor ethische reflectie op technologische toepassingen, ontwikkeld door ECP; brengt diverse betrokkenen samen onder begeleiding van een moderator om risico's en handelingsopties in kaart te brengen.
+  url: https://ecp.nl/project/aanpak-begeleidingsethiek/
+
+- id: actieplan-duurzame-digitalisering
+  title: Actieplan Duurzame Digitalisering (EZK, 2024/2025)
+  categorie: Beleid & kaders
+  omschrijving: >
+    Nationaal actieplan van EZK om de digitale sector te vergroenen, inclusief verduurzaming van Overheidsdatacenters (ODC's) en MVI-ICT.
+  url: https://www.tweedekamer.nl/downloads/document?id=2024D25340
+
+- id: aequitas
+  title: Aequitas
+  categorie: Tools
+  omschrijving: >
+    Open-source toolkit voor het auditen van machine learning-modellen op bias, gericht op het genereren van auditrapportages over oneerlijke uitkomsten per groep.
+  url: https://github.com/dssg/aequitas
+
+- id: a2a-protocol
+  title: Agent 2 Agent Protocol (A2A)
+  categorie: Kennisplatform
+  omschrijving: >
+    Open protocol voor communicatie tussen autonome AI-agents.
+  url: https://a2aproject.github.io/A2A/
+
+- id: ai-act-compliance-checker
+  title: AI Act Compliance Checker (EU)
+  categorie: Tools
+  omschrijving: >
+    Tool van de Europese Commissie waarmee getoetst kan worden of AI-systemen en general-purpose AI-modellen voldoen aan de eisen uit de AI Act.
+  url: https://ai-act-service-desk.ec.europa.eu/en/eu-ai-act-compliance-checker
+
+- id: ai-act-timeline
+  title: AI Act Implementation Timeline
+  categorie: Beleid & kaders
+  omschrijving: >
+    Tijdlijn met de belangrijkste data voor implementatie van de EU AI-wet, inclusief de gefaseerde inwerkingtreding van verplichtingen.
+  url: https://artificialintelligenceact.eu/implementation-timeline/
+
+- id: ai-act-platform
+  title: AI Act Single Information Platform (EU)
+  categorie: Beleid & kaders
+  omschrijving: >
+    Officieel EU-platform voor het laatste nieuws en informatie over de EU AI Act; centrale referentie voor compliance-teams die wijzigingen in regelgeving moeten signaleren.
+  url: https://ai-act-service-desk.ec.europa.eu/en
+
+- id: ai-cursus-overheid-dsp
+  title: "Data Science Partners – AI Cursus Overheid"
+  categorie: Kennisplatform
+  omschrijving: >
+    Praktijkgerichte AI-cursus speciaal voor overheden, gericht op kennisopbouw, bewustwording en het verantwoord toepassen van AI in de publieke sector.
+  url: https://datasciencepartners.nl/ai-cursus-overheid/
+
+- id: ai-energy-score
+  title: "Hugging Face — AI Energy Score"
+  categorie: Tools
+  omschrijving: >
+    Gestandaardiseerde energie-efficiëntie-rating per AI-model, vergelijkbaar met het EU-energielabel; helpt bij modelselectie per taaktype.
+  url: https://huggingface.github.io/AIEnergyScore/
+
+- id: ai-fairness-360
+  title: "IBM — AI Fairness 360"
+  categorie: Tools
+  omschrijving: >
+    Uitgebreide open-source toolkit met meer dan 70 fairness-metrics en technieken voor het detecteren en verminderen van bias in datasets en modellen (werkt op gestructureerde data).
+  url: https://github.com/Trusted-AI/AIF360
+
+- id: aiia-rijksoverheid
+  title: "Rijksoverheid — AI Impact Assessment (AIIA)"
+  categorie: Beleid & kaders
+  omschrijving: >
+    Rapport van de Rijksoverheid waarin de impact van AI-toepassingen wordt beoordeeld aan de hand van een AI-impactassessment; bruikbaar als template voor systematische impactbeoordeling.
+  url: https://www.rijksoverheid.nl/documenten/rapporten/2022/11/30/ai-impact-assessment-ministerie-van-infrastructuur-en-waterstaat
+
+- id: sustain-ai-check
+  title: AI Sustainability Check (AlgorithmWatch / SustAIn)
+  categorie: Artikel
+  omschrijving: >
+    Zelf-evaluatievragenlijst langs 13 duurzaamheidscriteria die ecologische, sociale en economische dimensies dekt; bruikbaar bij modelkeuze om brede impact in beeld te brengen.
+  url: https://sustain.algorithmwatch.org/en/how-sustainable-is-my-ai/
+
+- id: ai-transparency-ux
+  title: AI Transparency Framework (UX Design)
+  categorie: Artikel
+  omschrijving: >
+    Artikel dat een helder raamwerk geeft om transparantie-eisen te vertalen naar concrete ontwerpkeuzes in producten en diensten.
+  url: https://uxdesign.cc/ai-transparency-framework-cf89fa61dc1b
+
+- id: algorithmwatch-sustain
+  title: AlgorithmWatch SustAIn
+  categorie: Artikel
+  omschrijving: >
+    Initiatief met criteria en tools voor sociale, economische én ecologische duurzaamheid van AI; bron voor bredere assessment-frameworks rond modelselectie.
+  url: https://algorithmwatch.org/en/sustain/
+
+- id: algoritmekader
+  title: "BZK — Algoritmekader"
+  categorie: Raamwerk
+  omschrijving: >
+    Het Algoritmekader van de Rijksoverheid, inclusief leidraad voor inkoop van verantwoorde algoritmes en concrete maatregelen voor data en infrastructuur.
+  url: https://minbzk.github.io/Algoritmekader/
+
+- id: algoritmekader-rollen
+  title: Algoritmekader — Beschrijf rollen en verantwoordelijkheden
+  categorie: Richtlijnen
+  omschrijving: >
+    Maatregel uit het Algoritmekader voor het vastleggen van rollen en verantwoordelijkheden rondom algoritmes, inclusief toelichting op het gebruik van een RACI- of VERI-matrix.
+  url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/maatregelen/2-owp-01-rollen-en-verantwoordelijkheden/
+
+- id: algoritmekader-monitoring
+  title: Algoritmekader — Controleer of het algoritme werkt zoals bedoeld
+  categorie: Richtlijnen
+  omschrijving: >
+    Maatregel voor het voortdurend monitoren of een algoritme functioneert in lijn met de vastgestelde doelstelling, inclusief aandacht voor statistische bias.
+  url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/maatregelen/5-ver-01-functioneren-in-lijn-met-doeleinden/index.html
+
+- id: algoritmekader-grondrechten
+  title: Algoritmekader — Grondrechten beschermen in algoritmes
+  categorie: Richtlijnen
+  omschrijving: >
+    Overzicht van de grondrechten die kunnen worden geraakt door algoritmes, met aanbevolen maatregelen en hulpmiddelen voor de overheidscontext.
+  url: https://minbzk.github.io/Algoritmekader/onderwerpen/fundamentele-rechten/
 
 - id: algoritmekader-menselijke-tussenkomst
   title: Algoritmekader — Maatregel betekenisvolle menselijke tussenkomst
@@ -203,7 +567,7 @@
 
 - id: algoritmeregister
   title: Algoritmeregister
-  categorie: Raamwerk
+  categorie: Kennisplatform
   omschrijving: >
     Overheidsregister waarin Nederlandse overheidsorganisaties informatie publiceren over het gebruik van algoritmen en AI.
   url: https://algoritmes.overheid.nl/
@@ -216,8 +580,8 @@
   url: https://github.com/SeldonIO/alibi-detect
 
 - id: altai
-  title: ALTAI — Assessment List for Trustworthy AI (Europese Commissie)
-  categorie: Raamwerk
+  title: "Europese Commissie — ALTAI — Assessment List for Trustworthy AI"
+  categorie: Documentatie
   omschrijving: >
     Officiële checklist van de Europese Commissie waarmee je stap voor stap controleert of een AI-systeem ethisch en veilig is.
   url: https://altai.insight-centre.org/
@@ -243,13 +607,6 @@
     Vergelijk AI-modellen op performance, kosten en latency.
   url: https://artificialanalysis.ai/
 
-- id: it-academie-rijk-ai
-  title: "Artificiële intelligentie – IT-Academie Rijk"
-  categorie: Kennisplatform
-  omschrijving: >
-    Overzichtspagina met uitleg, leerpaden, trainingen en inspiratiebronnen over artificiële intelligentie voor professionals binnen de (Rijks)overheid.
-  url: https://www.it-academieoverheid.nl/onderwerpen/a/artificiele-intelligentie
-
 - id: ap-menselijke-tussenkomst
   title: Autoriteit Persoonsgegevens — Betekenisvolle Menselijke Tussenkomst
   categorie: Richtlijnen
@@ -271,13 +628,6 @@
     Azure-dienst voor het monitoren van applicatieprestaties, beschikbaarheid en gebruik, inclusief telemetry, logging en dashboards.
   url: https://learn.microsoft.com/nl-nl/azure/azure-monitor/app/app-insights-overview
 
-- id: azure-vm-scale-sets
-  title: "Azure Virtual Machine Scale Sets & AKS Cluster Autoscaler"
-  categorie: Tools
-  omschrijving: >
-    Azure diensten die automatisch het aantal VM-instances en Kubernetes nodes/pods schalen op basis van gebruik en belasting.
-  url: https://learn.microsoft.com/azure/virtual-machine-scale-sets/overview
-
 - id: berthub-opentk
   title: Berthub — Welkom bij OpenTK
   categorie: Voorbeeldproject
@@ -286,7 +636,7 @@
   url: https://berthub.eu/articles/posts/welkom-bij-opentk/
 
 - id: bias-detection-tool
-  title: Bias Detection Tool (Algorithm Audit)
+  title: "Algorithm Audit — Bias Detection Tool"
   categorie: Tools
   omschrijving: >
     Statistisch hulpmiddel dat groepen identificeert waarbij een algoritme afwijkende prestaties laat zien, zonder dat vooraf bekend hoeft te zijn welke groepen dat zijn. Werkt op gestructureerde tabeldata.
@@ -294,7 +644,7 @@
 
 - id: bio2
   title: BIO2 — Baseline Informatiebeveiliging Overheid (v1.3, 2026)
-  categorie: Verplicht kader
+  categorie: Beleid & kaders
   omschrijving: >
     Het verplichte informatiebeveiligingskader voor de Nederlandse overheid. Iedere infrastructuurkeuze moet hieraan voldoen.
   url: https://www.bio-overheid.nl/
@@ -315,7 +665,7 @@
 
 - id: briljante-mislukkingen
   title: Briljante Mislukkingen Awards — AI in de publieke sector
-  categorie: Raamwerk
+  categorie: Kennisplatform
   omschrijving: >
     Jaarlijkse uitreiking die teams beloont die geleerd hebben van een mislukking; voorbeeld van zichtbare ritualen die een fail-forward cultuur in de publieke sector ondersteunen.
   url: https://www.briljantemislukkingen.nl/2023/04/14/uitreiking-briljante-mislukkingen-awards-ai-in-de-publieke-sector/
@@ -326,20 +676,6 @@
   omschrijving: >
     Stapsgewijze handleiding voor het bouwen van een Retrieval-Augmented Generation (RAG) chatbot, inclusief architectuur, implementatie en best practices.
   url: https://docs.langchain.com/oss/python/langchain/rag
-
-- id: build-vs-buy-thoughtworks
-  title: "Build vs. Buy – How to Decide Between Building Software In-House or Buying Off the Shelf"
-  categorie: Raamwerk
-  omschrijving: >
-    Raamwerk dat organisaties helpt bij de keuze tussen zelf software ontwikkelen of bestaande oplossingen inkopen, met afwegingskaders, risico's en best practices.
-  url: https://www.thoughtworks.com/content/dam/thoughtworks/documents/e-book/tw_ebook_build_vs_buy_2022.pdf
-
-- id: databricks-semantic-caching
-  title: "Building a Cost-Optimized Chatbot with Semantic Caching (Databricks)"
-  categorie: Blog
-  omschrijving: >
-    Blogartikel met een architectuur en stappenplan voor het inzetten van semantische caching om LLM-chatbots goedkoper en sneller te maken.
-  url: https://www.databricks.com/blog/building-cost-optimized-chatbot-semantic-caching
 
 - id: camunda
   title: Camunda
@@ -357,7 +693,7 @@
 
 - id: cip-prisa
   title: CIP Privacy Self Assessment (PriSA)
-  categorie: Raamwerk
+  categorie: Kennisplatform
   omschrijving: >
     Zelf-assessment voor AVG-compliance van CIP; bruikbaar om AVG-risico's van een assistent-implementatie te verkennen vóór de PoC.
   url: https://www.cip-overheid.nl/
@@ -371,7 +707,7 @@
 
 - id: common-ground
   title: Common Ground
-  categorie: Raamwerk
+  categorie: Kennisplatform
   omschrijving: >
     Architectuurprincipes voor gemeentelijke IT, gericht op ontkoppeling van data en applicaties.
   url: https://commonground.nl/
@@ -382,13 +718,6 @@
   omschrijving: >
     Overzicht van best practices, richtlijnen en principes voor professioneel conversation design.
   url: https://www.conversationdesigninstitute.com/topics/best-practices
-
-- id: conversational-ai-design-patterns
-  title: "Conversational AI Design Patterns (AI-Agents Plus)"
-  categorie: Richtlijnen
-  omschrijving: >
-    Overzicht van essentiële conversational-AI-patronen waarmee een digitale assistent de complexiteit van menselijke conversaties effectief kan beheersen.
-  url: https://www.ai-agentsplus.com/blog/conversational-ai-design-patterns-2026
 
 - id: coralogix-guardrails
   title: Coralogix AI Guardrails
@@ -405,28 +734,14 @@
   url: https://www.credo.ai/
 
 - id: dpia-ap
-  title: Data Protection Impact Assessment (Autoriteit Persoonsgegevens)
-  categorie: Raamwerk
+  title: "Autoriteit Persoonsgegevens — Data Protection Impact Assessment"
+  categorie: Richtlijnen
   omschrijving: >
     Uitleg en handreiking van de Autoriteit Persoonsgegevens over wanneer een DPIA verplicht is en hoe de risicobeoordeling wordt uitgevoerd om privacyrisico's vooraf te minimaliseren.
   url: https://www.autoriteitpersoonsgegevens.nl/themas/basis-avg/praktisch-avg/data-protection-impact-assessment-dpia
 
-- id: dcat-ap-nl
-  title: "DCAT-AP-NL 3.0"
-  categorie: Raamwerk
-  omschrijving: >
-    Nederlandse profielimplementatie van de Europese DCAT-AP-standaard voor datacatalogi en lineage.
-  url: https://www.forumstandaardisatie.nl/intakeadvies-dcat-ap-nl-30
-
-- id: decagon-dst
-  title: "Decagon — What is Dialogue State Tracking?"
-  categorie: Richtlijnen
-  omschrijving: >
-    Toegankelijke uitleg van Dialogue State Tracking (DST) als methode om contextueel conversatievermogen te realiseren.
-  url: https://decagon.ai/glossary/what-is-dialogue-state-tracking-dst
-
 - id: deda
-  title: DEDA — De Ethische Data Assistent (Utrecht Data School)
+  title: "Utrecht Data School — DEDA — De Ethische Data Assistent"
   categorie: Raamwerk
   omschrijving: >
     Instrument voor ethische reflectie op datagebruik binnen organisaties, ontwikkeld door de Utrecht Data School; helpt teams bij het structureren van ethische vragen rondom data en algoritmes.
@@ -434,7 +749,7 @@
 
 - id: deepeval
   title: DeepEval
-  categorie: Raamwerk
+  categorie: Tools
   omschrijving: >
     Framework voor 'unit testen' van chatbots: meet hoe relevant en feitelijk de antwoorden zijn.
   url: https://deepeval.com/
@@ -461,14 +776,14 @@
   url: https://dev.to/qvfagundes/dense-vs-sparse-retrieval-mastering-faiss-bm25-and-hybrid-search-4kb1
 
 - id: bosa-digital-playbook
-  title: Digital Playbook (BOSA)
-  categorie: Raamwerk
+  title: "BOSA — Digital Playbook"
+  categorie: Richtlijnen
   omschrijving: >
     Catalogus van tools van de Belgische overheid (BOSA) om overheden te helpen bij het ontwerpen van inclusieve, gebruiksvriendelijke en effectieve openbare diensten — inclusief persona- en empathy-templates voor design thinking.
   url: https://bosa.belgium.be/nl/services/digital-playbook
 
 - id: redis-distributed-caching
-  title: Distributed Caching – Redis
+  title: "Redis – Distributed Caching"
   categorie: Artikel
   omschrijving: >
     Uitlegartikel over wat distributed caching is, hoe het werkt en welke voordelen het biedt voor schaalbare, performante applicaties.
@@ -476,17 +791,10 @@
 
 - id: dutch-cloud-community
   title: Dutch Cloud Community
-  categorie: Raamwerk
+  categorie: Kennisplatform
   omschrijving: >
     Samenwerkingsverband van Nederlandse cloud-aanbieders onder Nederlands recht; bruikbaar bij selectie van soevereine hosting-partners.
   url: https://dutchcloudcommunity.nl/
-
-- id: e5-nl-embeddings
-  title: "E5-NL embedding-modellen"
-  categorie: Tools
-  omschrijving: >
-    Open-source Nederlandse embedding-modellen, beschikbaar op Hugging Face.
-  url: https://huggingface.co/models?search=e5-nl
 
 - id: ecologits
   title: EcoLogits (GenAI Impact / CodeCarbon)
@@ -496,7 +804,7 @@
   url: https://ecologits.ai/
 
 - id: eindrapport-genai-duurzaamheid
-  title: Eindrapport Generatieve AI en duurzaamheid (BZK / UU, januari 2025)
+  title: "BZK / UU — Eindrapport Generatieve AI en duurzaamheid (januari 2025)"
   categorie: Richtlijnen
   omschrijving: >
     Eindrapport van BZK en Universiteit Utrecht dat duurzaamheid expliciet benoemt als randvoorwaarde voor verantwoorde inzet van generatieve AI binnen de overheid; biedt concrete aanbevelingen en scenario's.
@@ -516,13 +824,6 @@
     Jaarlijks overzicht van het Europese dreigingslandschap met specifieke aandacht voor AI-ondersteunde phishing, data-poisoning en social engineering.
   url: https://www.enisa.europa.eu/publications/enisa-threat-landscape-2025
 
-- id: eu-ai-act-art40
-  title: "EU AI Act — artikel 40 (standaarden energie-efficiëntie)"
-  categorie: Verplicht kader
-  omschrijving: >
-    Mandaat in de Europese AI-verordening voor het ontwikkelen van harmonised standards rond energie- en hulpbronnengebruik over de hele AI-levenscyclus.
-  url: https://artificialintelligenceact.eu/article/40/
-
 - id: eu-cloud-coc
   title: EU Cloud Code of Conduct
   categorie: Richtlijnen
@@ -532,17 +833,10 @@
 
 - id: eu-data-act
   title: EU Data Act (Verordening 2023/2854)
-  categorie: Verplicht kader
+  categorie: Beleid & kaders
   omschrijving: >
     Europese verordening met cloud-switching-verplichtingen die sinds 12 september 2025 van kracht zijn; basis voor het recht om van cloud-leverancier te wisselen.
   url: https://digital-strategy.ec.europa.eu/en/policies/data-act
-
-- id: ec-transparante-ai
-  title: "Europese Commissie — Transparante AI-systemen"
-  categorie: Richtlijnen
-  omschrijving: >
-    Pagina met officiële Europese richtlijnen en veelgestelde vragen over transparantie en verantwoording bij AI-systemen.
-  url: https://digital-strategy.ec.europa.eu/en/faqs/guidelines-and-code-practice-transparent-ai-systems
 
 - id: evidently-ai
   title: Evidently AI — Data Drift
@@ -567,7 +861,7 @@
 
 - id: opengem-chatbot
   title: Gem — virtuele gemeenteassistent (ICTU / VNG)
-  categorie: Raamwerk
+  categorie: Voorbeeldproject
   omschrijving: >
     Virtuele gemeenteassistent ontwikkeld door ICTU en VNG als referentie-implementatie voor gemeenten; werkt provider-agnostisch en open-source.
   url: https://opengem.nl/producten/chatbot/
@@ -581,13 +875,13 @@
 
 - id: genai-impact
   title: GenAI Impact
-  categorie: Raamwerk
+  categorie: Kennisplatform
   omschrijving: >
     Non-profit achter EcoLogits; richt zich specifiek op het meten en publiceren van milieu-impact van generatieve AI.
   url: https://genai-impact.org/
 
 - id: amsterdam-genai-afwegingskader
-  title: Generatieve AI Afwegingskader (gemeente Amsterdam)
+  title: "gemeente Amsterdam — Generatieve AI Afwegingskader"
   categorie: Raamwerk
   omschrijving: >
     Afwegingskader van de gemeente Amsterdam waarin vier juridische normen worden getoetst om generatieve AI-ideeën te evalueren, prioriteren en goedkeuren; concrete uitwerking van risicobeoordeling op gemeenteniveau.
@@ -602,24 +896,10 @@
 
 - id: gov-uk-chat
   title: GOV.UK Chat — algoritmische transparantierecord
-  categorie: Raamwerk
+  categorie: Voorbeeldproject
   omschrijving: >
     Overheidsvoorbeeld dat automated evaluation (factual precision, recall, relevancy, groundedness), handmatige evaluaties en red-teaming combineert; werkt met golden datasets en toont expliciete disclaimers plus bronlinks.
   url: https://www.gov.uk/algorithmic-transparency-records/dsit-gov-dot-uk-chat
-
-- id: govchat-nl
-  title: "GovChat-NL"
-  categorie: Tools
-  omschrijving: >
-    Open-source AI-platform voor overheden (Provincie Limburg), gebaseerd op OpenWebUI. Tweewekelijks overleg met provincies en gemeenten, goedgekeurde DPIA beschikbaar.
-  url: https://www.govchat-nl.nl/
-
-- id: gpt-nl
-  title: "GPT-NL (TNO, NFI, SURF)"
-  categorie: Tools
-  omschrijving: >
-    Soeverein open Nederlands taalmodel. Bètaversie draait bij eerste launching customers (Q1 2026); bredere uitrol najaar 2026.
-  url: https://gpt-nl.nl/
 
 - id: grafana
   title: Grafana
@@ -637,7 +917,7 @@
 
 - id: green-software-foundation
   title: Green Software Foundation
-  categorie: Raamwerk
+  categorie: Kennisplatform
   omschrijving: >
     Linux Foundation-project met werkgroepen, onder andere voor SCI for AI en het AI + Water White Paper (2026); centrale community voor meet- en rapportagestandaarden.
   url: https://greensoftware.foundation/
@@ -649,13 +929,6 @@
     Catalogus van de Green Software Foundation met concrete ontwerppatronen voor energie-efficiënte AI-systemen, inclusief patronen voor caching, batching en prompt-optimalisatie.
   url: https://patterns.greensoftware.foundation/catalog/ai/
 
-- id: greenpt
-  title: "GreenPT – EU-gehoste, privacyvriendelijke AI"
-  categorie: Tools
-  omschrijving: >
-    Nederlands AI-chatplatform dat modellen volledig binnen de EU host (datacenters op hernieuwbare energie) en geen externe API's gebruikt, zodat data de EU niet verlaat. Voorbeeld van een EU-gehoste modelaanbieder als soeverein alternatief voor hyperscalers die onder de CLOUD Act vallen.
-  url: https://greenpt.com/
-
 - id: guardrails-ai
   title: Guardrails AI
   categorie: Tools
@@ -665,7 +938,7 @@
 
 - id: hackathonopmaat
   title: Hackathon methode – Hackathon op maat
-  categorie: Raamwerk
+  categorie: Artikel
   omschrijving: >
     Website die de hackathonmethode uitlegt, met stappenplan, werkvormen en voorbeelden voor het organiseren van resultaatgerichte hackathons.
   url: https://hackathonopmaat.nl/hackathon-methode/
@@ -684,13 +957,6 @@
     Praktische uitleg over categorisering A (hoog-risico) en B (impactvol) en wat overheidsorganisaties moeten publiceren in het Algoritmeregister.
   url: https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/algoritmes/algoritmeregister
 
-- id: handreiking-nondiscriminatie
-  title: "Handreiking non-discriminatie by design"
-  categorie: Richtlijnen
-  omschrijving: >
-    Praktisch toepasbaar ontwerpkader dat helpt om discriminerende patronen in AI-systemen vroegtijdig te identificeren en te voorkomen, vanuit juridisch, technisch en organisatorisch perspectief.
-  url: https://www.rijksoverheid.nl/documenten/rapporten/2022/12/05/handreiking-non-discriminatie-artificial-intelligence-ai
-
 - id: haven
   title: Haven en Haven+
   categorie: Tools
@@ -705,37 +971,9 @@
     Academisch holistisch evaluatie-raamwerk voor taalmodellen, met benchmarks en metrieken; nuttig om model-keuze per agent of taak empirisch te onderbouwen.
   url: https://crfm.stanford.edu/helm
 
-- id: reijn-buddy-systeem
-  title: "Hoe implementeer je effectief een buddy-systeem – Reijn HRM"
-  categorie: Artikel
-  omschrijving: >
-    Praktisch artikel over het opzetten en effectief implementeren van een buddy-systeem binnen organisaties, met aandacht voor doelen, randvoorwaarden en stappenplan.
-  url: https://www.reijnhrm.nl/kennis/hoe-implementeer-je-effectief-een-buddy-systeem
-
-- id: anaconda-rag
-  title: "How to Build a Retrieval-Augmented Generation Chatbot"
-  categorie: Documentatie
-  omschrijving: >
-    Stapsgewijze handleiding voor het bouwen van een Retrieval-Augmented Generation (RAG) chatbot, inclusief architectuur, implementatie en best practices.
-  url: https://www.anaconda.com/blog/how-to-build-a-retrieval-augmented-generation-chatbot
-
-- id: iama-lessons
-  title: "IAMA in actie — Lessons learned van 15 IAMA-trajecten"
-  categorie: Raamwerk
-  omschrijving: >
-    Praktijkrapport over ervaringen met het IAMA bij gemeenten en de Belastingdienst, met concrete tips over uitvoering en wat in de praktijk goed en minder goed werkt.
-  url: https://www.rijksoverheid.nl/documenten/rapporten/2024/06/20/iama-in-actie-lessons-learned-van-15-iama-trajecten-bij-nederlandse-overheidsorganisaties
-
-- id: ibm-ai-team-rollen
-  title: "IBM – Building Your AI Team: The Roles Your Enterprise Needs"
-  categorie: Artikel
-  omschrijving: >
-    Artikel over de belangrijkste rollen, competenties en samenwerking binnen AI-teams in grotere organisaties.
-  url: https://www.ibm.com/think/insights/building-your-ai-team-the-roles-your-enterprise-needs
-
 - id: iama
   title: Impact Assessment Mensenrechten en Algoritmes (IAMA, v2 2026)
-  categorie: Raamwerk
+  categorie: Beleid & kaders
   omschrijving: >
     Het IAMA-vragenformulier zelf (Universiteit Utrecht in opdracht van BZK); instrument om de impact van algoritmes op grondrechten gestructureerd in kaart te brengen. Versie 2 (2026) aangepast aan huidige praktijk.
   url: https://www.rijksoverheid.nl/documenten/rapporten/2026/02/16/impact-assessment-mensenrechten-en-algoritmes
@@ -748,32 +986,11 @@
   url: https://www.informatiehuishouding.nl/
 
 - id: nn-zakelijk-innovatie
-  title: Innovatie werknemers stimuleren – NN Zakelijk
+  title: "NN Zakelijk – Innovatie werknemers stimuleren"
   categorie: Artikel
   omschrijving: >
     Artikel met tips en voorbeelden voor organisaties om innovatie onder werknemers te stimuleren, onder meer via cultuur, leiderschap en concrete initiatieven.
   url: https://www.nn.nl/Zakelijk/Ondernemen/Innovatie-werknemers-stimuleren.htm
-
-- id: innovatiebudget-2025
-  title: "Innovatiebudget 2025 — De Virtuele AI-assistent"
-  categorie: Voorbeeldproject
-  omschrijving: >
-    Project van gemeente Amsterdam en Heerlen voor een landelijke standaard virtuele AI-assistent.
-  url: https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/innovatie/innovatiebudget/toekenning-innovatiebudget-2025/
-
-- id: innovatiegroep-gem
-  title: "Innovatiegroep-methodiek (digitale assistent GEM)"
-  categorie: Raamwerk
-  omschrijving: >
-    Samenwerkingsmodel tussen overheidsorganisaties zoals toegepast bij de digitale assistent GEM; documentatie uit het AO-fonds Gemeenten over leren innoveren met een virtuele assistent.
-  url: https://www.aeno.nl/uploads/AO_fonds_Gemeenten_Leren-innoveren-virtuele-assistent-Gem_def.pdf
-
-- id: iso-23894
-  title: "ISO/IEC 23894:2023 — AI Risk Management"
-  categorie: Richtlijnen
-  omschrijving: >
-    Internationale norm met begeleiding voor organisaties die AI-producten of -diensten ontwikkelen, inzetten of gebruiken, om AI-specifieke risico's door de hele levenscyclus te managen.
-  url: https://www.iso.org/standard/77304.html
 
 - id: iso-42001
   title: ISO/IEC 42001 — AI Management System Standard (2023)
@@ -781,27 +998,6 @@
   omschrijving: >
     Internationale norm met eisen aan AI system ownership en accountability; biedt een managementsysteemkader voor verantwoorde ontwikkeling en inzet van AI.
   url: https://www.iso.org/standard/81230.html
-
-- id: itu-l1801
-  title: "ITU-T L.1801 (februari 2026)"
-  categorie: Richtlijnen
-  omschrijving: >
-    Internationale ITU-richtlijn voor het beoordelen van milieu-impact van AI-systemen; aanvullend op nationale en Europese kaders en bruikbaar voor wereldwijde benchmarking.
-  url: https://www.itu.int/rec/T-REC-L.1801
-
-- id: llm-council
-  title: "Karpathy llm-council"
-  categorie: Tools
-  omschrijving: >
-    Open-source voorbeeld van een multi-LLM-judge-aanpak waarin meerdere modellen onafhankelijk oordelen en je hun antwoorden aggregeert voor stabielere evaluatie-uitkomsten.
-  url: https://github.com/karpathy/llm-council
-
-- id: keda
-  title: "KEDA — Kubernetes Event-driven Autoscaling"
-  categorie: Tools
-  omschrijving: >
-    Event-gedreven auto-scaler voor Kubernetes, breed inzetbaar voor AI-workloads die schalen op basis van queue-depth of inkomend verkeer.
-  url: https://keda.sh/
 
 - id: kserve
   title: KServe
@@ -832,7 +1028,7 @@
   url: https://langfuse.com/
 
 - id: langsmith
-  title: LangSmith (LangChain)
+  title: "LangChain — LangSmith"
   categorie: Tools
   omschrijving: >
     Platform voor het debuggen en monitoren van LLM-conversaties; geeft inzicht in waar in de redenering iets misgaat.
@@ -866,16 +1062,9 @@
     Open-weight classifier van Meta voor input/output-moderatie, toepasbaar als een van de guardrail-lagen; gebaseerd op de MLCommons hazards taxonomy.
   url: https://github.com/meta-llama/PurpleLlama
 
-- id: datadog-llm-evaluation
-  title: "LLM Evaluation Framework & Best Practices – Datadog"
-  categorie: Artikel
-  omschrijving: >
-    Artikel met best practices en een raamwerk voor het opzetten van LLM-evaluatie, monitoring en metriek in productieomgevingen.
-  url: https://www.datadoghq.com/blog/llm-evaluation-framework-best-practices/
-
 - id: merge-llm-routing
   title: LLM Routing – What It Is and How It Works (Merge)
-  categorie: Documentatie
+  categorie: Artikel
   omschrijving: >
     Blogartikel van Merge over concepten en strategieën voor LLM-routing in AI-applicaties.
   url: https://www.merge.dev/blog/llm-routing
@@ -895,7 +1084,7 @@
   url: https://matomo.org/
 
 - id: mcp-gateway-docker
-  title: MCP Gateway (Docker)
+  title: "Docker — MCP Gateway"
   categorie: Tools
   omschrijving: >
     Open-source gateway van Docker voor het integreren en beheren van MCP-tools, waarmee AI-agents veilig kunnen communiceren met externe systemen en data.
@@ -903,7 +1092,7 @@
 
 - id: dpia-copilot-memo
   title: Memo DPIA Microsoft 365 Copilot
-  categorie: Raamwerk
+  categorie: Documentatie
   omschrijving: >
     Toelichting op de DPIA voor Microsoft 365 Copilot; bruikbaar als referentie bij DPIA-uitvoering voor commerciële AI-assistenten in de overheid.
   url: https://open.overheid.nl/documenten/15d01487-1c25-4933-a630-1ae1c9a925fe/file
@@ -973,7 +1162,7 @@
 
 - id: mitre-atlas
   title: MITRE ATLAS
-  categorie: Raamwerk
+  categorie: Kennisplatform
   omschrijving: >
     Kennisbank van adversariële tactieken, technieken en case-studies specifiek voor AI-systemen, gemodelleerd naar MITRE ATT&CK; standaard voor threat modeling en red-teaming van AI-applicaties.
   url: https://atlas.mitre.org/
@@ -1001,17 +1190,10 @@
 
 - id: mcp-protocol
   title: Model Context Protocol (MCP)
-  categorie: Raamwerk
+  categorie: Artikel
   omschrijving: >
     Open protocol voor de uitwisseling van context tussen LLM's en externe systemen.
   url: https://modelcontextprotocol.io/
-
-- id: model-routing-brenndoerfer
-  title: "Model Routing, Selection, A/B Testing & Cascades Strategies – Brenndoerfer"
-  categorie: Artikel
-  omschrijving: >
-    Artikel over strategieën voor model routing, modelselectie, A/B testen en cascade-architecturen bij het inzetten van meerdere LLM-modellen in één toepassing.
-  url: https://mbrenndoerfer.com/writing/model-routing-selection-ab-testing-cascades-strategies
 
 - id: mulesoft
   title: MuleSoft Anypoint Platform
@@ -1019,20 +1201,6 @@
   omschrijving: >
     Integratie- en API-platform voor het ontwerpen, beheren en monitoren van koppelingen tussen systemen, diensten en data.
   url: https://www.mulesoft.com/
-
-- id: dst-multidomain
-  title: "Multi-domain DST based on Dynamic Knowledge Fusion"
-  categorie: Richtlijnen
-  omschrijving: >
-    Overzichtsartikel over multi-domain taakgerichte dialoogsystemen, met nadruk op Dialogue State Tracking en het dynamisch combineren van kennisbronnen over domeinen heen.
-  url: https://link.springer.com/article/10.1007/s44336-026-00037-0
-
-- id: aws-multi-llm-routing
-  title: "Multi-LLM Routing Strategies for Generative AI Applications on AWS"
-  categorie: Documentatie
-  omschrijving: >
-    AWS-blog over strategieën om meerdere LLM's te routeren en combineren in generatieve AI-toepassingen.
-  url: https://aws.amazon.com/blogs/machine-learning/multi-llm-routing-strategies-for-generative-ai-applications-on-aws/
 
 - id: multiwoz
   title: MultiWOZ dataset
@@ -1043,17 +1211,10 @@
 
 - id: navex-ai-compliance
   title: NAVEX — Artificial Intelligence and Compliance
-  categorie: Raamwerk
+  categorie: Artikel
   omschrijving: >
     Overzicht van hoe AI-risico's en compliance structureel binnen een GRC-raamwerk te organiseren zijn.
   url: https://www.navex.com/en-us/blog/article/artificial-intelligence-and-compliance-preparing-for-the-future-of-ai-governance-risk-and-compliance/
-
-- id: ncsc-nl-building-trust
-  title: "NCSC NL — Building Trust in AI Through a Cyber Risk-Based Approach"
-  categorie: Richtlijnen
-  omschrijving: >
-    Internationale guidance over een risico-gebaseerde aanpak voor AI-security, mede onderschreven door NCSC-NL en AIVD.
-  url: https://www.ncsc.nl/artificial-intelligence/building-trust-ai-through-cyber-risk-based-approach
 
 - id: ncsc-uk-secure-ai
   title: NCSC UK — Guidelines for Secure AI System Development
@@ -1069,26 +1230,12 @@
     Achtergrondartikel van NCSC over het brede gebruik van generatieve AI in organisaties; context voor heldere toegangsregels en interne policies.
   url: https://www.ncsc.nl/nieuws/aanzienlijk-gebruik-van-generatieve-ai-onder-medewerkers
 
-- id: ncsc-webapps
-  title: "NCSC — ICT-beveiligingsrichtlijnen voor Webapplicaties"
-  categorie: Richtlijnen
-  omschrijving: >
-    Klassieke NCSC-beveiligingsrichtlijnen voor webapplicaties; blijven leidend voor het web-frontend-deel van een digitale assistent.
-  url: https://www.ncsc.nl/webapplicaties/ict-beveiligingsrichtlijnen-webapplicaties
-
-- id: ncsc-wet-regelgeving
-  title: "NCSC — Wet- en regelgeving (Cyber Resilience Act e.a.)"
-  categorie: Verplicht kader
-  omschrijving: >
-    Overzicht van relevante EU-wetgeving voor cybersecurity (NIS2, Cyber Resilience Act en gerelateerd) zoals beheerd door NCSC.
-  url: https://www.ncsc.nl/wet-en-regelgeving
-
 - id: nds
   title: Nederlandse Digitaliseringsstrategie (NDS)
-  categorie: Beleidskader
+  categorie: Beleid & kaders
   omschrijving: >
     Nationale strategie die digitale weerbaarheid en autonomie expliciet tot prioriteit 5 maakt, met een overheidsbrede aanpak om minder afhankelijk te zijn van een beperkt aantal leveranciers.
-  url: https://www.rijksoverheid.nl/onderwerpen/digitale-overheid
+  url: https://www.digitaleoverheid.nl/nederlandse-digitaliseringsstrategie-nds/
 
 - id: nerds-duurzaamheid
   title: NeRDS — Richtlijn Duurzaamheid (BZK, in ontwikkeling)
@@ -1096,20 +1243,6 @@
   omschrijving: >
     Open standaard van BZK voor verantwoord ontwikkelen en inkopen van digitale systemen binnen de Rijksoverheid, met expliciete aandacht voor duurzaamheid.
   url: https://minbzk.github.io/NeRDS/richtlijnen/duurzaamheid/
-
-- id: nis2-ncsc
-  title: "NIS2-richtlijn / Cyberbeveiligingswet (NCSC)"
-  categorie: Verplicht kader
-  omschrijving: >
-    Toelichting van het NCSC op de NIS2-richtlijn (EU 2022/2555) en de Nederlandse Cyberbeveiligingswet; strengere beveiligings- en meldplichten voor essentiële en belangrijke diensten.
-  url: https://www.ncsc.nl/cyberbeveiligingswet-nis2
-
-- id: nist-ai-600-1
-  title: "NIST AI 600-1 — Generative AI Profile"
-  categorie: Raamwerk
-  omschrijving: >
-    Uitwerking van het NIST AI RMF voor generatieve AI, met concrete acties voor o.a. prompt injection, training-data-poisoning en onbedoelde memorisatie.
-  url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf
 
 - id: nist-ai-rmf
   title: NIST AI Risk Management Framework
@@ -1125,13 +1258,6 @@
     Doorzoekbare set voorgestelde acties, concrete uitwerkingen en referenties om de vier NIST AI RMF-functies (Govern, Map, Measure, Manage) op een AI-systeem toe te passen.
   url: https://airc.nist.gov/
 
-- id: nist-sp-800-218a
-  title: "NIST SP 800-218A — Secure Software Development for Generative AI"
-  categorie: Raamwerk
-  omschrijving: >
-    AI-specifiek Secure Software Development Framework (SSDF) community-profiel met tasks voor AI-model- en systeemontwikkeling.
-  url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218A.pdf
-
 - id: nora-digitale-duurzaamheid
   title: NORA — Digitale Duurzaamheid
   categorie: Raamwerk
@@ -1141,21 +1267,14 @@
 
 - id: nora
   title: NORA — Nederlandse Overheid Referentie Architectuur
-  categorie: Raamwerk
+  categorie: Kennisplatform
   omschrijving: >
     Het overkoepelende architectuurkader voor de Nederlandse overheid.
   url: https://www.noraonline.nl/
 
-- id: nsa-securing-ai
-  title: "NSA / NCSC-UK / CISA — Guidance for Securing AI"
-  categorie: Richtlijnen
-  omschrijving: >
-    Gezamenlijke AI-beveiligingsrichtlijn van NSA, NCSC-UK, CISA en internationale partners; high-level security-principes voor AI-systemen.
-  url: https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3598020/guidance-for-securing-ai-issued-by-nsa-ncsc-uk-cisa-and-partners/
-
 - id: nvidia-rag-blueprint
   title: NVIDIA Enterprise RAG Blueprint
-  categorie: Raamwerk
+  categorie: Documentatie
   omschrijving: >
     Productie-klare referentiearchitectuur voor RAG-pijplijnen met alle componenten: ingestion, embedding, vector DB, retriever, reranker, LLM, guardrails en observability. Generiek toepasbaar; componenten zijn vervangbaar door open-source of soevereine alternatieven.
   url: https://github.com/NVIDIA-AI-Blueprints/rag
@@ -1181,13 +1300,6 @@
     Benchmark van chunkingstrategieën voor RAG-pijplijnen op gemengde datasets.
   url: https://developer.nvidia.com/blog/finding-the-best-chunking-strategy-for-accurate-ai-responses/
 
-- id: sibony-besluitvorming
-  title: "Olivier Sibony – You're About to Make a Terrible Mistake"
-  categorie: Artikel
-  omschrijving: >
-    Boek over besluitvormingsvalkuilen (groupthink, overconfidence, persuasive storytelling) en hoe je deze systematisch voorkomt door tegenspraak en dialoog te organiseren.
-  url: https://oliviersibony.com/books/youre-about-to-make-a-terrible-mistake/
-
 - id: ollama
   title: Ollama
   categorie: Tools
@@ -1197,7 +1309,7 @@
 
 - id: onegov-hackathon
   title: OneGov AI Hackathon Series
-  categorie: Raamwerk
+  categorie: Voorbeeldproject
   omschrijving: >
     Hackathonreeks waar overheden samen aan AI-prototypes werken; goed voorbeeld van rapid prototyping als manier om een fail-forward cultuur in de praktijk te zien.
   url: https://www.digitaleoverheid.nl/evenementen/onegov-ai-hackathon-series/
@@ -1217,8 +1329,8 @@
   url: https://opensource.pleio.nl/
 
 - id: aws-llm-caching
-  title: Optimize LLM Response Costs and Latency with Effective Caching (AWS)
-  categorie: Blog
+  title: "AWS — Optimize LLM Response Costs and Latency with Effective Caching"
+  categorie: Artikel
   omschrijving: >
     Technische blog over strategieën en patterns om met caching de kosten en latency van LLM-toepassingen op AWS te optimaliseren.
   url: https://aws.amazon.com/blogs/database/optimize-llm-response-costs-and-latency-with-effective-caching/
@@ -1232,14 +1344,14 @@
 
 - id: handreiking-genai-governance
   title: Overheidsbrede Handreiking Generatieve AI – governance (RASCI, klokkenluiden, bezwaar en beroep)
-  categorie: Verplicht kader
+  categorie: Beleid & kaders
   omschrijving: >
     Het governance-hoofdstuk (hoofdstuk 8) van de Overheidsbrede Handreiking Generatieve AI. Het hanteert de RASCI-variant voor de rolverdeling, waarin ook Support expliciet wordt benoemd (wie ondersteunt de uitvoering), en beschrijft eisen rondom klokkenluiden, bezwaar en beroep bij directe en indirecte besluiten die voortkomen uit de inzet van generatieve AI.
   url: https://open.overheid.nl/documenten/9c273b71-cebb-4e11-b06f-fa20f7b4b90e/file
 
 - id: overheidsbreed-standpunt-genai
   title: Overheidsbreed standpunt generatieve AI
-  categorie: Beleidskader
+  categorie: Beleid & kaders
   omschrijving: >
     Vereist dat overheidsorganisaties een risicoanalyse uitvoeren voor iedere generatieve-AI-toepassing; het beleidskader waarbinnen de overheidsbrede handreiking werkt.
   url: https://www.rijksoverheid.nl/documenten/rapporten/2025/04/16/het-overheidsbrede-standpunt-voor-de-inzet-van-generatieve-ai
@@ -1250,27 +1362,6 @@
   omschrijving: >
     Werkgroep en kennisbank binnen OWASP voor best practices, tools en threat reports rond agentische AI-systemen.
   url: https://genai.owasp.org/initiatives/agentic-security-initiative/
-
-- id: owasp-prompt-injection
-  title: "OWASP LLM01:2025 — Prompt Injection"
-  categorie: Richtlijnen
-  omschrijving: >
-    Uitgewerkte definitie, voorbeelden en mitigaties voor prompt injection — de belangrijkste risicocategorie volgens de OWASP LLM Top 10.
-  url: https://genai.owasp.org/llmrisk/llm01-prompt-injection/
-
-- id: owasp-sensitive-info
-  title: "OWASP LLM02:2025 — Sensitive Information Disclosure"
-  categorie: Richtlijnen
-  omschrijving: >
-    Risico's van inadequate autorisatie en het lekken van persoonsgegevens, system prompts of API-sleutels via LLM-output of logs.
-  url: https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/
-
-- id: owasp-excessive-agency
-  title: "OWASP LLM06:2025 — Excessive Agency"
-  categorie: Richtlijnen
-  omschrijving: >
-    Risico's van te ruime tool-toegang en autonome handelingen door een agentische assistent; mitigatie via allowlists, scope-restricties en menselijke goedkeuring.
-  url: https://genai.owasp.org/llmrisk/llm062025-excessive-agency/
 
 - id: owasp-agentic-top10
   title: OWASP Top 10 for Agentic Applications 2026
@@ -1286,26 +1377,12 @@
     Wereldwijde referentielijst van de tien grootste security-risico's voor LLM-applicaties (prompt injection, sensitive information disclosure, supply chain, data/model poisoning, improper output handling, excessive agency, system prompt leakage, vector/embedding weaknesses, misinformation, unbounded consumption).
   url: https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/
 
-- id: platform-ai-overheid
-  title: "Platform AI & Overheid"
-  categorie: Raamwerk
-  omschrijving: >
-    Kennis- en netwerkplatform voor AI bij de overheid; deelt use cases, experimenten en ervaringen tussen overheidsorganisaties.
-  url: https://platformaioverheid.nl/
-
 - id: prefect
   title: Prefect
   categorie: Tools
   omschrijving: >
     Open-source workflow- en data-orchestratieplatform voor het bouwen, plannen, monitoren en beheren van (data-)pipelines.
   url: https://www.prefect.io/
-
-- id: arxiv-profile-personalization
-  title: "Pro-active Personalization through Profile Customization (arXiv)"
-  categorie: Richtlijnen
-  omschrijving: >
-    Onderzoek over een agent die continu gebruikersvoorkeuren leert en bijwerkt om langdurige, consistente personalisatie in gesprekken mogelijk te maken.
-  url: https://arxiv.org/abs/2512.15302
 
 - id: arxiv-proactive-agents
   title: Proactive Artificial Intelligence Agents (arXiv)
@@ -1327,13 +1404,6 @@
   omschrijving: >
     Open-source CLI/library voor het evalueren én red-teamen van LLM-applicaties en RAG-pipelines, met tests voor OWASP LLM Top 10-categorieën en CI/CD- integratie.
   url: https://github.com/promptfoo/promptfoo
-
-- id: publicspaces
-  title: PublicSpaces
-  categorie: Raamwerk
-  omschrijving: >
-    Coalitie voor publieke-waarden-gedreven digitale infrastructuur; relevant voor de bredere context van soevereiniteit en publieke waarden in technologie.
-  url: https://publicspaces.net/
 
 - id: qdrant
   title: Qdrant
@@ -1364,43 +1434,15 @@
   url: https://arxiv.org/abs/2601.02522
 
 - id: ibm-rlhf
-  title: Reinforcement Learning from Human Feedback (RLHF) – IBM
-  categorie: Documentatie
+  title: "IBM – Reinforcement Learning from Human Feedback (RLHF)"
+  categorie: Artikel
   omschrijving: >
     IBM-artikel dat het concept, de werking en toepassingen van Reinforcement Learning from Human Feedback (RLHF) bij het trainen van AI-modellen uitlegt.
   url: https://www.ibm.com/think/topics/rlhf
 
-- id: rijksbrede-handreiking-it-sourcing
-  title: "Rijksbrede Handreiking IT-sourcing"
-  categorie: Raamwerk
-  omschrijving: >
-    Praktische handreiking voor organisaties binnen de Rijksoverheid met een IT-dienstenmodel, stappenplan voor het IT-sourcingproces en een afwegingskader voor sourcingkeuzes.
-  url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2026/02/85096-BZK-Rijksbrede-Handreiking-IT-sourcing-TG.pdf
-
-- id: rijksbrede-strategie-it-sourcing
-  title: "Rijksbrede Strategie IT-sourcing"
-  categorie: Beleidsdocument
-  omschrijving: >
-    Rijksbrede strategie van de Rijksoverheid om kwetsbaarheden en risico's in IT-sourcing structureel aan te pakken en meer grip te krijgen op digitale autonomie, continuïteit en leveranciersafhankelijkheden.
-  url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2026/02/85096-BZK-Rijksbrede-Strategie-IT-sourcing-TG.pdf
-
-- id: schema-guided-dialogue
-  title: "Schema-Guided Dialogue (Google Research)"
-  categorie: Tools
-  omschrijving: >
-    Schema-gebaseerde dialoogdataset die als referentiestandaard dient voor DST in API-gedreven, taakgerichte assistenten.
-  url: https://github.com/google-research-datasets/dstc8-schema-guided-dialogue
-
-- id: sci-for-ai
-  title: "SCI for AI — Green Software Foundation (ISO/IEC 21031-uitbreiding)"
-  categorie: Raamwerk
-  omschrijving: >
-    Consensus-standaard voor CO₂-intensiteit van AI-systemen, inclusief specificatie en rekenmodel voor een carbon-intensity-score per use case.
-  url: https://greensoftware.foundation/standards/sci-ai/
-
 - id: google-sre-slo
   title: Service Level Objectives – Google SRE Book
-  categorie: Documentatie
+  categorie: Artikel
   omschrijving: >
     Hoofdstuk uit het Google SRE-boek over het definiëren, meten en beheren van service level objectives (SLO's).
   url: https://sre.google/sre-book/service-level-objectives/
@@ -1427,7 +1469,7 @@
   url: https://www.splunk.com/
 
 - id: standaard-platform
-  title: Standaard Platform (Logius)
+  title: "Logius — Standaard Platform"
   categorie: Tools
   omschrijving: >
     Kubernetes-containerplatform voor Rijksapplicaties.
@@ -1440,20 +1482,6 @@
     Lecture-materiaal van Stanford over het Dialogue State Tracking-probleem en oplossingsrichtingen.
   url: https://web.stanford.edu/class/cs224v/lectures_2023/l-DST.pdf
 
-- id: stumble-tool
-  title: "Stumble — conversational AI-prestatie-tool"
-  categorie: Tools
-  omschrijving: >
-    Tool om inzicht te krijgen in de conversational-AI-prestatie van een chatbot, inclusief afhaakmomenten en herstelpunten.
-  url: https://www.trystumble.com/
-
-- id: surf-ai-hub
-  title: "SURF AI-hub"
-  categorie: Raamwerk
-  omschrijving: >
-    AI-hub van SURF met soevereine architectuur en use-case community voor onderwijs en overheid; bruikbaar als referentie voor provider-agnostische architectuur.
-  url: https://www.surf.nl/themas/artificial-intelligence/projecten-en-samenwerkingen/ai-hub
-
 - id: surf-snellius
   title: SURF Snellius / AI Hub
   categorie: Tools
@@ -1462,8 +1490,8 @@
   url: https://www.surf.nl/en/news/gpu-expansion-of-supercomputer-snellius-enables-even-faster-data-processing-for-dutch
 
 - id: siia-handreiking
-  title: Sustainable IT Impact Assessment (SIIA) — Nationale Coalitie Duurzame Digitalisering
-  categorie: Raamwerk
+  title: "Nationale Coalitie Duurzame Digitalisering — Sustainable IT Impact Assessment (SIIA)"
+  categorie: Richtlijnen
   omschrijving: >
     Handreiking voor lifecycle-beoordeling van IT-projecten inclusief AI; bruikbaar als gestructureerd meetkader voor CSRD- en MVI-rapportage.
   url: https://coalitieduurzamedigitalisering.nl/wp-content/uploads/223-006-001-SIIA-Handreiking_DEF_DIG_ENGELS_LR_V280.pdf
@@ -1484,7 +1512,7 @@
 
 - id: tno-digital-trust
   title: TNO Digital Trust Reference Frame
-  categorie: Raamwerk
+  categorie: Artikel
   omschrijving: >
     Integrerend raamwerk dat soevereiniteit, autonomie, concurrentiekracht en maatschappelijke veerkracht koppelt aan concrete "trust tech"-lagen.
   url: https://vector.tno.nl/en/articles/unlocking-power-of-digital-trust/
@@ -1498,14 +1526,14 @@
 
 - id: iama-toelichting
   title: Toelichtingsdocument IAMA (v2 2026)
-  categorie: Raamwerk
+  categorie: Beleid & kaders
   omschrijving: >
     Toelichting bij het IAMA met uitvoeringstips, een functietabel, uitleg per IAMA-vraag en een overzicht van grondrechtenclusters; bevat specifieke aanwijzingen voor generatieve AI en de relatie tot de AI-verordening.
   url: https://www.rijksoverheid.nl/documenten/rapporten/2026/02/16/toelichtingsdocument-impact-assessment-mensenrechten-en-algoritmes
 
 - id: datacamp-mcp-servers
-  title: Top Remote MCP Servers – DataCamp
-  categorie: Documentatie
+  title: "DataCamp – Top Remote MCP Servers"
+  categorie: Artikel
   omschrijving: >
     DataCamp‑blog met een overzicht van populaire remote MCP‑servers en hoe je ze kunt inzetten in AI‑toepassingen.
   url: https://www.datacamp.com/blog/top-remote-mcp-servers
@@ -1568,17 +1596,10 @@
 
 - id: visie-digitale-autonomie
   title: Visie Digitale Autonomie en Soevereiniteit
-  categorie: Beleidskader
+  categorie: Beleid & kaders
   omschrijving: >
     Visiedocument (december 2025) van het kabinet dat het principe 'open waar kan, beschermen waar moet' uitwerkt voor de digitale overheid. Het beleidskader voor alle infrastructuurkeuzes.
   url: https://www.rijksoverheid.nl/actueel/nieuws/2025/12/12/nieuwe-visie-legt-fundament-voor-een-autonome-en-soevereine-digitale-overheid
-
-- id: vlam-ai
-  title: "VLAM.AI (SSC-ICT)"
-  categorie: Tools
-  omschrijving: >
-    Veilige Lokale AI Modellen — on-premise GPU-cluster in overheidsdatacenters met API-toegang, vlam-chat en vlam-search. Officieel gelanceerd mei 2025; acht ministeries aangesloten.
-  url: https://www.digitaleoverheid.nl/nieuws/departementen-kiezen-voor-veilige-ai-chatbot-van-ssc-ict/
 
 - id: vllm
   title: vLLM
@@ -1586,13 +1607,6 @@
   omschrijving: >
     Productie-inference-engine voor taalmodellen, open source.
   url: https://vllm.ai/
-
-- id: vng-ai-governance
-  title: "VNG AI-governancekader"
-  categorie: Raamwerk
-  omschrijving: >
-    Interactieve kennisbank met rollen, processtappen en kenniskaarten voor AI-governance bij gemeenten; voor en door gemeenten.
-  url: https://aigovernance.vng.nl/
 
 - id: vng-reisgids-ai
   title: VNG Reisgids voor verantwoorde inzet AI bij gemeenten
@@ -1603,7 +1617,7 @@
 
 - id: dpia-fraia-voorbeeld
   title: Voorbeeldrapport DPIA + FRAIA
-  categorie: Raamwerk
+  categorie: Documentatie
   omschrijving: >
     Openbaar voorbeeldrapport met de resultaten van een gecombineerde DPIA en FRAIA; bruikbaar als referentie bij het opstellen van eigen impact- assessments.
   url: https://open.overheid.nl/documenten/46e9201c-81b8-4260-ace4-b81c537ffd09/file
@@ -1614,27 +1628,6 @@
   omschrijving: >
     Praktische verwijzing naar duurzaam front-end-ontwerp voor de user-facing kant van een digitale assistent; complementair aan WCAG 2.2.
   url: https://w3c.github.io/sustainableweb-wsg/quickref.html
-
-- id: coursera-hackathon
-  title: "Wat is een hackathon? – Coursera"
-  categorie: Artikel
-  omschrijving: >
-    Toelichtend artikel over wat een hackathon is, hoe het werkt, welke doelen het dient en wat deelnemers en organisaties ermee kunnen bereiken.
-  url: https://www.coursera.org/articles/what-is-a-hackathon
-
-- id: splunk-siem-blog
-  title: "Wat is SIEM? (Splunk blog)"
-  categorie: Richtlijnen
-  omschrijving: >
-    Achtergrondartikel over het concept Security Information and Event Management (SIEM) en hoe dit helpt bij het centraal verzamelen, analyseren en monitoren van security-events.
-  url: https://www.splunk.com/en_us/blog/learn/siem-security-information-event-management.html
-
-- id: digitaleoverheid-ai-geletterdheid
-  title: "Wat je moet weten over AI-geletterdheid – Digitale Overheid"
-  categorie: Artikel
-  omschrijving: >
-    Artikel over het belang van AI-geletterdheid voor inwoners, professionals en bestuurders, met uitleg, voorbeelden en aanknopingspunten voor beleid en praktijk.
-  url: https://www.digitaleoverheid.nl/achtergrondartikelen/wat-je-moet-weten-over-ai-geletterdheid/
 
 - id: weaviate
   title: Weaviate
@@ -1649,13 +1642,6 @@
   omschrijving: >
     Nederlands referentievoorbeeld voor RAG bij de overheid; volledig open-source gerealiseerd. Eindrapport en broncode beschikbaar op GitLab.
   url: https://gitlab.com/koop/innovatielab/wetwijzer-bedrijven-prototype
-
-- id: ibm-prompt-caching
-  title: "What is Prompt Caching? – IBM"
-  categorie: Artikel
-  omschrijving: >
-    Artikel dat uitlegt wat prompt caching is, hoe het werkt en hoe organisaties het kunnen inzetten om prestaties en kosten van generatieve AI-toepassingen te optimaliseren.
-  url: https://www.ibm.com/think/topics/prompt-caching
 
 - id: wso2
   title: WSO2 Enterprise Integrator / ESB

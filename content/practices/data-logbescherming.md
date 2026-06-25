@@ -15,6 +15,7 @@ sources:
   - microsoft-presidio
   - cip-prisa
   - handreiking-generatieve-ai
+  - dpia-copilot-memo
 ---
 
 Pas dataminimalisatie toe in prompts en context: stuur alleen de strikt noodzakelijke gegevens door naar het model. Wat niet verstuurd wordt, kan ook niet lekken. 
