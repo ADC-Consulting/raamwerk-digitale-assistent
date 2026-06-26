@@ -1670,3 +1670,14 @@
   omschrijving: >
     Toegankelijk artikel dat uitlegt wat MCP is en hoe het gebruikt kan worden om AI-agents met externe tools en data te verbinden.
   url: https://zapier.com/blog/mcp/
+
+- id: arxiv-price-reversal
+  title: "The Price Reversal Phenomenon: When Cheaper Reasoning Models End Up Costing More"
+  categorie: Onderzoek
+  omschrijving: >
+    Systematische studie van acht frontier-redeneermodellen over twaalf taken die laat
+    zien dat de geadverteerde prijs per token een onbetrouwbare voorspeller is van de
+    werkelijke kosten. In 32% van de modelvergelijkingen kost het model met de laagste
+    tokenprijs juist het meest, vooral door verschillen in thinking-tokens en het aantal
+    agent-stappen. Onderbouwt waarom kosten per taak een betere metric is dan prijs per token.
+  url: https://arxiv.org/abs/2603.23971

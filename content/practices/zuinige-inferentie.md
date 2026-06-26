@@ -17,6 +17,7 @@ sources:
   - w3c-wsg
   - milvus
   - qdrant
+  - arxiv-price-reversal
 ---
 
 Begrens outputlengte expliciet: stel `max_tokens` in en geef in de system-prompt instructies als "antwoord in maximaal drie zinnen, zonder inleiding". Onderzoek naar babbling suppression rapporteert 44–89% energiebesparing bij behoud van antwoordkwaliteit als alleen output-begrenzing wordt toegepast.
@@ -27,6 +28,9 @@ Cache agressief: veelgestelde vragen ("waar vraag ik huurtoeslag aan?") horen ni
 
 Pas op voor over-agentificatie: elke extra agent-stap in een multi-agent-setup voegt tokens en latency toe. Ga per use-case na of een extra controle-agent echt waarde toevoegt, of dat een eenvoudige guardrail-regel volstaat. De afweging is risicogestuurd: hoge-impact-use-cases rechtvaardigen mogelijk een aparte controle-agent, bij laag risico volstaat een goedkope guardrail.
 
+Vergelijk modellen op kosten per taak, niet alleen op prijs per token: De geadverteerde API-prijs per miljoen tokens is wat teams meestal gebruiken om modellen te vergelijken, maar die prijs voorspelt slecht wat een model uiteindelijk kost. Een model dat per token goedkoper is, kan duurder uitvallen zodra het meer tokens of meer stappen nodig heeft voor dezelfde taak. Let extra op bij redeneer- en agent-modellen. De verschillen zitten vooral in het aantal redeneer-tokens (thinking tokens), waar het ene model 900% meer kan verbruiken voor dezelfde vraag, en in het aantal interactie-stappen bij agents, dat tot tien keer hoger kan liggen. Een lage tokenprijs zegt weinig als het model veel nadenkt of veel rondjes maakt. Neem dit mee bij de keuze voor kleine modellen. Een klein of goedkoop model is niet automatisch zuiniger, als het breedsprakig is of meer stappen nodig heeft, kan een groter model met een hogere tokenprijs juist goedkoper en groener uitpakken.
+
 Gebruik concrete Green-Software-patronen voor implementatie: de Green Software Foundation onderhoudt een catalogus met ontwerppatronen voor energie-efficiënte AI-systemen, inclusief patronen voor caching, batching en prompt-optimalisatie. Begin daar in plaats van zelf op te bouwen.
 
 Vergeet de front-end niet: de W3C Web Sustainability Guidelines geven praktische richtlijnen voor duurzaam front-end-ontwerp van de user-facing kant van de assistent. Complementair aan WCAG 2.2 en vaak laaghangend fruit.
+
