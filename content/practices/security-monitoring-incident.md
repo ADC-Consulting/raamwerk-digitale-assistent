@@ -22,6 +22,7 @@ sources:
   - deepteam
   - owasp-llm-top10
   - mitre-atlas
+  - enisa-multilayer-framework
 ---
 
 Log prompts, tool-calls en belangrijke tussenstappen gestructureerd, met metadata over gebruiker, model-versie en context: zonder die context kun je incidenten niet reconstrueren. 

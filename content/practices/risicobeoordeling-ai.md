@@ -18,6 +18,9 @@ sources:
   - giskard
   - deepeval
   - langsmith
+  - nist-rmf-playbook
+  - overheidsbreed-standpunt-genai
+  - tno-digital-trust
 ---
 
 Breng systematisch in kaart welke risico's de digitale assistent met zich meebrengt op het gebied van bias, transparantie, onjuiste antwoorden en naleving van regelgeving. Dit vormt de nulmeting waarop alle vervolgbeoordelingen worden gebaseerd; zonder nulmeting weet je later niet of het beter of slechter is geworden.

@@ -12,7 +12,6 @@ sources:
   - conversation-design-institute
   - microsoft-handle-errors
   - conversational-ai-design-patterns
-  - stumble-tool
   - uu-chatbot-repair
 ---
 

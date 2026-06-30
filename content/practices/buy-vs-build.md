@@ -14,6 +14,8 @@ sources:
   - algoritmekader
   - visie-digitale-autonomie
   - vng-ai-governance
+  - build-vs-buy-thoughtworks
+  - opengem-chatbot
 ---
 
 Maak de afweging expliciet en op basis van strategische capaciteiten, niet op basis van losse offertes: bepaal welke onderdelen van de digitale assistent strategisch waardevol zijn (eigen merk en gebruikersrelatie, gevoelige data, domeinexpertise, controle over kwaliteit) en welke commodity zijn (rekeninfrastructuur, observability, basis-tooling). Strategisch = build of meebouwen in coalitie; commodity = buy, mits exit-baar.

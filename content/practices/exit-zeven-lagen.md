@@ -17,6 +17,7 @@ sources:
   - qdrant
   - weaviate
   - langfuse
+  - rijksbrede-strategie-it-sourcing
 ---
 
 Laag 1 – Model: implementeer contract-tests per provider-adapter. Een test is pas geslaagd als de assistent op een willekeurige vrijdag kan overschakelen naar een alternatief model zonder regressie op de golden dataset. Zonder zo'n test is "exit-mogelijk" een hoop, geen capaciteit.
