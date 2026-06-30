@@ -1660,3 +1660,136 @@
     tokenprijs juist het meest, vooral door verschillen in thinking-tokens en het aantal
     agent-stappen. Onderbouwt waarom kosten per taak een betere metric is dan prijs per token.
   url: https://arxiv.org/abs/2603.23971
+
+- id: microsoft-hax-toolkit
+  title: "Microsoft - HAX Toolkit: Guidelines for Human-AI Interaction"
+  categorie: Raamwerk
+  omschrijving: >
+    Achttien ontwerprichtlijnen voor mens-AI-interactie, gebaseerd op ruim twintig jaar
+    onderzoek. Geeft concrete handvatten om verwachtingen, onzekerheid, fouten en bijsturing in
+    de interactie met een digitale assistent goed vorm te geven.
+  url: https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/
+
+- id: nng-designing-ai
+  title: "Nielsen Norman Group - Designing AI study guide"
+  categorie: Artikel & Richtlijnen
+  omschrijving: >
+    Gecureerde verzameling UX-richtlijnen voor het ontwerpen van AI-interfaces, gericht op het
+    leveren van echte gebruikerswaarde in plaats van AI als gimmick. Relevant voor het ontwerpen
+    van begrijpelijke en bestuurbare mens-assistent interactie.
+  url: https://www.nngroup.com/articles/designing-ai-study-guide/
+
+- id: govuk-service-manual-design
+  title: "GOV.UK Service Manual - Design"
+  categorie: Beleid & kaders
+  omschrijving: >
+    Het ontwerp-onderdeel van het Britse GOV.UK Service Manual met richtlijnen en methoden voor
+    het benoemen, structureren, scopen en prototypen van publieke dienstverlening. Een
+    gezaghebbend referentiekader voor toegankelijke, gebruikersgerichte interactie bij de
+    overheid.
+  url: https://www.gov.uk/service-manual/design
+
+- id: service-design-tools-ai
+  title: "Service Design Tools - AI-enabled services and operations"
+  categorie: Tools
+  omschrijving: >
+    Vierstaps-raamwerk om AI in dienstverlening te ontwerpen: kansen identificeren, concepten
+    prioriteren, de gebruikerservaring definiëren en impact beoordelen. Helpt de assistent te
+    positioneren als orchestratielaag binnen de bredere dienstverlening.
+  url: https://servicedesigntools.org/tutorials/how-to-understand-and-shape-ai-enabled-services-and-operations
+
+- id: microsoft-hax-systeem-mogelijkheden
+  title: "Microsoft HAX Toolkit - Make clear what the system can do"
+  categorie: Artikel & Richtlijnen
+  omschrijving: >
+    Ontwerprichtlijn uit de Microsoft HAX Toolkit die uitlegt hoe je gebruikers duidelijk maakt
+    wat een AI-systeem wel en niet kan, met patronen om verwachtingen te sturen. Relevant om de
+    rol van de assistent herkenbaar te maken en te voorkomen dat de interface meer belooft dan
+    het systeem waarmaakt.
+  url: https://www.microsoft.com/en-us/haxtoolkit/guideline/make-clear-what-the-system-can-do/
+
+- id: nng-ai-rollen-ux
+  title: "Nielsen Norman Group - AI as a UX Assistant"
+  categorie: Artikel & Richtlijnen
+  omschrijving: >
+    Onderzoeksartikel van de Nielsen Norman Group dat verschillende rollen onderscheidt waarin
+    een AI-assistent gebruikers ondersteunt en laat zien dat de effectiviteit afhangt van het
+    bewust koppelen van de rol aan de taak. Bruikbaar bij het bepalen van de passende rol van
+    een digitale assistent.
+  url: https://www.nngroup.com/articles/ai-roles-ux/
+
+- id: nng-humanizing-ai
+  title: "Nielsen Norman Group - Humanizing AI Is a Trap"
+  categorie: Artikel & Richtlijnen
+  omschrijving: >
+    Onderzoeksgebaseerd artikel van Nielsen Norman Group over de risico's van het bewust
+    menselijk laten lijken van AI-assistenten. Onderbouwt waarom geveinsde empathie en
+    toegevoegde persoonlijkheid het vertrouwen en de betrouwbaarheid ondermijnen en pleit voor
+    het ontwerpen van eerlijke gereedschappen in plaats van nep-vrienden.
+  url: https://www.nngroup.com/articles/humanizing-ai/
+
+- id: govuk-writing-standards
+  title: "GOV.UK - Writing to GOV.UK standards (content design en tone of voice)"
+  categorie: Artikel & Richtlijnen
+  omschrijving: >
+    Officiele Britse overheidsrichtlijnen voor het schrijven van publieke dienstverlening, met
+    aandacht voor een heldere, menselijke maar niet kletserige toon, plain English, korte zinnen
+    en het direct aanspreken van de gebruiker. Toonaangevend referentiekader voor de toon en
+    vorm van overheidscommunicatie.
+  url: https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/
+
+- id: wcag-2-2
+  title: "W3C - Web Content Accessibility Guidelines (WCAG) 2.2"
+  categorie: Raamwerk
+  omschrijving: >
+    Internationale W3C-standaard voor toegankelijke webcontent voor mensen met uiteenlopende
+    beperkingen (visueel, motorisch, auditief, cognitief). WCAG 2.2 niveau AA vormt via EN 301
+    549 de norm waaraan publieke assistenten en interfaces moeten voldoen.
+  url: https://www.w3.org/WAI/standards-guidelines/wcag/
+
+- id: digitoegankelijk-verplicht
+  title: "Digitoegankelijk - Wat is verplicht (EN 301 549 / WCAG)"
+  categorie: Beleid & kaders
+  omschrijving: >
+    Uitleg van de wettelijke verplichting voor digitale toegankelijkheid van Nederlandse
+    overheden: websites, apps en content moeten voldoen aan EN 301 549 (met WCAG, niveau A en
+    AA) en er moet een toegankelijkheidsverklaring worden gepubliceerd.
+  url: https://www.digitoegankelijk.nl/wetgeving/wat-is-verplicht
+
+- id: nl-design-system
+  title: "NL Design System - Handboek introductie"
+  categorie: Tools
+  omschrijving: >
+    Gezamenlijk ontwerp- en componentsysteem van Nederlandse overheidsorganisaties dat
+    toegankelijke, inclusieve en gebruiksvriendelijke interfaces makkelijker maakt. Biedt
+    herbruikbare componenten en richtlijnen die aan WCAG-eisen voldoen.
+  url: https://nldesignsystem.nl/handboek/introductie/
+
+- id: govuk-accessibility-dosdonts
+  title: "GOV.UK - Dos and don'ts on designing for accessibility"
+  categorie: Artikel & Richtlijnen
+  omschrijving: >
+    Bekende GOV.UK-posters met concrete do's en don'ts voor inclusief ontwerp per
+    gebruikersbehoefte (slechtziend, dyslexie, autisme, doof/slechthorend, motorisch beperkt,
+    schermlezergebruikers). Praktische vertaling van toegankelijkheid naar ontwerpkeuzes.
+  url: https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/
+
+- id: ap-bewaartermijnen
+  title: "Autoriteit Persoonsgegevens - Bewaren van persoonsgegevens"
+  categorie: Beleid & kaders
+  omschrijving: >
+    Uitleg van de Autoriteit Persoonsgegevens over het AVG-beginsel van opslagbeperking:
+    persoonsgegevens mogen niet langer worden bewaard dan noodzakelijk is voor het doel, en
+    bewaartermijnen moeten onderbouwd en zo kort mogelijk zijn. Direct relevant voor de vraag
+    wat een assistent onthoudt en hoe lang.
+  url: https://www.autoriteitpersoonsgegevens.nl/themas/basis-avg/privacy-en-persoonsgegevens/bewaren-van-persoonsgegevens
+
+- id: openai-memory-controls
+  title: "OpenAI - Memory and new controls for ChatGPT"
+  categorie: Artikel & Richtlijnen
+  omschrijving: >
+    Beschrijving van de geheugenfunctie van ChatGPT met onderscheid tussen opgeslagen
+    herinneringen en gespreksgeschiedenis, plus de bedieningsopties: geheugen bekijken,
+    aanpassen, verwijderen, uitschakelen en tijdelijke chats zonder geheugen. Praktisch
+    referentievoorbeeld van controleerbaar geheugen voor gebruikers.
+  url: https://openai.com/index/memory-and-new-controls-for-chatgpt/

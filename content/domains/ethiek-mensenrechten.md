@@ -9,7 +9,7 @@ samenhang_blokken:
     omschrijving: "Ethiek en compliance raken elkaar maar zijn niet hetzelfde. Compliance stelt het minimum vast dat wettelijk verplicht is; ethiek vraagt wat maatschappelijk wenselijk is, ook waar de wet nog geen antwoord geeft. IAMA en Algoritmekader zijn de koppelingsinstrumenten."
   - naam: Antwoordkwaliteit
     omschrijving: "Bias in antwoorden is tegelijk een kwaliteitsprobleem en een ethisch probleem. Als bepaalde gebruikersgroepen systematisch slechtere antwoorden krijgen, raakt dat direct aan non-discriminatie. Test-sets met ethische cases overlappen met kwaliteits-test-sets."
-  - naam: Gebruikerservaring en toegankelijkheid
+  - naam: Mens-assistent interactie
     omschrijving: "Kwetsbare gebruikersgroepen die door de assistent benadeeld worden zijn vaak ook de groepen die tegen toegankelijkheidsdrempels aanlopen. Beide domeinen vragen om een perspectief van buiten de gemiddelde gebruiker."
   - naam: Digitale Soevereiniteit
     omschrijving: "Autonomie over algoritmes is een voorwaarde voor democratische controle. Als de overheid geen grip heeft op hoe een model werkt of wat het doet, kan ze ook geen ethische verantwoording afleggen."

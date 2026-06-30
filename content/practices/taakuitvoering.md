@@ -7,7 +7,7 @@ summary: >
   orchestratie-tooling. Workflow-helderheid is de voorwaarde voor controleerbare,
   traceerbare taakuitvoering.
 domains: [functionaliteit]
-good_practise: [systeemintegraties]
+good_practise: [systeemintegraties, kies-rol-assistent]
 phases: [Pilot, Productie, PoC]
 levels: [Developer/ Engineer, Projectmanager]
 sources:

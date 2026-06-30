@@ -11,7 +11,7 @@ samenhang_blokken:
     omschrijving: "Om taakuitvoering en integraties goed te benutten is voldoende AI-geletterdheid en domeinkennis nodig in de organisatie. Medewerkers moeten weten wat de assistent wel en niet kan."
   - naam: Antwoordkwaliteit
     omschrijving: "Sterke functionaliteit (integraties, taakuitvoering, personalisatie) zorgt dat antwoorden niet alleen mooi maar ook feitelijk juist zijn, omdat de assistent echte data en statussen uit bronsystemen ophaalt en terugmeldt."
-  - naam: Gebruikerservaring en toegankelijkheid
+  - naam: Mens-assistent interactie
     omschrijving: "Hoe functionaliteit wordt aangeboden (streaming, foutafhandeling, personalisatie) bepaalt de ervaren gebruiksvriendelijkheid en het vertrouwen in de assistent."
   - naam: Technische Prestaties
     omschrijving: "Integraties, orkestratie en personalisatie leggen de basis voor schaalbaarheid en snelheid. Slim hergebruikbare koppelingen verbeteren performance; rommelige functionaliteit veroorzaakt vertraging."

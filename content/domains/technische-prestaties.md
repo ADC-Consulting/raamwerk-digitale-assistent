@@ -11,7 +11,7 @@ samenhang_blokken:
     omschrijving: "De kwaliteit van antwoorden hangt direct samen met technische prestaties: hoge latentie of instabiliteit zorgt voor trage of afgebroken antwoorden, en slechte retrieval (RAG) vergroot de hoeveelheid data en drukt op schaalbaarheid en snelheid."
   - naam: Gespreksvaardigheid
     omschrijving: "Functies als chatgeschiedenis, vagheidsdetectie en meertaligheid vragen extra verwerking per verzoek, waardoor de rekenlast toeneemt en er strengere eisen ontstaan aan latentie en schaalbaarheid, vooral bij complexe dialogen."
-  - naam: Gebruikerservaring
+  - naam: Mens-assistent interactie
     omschrijving: "Ervaren kwaliteit (snelheid, response streaming, beschikbaarheid) wordt rechtstreeks bepaald door technische prestaties; een trage of instabiele assistent voelt slecht, ongeacht de inhoud, terwijl gebruikersfeedback uit de UX-kant weer input is voor geautomatiseerd leren."
   - naam: Functionaliteit
     omschrijving: "Extra functies zoals tooling, response streaming, multimodaliteit en personalisatie verhogen de complexiteit van de verwerkingsketen en stellen extra eisen aan infrastructuur, schaalbaarheid en latentie."

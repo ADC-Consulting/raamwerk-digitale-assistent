@@ -9,7 +9,7 @@ summary: >
   Deze praktijk gaat over de werking en uitlegbaarheid van het systeem, niet over het
   meten van de outputkwaliteit.
 domains: [compliance, gebruikerservaring]
-good_practise: [ethische-impact-iama, output-transparantie]
+good_practise: [ethische-impact-iama, output-transparantie, toon-vorm-persoonlijkheid, inclusief-toegankelijk-ontwerp]
 phases: [PoC, Pilot, Productie]
 levels: [Projectmanager, Compliance officer]
 sources:
