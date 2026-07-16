@@ -7,6 +7,7 @@ summary: >
   historie worden in een gespreksgeheugen vastgelegd zodat verwijzingen als "die
   aanvraag van net" correct worden geïnterpreteerd.
 domains: [functionaliteit, gebruikerservaring]
+good_practise: [geheugen-controleerbaar]
 phases: [Pilot, Productie, PoC]
 levels: [Projectmanager, Developer/ Engineer]
 sources:

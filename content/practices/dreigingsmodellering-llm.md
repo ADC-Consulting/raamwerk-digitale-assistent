@@ -22,6 +22,11 @@ sources:
   - guardrails-ai
   - llama-guard
   - hackerone-prompt-injection
+  - aivd-ai-secure
+  - aivd-rdi-genai
+  - ncsc-uk-secure-ai
+  - nist-sp-800-218a
+  - nsa-securing-ai
 ---
 
 Gebruik de OWASP-checklists om scenario's systematisch af te lopen: de OWASP Top 10 for LLM Applications dekt prompt injection (direct, indirect en multimodaal), data-exfiltratie, poisoning en excessive agency. Voor agentische assistenten combineer je die met de OWASP Top 10 for Agentic Applications, voor risico's rond tool-chaining, memory manipulation en agent-to-agent-trust.

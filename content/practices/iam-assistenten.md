@@ -25,6 +25,7 @@ sources:
   - promptfoo
   - enisa-threat-landscape
   - ncsc-genai-medewerkers
+  - ncsc-webapps
 ---
 
 Implementeer sterke, bij voorkeur phishing-bestendige authenticatie voor de eindgebruiker bij toegang tot gevoelige functionaliteit: AI-ondersteunde phishing wordt steeds geavanceerder (zie ENISA Threat Landscape 2025). Wachtwoorden alleen volstaan niet. Gebruik MFA, hardware-tokens of FIDO2 voor alles wat verder gaat dan publieke informatie.

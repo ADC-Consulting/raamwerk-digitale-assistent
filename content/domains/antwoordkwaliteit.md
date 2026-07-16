@@ -5,7 +5,7 @@ title: Kwaliteit van de output
 short: De mate waarin de output relevant, correct, herleidbaar en passend is bij input, context en gebruiker. 
 status: published
 samenhang_blokken:
-  - naam: Gebruikerservaring en toegankelijkheid
+  - naam: Mens-assistent interactie
     omschrijving: "Confidence-indicatoren, disclaimers en mogelijkheden om naar een mens over te schakelen bepalen hoe de assistent ervaren wordt — kwaliteit is alleen merkbaar als de UI hem zichtbaar maakt."
   - naam: Technische Prestaties
     omschrijving: "Latency en kwaliteit zijn een trade-off. Meer evaluatie- en controlestappen kunnen het systeem trager en duurder maken; log per stap zowel kwaliteitswinst als extra latency en tokenverbruik."

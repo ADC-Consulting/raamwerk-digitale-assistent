@@ -21,6 +21,9 @@ sources:
   - surf-snellius
   - dutch-cloud-community
   - greenpt
+  - gemma
+  - nora
+  - opensource-pleio
 ---
 
 

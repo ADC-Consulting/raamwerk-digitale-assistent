@@ -1,14 +1,32 @@
 /* global SuggestieBlok */
 // ── Eigen kleurpalet voor categorieën (blauw + roze + groen + amber) ──
 const D_TYPES = {
-  beleid:    { label: 'Beleidskader',     color: '#0B3A66', tint: '#D6E2F0' }, // diepblauw
-  verplicht: { label: 'Verplicht kader',  color: '#9C1F54', tint: '#F4DCE6' }, // diep roze
-  richtlijn: { label: 'Richtlijnen',      color: '#01689B', tint: '#DCEAF4' }, // middenblauw
-  raamwerk:  { label: 'Raamwerk',         color: '#5E8FB0', tint: '#E6EEF4' }, // grijsblauw
-  tools:     { label: 'Tools',            color: '#3A6B4F', tint: '#DDE7E0' }, // gedempt groen
-  voorbeeld: { label: 'Voorbeeldproject', color: '#7A5A32', tint: '#ECDFCD' }, // gedempt amber
-  infra:     { label: 'Overig',           color: '#6B7785', tint: '#EEF2F6' }, // grijs (fallback)
+  richtlijn:      { label: 'Artikel & Richtlijnen', color: '#01689B', tint: '#DCEAF4' },
+  raamwerk:       { label: 'Raamwerk',              color: '#5E8FB0', tint: '#E6EEF4' },
+  tools:          { label: 'Tools',                 color: '#3A6B4F', tint: '#DDE7E0' },
+  voorbeeld:      { label: 'Voorbeeldproject',      color: '#7A5A32', tint: '#ECDFCD' },
+  kennisplatform: { label: 'Kennisplatform',        color: '#9C1F54', tint: '#F4DCE6' },
+  infra:          { label: 'Overig',                color: '#6B7785', tint: '#EEF2F6' },
 };
+
+function getCategoryGroup(categorie) {
+  if (categorie === 'Artikel & Richtlijnen') {
+    return { key: 'artikels-richtlijnen', label: D_TYPES.richtlijn.label, typeKey: 'richtlijn' };
+  }
+
+  const typeKey = ({
+    'Raamwerk':        'raamwerk',
+    'Tools':           'tools',
+    'Voorbeeldproject':'voorbeeld',
+    'Kennisplatform':  'kennisplatform',
+  }[categorie] || 'infra');
+
+  return {
+    key: categorie || 'overig',
+    label: categorie || D_TYPES.infra.label,
+    typeKey,
+  };
+}
 
 // Primaire UI-accent (gebruikt voor headings, actieve chip, hover-stripe):
 const D_INK   = '#0B3A66'; // donkerblauw
@@ -119,8 +137,8 @@ function VariantD() {
   const [active, setActive] = React.useState('alle');
   const [q, setQ] = React.useState('');
   const [hover, setHover] = React.useState(null);
-  const [sortBy, setSortBy] = React.useState('recent');
-  const [sortDir, setSortDir] = React.useState('desc');
+  const [sortBy, setSortBy] = React.useState('titel');
+  const [sortDir, setSortDir] = React.useState('asc');
   const [sortOpen, setSortOpen] = React.useState(false);
   const sortRef = React.useRef(null);
 
@@ -132,17 +150,19 @@ function VariantD() {
     return () => document.removeEventListener('mousedown', onDoc);
   }, []);
 
-  const CATEGORY_ORDER = ['beleid', 'verplicht', 'richtlijn', 'raamwerk', 'tools', 'voorbeeld', 'infra'];
-
-  const uniqueCats = [...new Set(data.map(d => d.categorie).filter(Boolean))];
   const tabs = [
     { key: 'alle', label: 'Alle bronnen', count: data.length },
-    ...uniqueCats.map(cat => ({ key: cat, label: cat, count: data.filter(d => d.categorie === cat).length })),
+    ...Array.from(data.reduce((groups, item) => {
+      const group = getCategoryGroup(item.categorie);
+      const current = groups.get(group.key);
+      groups.set(group.key, current ? { ...current, count: current.count + 1 } : { key: group.key, label: group.label, count: 1 });
+      return groups;
+    }, new Map()).values()).sort((a, b) => a.label.localeCompare(b.label, 'nl')),
   ];
 
   const ql = q.toLowerCase();
   const filtered = data.filter(d => {
-    if (active !== 'alle' && d.categorie !== active) return false;
+    if (active !== 'alle' && getCategoryGroup(d.categorie).key !== active) return false;
     if (ql) {
       return (d.title || '').toLowerCase().includes(ql) ||
              (d.omschrijving || '').toLowerCase().includes(ql);
@@ -153,25 +173,19 @@ function VariantD() {
   const sorted = [...filtered].sort((a, b) => {
     let cmp = 0;
     if (sortBy === 'categorie') {
-      cmp = CATEGORY_ORDER.indexOf(a.typeKey) - CATEGORY_ORDER.indexOf(b.typeKey);
+      cmp = getCategoryGroup(a.categorie).label.localeCompare(getCategoryGroup(b.categorie).label, 'nl');
       if (cmp === 0) cmp = a.title.localeCompare(b.title, 'nl');
-    } else if (sortBy === 'titel') {
-      cmp = a.title.localeCompare(b.title, 'nl');
     } else {
-      const ay = parseInt(a.year, 10) || 0;
-      const by = parseInt(b.year, 10) || 0;
-      cmp = ay - by;
-      if (cmp === 0) cmp = (a.month || '').localeCompare(b.month || '');
+      cmp = a.title.localeCompare(b.title, 'nl');
     }
     return sortDir === 'asc' ? cmp : -cmp;
   });
 
   const sortLabels = {
-    recent:    { asc: 'oudst eerst', desc: 'meest recent' },
-    categorie: { asc: 'A → Z',       desc: 'Z → A' },
-    titel:     { asc: 'A → Z',       desc: 'Z → A' },
+    categorie: { asc: 'A → Z', desc: 'Z → A' },
+    titel:     { asc: 'A → Z', desc: 'Z → A' },
   };
-  const sortNames = { recent: 'Datum', categorie: 'Categorie', titel: 'Titel' };
+  const sortNames = { categorie: 'Categorie', titel: 'Titel' };
 
   return (
     <div className="container" style={{ fontFamily: 'Arial, sans-serif', color: '#1F2A36', paddingBottom: 56 }}>
@@ -237,7 +251,7 @@ function VariantD() {
               background:'#FFFFFF', border:'1px solid #D8D8D2', minWidth:200,
               boxShadow:'0 6px 18px rgba(11,58,102,0.10)',
             }}>
-              {['categorie', 'recent', 'titel'].map(key => {
+              {['categorie', 'titel'].map(key => {
                 const isActive = sortBy === key;
                 return (
                   <button
@@ -268,7 +282,8 @@ function VariantD() {
 
       <div>
         {sorted.map(b => {
-          const type = T[b.typeKey];
+          const group = getCategoryGroup(b.categorie);
+          const type = T[group.typeKey] || T.infra;
           const isHover = hover === b.id;
           return (
             <div
@@ -285,7 +300,7 @@ function VariantD() {
             >
               <div style={vdStyle.typeStripe}>
                 <span style={vdStyle.typeDot(type.color)}></span>
-                <span style={{...vdStyle.typeLabel, color: type.color}}>{b.categorie || type.label}</span>
+                <span style={{...vdStyle.typeLabel, color: type.color}}>{group.label}</span>
               </div>
 
               <div style={vdStyle.titleCol}>
@@ -310,7 +325,6 @@ window.VariantD = VariantD;
 /* ===== Herbruikbare bronnenlijst voor domein- en practicepagina's ===== */
 function BronnenLijst({ bronnen }) {
   const [hover, setHover] = React.useState(null);
-  const toKey = c => ({ 'Beleidskader':'beleid','Richtlijnen':'richtlijn','Richtlijn':'richtlijn','Verplicht kader':'verplicht','Raamwerk':'raamwerk','Register':'register' }[c] || 'infra');
   const rowStyle = {
     display: 'grid', gridTemplateColumns: '180px 1fr 32px',
     gap: '0 32px', padding: '14px 0',
@@ -320,26 +334,34 @@ function BronnenLijst({ bronnen }) {
   return (
     <div>
       {bronnen.map((b, i) => {
-        const type = D_TYPES[b.typeKey || toKey(b.categorie)] || D_TYPES.infra;
+        const group = getCategoryGroup(b.categorie);
+        const type = D_TYPES[b.typeKey || group.typeKey] || D_TYPES.infra;
         const isHov = hover === (b.id || i);
-        return (
-          <div key={b.id || i} style={{ ...rowStyle, background: isHov ? '#fff' : 'transparent', boxShadow: isHov ? 'inset 3px 0 0 ' + D_ROSE : 'none', paddingLeft: isHov ? 12 : 0 }}
-            onMouseEnter={() => setHover(b.id || i)} onMouseLeave={() => setHover(null)}>
+        const rowProps = {
+          key: b.id || i,
+          onMouseEnter: () => setHover(b.id || i),
+          onMouseLeave: () => setHover(null),
+          style: { ...rowStyle, background: isHov ? '#fff' : 'transparent', boxShadow: isHov ? 'inset 3px 0 0 ' + D_ROSE : 'none', paddingLeft: isHov ? 12 : 0, cursor: b.url ? 'pointer' : 'default' },
+        };
+        const rowInner = (
+          <React.Fragment>
             <div style={vdStyle.typeStripe}>
               <span style={vdStyle.typeDot(type.color)}></span>
-              <span style={{ ...vdStyle.typeLabel, color: type.color }}>{b.categorie || type.label}</span>
+              <span style={{ ...vdStyle.typeLabel, color: type.color }}>{group.label}</span>
             </div>
             <div>
-              {b.url
-                ? <a href={b.url} target="_blank" rel="noopener noreferrer" style={{ ...vdStyle.title, textDecoration: 'none', display: 'block', marginBottom: 4 }}>{b.title}</a>
-                : <strong style={{ ...vdStyle.title, display: 'block', marginBottom: 4 }}>{b.title}</strong>}
+              <strong style={{ ...vdStyle.title, display: 'block', marginBottom: 4 }}>{b.title}</strong>
               <p style={{ ...vdStyle.desc, margin: 0 }}>{b.omschrijving || b.short}</p>
             </div>
             <div style={{ ...vdStyle.statusCol, justifyContent: 'flex-start' }}>
               <span style={{ ...vdStyle.arrow, opacity: isHov ? 1 : 0.4 }}>&rarr;</span>
             </div>
-          </div>
+          </React.Fragment>
         );
+        return b.url
+          ? <a {...rowProps} href={b.url} target="_blank" rel="noopener noreferrer"
+               style={{ ...rowProps.style, textDecoration: 'none', color: 'inherit' }}>{rowInner}</a>
+          : <div {...rowProps}>{rowInner}</div>;
       })}
     </div>
   );

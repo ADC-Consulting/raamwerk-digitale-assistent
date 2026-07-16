@@ -23,4 +23,4 @@ Registreer elke keuze met een comply-or-explain-systeem (groen, oranje, rood): l
 
 Vertaal oranje en rode labels naar concrete vervolgacties: een label is geen eindpunt maar een opdracht. Maak een afhankelijkheid exit-baar (zie de praktijk over exit op zeven lagen), kies bewust infrastructuur en hosting (zie de praktijk over de infrastructuur- en hostingkeuze) en bouw een provider-agnostische tussenlaag, zodat een oranje keuze in een volgende iteratie naar groen kan bewegen in plaats van stil te blijven staan.
 
-Veranker het twee-sporenbeleid in bestaand bestuurlijk mandaat: beleg het eigenaarschap van de sporen en het register binnen de governance-structuur (bijvoorbeeld CIO- en CISO-beraad, SLM Rijk of VNG Samen Organiseren) en sluit aan op de Kabinetsvisie Digitale Autonomie en Soevereiniteit en de Nederlandse Digitaliseringsstrategie.
+Veranker het twee-sporenbeleid in bestaand bestuurlijk mandaat: beleg het eigenaarschap van de sporen en het register binnen de governance-structuur (bijvoorbeeld CIO- en CISO-beraad, SLM Rijk of VNG Samen Organiseren) en sluit aan op de Kabinetsvisie Digitale Autonomie en Soevereiniteit.

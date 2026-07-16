@@ -6,13 +6,13 @@ summary: >
   voorspelbaar en gebruikersvriendelijk worden afgehandeld zonder dat gesprekken
   vastlopen.
 domains: [gebruikerservaring]
+good_practise: [inclusief-toegankelijk-ontwerp]
 phases: [Pilot, Productie]
 levels: [Developer/ Engineer]
 sources:
   - conversation-design-institute
   - microsoft-handle-errors
   - conversational-ai-design-patterns
-  - stumble-tool
   - uu-chatbot-repair
 ---
 

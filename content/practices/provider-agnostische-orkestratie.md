@@ -18,6 +18,7 @@ sources:
   - aequitas
   - ai-fairness-360
   - librechat
+  - surf-ai-hub
 ---
 
 Zet LiteLLM (of vergelijkbaar) als centrale proxy: providers wisselen dan via configuratie in plaats van via een code-release. Dat verandert "we switchen ooit van leverancier" van een project naar een operationele beslissing.
