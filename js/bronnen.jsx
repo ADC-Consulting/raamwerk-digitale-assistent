@@ -337,24 +337,31 @@ function BronnenLijst({ bronnen }) {
         const group = getCategoryGroup(b.categorie);
         const type = D_TYPES[b.typeKey || group.typeKey] || D_TYPES.infra;
         const isHov = hover === (b.id || i);
-        return (
-          <div key={b.id || i} style={{ ...rowStyle, background: isHov ? '#fff' : 'transparent', boxShadow: isHov ? 'inset 3px 0 0 ' + D_ROSE : 'none', paddingLeft: isHov ? 12 : 0 }}
-            onMouseEnter={() => setHover(b.id || i)} onMouseLeave={() => setHover(null)}>
+        const rowProps = {
+          key: b.id || i,
+          onMouseEnter: () => setHover(b.id || i),
+          onMouseLeave: () => setHover(null),
+          style: { ...rowStyle, background: isHov ? '#fff' : 'transparent', boxShadow: isHov ? 'inset 3px 0 0 ' + D_ROSE : 'none', paddingLeft: isHov ? 12 : 0, cursor: b.url ? 'pointer' : 'default' },
+        };
+        const rowInner = (
+          <React.Fragment>
             <div style={vdStyle.typeStripe}>
               <span style={vdStyle.typeDot(type.color)}></span>
               <span style={{ ...vdStyle.typeLabel, color: type.color }}>{group.label}</span>
             </div>
             <div>
-              {b.url
-                ? <a href={b.url} target="_blank" rel="noopener noreferrer" style={{ ...vdStyle.title, textDecoration: 'none', display: 'block', marginBottom: 4 }}>{b.title}</a>
-                : <strong style={{ ...vdStyle.title, display: 'block', marginBottom: 4 }}>{b.title}</strong>}
+              <strong style={{ ...vdStyle.title, display: 'block', marginBottom: 4 }}>{b.title}</strong>
               <p style={{ ...vdStyle.desc, margin: 0 }}>{b.omschrijving || b.short}</p>
             </div>
             <div style={{ ...vdStyle.statusCol, justifyContent: 'flex-start' }}>
               <span style={{ ...vdStyle.arrow, opacity: isHov ? 1 : 0.4 }}>&rarr;</span>
             </div>
-          </div>
+          </React.Fragment>
         );
+        return b.url
+          ? <a {...rowProps} href={b.url} target="_blank" rel="noopener noreferrer"
+               style={{ ...rowProps.style, textDecoration: 'none', color: 'inherit' }}>{rowInner}</a>
+          : <div {...rowProps}>{rowInner}</div>;
       })}
     </div>
   );
