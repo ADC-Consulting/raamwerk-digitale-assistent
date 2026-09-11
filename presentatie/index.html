@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Raamwerk Digitale Assistent — presentatie</title>
+  <meta name="description" content="Interactieve presentatie: zo bouwden we het Raamwerk Digitale Assistent, van deskonderzoek tot een levende kennisgraaf en website." />
+
+  <link rel="preload" href="./fonts/EaseSemiDisplay-Black.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./fonts/EaseDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="./vendor/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./presentatie.css" />
+</head>
+<body>
+  <div id="bg-grad"></div>
+  <div id="particles"></div>
+
+  <div class="brandmark"><span class="d"></span> Raamwerk Digitale Assistent</div>
+  <div class="progress" id="progress"></div>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+      <!-- 0 · HERO -->
+      <section class="swiper-slide hero" style="--accent:var(--c-teal)">
+        <div class="slide-inner">
+          <h1 class="title hero-grad" data-reveal>Raamwerk<br>Digitale Assistent</h1>
+          <p class="byline" data-reveal>Laurent Smeets en Daan van Wijk</p>
+          <div class="media hero-media" data-reveal style="max-width:60rem;aspect-ratio:16/6">
+            <img src="./img/hero-llm.png" alt="Abstracte visualisatie van AI-taalmodellen" />
+            <div class="credit">Wes Cockx &amp; Google DeepMind / Better Images of AI / CC-BY 4.0</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1 · DEFINITIE -->
+      <section class="swiper-slide" style="--accent:var(--c-purple)">
+        <div class="slide-inner">
+          <p class="eyebrow" data-reveal>Wat is het?</p>
+          <h2 class="title" data-reveal>Wat is een <span class="hl">digitale assistent</span>?</h2>
+          <div class="def-card" data-reveal>
+            <p class="def">Een digitale assistent is een <span class="mark">slimme, geautomatiseerde dienst op basis van AI</span> die via digitale kanalen interactief met gebruikers en/of systemen communiceert. De assistent kan <span class="mark">vragen beantwoorden</span>, <span class="mark">taken uitvoeren</span> en <span class="mark">informatie aanbieden</span> aan mensen binnen (medewerkers) of buiten de organisatie (burgers en bedrijven).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2 · STAP 01 -->
+      <section class="swiper-slide" style="--accent:var(--c-teal)">
+        <div class="slide-inner">
+          <div class="step-badge" data-reveal>01</div>
+          <p class="eyebrow" data-reveal>maart – juni</p>
+          <h2 class="title" data-reveal>Deskonderzoek</h2>
+          <p class="lede" data-reveal>We brachten literatuur, kaders en bestaande praktijk in kaart — de basis onder het raamwerk.</p>
+          <div class="motif" data-reveal>
+            <div class="m">📚</div><div class="m">🔎</div><div class="m">🗂️</div><div class="m">📎</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 · STAP 02 -->
+      <section class="swiper-slide" style="--accent:var(--c-gold)">
+        <div class="slide-inner split">
+          <div>
+            <div class="step-badge" data-reveal>02</div>
+            <h2 class="title" data-reveal>Verzamel alle data</h2>
+            <p class="lede" data-reveal>Bronnen, kaders en voorbeelden bij elkaar gebracht — vaak handwerk achter de schermen.</p>
+          </div>
+          <div class="media" data-reveal>
+            <img src="./img/data-lifting.jpg" alt="Illustratie van het menselijke werk achter dataverzameling" />
+            <div class="credit">Ann Fehres &amp; Luke Conroy &amp; AI4Media / Better Images of AI / CC-BY 4.0</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 · STAP 03 -->
+      <section class="swiper-slide" style="--accent:var(--c-purple)">
+        <div class="slide-inner">
+          <div class="step-badge" data-reveal>03</div>
+          <h2 class="title" data-reveal>Maak de templates</h2>
+          <p class="lede" data-reveal>Eén vaste structuur voor elk domein, elke good practice en elke bron.</p>
+          <div class="stats" data-reveal>
+            <div class="stat"><div class="num" data-count="14">0</div><div class="lbl">domeinen</div></div>
+            <div class="stat"><div class="num" data-count="58">0</div><div class="lbl">good practices</div></div>
+            <div class="stat"><div class="num" data-count="251">0</div><div class="lbl">bronnen</div></div>
+          </div>
+          <div class="chips" data-reveal>
+            <span class="chip fund">Cultuur &amp; Adoptie</span>
+            <span class="chip fund">Kennis &amp; capaciteit</span>
+            <span class="chip fund">Governance</span>
+            <span class="chip fund">Infrastructuur &amp; Data</span>
+            <span class="chip">Evaluatie</span>
+            <span class="chip">Kwaliteit van de output</span>
+            <span class="chip">Mens-assistent interactie</span>
+            <span class="chip">Technische Prestaties</span>
+            <span class="chip">Functionaliteit</span>
+            <span class="chip">Duurzaamheid</span>
+            <span class="chip">Digitale Soevereiniteit</span>
+            <span class="chip">Ethiek &amp; Mensenrechten</span>
+            <span class="chip">Compliance</span>
+            <span class="chip">Beveiliging</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 · STAP 04 -->
+      <section class="swiper-slide" style="--accent:var(--c-pink)">
+        <div class="slide-inner">
+          <div class="step-badge" data-reveal>04</div>
+          <h2 class="title" data-reveal>Interview de <span class="hl">domeinexperts</span></h2>
+          <p class="lede" data-reveal>Kennis opgehaald bij de mensen die het werk elke dag doen.</p>
+          <div class="motif" data-reveal><div class="m">🎙️</div><div class="m">💬</div><div class="m">🧠</div></div>
+        </div>
+      </section>
+
+      <!-- 6 · STAP 05 -->
+      <section class="swiper-slide" style="--accent:var(--c-green)">
+        <div class="slide-inner">
+          <div class="step-badge" data-reveal>05</div>
+          <h2 class="title" data-reveal>Data naar de templates</h2>
+          <p class="lede" data-reveal>Alles gestructureerd uitgewerkt in Word — consistent en vergelijkbaar.</p>
+          <div class="motif" data-reveal><div class="m">📝</div><div class="m">📄</div><div class="m">➡️</div><div class="m">🧩</div></div>
+        </div>
+      </section>
+
+      <!-- 7 · STAP 06 -->
+      <section class="swiper-slide" style="--accent:var(--c-yellow)">
+        <div class="slide-inner">
+          <div class="step-badge" data-reveal>06</div>
+          <h2 class="title" data-reveal>Valideer met experts</h2>
+          <p class="lede" data-reveal>Teruggelegd, getoetst en aangescherpt met de experts.</p>
+          <div class="motif" data-reveal><div class="m">✅</div><div class="m">🔁</div><div class="m">👥</div></div>
+        </div>
+      </section>
+
+      <!-- 8 · STAP 07 · KENNISGRAAF -->
+      <section class="swiper-slide slide full" style="--accent:var(--c-teal)">
+        <div class="slide-inner">
+          <div class="head">
+            <span class="step-badge" style="font-size:clamp(2rem,1.4rem+2vw,3.2rem)" data-reveal>07</span>
+            <h2 class="title" data-reveal>Zet alles in de <span class="hl">kennisgraaf</span></h2>
+          </div>
+          <div class="browser" data-reveal>
+            <div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+              <span class="addr">kennisgraaf · domeinen → practices → bronnen</span></div>
+            <iframe data-src="../kennisgraaf/melkweg.html" title="Interactieve kennisgraaf" loading="lazy"></iframe>
+          </div>
+          <div class="demo-actions" data-reveal>
+            <a class="btn" href="../kennisgraaf/melkweg.html" target="_blank" rel="noopener">Open kennisgraaf ↗</a>
+            <a class="btn ghost" href="../kennisgraaf/index.html" target="_blank" rel="noopener">Netwerk-versie</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9 · STAP 08 · DEMO -->
+      <section class="swiper-slide slide full" style="--accent:var(--c-purple)">
+        <div class="slide-inner">
+          <div class="head">
+            <span class="step-badge" style="font-size:clamp(2rem,1.4rem+2vw,3.2rem)" data-reveal>08</span>
+            <h2 class="title" data-reveal>Bouw de <span class="hl">website</span></h2>
+          </div>
+          <div class="browser" data-reveal>
+            <div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+              <span class="addr">demo-opschalingsticket-digitale-assistent.dokploy.adc-it.com</span></div>
+            <iframe data-src="https://demo-opschalingsticket-digitale-assistent.dokploy.adc-it.com/" title="Live demo van de website" loading="lazy"></iframe>
+          </div>
+          <div class="demo-actions" data-reveal>
+            <a class="btn" href="https://demo-opschalingsticket-digitale-assistent.dokploy.adc-it.com/" target="_blank" rel="noopener">Open demo ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 · STAP 09 -->
+      <section class="swiper-slide" style="--accent:var(--c-green)">
+        <div class="slide-inner split">
+          <div>
+            <div class="step-badge" data-reveal>09</div>
+            <p class="eyebrow" data-reveal>nu bezig</p>
+            <h2 class="title" data-reveal>Beter communiceren &amp; context <span class="hl">bruikbaar</span> maken</h2>
+            <p class="lede" data-reveal>De fase die nu start: resultaten toegankelijk maken en de context écht bruikbaar voor mensen.</p>
+            <span class="tag" data-reveal>Fase die nu start</span>
+          </div>
+          <div class="media" data-reveal>
+            <img src="./img/joining-the-table.png" alt="Illustratie van samenwerking en aansluiten bij de tafel" />
+            <div class="credit">Yutong Liu / Better Images of AI / CC-BY 4.0</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 · CREDITS -->
+      <section class="swiper-slide credits" style="--accent:var(--c-teal)">
+        <div class="slide-inner">
+          <p class="eyebrow" data-reveal>Colofon</p>
+          <h2 class="title" data-reveal>Credits</h2>
+          <ul data-reveal>
+            <li><b>Beelden</b> — <a href="https://betterimagesofai.org" target="_blank" rel="noopener">Better Images of AI</a>, gebruikt onder <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a>:</li>
+            <li>Wes Cockx &amp; Google DeepMind / Better Images of AI / <i>AI Large Language Models</i> / CC-BY 4.0</li>
+            <li>Ann Fehres &amp; Luke Conroy &amp; AI4Media / Better Images of AI / <i>Humans Do The Heavy Data Lifting</i> / CC-BY 4.0</li>
+            <li>Yutong Liu / Better Images of AI / <i>Joining the Table</i> / CC-BY 4.0</li>
+            <li class="sub"><b>Techniek</b> — Swiper · tsParticles · GSAP · zelf-gehoste Ease &amp; DM&nbsp;Sans fonts. Kennisgraaf &amp; data: Raamwerk Digitale Assistent.</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <div class="deck-nav">
+    <button class="nav-prev" aria-label="Vorige">‹</button>
+    <button class="nav-next" aria-label="Volgende">›</button>
+  </div>
+  <div class="hint">← sleep · pijltjes · scroll → &nbsp;·&nbsp; <a href="./editorial.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Editorial-versie</a></div>
+  <div class="counter"><b id="cur">1</b> / <span id="tot">12</span></div>
+
+  <script src="./vendor/swiper-bundle.min.js"></script>
+  <script src="./vendor/tsparticles.slim.bundle.min.js"></script>
+  <script src="./vendor/gsap.min.js"></script>
+  <script src="./presentatie.js"></script>
+</body>
+</html>
