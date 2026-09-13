@@ -250,7 +250,7 @@
     var h = n.href || '';
     if (!h) return null;
     if (/^https?:/i.test(h)) return { url: h, external: true };
-    if (h.charAt(0) === '#') return { url: '../index.html' + h, external: false };
+    if (h.charAt(0) === '#') return { url: 'https://demo-opschalingsticket-digitale-assistent.dokploy.adc-it.com/' + h, external: true };
     return { url: h, external: false };
   }
 
@@ -336,7 +336,7 @@
     var ph = pageHref(n);
     var btn = '';
     if (ph) {
-      var txt = n.type === 'bron' ? 'Open bron ↗' : (ph.external ? 'Open link ↗' : 'Open volledige pagina →');
+      var txt = n.type === 'bron' ? 'Open bron ↗' : 'Open volledige pagina →';
       btn = '<a class="openpage" href="' + escapeHtml(ph.url) + '"' + (ph.external ? ' target="_blank" rel="noopener"' : '') + '>' + txt + '</a>';
     }
 

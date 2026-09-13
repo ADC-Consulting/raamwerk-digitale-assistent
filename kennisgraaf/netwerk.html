@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Kennisgraaf — Raamwerk Digitale Assistent</title>
+  <meta name="description" content="Interactieve kennisgraaf van het Raamwerk Digitale Assistent: domeinen, good practices, bronnen, begrippen en filters en hun onderlinge verbanden." />
+
+  <!-- no-flash theme: set before first paint -->
+  <script>
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search).get('theme');
+        var t = (q === 'dark' || q === 'light') ? q : localStorage.getItem('kg-theme');
+        if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preload" href="./fonts/EaseSemiDisplay-Black.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./fonts/EaseDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- ============ top bar ============ -->
+    <header class="topbar">
+      <div class="brand">
+        <span class="eyebrow">Raamwerk Digitale Assistent</span>
+        <h1>Kennisgraaf</h1>
+        <span class="sub"><b id="count-nodes">0</b> knooppunten · <b id="count-edges">0</b> verbindingen</span>
+      </div>
+
+      <div class="topbar-spacer"></div>
+
+      <div class="topbar-tools">
+        <div class="search">
+          <svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" />
+          </svg>
+          <input id="search" type="search" placeholder="Zoek knooppunt…" autocomplete="off" aria-label="Zoek in de graaf" />
+          <div class="search-results" id="search-results" role="listbox"></div>
+        </div>
+
+        <a class="switchlink" href="./index.html" title="Sterrenbeeld-weergave (ringen)">✦ Sterrenbeeld</a>
+
+        <button class="iconbtn filters-toggle" id="filters-toggle" aria-label="Toon/verberg filters" title="Filters">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 6h16M7 12h10M10 18h4" />
+          </svg>
+        </button>
+
+        <button class="iconbtn" id="theme-toggle" aria-label="Wissel licht/donker thema" title="Licht / donker">
+          <svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" /><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8" />
+          </svg>
+          <svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20 14.5A8 8 0 0 1 9.5 4a.7.7 0 0 0-.95-.86A9.3 9.3 0 1 0 20.86 15.5a.7.7 0 0 0-.86-1z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- ============ stage ============ -->
+    <main class="stage">
+      <div id="graph"></div>
+
+      <div class="loading" id="loading" aria-live="polite">
+        Kennisgraaf laden<span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+
+      <aside class="rail" id="rail" aria-label="Legenda en filters"></aside>
+
+      <div class="controls" role="group" aria-label="Zoomknoppen">
+        <button id="zoom-in" aria-label="Inzoomen" title="Inzoomen">+</button>
+        <button id="zoom-out" aria-label="Uitzoomen" title="Uitzoomen">−</button>
+        <button id="zoom-fit" aria-label="Passend maken" title="Passend maken">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="hint">Sleep om te pannen · scroll om te zoomen · klik een knooppunt voor details</div>
+      <div class="gtip" id="gtip"></div>
+
+      <aside class="panel" id="panel" aria-label="Details" aria-hidden="true"></aside>
+    </main>
+  </div>
+
+  <!-- force-graph (canvas 2D, d3-force engine) — vendored locally, no external requests -->
+  <script src="./vendor/force-graph.min.js"></script>
+  <!-- data as a window global (works over http.server AND file://) -->
+  <script src="./graph-data.js"></script>
+  <!-- app -->
+  <script src="./app.js"></script>
+</body>
+</html>

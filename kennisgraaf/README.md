@@ -5,10 +5,10 @@ domeinen, good practices, bronnen, begrippen en filters (fases/niveaus/categorie
 en al hun onderlinge verbanden. **401 knooppunten, 1111 verbindingen.**
 
 Twee weergaven (schakel bovenin heen en weer):
-- **`index.html`** — netwerk-versie (force-directed, alle knooptypen + filters + zoeken).
-- **`melkweg.html`** — "Melkweg": domeinen als binnenring, good practices in de middenring,
+- **`index.html`** — "Sterrenbeeld": domeinen als binnenring, good practices in de middenring,
   bronnen in de buitenring, met verbindingen als sterrenbeelden. Volledig dependency-vrij
-  (geen bibliotheek, geen internet nodig).
+  (geen bibliotheek, geen internet nodig). Dit is de standaard-landingspagina.
+- **`netwerk.html`** — netwerk-versie (force-directed, alle knooptypen + filters + zoeken).
 
 ## Bekijken
 
@@ -47,4 +47,5 @@ python3 scripts/build_graph.py
 
 Niet met de hand bewerken; pas de inhoud aan in `content/` en genereer opnieuw.
 Elke knoop bevat een `href` die teruglinkt naar de bijbehorende pagina op de
-hoofdsite (`../index.html#/...`); bron-knopen linken naar hun externe URL.
+hoofdsite (`https://demo-opschalingsticket-digitale-assistent.dokploy.adc-it.com/#/...`);
+bron-knopen linken naar hun externe URL.

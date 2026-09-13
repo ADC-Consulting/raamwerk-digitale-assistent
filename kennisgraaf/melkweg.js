@@ -331,7 +331,7 @@
     }
     var href = n.href || '', btn = '';
     if (/^https?:/i.test(href)) btn = '<a class="openpage" href="' + esc(href) + '" target="_blank" rel="noopener">Open bron ↗</a>';
-    else if (href.charAt(0) === '#') btn = '<a class="openpage" href="../index.html' + esc(href) + '">Open volledige pagina →</a>';
+    else if (href.charAt(0) === '#') btn = '<a class="openpage" href="https://demo-opschalingsticket-digitale-assistent.dokploy.adc-it.com/' + esc(href) + '" target="_blank" rel="noopener">Open volledige pagina →</a>';
     panel.innerHTML =
       '<div class="panel-head"><div class="grow"><span class="type-tag" style="--tt:' + col + '"><span class="dot"></span>' + esc(TYPE_LABEL[n.type]) + '</span>' +
       '<h2>' + esc(n.label) + '</h2></div><button class="close" aria-label="Sluiten">✕</button></div>' +
