@@ -10,17 +10,18 @@ lede:
 lede_sub: >
   Bedoeld voor beleidsmakers, projectleiders, IT-professionals en bestuurders die grip
   willen krijgen op AI in publieke dienstverlening.
-diagram_hint: >
-  Klik op een segment om de fundamentele domeinen te bekijken, of op het midden voor de domeinen die samen de digitale assistent vormen. 
-
 fundamenten_section:
   label: Fundamenten
+  step: Stap 1
+  title: Leg het fundament
   description: >
     Zonder deze vier fundamenten is een verantwoorde digitale assistent niet mogelijk.
     Ze vormen de basis waarop alle andere domeinen rusten.
 
 assistent_section:
   label: Digitale Assistent
+  step: Stap 2
+  title: Bouw de assistent
   description: >
     De onderdelen die samen de digitale assistent vormen, van prompt en context tot
     kwaliteit, veiligheid en gebruikerservaring.

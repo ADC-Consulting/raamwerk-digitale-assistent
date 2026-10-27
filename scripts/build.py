@@ -8,7 +8,6 @@ import json
 import os
 
 from _content import (
-    CAT_TO_TYPEKEY,
     CONTENT_DIR,
     REPO_ROOT,
     load_bronnen,
@@ -70,12 +69,10 @@ def render_practices(practices):
 def render_bronnen(bronnen):
     lines = ['window.BRONNEN = [']
     for b in bronnen:
-        type_key = CAT_TO_TYPEKEY.get(b.get('categorie', ''), 'infra')
         omschrijving = (b.get('omschrijving') or '').strip().replace('\n', ' ')
         entry = {
             'id':           b['id'],
             'categorie':    b.get('categorie', ''),
-            'typeKey':      type_key,
             'title':        b['title'],
             'omschrijving': omschrijving,
             'url':          b.get('url', ''),
