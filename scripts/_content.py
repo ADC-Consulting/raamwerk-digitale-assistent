@@ -26,7 +26,7 @@ DOMAINS_DIR = os.path.join(CONTENT_DIR, 'domains')
 PRACTICES_DIR = os.path.join(CONTENT_DIR, 'practices')
 
 # The raamwerk has 4 fundamenten and 10 domeinen. `nr` is unique within each group.
-# Mirrored in js/pages.jsx (FUND_IDS + the hardcoded list on the detail-page check).
+# Mirrored once on the front end, in js/model.jsx (FUNDAMENT_IDS).
 FUNDAMENT_IDS = frozenset({
     'cultuur-adoptie',
     'kennis-capaciteit',

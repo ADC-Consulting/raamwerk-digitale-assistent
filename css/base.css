@@ -1,0 +1,115 @@
+/* ===========================================================================
+   Base — reset, typography defaults, layout helpers.
+   =========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--surface-page);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--accent-hover);
+  letter-spacing: normal;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: 1;
+  letter-spacing: -.02em;
+  text-wrap: balance;
+}
+
+h2 { font-size: var(--fs-h2); color: var(--accent-hover); }
+h3 { font-size: var(--fs-h3); }
+
+p { margin: 0 0 var(--sp-1); }
+
+a { color: var(--accent-hover); text-decoration: none; }
+a:hover { color: var(--accent); }
+
+button { font-family: inherit; font-size: inherit; cursor: pointer; }
+
+input::placeholder { color: var(--field-placeholder); }
+
+img, svg { max-width: 100%; }
+
+/* Section 8: one focus treatment, on everything. */
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* --- Layout helpers (section 5) --- */
+
+.wrap {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.page {
+  padding-top: var(--sp-1);
+  padding-bottom: var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+/* Collapses to one column on narrow screens without a media query. */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: var(--sp-4);
+}
+
+/* Re-points the generic roles for anything sitting on the blue band, so the
+   same tile, row or label renders correctly on or off the band, in both
+   themes, without an "is this on blue" prop. */
+.on-band {
+  --text: var(--on-brand);
+  --text-soft: var(--on-brand-soft);
+  --text-meta: var(--on-brand-soft);
+  --rule: var(--rule-on-band);
+  --accent-hover: var(--on-brand);
+  --accent: var(--on-brand-soft);
+  /* The specced #01689b ring would disappear against lintblauw, and section 2
+     allows only white or #dce8f3 on that surface. */
+  --focus-ring: var(--on-brand);
+  color: var(--on-brand);
+}
+
+/* Restores the page roles for a white panel sitting inside the blue band. */
+.on-surface {
+  --text: var(--p-ink);
+  --text-soft: var(--p-ink-zacht);
+  --text-meta: var(--p-ink-meta);
+  --rule: var(--p-lijn);
+  --accent: var(--p-donker);
+  --accent-hover: var(--p-lint);
+  color: var(--text);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Glyphs (section 6): one colour, sized by the box they sit in. */
+.glyph { display: block; flex-shrink: 0; }

@@ -1,12 +1,8 @@
-/* global React, navigate, FrameworkDiagram, DomainGlyph, Icon, BronnenLijst, SuggestieBlok */
+/* global React, navigate, Glyph, Collapsible, TopicTile, kindLabel, phaseLabel, gpLabel, gpCountFor,
+   practicesFor, isFundament, topicByName, FUNDAMENTEN, DOMEINEN, BronnenLijst, SuggestieBlok */
 const { useState: useS, useMemo: useM } = React;
 
 const RAAM = window.RAAMWERK;
-
-// Practice body items render as plain paragraphs (no auto-bolding). Tips read as
-// natural prose; visual separation is handled by .practice-tips p in style.css.
-
-const FASES = ["PoC", "Pilot", "Productie"];
 
 function renderInlineMd(text) {
   const parts = text.split(/\*\*(.*?)\*\*/g);
@@ -21,9 +17,7 @@ function ToelichtingBlock({ items }) {
           const lines = text.split('\n').filter(l => l.trim());
           return (
             <ul key={i} className="toelichting-list">
-              {lines.map((line, j) => (
-                <li key={j}>{renderInlineMd(line.replace(/^- /, ''))}</li>
-              ))}
+              {lines.map((line, j) => <li key={j}>{renderInlineMd(line.replace(/^- /, ''))}</li>)}
             </ul>
           );
         }
@@ -33,300 +27,269 @@ function ToelichtingBlock({ items }) {
   );
 }
 
-
-/* ============================== COLLAPSIBLE SECTION ============================== */
-function Section({ title, children, id, defaultOpen = false }) {
-  const [open, setOpen] = useS(defaultOpen);
+/* Crumbs are the only way back up from a detail page. */
+function Crumbs({ trail, current }) {
   return (
-    <div id={id} className="section-block" style={{ scrollMarginTop: 80 }}>
-      <button className="section-toggle" onClick={() => setOpen(o => !o)}>
-        <span>{title}</span>
-        <svg className={'section-chevron' + (open ? ' open' : '')} viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <polyline points="6 9 12 15 18 9"/>
-        </svg>
-      </button>
-      {open && <div className="section-content">{children}</div>}
+    <nav className="crumbs" aria-label="Kruimelpad">
+      {trail.map(t => (
+        <span key={t.href}>
+          <a href={t.href} onClick={(e) => { e.preventDefault(); navigate(t.href.replace(/^#/, '')); }}>{t.label}</a>
+          <span className="crumb-sep" aria-hidden="true">/</span>
+        </span>
+      ))}
+      <span>{current}</span>
+    </nav>
+  );
+}
+
+/* Shows which fasen a good practice fits, as a filled track from the first to
+   the last that applies. Section 1 allows no red here, so the track is blue. */
+function MaturityStepper({ phases }) {
+  const active = new Set(phases);
+  const hit = RAAM.PHASES.map((f, i) => (active.has(f) ? i : -1)).filter(i => i >= 0);
+  const first = hit.length ? hit[0] : -1;
+  const last = hit.length ? hit[hit.length - 1] : -1;
+  const spoken = phases.map(phaseLabel).join(', ');
+
+  return (
+    <div className="maturity">
+      <span className="maturity-label">Volwassenheid</span>
+      <ol className="maturity-track" aria-label={'Past in fase: ' + spoken}>
+        {RAAM.PHASES.map((f, i) => (
+          <li
+            key={f}
+            className={'maturity-step' + (active.has(f) ? ' is-on' : '')
+              + (i > 0 && i > first && i <= last ? ' is-linked' : '')}
+          >
+            <span className="maturity-dot" aria-hidden="true"></span>
+            <span className="maturity-name">{phaseLabel(f)}</span>
+          </li>
+        ))}
+      </ol>
     </div>
   );
 }
 
-/* ============================== HOME ============================== */
-function HomePage() {
-  const h = RAAM.HOME;
+/* The richer card used where there is room to show what a practice is about. */
+function PracticeCard({ p }) {
+  const path = '/practices/' + p.id;
   return (
-    <div className="container">
-      <section className="hero">
-        <div className="hero-text">
-          <span className="eyebrow">{h.eyebrow}</span>
-          <h1>{h.title}</h1>
-          {(Array.isArray(h.lede) ? h.lede : [h.lede]).map((p, i) => (
-            <p key={i} className="lede">{p}</p>
-          ))}
-          <p className="lede" style={{ fontSize: 16 }}>{h.lede_sub}</p>
-          <div className="hero-meta">
-            <div className="stat"><span className="num">4</span><span className="lbl">Fundamenten</span></div>
-            <div className="stat"><span className="num">10</span><span className="lbl">Domeinen</span></div>
-            <div className="stat"><span className="num">{RAAM.PRACTICES.length}</span><span className="lbl">Good Practices</span></div>
-          </div>
-          <div className="hero-cta">
-            <button className="btn" onClick={() => navigate('/domeinen')}>Bekijk alle domeinen <Icon.Arrow/></button>
-            <button className="btn btn-ghost" onClick={() => navigate('/practices')}>Overzicht Good Practices</button>
-          </div>
-        </div>
-        <div>
-          <FrameworkDiagram
-            onSelectDomain={(id) => navigate('/domeinen/' + id)}
-            onSelectAll={() => navigate('/domeinen#digitale-assistent')}
-          />
-          <p style={{ textAlign: 'center', color: 'var(--ink-500)', marginTop: 12, fontSize: 14 }}>
-            {h.diagram_hint.split(/(segment|midden)/g).map((part, i) =>
-              (part === 'segment' || part === 'midden')
-                ? <span key={i} style={{ color: 'var(--ro-blue-600)', fontWeight: 600 }}>{part}</span>
-                : part
-            )}
-          </p>
-        </div>
-      </section>
+    <a className="practice-card" href={'#' + path}
+       onClick={(e) => { e.preventDefault(); navigate(path); }}>
+      <div className="practice-card-text">
+        <h3>{p.title}</h3>
+        <p>{p.summary}</p>
+      </div>
+      <MaturityStepper phases={p.phases} />
+    </a>
+  );
+}
 
-    </div>
+/* A result row. Section 6: the glyph always sits next to the full name. */
+function PracticeRow({ p }) {
+  const path = '/practices/' + p.id;
+  return (
+    <a className="row" href={'#' + path} onClick={(e) => { e.preventDefault(); navigate(path); }}>
+      {p.domains[0] && <Glyph id={p.domains[0]} />}
+      <span>
+        <span className="row-title">{p.title}</span><br/>
+        <span className="row-sub">
+          Good practice &middot; {p.domains.map(id => (RAAM.DOMAINS.find(d => d.id === id) || {}).title).filter(Boolean).join(', ')}
+        </span>
+      </span>
+    </a>
   );
 }
 
 /* ============================== DOMEINEN ============================== */
-function DomeinenPage() {
-  const FUND_IDS = ['governance','infrastructuur-data','cultuur-adoptie','kennis-capaciteit'];
-  const fundamenten = RAAM.DOMAINS.filter(d => FUND_IDS.includes(d.id));
-  const overige = RAAM.DOMAINS.filter(d => !FUND_IDS.includes(d.id));
-  const renderCard = (d, isFundament = false) => {
-    const count = RAAM.PRACTICES.filter(p => p.domains.includes(d.id)).length;
-    const comingSoon = d.status === 'coming-soon';
-    return (
-      <a key={d.id} className={'card card-link domain-card' + (isFundament ? ' domain-card--fundament' : '') + (comingSoon ? ' domain-card--coming-soon' : '')}
-         onClick={(e) => { e.preventDefault(); navigate('/domeinen/' + d.id); }}
-         href={'#/domeinen/' + d.id}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8 }}>
-          <DomainGlyph id={d.id} />
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 6 }}>
-            <span className="nr">{isFundament ? 'FUNDAMENT' : 'DOMEIN'} {String(d.nr).padStart(2, '0')}</span>
-            {comingSoon && <span className="badge-coming-soon">Binnenkort</span>}
-          </div>
-        </div>
-        <h3>{d.title}</h3>
-        <p>{d.short}</p>
-        <div className="meta">
-          <span>{count} good practice{count===1?'':'s'}</span>
-        </div>
-      </a>
-    );
-  };
+function DomeinenHero() {
   return (
-    <div className="container">
-      <div className="section-title-row" style={{ marginBottom: 18, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
-        <div>
-          <span className="eyebrow">Overzicht</span>
-          <h1 style={{ marginTop: 6, fontSize: 38 }}>Domeinen van het raamwerk</h1>
-          <p className="lede" style={{ marginTop: 10 }}>
-            Het raamwerk omvat vier fundamenten en tien domeinen die samen de digitale assistent vormen. Klik op een domein voor de volledige beschrijving, good practices en bronnen.
-          </p>
-        </div>
-        <SuggestieBlok />
+    <div className="hero hero--page">
+      <div>
+        <h1>Fundamenten en domeinen</h1>
+        <p className="hero-intro">
+          Eerst het fundament, dan de assistent. Vier fundamenten dragen het geheel;
+          tien domeinen vormen samen de digitale assistent.
+        </p>
       </div>
-
-      <div className="section-header" style={{ display: 'flex', alignItems: 'baseline', gap: 16, margin: '40px 0 4px' }}>
-        <span className="eyebrow" style={{ fontSize: 13, letterSpacing: 1.6 }}>{RAAM.HOME.fundamenten_section.label}</span>
-        <span style={{ flex: 1, height: 2, background: '#0b3d68' }}/>
-        <span style={{ fontSize: 13, color: 'var(--ink-500)' }}>{fundamenten.length} fundamenten</span>
-      </div>
-      <p style={{ color: 'var(--ink-700)', maxWidth: 780, margin: '0 0 22px' }}>
-        {RAAM.HOME.fundamenten_section.description}
-      </p>
-      <div className="domain-grid domain-grid--fundament">{fundamenten.map(d => renderCard(d, true))}</div>
-
-      <div id="digitale-assistent" className="section-header" style={{ display: 'flex', alignItems: 'baseline', gap: 16, margin: '48px 0 4px', scrollMarginTop: 24 }}>
-        <span className="eyebrow" style={{ fontSize: 13, letterSpacing: 1.6 }}>{RAAM.HOME.assistent_section.label}</span>
-        <span style={{ flex: 1, height: 2, background: '#01689b' }}/>
-        <span style={{ fontSize: 13, color: 'var(--ink-500)' }}>{overige.length} domeinen</span>
-      </div>
-      <p style={{ color: 'var(--ink-700)', maxWidth: 780, margin: '0 0 22px' }}>
-        {RAAM.HOME.assistent_section.description}
-      </p>
-      <div className="domain-grid">{overige.map(d => renderCard(d, false))}</div>
     </div>
   );
 }
 
-/* ============================== MATURITY STEPPER ============================== */
-function MaturityStepper({ phases }) {
-  const activeSet = new Set(phases);
-  const activeIndices = FASES.map((f, i) => activeSet.has(f) ? i : -1).filter(i => i >= 0);
-  const firstActive = activeIndices.length ? activeIndices[0] : -1;
-  const lastActive  = activeIndices.length ? activeIndices[activeIndices.length - 1] : -1;
-
+function TopicSection({ section, two, topics }) {
   return (
-    <div className="maturity-stepper">
-      <span className="maturity-label" aria-hidden="true">Volwassenheid</span>
-      <div className="maturity-track-wrap">
-        <div className="maturity-line maturity-line--base" aria-hidden="true"></div>
-        {firstActive !== -1 && (
-          <div
-            className="maturity-line maturity-line--fill"
-            style={{
-              left:  `${(firstActive * 2 + 1) * 100 / 6}%`,
-              right: `${((2 - lastActive) * 2 + 1) * 100 / 6}%`
-            }}
-            aria-hidden="true"
-          ></div>
-        )}
-        <ol className="maturity-phases" role="list">
-          {FASES.map(fase => {
-            const isActive = activeSet.has(fase);
-            return (
-              <li key={fase} className="maturity-phase"
-                  aria-label={fase + ': ' + (isActive ? 'bereikt' : 'nog niet bereikt')}>
-                <div className={'maturity-dot' + (isActive ? ' maturity-dot--active' : '')} aria-hidden="true"></div>
-                <span className={'maturity-phase-label' + (isActive ? ' maturity-phase-label--active' : '')} aria-hidden="true">
-                  {fase}
-                </span>
-              </li>
-            );
-          })}
-        </ol>
+    <section className={'step' + (two ? ' step--two' : '')}>
+      <div>
+        <span className="step-label">{section.step}</span>
+        <h2>{section.title}</h2>
+        <p className="step-intro">{section.description}</p>
+      </div>
+      <div className="tile-grid">
+        {topics.map(t => (
+          <TopicTile key={t.id} topic={t} fundament={!two} preview={null} onPreview={() => {}} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function DomeinenPage() {
+  return (
+    <div className="wrap page">
+      <div className="steps">
+        <TopicSection section={RAAM.HOME.fundamenten_section} topics={FUNDAMENTEN} />
+        <TopicSection section={RAAM.HOME.assistent_section} two topics={DOMEINEN} />
       </div>
     </div>
   );
 }
 
 /* ============================== DOMEIN DETAIL ============================== */
-function DomeinDetail({ id }) {
+function DomeinHero({ id }) {
   const d = RAAM.DOMAINS.find(x => x.id === id);
-  if (!d) return <div className="container"><h1>Domein niet gevonden</h1></div>;
-  const isFundament = ['governance','infrastructuur-data','cultuur-adoptie','kennis-capaciteit'].includes(d.id);
-  const typeLabel = isFundament ? 'fundament' : 'domein';
-  // Single source of truth: a practice belongs to a domain when its own
-  // `domains:` frontmatter includes the domain id. The overview-card count
-  // (renderCard) uses the same filter — they always agree.
-  const practices = RAAM.PRACTICES.filter(p => p.domains.includes(d.id));
-  const comingSoon = d.status === 'coming-soon';
+  if (!d) return null;
+  const practices = practicesFor(d.id);
+  const bronnen = (d.sources || []).filter(b => typeof b !== 'string');
   return (
-    <div className="container">
-      <div className="crumbs">
-        <a href="#/">Home</a><span className="sep">/</span>
-        <a href="#/domeinen">Domeinen</a><span className="sep">/</span>
-        <span>{d.title}</span>
+    <div className="hero">
+      <div>
+        <span className="hero-glyph hero-glyph--static">
+          <Glyph id={d.id} variant={isFundament(d.id) ? 'sq' : 'dot'} />
+        </span>
       </div>
-      {comingSoon && (
-        <div className="banner-coming-soon" role="status">
-          <strong>Binnenkort beschikbaar</strong> — dit {typeLabel} is nog in review. De inhoud op deze pagina is een eerste opzet en kan nog veranderen.
-        </div>
-      )}
-      <div className="detail-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
-        <div>
-          <span className="eyebrow">{isFundament ? 'Fundament' : 'Domein'} {String(d.nr).padStart(2, '0')}</span>
-          <h1>{d.title}</h1>
-          <p className="lede" style={{ fontSize: 19 }}>{d.short}</p>
-        </div>
-        <SuggestieBlok />
-      </div>
-
-      <div className="detail-with-toc">
-        <nav className="detail-toc">
-          <p className="toc-heading">Inhoud</p>
-          <ul>
-            {[
-              { id: 'sec-wat', label: `Wat houdt dit ${typeLabel} in?` },
-              { id: 'sec-waarom', label: 'Waarom is het belangrijk?' },
-              ...(d.sources && d.sources.length > 0 ? [{ id: 'sec-kennis', label: 'Basiskennis' }] : []),
-              { id: 'sec-practices', label: 'Good practices' },
-              { id: 'sec-samenhang', label: 'Samenhang' },
-            ].map(item => (
-              <li key={item.id}>
-                <button className="toc-link" onClick={() => document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>
-                  {item.label}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <div className="detail-body">
-          <Section id="sec-wat" defaultOpen title={isFundament ? `Wat wordt verstaan onder ${d.title} bij een digitale assistent?` : `Wat is ${d.title} in een digitale assistent?`}>
-            <div dangerouslySetInnerHTML={{ __html: d.wat }} />
-          </Section>
-
-          <Section id="sec-waarom" title={`Waarom is ${d.title} belangrijk in een digitale assistent?`}>
-            <div dangerouslySetInnerHTML={{ __html: d.waarom }} />
-          </Section>
-
-          {d.sources && d.sources.length > 0 && (
-            <Section id="sec-kennis" title="Welke basiskennis is nodig?">
-              <BronnenLijst bronnen={d.sources.filter(b => typeof b !== 'string')} />
-            </Section>
-          )}
-
-          <Section id="sec-practices" title="Good practices">
-            {practices.length === 0 ? (
-              <p style={{ color: 'var(--ink-500)' }}>Nog geen good practices in dit domein. Heb je er een? <a href="#">Dien een suggestie in</a>.</p>
-            ) : (
-              <div className="practice-maturity-list">
-                {practices.map(p => (
-                  <a key={p.id} className="practice-maturity-card"
-                     onClick={(e) => { e.preventDefault(); navigate('/practices/' + p.id); }}
-                     href={'#/practices/' + p.id}>
-                    <div>
-                      <h3>{p.title}</h3>
-                      <p>{p.summary}</p>
-                    </div>
-                    <MaturityStepper phases={p.phases} />
-                  </a>
-                ))}
-              </div>
-            )}
-          </Section>
-
-          <Section id="sec-samenhang" title="Samenhang met andere fundamenten en domeinen">
-            {d.samenhang_blokken && d.samenhang_blokken.length > 0
-              ? <div className="samenhang-grid">
-                  {d.samenhang_blokken.map((b, i) => (
-                    <article key={b.naam} className="samenhang-item">
-                      <header className="samenhang-head">
-                        <span className="samenhang-num">{String(i + 1).padStart(2, '0')}</span>
-                        <h3 className="samenhang-title">{b.naam}</h3>
-                      </header>
-                      <p className="samenhang-body">{b.omschrijving}</p>
-                    </article>
-                  ))}
-                </div>
-              : <p style={{ color: 'var(--ink-500)' }}>Nog geen inhoud toegevoegd.</p>}
-          </Section>
+      <div>
+        <span className="hero-caption-kind">{kindLabel(d)}</span>
+        <h1 className="hero-title--detail">{d.title}</h1>
+        <p className="hero-intro">{d.short}</p>
+        <div className="stats">
+          <div><div className="stat-n">{practices.length}</div><div className="stat-l">good practices</div></div>
+          <div><div className="stat-n">{bronnen.length}</div><div className="stat-l">bronnen</div></div>
+          <div>
+            <div className="stat-n">{(d.samenhang_blokken || []).length}</div>
+            <div className="stat-l">verbanden</div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
+function DomeinDetail({ id }) {
+  const d = RAAM.DOMAINS.find(x => x.id === id);
+  if (!d) return <div className="wrap page"><h1>Onderwerp niet gevonden</h1></div>;
+  const soort = isFundament(d.id) ? 'fundament' : 'domein';
+  const practices = practicesFor(d.id);
+  const bronnen = (d.sources || []).filter(b => typeof b !== 'string');
+
+  return (
+    <div className="wrap page">
+      <Crumbs trail={[{ href: '#/', label: 'Home' }, { href: '#/domeinen', label: 'Domeinen' }]} current={d.title} />
+
+      {d.status === 'coming-soon' && (
+        <p className="notice" role="status">
+          <strong>Binnenkort beschikbaar</strong> — dit {soort} is nog in review. De inhoud kan nog veranderen.
+        </p>
+      )}
+
+      <div className="detail-layout">
+        <div className="detail-main">
+          <Collapsible title={'Over dit ' + soort} defaultOpen>
+            <div dangerouslySetInnerHTML={{ __html: d.wat }} />
+          </Collapsible>
+
+          <Collapsible title={'Waarom is ' + d.title + ' belangrijk?'}>
+            <div dangerouslySetInnerHTML={{ __html: d.waarom }} />
+          </Collapsible>
+
+          {bronnen.length > 0 && (
+            <Collapsible title={'Basiskennis en bronnen (' + bronnen.length + ')'}>
+              <BronnenLijst bronnen={bronnen} />
+            </Collapsible>
+          )}
+
+          {d.samenhang_blokken && d.samenhang_blokken.length > 0 && (
+            <Collapsible title="Samenhang met andere onderwerpen">
+              <div className="samenhang-grid">
+                {d.samenhang_blokken.map((b, i) => {
+                  const other = topicByName(b.naam);
+                  const nr = String(i + 1).padStart(2, '0');
+                  return (
+                    <article key={b.naam} className="samenhang-item">
+                      {other ? (
+                        <a className="samenhang-head" href={'#/domeinen/' + other.id}
+                           onClick={(e) => { e.preventDefault(); navigate('/domeinen/' + other.id); }}>
+                          <span className="samenhang-nr" aria-hidden="true">{nr}</span>
+                          <Glyph id={other.id} variant={isFundament(other.id) ? 'sq' : 'dot'} />
+                          <span className="samenhang-naam">
+                            {other.title}
+                            <span className="samenhang-kind">{kindLabel(other)}</span>
+                          </span>
+                        </a>
+                      ) : (
+                        <div className="samenhang-head">
+                          <span className="samenhang-nr" aria-hidden="true">{nr}</span>
+                          <span className="samenhang-naam">{b.naam}</span>
+                        </div>
+                      )}
+                      <p>{b.omschrijving}</p>
+                    </article>
+                  );
+                })}
+              </div>
+            </Collapsible>
+          )}
+
+          <section className="detail-section">
+            <h2>Good practices</h2>
+            {practices.length === 0
+              ? <p className="muted">Nog geen good practices bij dit {soort}.</p>
+              : <div className="practice-cards">{practices.map(p => <PracticeCard key={p.id} p={p} />)}</div>}
+          </section>
+        </div>
+
+        <aside className="detail-side">
+          <SuggestieBlok />
+        </aside>
+      </div>
+    </div>
+  );
+}
+
 /* ============================== GOOD PRACTICES ============================== */
+function PracticesHero() {
+  return (
+    <div className="hero hero--page">
+      <div>
+        <h1>Good practices</h1>
+        <p className="hero-intro">
+          {RAAM.PRACTICES.length} concrete handvatten uit de praktijk, gekoppeld aan de
+          fundamenten en domeinen van het raamwerk.
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function PracticesPage() {
   const [q, setQ] = useS('');
   const [selDomains, setSelDomains] = useS(new Set());
   const [selPhases, setSelPhases] = useS(new Set());
   const [selLevels, setSelLevels] = useS(new Set());
 
-  function toggle(set, setSet, v) {
-    const n = new Set(set);
-    if (n.has(v)) n.delete(v); else n.add(v);
-    setSet(n);
-  }
-  function clearAll() {
-    setQ(''); setSelDomains(new Set()); setSelPhases(new Set()); setSelLevels(new Set());
-  }
+  const toggle = (set, setSet, v) => {
+    const next = new Set(set);
+    if (next.has(v)) next.delete(v); else next.add(v);
+    setSet(next);
+  };
+  const clearAll = () => { setQ(''); setSelDomains(new Set()); setSelPhases(new Set()); setSelLevels(new Set()); };
 
   const filtered = useM(() => {
-    const qq = q.trim().toLowerCase();
+    const ql = q.trim().toLowerCase();
     return RAAM.PRACTICES.filter(p => {
-      if (qq && !(p.title.toLowerCase().includes(qq) || p.summary.toLowerCase().includes(qq))) return false;
+      if (ql && !(p.title + ' ' + p.summary).toLowerCase().includes(ql)) return false;
       if (selDomains.size && !p.domains.some(d => selDomains.has(d))) return false;
-      if (selPhases.size && !p.phases.some(d => selPhases.has(d))) return false;
-      if (selLevels.size && !p.levels.some(d => selLevels.has(d))) return false;
+      if (selPhases.size && !p.phases.some(f => selPhases.has(f))) return false;
+      if (selLevels.size && !p.levels.some(l => selLevels.has(l))) return false;
       return true;
     });
   }, [q, selDomains, selPhases, selLevels]);
@@ -334,103 +297,91 @@ function PracticesPage() {
   const active = selDomains.size + selPhases.size + selLevels.size + (q ? 1 : 0);
 
   return (
-    <div className="container">
-      <div className="section-title-row" style={{ marginBottom: 18, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
-        <div>
-          <span className="eyebrow">Praktijk</span>
-          <h1 style={{ marginTop: 6, fontSize: 38 }}>Overzicht Good Practices</h1>
-          <p className="lede" style={{ marginTop: 10 }}>
-            {RAAM.PRACTICES.length} concrete handvatten, methoden en technieken voor de (door)ontwikkeling van digitale assistenten.
-          </p>
-        </div>
-        <SuggestieBlok />
-      </div>
-
-      <div className="searchbar" style={{ marginBottom: 24 }}>
-        <Icon.Search/>
-        <input value={q} onChange={e => setQ(e.target.value)} placeholder="Zoek in titels en beschrijvingen…" aria-label="Zoeken"/>
-        {q && <button onClick={() => setQ('')} className="filter-clear" style={{ display: 'flex', alignItems:'center' }}><Icon.Close/></button>}
-      </div>
-
+    <div className="wrap page">
       <div className="gp-layout">
-        <aside className="gp-sidebar">
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 4 }}>
-            <h3 style={{ margin: 0 }}>Filters</h3>
-            {active > 0 && <button className="filter-clear" onClick={clearAll}>Alle wissen</button>}
-          </div>
-          <div className="search-meta" style={{ marginBottom: 8 }}>
-            {filtered.length} van {RAAM.PRACTICES.length} good practices
+        <aside className="gp-filters">
+          <div className="filter-head">
+            <h2>Filters</h2>
+            {active > 0 && <button className="link-btn" onClick={clearAll}>Wis alles ({active})</button>}
           </div>
 
           <div className="filter-section">
-            <h4>Per domein</h4>
+            <h3>Zoek in good practices</h3>
+            <input
+              className="filter-input"
+              type="search"
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder="Titel of samenvatting"
+              aria-label="Zoek in good practices"
+            />
+          </div>
+
+          <div className="filter-section">
+            <h3>Per onderwerp</h3>
             <div className="filter-chips">
               {RAAM.DOMAINS.map(d => {
-                const cnt = RAAM.PRACTICES.filter(p => p.domains.includes(d.id)).length;
+                const cnt = gpCountFor(d.id);
                 if (cnt === 0) return null;
+                const on = selDomains.has(d.id);
                 return (
-                  <button key={d.id} className={'filter-chip filter-chip--domain' + (selDomains.has(d.id) ? ' active' : '')}
+                  <button key={d.id} className={'chip' + (on ? ' active' : '')}
+                          aria-pressed={on}
                           onClick={() => toggle(selDomains, setSelDomains, d.id)}>
-                    <DomainGlyph id={d.id} /> {d.title} <span className="count">{cnt}</span>
+                    <Glyph id={d.id} />
+                    <span>{d.title}</span>
+                    <span className="chip-count">{cnt}</span>
                   </button>
                 );
               })}
             </div>
           </div>
+
           <div className="filter-section">
-            <h4>Per oplossingsfase</h4>
+            <h3>Per oplossingsfase</h3>
             <div className="filter-chips">
-              {RAAM.PHASES.map(p => (
-                <button key={p} className={'filter-chip' + (selPhases.has(p) ? ' active' : '')}
-                        onClick={() => toggle(selPhases, setSelPhases, p)}>
-                  {p}
-                </button>
-              ))}
+              {RAAM.PHASES.map(p => {
+                const on = selPhases.has(p);
+                return (
+                  <button key={p} className={'chip' + (on ? ' active' : '')} aria-pressed={on}
+                          onClick={() => toggle(selPhases, setSelPhases, p)}>
+                    <span>{p === 'PoC' ? 'Proof of concept' : p}</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
+
           <div className="filter-section">
-            <h4>Per organisatieniveau</h4>
+            <h3>Per organisatieniveau</h3>
             <div className="filter-chips">
-              {RAAM.LEVELS.map(p => (
-                <button key={p} className={'filter-chip' + (selLevels.has(p) ? ' active' : '')}
-                        onClick={() => toggle(selLevels, setSelLevels, p)}>
-                  {p}
-                </button>
-              ))}
+              {RAAM.LEVELS.map(l => {
+                const on = selLevels.has(l);
+                return (
+                  <button key={l} className={'chip' + (on ? ' active' : '')} aria-pressed={on}
+                          onClick={() => toggle(selLevels, setSelLevels, l)}>
+                    <span>{l}</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
         </aside>
 
         <div>
+          <p className="result-count" role="status">
+            {filtered.length === RAAM.PRACTICES.length
+              ? gpLabel(filtered.length)
+              : gpLabel(filtered.length) + ' van ' + RAAM.PRACTICES.length}
+          </p>
           {filtered.length === 0 ? (
-            <div className="empty-state">
-              <Icon.Search style={{ width: 32, height: 32, color: 'var(--ink-400)' }}/>
+            <div className="empty">
               <h3>Geen good practices gevonden</h3>
-              <p style={{ margin: 0 }}>Verruim je zoekopdracht of wis een paar filters.</p>
-              <button className="btn btn-ghost btn-sm" onClick={clearAll}>Wis alle filters</button>
+              <p>Verruim je zoekopdracht of wis een paar filters.</p>
+              <button className="btn-primary" onClick={clearAll}>Wis alle filters</button>
             </div>
           ) : (
-            <div className="gp-list">
-              {filtered.map(p => (
-                <a key={p.id} className="card card-link practice-card"
-                   onClick={(e) => { e.preventDefault(); navigate('/practices/' + p.id); }}
-                   href={'#/practices/' + p.id}>
-                  <h3 style={{ margin: '0 0 4px' }}>{p.title}</h3>
-                  <p>{p.summary}</p>
-                  <div className="tag-row">
-                    {p.domains.slice(0,2).map(did => {
-                      const dd = RAAM.DOMAINS.find(x => x.id === did);
-                      return <span key={did} className="tag tag-domain tag-domain--icon" title={dd.title}><DomainGlyph id={did}/></span>;
-                    })}
-                    {p.phases.map(ph => <span key={ph} className={'tag tag-phase-' + ph.toLowerCase()}>{ph}</span>)}
-                    {p.levels.map(l => <span key={l} className={'tag tag-level-' + l.toLowerCase().replace(/[\s/]+/g, '-').replace(/-+/g, '-')}>{l}</span>)}
-                  </div>
-                  <div className="row-meta">
-                    <span className="read-more">Lees meer <Icon.Arrow/></span>
-                  </div>
-                </a>
-              ))}
-            </div>
+            <div className="row-list">{filtered.map(p => <PracticeRow key={p.id} p={p} />)}</div>
           )}
         </div>
       </div>
@@ -439,98 +390,98 @@ function PracticesPage() {
 }
 
 /* ============================== PRACTICE DETAIL ============================== */
+function PracticeHero({ id }) {
+  const p = RAAM.PRACTICES.find(x => x.id === id);
+  if (!p) return null;
+  return (
+    <div className="hero hero--page">
+      <div>
+        <span className="hero-caption-kind">Good practice</span>
+        <h1 className="hero-title--detail">{p.title}</h1>
+        <p className="hero-intro">{p.summary}</p>
+      </div>
+    </div>
+  );
+}
+
 function PracticeDetail({ id }) {
   const p = RAAM.PRACTICES.find(x => x.id === id);
-  if (!p) return <div className="container"><h1>Good practice niet gevonden</h1></div>;
+  if (!p) return <div className="wrap page"><h1>Good practice niet gevonden</h1></div>;
   const domainObjs = p.domains.map(did => RAAM.DOMAINS.find(d => d.id === did)).filter(Boolean);
-  const relatedPractices = RAAM.PRACTICES.filter(r =>
-    r.id !== p.id && (
-      (p.good_practise || []).includes(r.id) ||
-      (r.good_practise || []).includes(p.id)
-    )
-  );
-  return (
-    <div className="container">
-      <div className="crumbs">
-        <a href="#/">Home</a><span className="sep">/</span>
-        <a href="#/practices">Good Practices</a><span className="sep">/</span>
-        <span>{p.title}</span>
-      </div>
-      <div className="detail-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
-        <div>
-          <span className="eyebrow">Good Practice</span>
-          <h1>{p.title}</h1>
-          {p.summary.split('\n').filter(s => s.trim()).map((para, i) => (
-            <p key={i} className="lede" style={{ fontSize: 19 }}>{para.trim()}</p>
-          ))}
-        </div>
-        <SuggestieBlok />
-      </div>
+  const related = RAAM.PRACTICES.filter(r =>
+    r.id !== p.id && ((p.good_practise || []).includes(r.id) || (r.good_practise || []).includes(p.id)));
+  const bronnen = (p.sources || []).filter(b => typeof b !== 'string');
 
-      <div className="detail-grid">
-        <div className="detail-body">
-          {p.image && p.image_top && <img src={'content/docs/' + p.image} alt="" style={{ width: '100%', margin: '0 0 1.5rem', borderRadius: 8 }} />}
+  return (
+    <div className="wrap page">
+      <Crumbs trail={[{ href: '#/', label: 'Home' }, { href: '#/practices', label: 'Good practices' }]} current={p.title} />
+
+      <div className="detail-layout">
+        <div className="detail-main">
+          {p.image && p.image_top && <img className="detail-image" src={'content/docs/' + p.image} alt="" />}
+
           {p.toelichting_html
             ? <div className="toelichting-block" dangerouslySetInnerHTML={{ __html: p.toelichting_html }} />
-            : p.toelichting && p.toelichting.length > 0 && <ToelichtingBlock items={p.toelichting} />
-          }
-          <h2>Praktische tips</h2>
-          <div className="practice-tips">
-            {p.body.map((b, i) => {
-              if (b.startsWith('<table') || b.startsWith('<ul') || b.startsWith('<img')) {
-                return <div key={i} dangerouslySetInnerHTML={{ __html: b }} />;
-              }
-              const colon = b.indexOf(': ');
-              if (colon > 0) {
-                return <p key={i}><strong>{b.slice(0, colon)}:</strong> {b.slice(colon + 2)}</p>;
-              }
-              return <p key={i}>{b}</p>;
-            })}
-          </div>
-          {p.image && !p.image_top && <img src={'content/docs/' + p.image} alt="" style={{ width: '100%', margin: '1.5rem 0', borderRadius: 8 }} />}
+            : p.toelichting && p.toelichting.length > 0 && <ToelichtingBlock items={p.toelichting} />}
 
-          {p.sources && p.sources.length > 0 && (
-            <>
+          <section className="detail-section">
+            <h2>Praktische tips</h2>
+            <div className="tips">
+              {p.body.map((b, i) => {
+                if (/^\s*<(table|ul|img)/.test(b)) {
+                  return <div key={i} dangerouslySetInnerHTML={{ __html: b }} />;
+                }
+                const colon = b.indexOf(': ');
+                if (colon > 0) {
+                  return <p key={i}><strong>{b.slice(0, colon)}:</strong> {b.slice(colon + 2)}</p>;
+                }
+                return <p key={i}>{b}</p>;
+              })}
+            </div>
+          </section>
+
+          {p.image && !p.image_top && <img className="detail-image" src={'content/docs/' + p.image} alt="" />}
+
+          {bronnen.length > 0 && (
+            <section className="detail-section">
               <h2>Relevante bronnen</h2>
-              <BronnenLijst bronnen={p.sources.filter(b => typeof b !== 'string')} />
-            </>
+              <BronnenLijst bronnen={bronnen} />
+            </section>
+          )}
+
+          {related.length > 0 && (
+            <section className="detail-section">
+              <h2>Gerelateerde good practices</h2>
+              <div className="row-list">{related.map(r => <PracticeRow key={r.id} p={r} />)}</div>
+            </section>
           )}
         </div>
+
         <aside className="detail-side">
           <div className="side-card">
-            <h4>Relevante domeinen</h4>
-            <ul>
+            <h4>Hoort bij</h4>
+            <div className="side-links">
               {domainObjs.map(d => (
-                <li key={d.id}>
-                  <a onClick={(e)=>{e.preventDefault();navigate('/domeinen/'+d.id);}} href={'#/domeinen/'+d.id}>{d.title}</a>
-                </li>
+                <a key={d.id} className="row" href={'#/domeinen/' + d.id}
+                   onClick={(e) => { e.preventDefault(); navigate('/domeinen/' + d.id); }}>
+                  <Glyph id={d.id} />
+                  <span>
+                    <span className="row-title">{d.title}</span><br/>
+                    <span className="row-sub">{kindLabel(d)}</span>
+                  </span>
+                </a>
               ))}
-            </ul>
-          </div>
-          {relatedPractices.length > 0 && (
-            <div className="side-card">
-              <h4>Samenhangende Good Practices</h4>
-              <ul>
-                {relatedPractices.map(r => (
-                  <li key={r.id}>
-                    <a onClick={(e)=>{e.preventDefault();navigate('/practices/'+r.id);}} href={'#/practices/'+r.id}>{r.title}</a>
-                  </li>
-                ))}
-              </ul>
             </div>
-          )}
+          </div>
           <div className="side-card">
             <h4>Past in fase</h4>
-            <div className="tag-row" style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-              {p.phases.map(ph => <span key={ph} className={'tag tag-phase-' + ph.toLowerCase()}>{ph}</span>)}
-            </div>
+            <p className="side-value">{p.phases.map(f => f === 'PoC' ? 'Proof of concept' : f).join(', ')}</p>
           </div>
           <div className="side-card">
             <h4>Voor welk niveau?</h4>
-            <div className="tag-row" style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-              {p.levels.map(l => <span key={l} className="tag tag-level">{l}</span>)}
-            </div>
+            <p className="side-value">{p.levels.join(', ')}</p>
           </div>
+          <SuggestieBlok />
         </aside>
       </div>
     </div>
@@ -538,46 +489,66 @@ function PracticeDetail({ id }) {
 }
 
 /* ============================== OVER ============================== */
-function OverPage() {
+function OverHero() {
   const o = RAAM.OVER;
-  const sectionIds = o.sections.map((_, i) => 'over-sec-' + i);
   return (
-    <div className="container">
-      <div className="detail-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 32 }}>
-        <div>
-          <span className="eyebrow">{o.eyebrow}</span>
-          <h1>{o.title}</h1>
-          <p className="lede" style={{ fontSize: 19 }}>{o.lede}</p>
-        </div>
-        <SuggestieBlok />
-      </div>
-
-      <div className="detail-with-toc">
-        <nav className="detail-toc">
-          <p className="toc-heading">Inhoud</p>
-          <ul>
-            {o.sections.map((s, i) => (
-              <li key={i}>
-                <button className="toc-link" onClick={() => document.getElementById(sectionIds[i])?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>
-                  {s.heading}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <div className="detail-body">
-          {o.sections.map((s, i) => (
-            <Section key={i} id={sectionIds[i]} title={s.heading} defaultOpen={i === 0}>
-              {(Array.isArray(s.body) ? s.body : [s.body]).map((p, j) => (
-                <p key={j} style={p.includes('\n') ? { whiteSpace: 'pre-line' } : undefined}>{p}</p>
-              ))}
-            </Section>
-          ))}
-        </div>
+    <div className="hero hero--page">
+      <div>
+        <span className="hero-caption-kind">{o.eyebrow}</span>
+        <h1 className="hero-title--detail">{o.title}</h1>
+        <p className="hero-intro">{o.lede}</p>
       </div>
     </div>
   );
 }
 
-Object.assign(window, { HomePage, DomeinenPage, DomeinDetail, PracticesPage, PracticeDetail, OverPage });
+function OverPage() {
+  const o = RAAM.OVER;
+  return (
+    <div className="wrap page">
+      <div className="detail-main">
+        {o.sections.map((s, i) => (
+          <Collapsible key={i} title={s.heading} defaultOpen={i === 0}>
+            {(Array.isArray(s.body) ? s.body : [s.body]).map((para, j) => (
+              <p key={j} style={para.includes('\n') ? { whiteSpace: 'pre-line' } : undefined}>{para}</p>
+            ))}
+          </Collapsible>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ============================== NIET GEVONDEN ============================== */
+function NotFoundHero() {
+  return (
+    <div className="hero hero--page">
+      <div>
+        <h1>Pagina niet gevonden</h1>
+        <p className="hero-intro">
+          Deze pagina bestaat niet (meer). Zoek hieronder, of ga terug naar de homepage.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function NotFoundPage() {
+  return (
+    <div className="wrap page">
+      <div className="empty">
+        <h3>Er staat hier niets</h3>
+        <p>Controleer het adres, of begin opnieuw vanaf de homepage.</p>
+        <a className="btn-primary" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
+          Naar de homepage
+        </a>
+      </div>
+    </div>
+  );
+}
+
+Object.assign(window, {
+  DomeinenPage, DomeinenHero, DomeinDetail, DomeinHero, NotFoundHero, NotFoundPage,
+  PracticesPage, PracticesHero, PracticeDetail, PracticeHero,
+  OverPage, OverHero, PracticeRow, PracticeCard, MaturityStepper, Crumbs, ToelichtingBlock,
+});
