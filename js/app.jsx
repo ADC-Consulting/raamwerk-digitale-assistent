@@ -5,6 +5,38 @@
 /* global useTweaks, TweaksPanel, TweakSection, TweakRadio, TweakToggle */
 const { useState: useStateA, useEffect: useEffectA } = React;
 
+/* Without this a render error leaves a blank page and the reason only in the
+   console. A stale cached script is the usual cause, so say so. */
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { error: null };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { error };
+  }
+
+  render() {
+    if (!this.state.error) return this.props.children;
+    return (
+      <div className="wrap page">
+        <div className="empty">
+          <h3>Er ging iets mis bij het laden van deze pagina</h3>
+          <p>
+            Dit komt meestal door een verouderde versie in de cache van je browser.
+            Ververs de pagina met Cmd+Shift+R (Mac) of Ctrl+F5 (Windows).
+          </p>
+          <p className="muted">{String(this.state.error)}</p>
+          <button className="btn-primary" onClick={() => window.location.reload(true)}>
+            Opnieuw laden
+          </button>
+        </div>
+      </div>
+    );
+  }
+}
+
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "theme": "light",
   "density": "comfort",
@@ -55,8 +87,10 @@ function App() {
 
   return (
     <div className="app">
-      <Band route={route} theme={t.theme} setTheme={setTheme}>{hero}</Band>
-      <main>{page}</main>
+      <Band route={route} theme={t.theme} setTheme={setTheme}>
+        <ErrorBoundary key={'hero' + route}>{hero}</ErrorBoundary>
+      </Band>
+      <main><ErrorBoundary key={route}>{page}</ErrorBoundary></main>
       <SiteFooter/>
 
       <TweaksPanel title="Tweaks">

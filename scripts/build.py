@@ -4,8 +4,10 @@ Reads content/ and generates js/data.js.
 Run: python3 scripts/build.py
 """
 
+import hashlib
 import json
 import os
+import re
 
 from _content import (
     CONTENT_DIR,
@@ -102,6 +104,34 @@ def render_glossary(glossary, bronnen_by_id):
     return '\n'.join(lines)
 
 
+INDEX_FILE = os.path.join(REPO_ROOT, 'index.html')
+_ASSET_RE = re.compile(r'(?P<attr>src|href)="(?P<path>(?:css|js)/[^"?]+)(?:\?v=[^"]*)?"')
+
+
+def stamp_assets():
+    """Add ?v=<hash> to the local css/js URLs in index.html.
+
+    Filenames never change between releases, so without this a browser or proxy
+    will happily pair a fresh index.html with a cached js/pages.jsx — which
+    breaks the site in ways that look like a bad deploy.
+    """
+    html = open(INDEX_FILE, encoding='utf-8').read()
+
+    digest = hashlib.sha256()
+    for match in sorted(set(m.group('path') for m in _ASSET_RE.finditer(html))):
+        asset = os.path.join(REPO_ROOT, match)
+        if os.path.exists(asset):
+            digest.update(match.encode('utf-8'))
+            digest.update(open(asset, 'rb').read())
+    version = digest.hexdigest()[:10]
+
+    stamped = _ASSET_RE.sub(
+        lambda m: f'{m.group("attr")}="{m.group("path")}?v={version}"', html)
+    if stamped != html:
+        open(INDEX_FILE, 'w', encoding='utf-8').write(stamped)
+    return version
+
+
 def main():
     meta = load_filters()
     home = load_yaml(os.path.join(CONTENT_DIR, 'home.yaml'))
@@ -137,6 +167,9 @@ def main():
         f.write(output + '\n')
 
     print(f'Written {OUTPUT_FILE} ({len(practices)} practices, {len(domains)} domains, {len(bronnen)} bronnen, {len(glossary)} begrippen)')
+
+    version = stamp_assets()
+    print(f'Stamped index.html assets with ?v={version}')
 
 
 if __name__ == '__main__':

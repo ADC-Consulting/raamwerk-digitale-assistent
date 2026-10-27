@@ -79,6 +79,20 @@ scripts/  ← build-, watch- en controlescripts
 docs/     ← statische assets en afbeeldingen voor practices
 ```
 
+## Deployen
+
+`scripts/build.py` zet een versiehash achter de css- en js-urls in `index.html`
+(`css/base.css?v=abc123`). Zonder die hash serveert een browser of proxy een
+verse `index.html` naast een gecachete `js/pages.jsx`, en dan breekt de site op
+een manier die op een mislukte deploy lijkt.
+
+> **Draai `python3 scripts/build.py` voordat je commit en deployt**, ook als je
+> alleen css of jsx hebt aangepast. Anders blijft de hash staan op de vorige
+> versie en krijgen bezoekers oude bestanden.
+
+Gaat er na een deploy toch iets mis: ververs eerst hard (Cmd+Shift+R of
+Ctrl+F5). Blijft het staan, kijk dan in de console welk bestand klaagt.
+
 ## Vormgeving
 
 De vormgeving volgt `Ontwerpprincipes Raamwerk Digitale Assistenten`: lintblauw en
