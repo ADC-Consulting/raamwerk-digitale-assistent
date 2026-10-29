@@ -68,48 +68,15 @@ python3 scripts/build.py
 | Bestand | Inhoud |
 |--------|--------|
 | `js/data.js` | Gegenereerd door `build.py` — wijzigingen worden overschreven |
-| `js/glyph-data.js` | Gegenereerd door `scripts/glyphs/build_glyphs.py` — de 16x16 glyph-maskers |
 
 ### Overig
 
 ```
 js/       ← React-componenten
-css/      ← stijlen (tokens → base → chrome → components → pages)
-scripts/  ← build-, watch- en controlescripts
+css/      ← stijlen
+scripts/  ← build- en watch-script
 docs/     ← statische assets en afbeeldingen voor practices
 ```
-
-## Vormgeving
-
-De vormgeving volgt `Ontwerpprincipes Raamwerk Digitale Assistenten`: lintblauw en
-wit, Fira Sans, rechte hoeken (behalve de zoekbalk), geen schaduwen, en glyphs
-waarin vorm betekenis draagt — fundamenten zijn blokken, domeinen zijn punten.
-
-De CSS staat in vijf lagen. `tokens.css` bevat het ruwe palet en daarboven een
-set semantische rollen (`--surface-band`, `--text-soft`, `--on-brand`, …).
-**Componenten gebruiken alleen die rollen, nooit het ruwe palet.** "Tekst op
-blauw" is geen kleur maar een context: de klasse `.on-band` herdefinieert de
-rollen, `.on-surface` zet ze terug voor een wit paneel binnen de blauwe kop.
-
-### Bewuste afwijkingen van de ontwerpprincipes
-
-| Afwijking | Reden |
-|---|---|
-| Donkere modus | Bewust behouden. Het donkere thema herdefinieert het ruwe palet, zodat de rollen meebewegen. Let op: een fundament-tegel is in de lichte modus donkerder dan de pagina en in de donkere modus juist lichter — vorm (blok versus punt) draagt de betekenis, niet de tint. |
-| Focusrand op de blauwe kop is wit | De voorgeschreven `#01689b` is vrijwel onzichtbaar op lintblauw; paragraaf 2 staat op dat vlak alleen wit of `#dce8f3` toe. |
-| Accentkleur instelbaar | Het tweaks-paneel schrijft uitsluitend `--accent`. Het mag `--accent-hover` niet zetten: die is thema-afhankelijk en een inline-waarde wint het van het donkere thema. |
-
-### Glyphs opnieuw genereren
-
-De glyphs zijn het lijnicoon van een onderwerp, gerasterd op 16 × 16. De maskers
-staan in `js/glyph-data.js`. Pas je een icoon aan in
-`scripts/glyphs/build_glyphs.py`, draai dan:
-
-```bash
-python3 scripts/glyphs/build_glyphs.py   # vereist rsvg-convert en Pillow
-```
-
-`scripts/check_content.py` controleert dat elk onderwerp een masker heeft.
 
 ---
 
@@ -117,19 +84,12 @@ python3 scripts/glyphs/build_glyphs.py   # vereist rsvg-convert en Pillow
 
 Het ingangspunt van de website. Laadt React 18 en Babel via CDN, dan `js/data.js`, en daarna de JSX-componenten in volgorde:
 
-1. `glyphs.jsx` ← tekent de glyphs uit `glyph-data.js`
-2. `model.jsx` ← fundament/domein-indeling, labels en de kerncijfers
-3. `tweaks-panel.jsx`
-4. `search.jsx`
-5. `chrome.jsx`
-6. `page-home.jsx`
-7. `pages.jsx`
-8. `bronnen.jsx`
-9. `glossary.jsx`
-10. `app.jsx` ← altijd als laatste
-
-De scripts delen één globale scope: elk bestand hangt zijn exports aan `window`
-en hooks worden per bestand hernoemd (`useStateQ`, `useS`, …) om botsingen te
-voorkomen. De volgorde in `index.html` ís daarmee de afhankelijkheidsvolgorde.
+1. `tweaks-panel.jsx`
+2. `chrome.jsx`
+3. `diagram.jsx`
+4. `pages.jsx`
+5. `bronnen.jsx`
+6. `glossary.jsx`
+7. `app.jsx` ← altijd als laatste
 
 > Voeg nieuwe componenten toe vóór `app.jsx`.

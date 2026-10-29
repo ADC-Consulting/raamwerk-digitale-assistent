@@ -10,13 +10,12 @@ Flags:
 
 import argparse
 import json
-import os
 import re
 import sys
 from collections import Counter, defaultdict
 
 from _content import (
-    REPO_ROOT,
+    CAT_TO_TYPEKEY,
     FUNDAMENT_IDS,
     load_bronnen,
     load_domain_files,
@@ -119,46 +118,13 @@ def check_vocabularies(report, practices, bronnen, filters):
         for lv in p.get('levels') or []:
             if lv not in valid_levels:
                 report.error(where, f'level `{lv}` not in filters.yaml levels ({sorted(valid_levels)})')
-
-
-def _normalise_name(s):
-    return re.sub(r'[^a-z0-9]', '', s.lower().replace('&', 'en'))
-
-
-def check_samenhang(report, domains):
-    """Each samenhang blok should name an onderwerp, so the page can show its glyph.
-
-    Mirrors topicByName() in js/model.jsx: exact match on a normalised id or
-    title, else a prefix match, longest key first.
-    """
-    keys = []
-    for d in domains:
-        keys.append((_normalise_name(d['id']), d['id']))
-        keys.append((_normalise_name(d['title']), d['id']))
-    keys.sort(key=lambda k: -len(k[0]))
-
-    for d in domains:
-        for blok in d.get('samenhang_blokken') or []:
-            naam = blok.get('naam', '')
-            n = _normalise_name(naam)
-            if any(k == n for k, _ in keys):
-                continue
-            if any(n.startswith(k) or k.startswith(n) for k, _ in keys):
-                continue
+    for b in bronnen:
+        bid = b.get('id', '<unknown>')
+        cat = b.get('categorie', '')
+        if cat and cat not in CAT_TO_TYPEKEY:
             report.warn(
-                f"domains/{d['id']}.md",
-                f'samenhang `{naam}` matches no onderwerp, so it renders without a glyph',
-            )
-
-
-def check_glyphs(report, domains):
-    """Every onderwerp needs a rasterised glyph; see ontwerpprincipes section 6."""
-    masks = _glyph_mask_ids()
-    for d in domains:
-        if d['id'] not in masks:
-            report.error(
-                f"domains/{d['id']}.md",
-                'no glyph mask; add the icon to scripts/glyphs/build_glyphs.py and rerun it',
+                f'bronnen.yaml#{bid}',
+                f'categorie `{cat}` not in CAT_TO_TYPEKEY (typeKey defaults to "infra")',
             )
 
 
@@ -297,14 +263,6 @@ def check_content_smells(report, domains, practices):
             report.warn('domains/', f'identical first paragraph of `wat` across: {", ".join(sorted(slugs))}')
 
 
-def _glyph_mask_ids():
-    """Ids present in the generated js/glyph-data.js."""
-    path = os.path.join(REPO_ROOT, 'js', 'glyph-data.js')
-    if not os.path.exists(path):
-        return set()
-    return set(re.findall(r"'([a-z0-9-]+)':\s*'[0-9a-f]{64}'", open(path, encoding='utf-8').read()))
-
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__.strip().split('\n')[0])
     parser.add_argument('--strict', action='store_true', help='Treat warnings as errors')
@@ -332,8 +290,6 @@ def main():
     check_cross_references(report, domains, practices, bronnen, glossary)
     check_uniqueness(report, domains, practices, bronnen)
     check_content_smells(report, domains, practices)
-    check_glyphs(report, domains)
-    check_samenhang(report, domains)
 
     if args.json:
         print(json.dumps(report.to_json(), ensure_ascii=False, indent=2))
