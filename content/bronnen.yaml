@@ -1235,7 +1235,7 @@
   categorie: Artikel & Richtlijnen
   omschrijving: >
     Open standaard van BZK voor verantwoord ontwikkelen en inkopen van digitale systemen binnen de Rijksoverheid, met expliciete aandacht voor duurzaamheid.
-  url: https://nerds.digitaledienst.overheid.nl/richtlijnen/duurzaamheid/
+  url: https://minbzk.github.io/NeRDS/richtlijnen/duurzaamheid/
 
 - id: nist-ai-rmf
   title: NIST AI Risk Management Framework
